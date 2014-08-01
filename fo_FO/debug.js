@@ -1684,4 +1684,2884 @@ var ES6Object = {
 
 module.exports = ES6Object;
 
-/* 76DsDGXX9vb
+/* 76DsDGXX9vb */
+},null);
+/** Path: html/js/sdk/ES.js */
+/**
+ * @providesModule ES
+ *
+ * scripts/jssdk/default.spatch converts ES5/ES6 code into using this module in
+ * ES3 style.
+ */
+__d("ES",["ES5ArrayPrototype","ES5FunctionPrototype","ES5StringPrototype","ES5Array","ES5Object","ES5Date","JSON3","ES6Object"],function(global,require,requireDynamic,requireLazy,module,exports,ES5ArrayPrototype,ES5FunctionPrototype,ES5StringPrototype,ES5Array,ES5Object,ES5Date,JSON3,ES6Object) {
+   
+   
+   
+  
+   
+   
+   
+   
+
+var toString = ({}).toString;
+
+var methodCache = {
+  // Always use the polyfill for JSON to work around Prototype 1.6.x issues.
+  // JSON3 will use the native versions if possible.
+  'JSON.stringify': JSON3.stringify,
+  'JSON.parse': JSON3.parse
+};
+
+var es5Polyfills = {
+  'Array.prototype': ES5ArrayPrototype,
+  'Function.prototype': ES5FunctionPrototype,
+  'String.prototype': ES5StringPrototype,
+  'Object': ES5Object,
+  'Array': ES5Array,
+  'Date': ES5Date
+};
+
+var es6Polyfills = {
+  'Object': ES6Object
+};
+
+function setupMethodsCache(polyfills) {
+  // Iterate over the polyfills, and add either a valid native implementation or
+  // a polyfill to the methodCache
+  for (var pName in polyfills) {
+    if (!polyfills.hasOwnProperty(pName)) { continue; }
+    var polyfillObject =  polyfills[pName];
+
+    // Resolve which native object holds the function we are looking for
+    var accessor = pName.split('.');
+    var nativeObject = accessor.length == 2
+      ? window[accessor[0]][accessor[1]]
+      : window[pName];
+
+    // Iterate over the shimmed methods, testing the native implementation
+    for (var fName in polyfillObject) {
+      if (!polyfillObject.hasOwnProperty(fName)) { continue; }
+
+      var nativeFunction = nativeObject[fName];
+      // If the native function exist, and tests as a native function, then
+      // we save it for later
+      methodCache[pName + '.' + fName] =
+        nativeFunction && /\{\s+\[native code\]\s\}/.test(nativeFunction)
+          ? nativeFunction
+          : polyfillObject[fName];
+    }
+  }
+}
+
+// Setup ES5, and ES6 polyfills
+setupMethodsCache(es5Polyfills);
+setupMethodsCache(es6Polyfills);
+
+function ES(lhs, rhs, proto ) {var args=Array.prototype.slice.call(arguments,3);
+  // Normalize the type information
+  var type = proto
+    ? toString.call(lhs).slice(8, -1) + '.prototype'
+    : lhs;
+
+  // Locate the method to use
+  var method = methodCache[type + '.' + rhs] || lhs[rhs];
+
+  // Invoke or throw
+  if (typeof method === 'function') {
+    return method.apply(lhs, args);
+  }
+
+  if (__DEV__) {
+    throw new Error('Polyfill ' + type + ' does not have a method ' + rhs);
+  }
+}
+
+module.exports = ES;
+
+/* HddqKc1MRYB */
+},null);
+var ES = require('ES');
+__d("JSSDKRuntimeConfig",[],{"locale":"fo_FO","rtl":false,"revision":"1352406"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true},"api":{"mode":"warn","whitelist":["Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Data","Data.process","Data.query","Data.query:wait","Data.waitOn","Data.waitOn:wait","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.unlockForProcessing","Payment.parse","Payment.setSize","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui","ui:subscribe"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/sT9WD2idZGy.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yR\/r\/ks_9ZXiQ0GL.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}\n.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode==\"CSS1Compat\"? document.documentElement.scrollTop+\"px\":body.scrollTop+\"px\")}.fb_connect_bar{position:relative;margin:auto;height:100\u0025;width:100\u0025;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}\n.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget","css:fb.css.connectbarwidget","css:fb.css.plugin.recommendationsbar"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/PvklbuW2Ycn.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});__d("JSSDKConnectBarConfig",[],{"imgs":{"buttonUrl":"rsrc.php\/v2\/yY\/r\/h_Y6u1wrZPW.png","missingProfileUrl":"rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif"}});
+
+
+__d("QueryString",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+
+function encode(/*object*/ bag) /*string*/ {__t([bag, 'object', 'bag']);return __t([function() {
+  var pairs = [];
+  ES(ES('Object', 'keys', false,bag).sort(), 'forEach', true,function(key) {
+    var value = bag[key];
+    
+    if (typeof value === 'undefined') {
+      return;
+    }
+    
+    if (value === null) {
+      pairs.push(key);
+      return;
+    }
+    
+    pairs.push(encodeURIComponent(key) +
+               '=' +
+               encodeURIComponent(value));
+  });
+  return pairs.join('&');
+}.apply(this, arguments), 'string']);}__w(encode, {"signature":"function(object):string"}); 
+
+
+function decode(/*string*/ str, /*?boolean*/ strict) /*object*/ {__t([str, 'string', 'str'], [strict, '?boolean', 'strict']);return __t([function() {
+  var data = {};
+  if (str === '') {
+    return data;
+  }
+
+  var pairs = str.split('&');
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i].split('=', 2);
+    var key = decodeURIComponent(pair[0]);
+    if (strict && data.hasOwnProperty(key)) {
+      throw new URIError('Duplicate key: ' + key);
+    }
+    data[key] = pair.length === 2
+      ? decodeURIComponent(pair[1])
+      : null;
+  }
+  return data;
+}.apply(this, arguments), 'object']);}__w(decode, {"signature":"function(string,?boolean):object"}); 
+
+
+function appendToUrl(/*string*/ url, params) /*string*/ {__t([url, 'string', 'url']);return __t([function() {
+  return url +
+    (~ES(url, 'indexOf', true,'?') ? '&' : '?') +
+    (typeof params === 'string'
+      ? params
+      : QueryString.encode(params));
+}.apply(this, arguments), 'string']);}__w(appendToUrl, {"signature":"function(string):string"}); 
+
+var QueryString = {
+  encode: encode,
+  decode: decode,
+  appendToUrl: appendToUrl
+};
+
+module.exports = QueryString;
+
+
+},null);
+
+
+__d("ManagedError",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+function ManagedError(message, innerError) {
+  Error.prototype.constructor.call(this, message);
+  this.message = message;
+  this.innerError = innerError;
+}__w(ManagedError, {"type":"ManagedError"}); 
+ManagedError.prototype = new Error();
+ManagedError.prototype.constructor = ManagedError;
+
+module.exports = ManagedError;
+
+
+},null);
+
+
+__d("AssertionError",["ManagedError"],function(global,require,requireDynamic,requireLazy,module,exports,ManagedError) {
+   
+
+function AssertionError(message) {
+  ManagedError.prototype.constructor.apply(this, arguments);
+}
+AssertionError.prototype = new ManagedError();
+AssertionError.prototype.constructor = AssertionError;
+
+module.exports = AssertionError;
+
+
+
+},null);
+
+
+__d("sprintf",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+function sprintf(format ) {__t([format, 'string', 'format']);var args=Array.prototype.slice.call(arguments,1);
+  var index = 0;
+  return format.replace(/%s/g, function(match)  {return args[index++];});
+}__w(sprintf, {"signature":"function(string)"}); 
+
+module.exports = sprintf;
+
+
+},null);
+
+
+__d("Assert",["AssertionError","sprintf"],function(global,require,requireDynamic,requireLazy,module,exports,AssertionError,sprintf) {
+   
+
+   
+
+
+function assert(/*boolean*/ expression, /*?string*/ message) /*boolean*/ {__t([expression, 'boolean', 'expression'], [message, '?string', 'message']);return __t([function() {
+  if (typeof expression !== 'boolean' || !expression) {
+    throw new AssertionError(message);
+  }
+  return expression;
+}.apply(this, arguments), 'boolean']);}__w(assert, {"signature":"function(boolean,?string):boolean"}); 
+
+
+function assertType(/*string*/ type, expression, /*?string*/ message) {__t([type, 'string', 'type'], [message, '?string', 'message']);
+  var actualType;
+
+  if (expression === undefined) {
+    actualType = 'undefined';
+  } else if (expression === null) {
+    actualType = 'null';
+  } else {
+    var className = Object.prototype.toString.call(expression);
+    actualType = /\s(\w*)/.exec(className)[1].toLowerCase();
+  }
+
+  assert(
+    ES(type, 'indexOf', true,actualType) !== -1,
+    message || sprintf('Expression is of type %s, not %s', actualType, type)
+  );
+  return expression;
+}__w(assertType, {"signature":"function(string,?string)"}); 
+
+
+function assertInstanceOf(/*function*/ type, expression, /*?string*/ message) {__t([type, 'function', 'type'], [message, '?string', 'message']);
+  assert(
+    expression instanceof type,
+    message || 'Expression not instance of type'
+  );
+  return expression;
+}__w(assertInstanceOf, {"signature":"function(function,?string)"}); 
+
+function define(/*string*/ type, /*function*/ test) {__t([type, 'string', 'type'], [test, 'function', 'test']);
+  Assert['is' + type] = test;
+  Assert['maybe' + type] = function(expression, message) {
+    
+    if (expression != null) {
+      test(expression, message);
+    }
+  };
+}__w(define, {"signature":"function(string,function)"}); 
+
+var Assert = {
+  isInstanceOf: assertInstanceOf,
+  isTrue      : assert,
+  isTruthy    : __w(function(expression, /*?string*/ message) /*boolean*/ {__t([message, '?string', 'message']);return __t([function() {
+    return assert(!!expression, message);
+  }.apply(this, arguments), 'boolean']);}, {"signature":"function(?string):boolean"}),
+  type        : assertType,
+  define      : __w(function(/*string*/ type, /*function*/ fn) {__t([type, 'string', 'type'], [fn, 'function', 'fn']);
+    type = type.substring(0, 1).toUpperCase() +
+      type.substring(1).toLowerCase();
+
+    define(type, function(expression, message) {
+      assert(fn(expression), message);
+    });
+  }, {"signature":"function(string,function)"})
+};
+
+
+ES(['Array',
+ 'Boolean',
+ 'Date',
+ 'Function',
+ 'Null',
+ 'Number',
+ 'Object',
+ 'Regexp',
+ 'String',
+ 'Undefined'], 'forEach', true,__w(function(/*string*/ type) {__t([type, 'string', 'type']);
+   define(type, ES(assertType, 'bind', true,null, type.toLowerCase()));
+ }, {"signature":"function(string)"}));
+
+module.exports = Assert;
+
+
+},null);
+
+__d("Type",["Assert"],function(global,require,requireDynamic,requireLazy,module,exports,Assert) {
+   
+
+
+function Type() {
+  var mixins = this.__mixins;
+  if (mixins) {
+    for (var i = 0; i < mixins.length; i++) {
+      mixins[i].apply(this, arguments);
+    }
+  }
+}__w(Type, {"type":"Type"}); 
+
+
+function instanceOf(/*function*/ constructor, which) /*boolean*/ {__t([constructor, 'function', 'constructor']);return __t([function() {
+
+  
+  if (which instanceof constructor) {
+    return true;
+  }
+
+  
+  if (which instanceof Type) {
+    for (var i = 0; i < which.__mixins.length; i++) {
+      if (which.__mixins[i] == constructor) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}.apply(this, arguments), 'boolean']);}__w(instanceOf, {"signature":"function(function):boolean"}); 
+
+
+function mixin(/*function*/ to, from) {__t([to, 'function', 'to']);
+  var prototype = to.prototype;
+
+  if (!ES('Array', 'isArray', false,from)) {
+    from = [from];
+  }
+
+  for (var i = 0; i < from.length; i++) {
+    var mixinFrom = from[i];
+    
+    if(typeof mixinFrom == 'function') {
+      prototype.__mixins.push(mixinFrom);
+      mixinFrom = mixinFrom.prototype;
+    }
+    
+    ES(ES('Object', 'keys', false,mixinFrom), 'forEach', true,function(key) {
+      prototype[key] = mixinFrom[key];
+    });
+  }
+}__w(mixin, {"signature":"function(function)"}); 
+
+
+function extend(/*?function*/ from, /*?object*/ prototype, mixins)
+    /*function*/ {__t([from, '?function', 'from'], [prototype, '?object', 'prototype']);return __t([function() {
+  var constructor = prototype && prototype.hasOwnProperty('constructor')
+    ? prototype.constructor
+    : function() {this.parent.apply(this, arguments);};
+
+  Assert.isFunction(constructor);
+
+  
+  if (from && from.prototype instanceof Type === false) {
+    throw new Error('parent type does not inherit from Type');
+  }
+  from = from || Type;
+
+  
+  var F = new Function();
+  F.prototype = from.prototype;
+  constructor.prototype = new F();
+
+  if (prototype) {
+    ES('Object', 'assign', false,constructor.prototype, prototype);
+  }
+
+  
+  constructor.prototype.constructor = constructor;
+  
+  constructor.parent = from;
+
+  
+  
+  constructor.prototype.__mixins = from.prototype.__mixins
+    ? Array.prototype.slice.call(from.prototype.__mixins)
+    : [];
+
+  
+  if (mixins) {
+    mixin(constructor, mixins);
+  }
+
+  
+  constructor.prototype.parent = function() {
+    this.parent = from.prototype.parent;
+    from.apply(this, arguments);
+  };
+
+  // Allow the new type to call this.parentCall('method'/*, args*/);
+  constructor.prototype.parentCall = __w(function(/*string*/ method) {__t([method, 'string', 'method']);
+    return from.prototype[method].apply(this,
+      Array.prototype.slice.call(arguments, 1));
+  }, {"signature":"function(string)"});
+
+  constructor.extend = __w(function(/*?object*/ prototype, mixins) {__t([prototype, '?object', 'prototype']);
+    return extend(this, prototype, mixins);
+  }, {"signature":"function(?object)"});
+  return constructor;
+}.apply(this, arguments), 'function']);}__w(extend, {"signature":"function(?function,?object):function"}); 
+
+ES('Object', 'assign', false,Type.prototype, {
+  instanceOf: __w(function(/*function*/ type) /*boolean*/ {__t([type, 'function', 'type']);return __t([function() {
+    return instanceOf(type, this);
+  }.apply(this, arguments), 'boolean']);}, {"signature":"function(function):boolean"})
+});
+
+ES('Object', 'assign', false,Type, {
+  extend: __w(function(prototype, mixins) /*function*/ {return __t([function() {
+    return typeof prototype === 'function'
+      ? extend.apply(null, arguments)
+      : extend(null, prototype, mixins);
+  }.apply(this, arguments), 'function']);}, {"signature":"function():function"}),
+  instanceOf: instanceOf
+});
+
+module.exports = Type;
+
+
+},null);
+
+
+__d("ObservableMixin",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+function ObservableMixin() {
+  this.__observableEvents = {};
+}__w(ObservableMixin, {"type":"ObservableMixin"}); 
+
+ObservableMixin.prototype = {
+
+  
+  inform: __w(function(/*string*/ what /*, args*/) {__t([what, 'string', 'what']);
+
+    var args = Array.prototype.slice.call(arguments, 1);
+    var list = Array.prototype.slice.call(this.getSubscribers(what));
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] === null) continue;
+      if (__DEV__) {
+        list[i].apply(this, args);
+      } else {
+        try {
+          list[i].apply(this, args);
+        } catch(e) {
+          // we want the loop to continue, but we don't want to swallow the
+          
+          setTimeout(function() { throw e; }, 0);
+        }
+      }
+    }
+    return this;
+  }, {"signature":"function(string)"}),
+
+  
+  getSubscribers: __w(function(/*string*/ toWhat) /*array*/ {__t([toWhat, 'string', 'toWhat']);return __t([function() {
+
+    return this.__observableEvents[toWhat] ||
+      (this.__observableEvents[toWhat] = []);
+  }.apply(this, arguments), 'array']);}, {"signature":"function(string):array"}),
+
+  
+  clearSubscribers: __w(function(/*string*/ toWhat) {__t([toWhat, 'string', 'toWhat']);
+
+    if (toWhat) {
+      this.__observableEvents[toWhat] = [];
+    }
+    return this;
+  }, {"signature":"function(string)"}),
+
+  
+  clearAllSubscribers: function() {
+    this.__observableEvents = {};
+    return this;
+  },
+
+  
+  subscribe: __w(function(/*string*/ toWhat, /*function*/ withWhat) {__t([toWhat, 'string', 'toWhat'], [withWhat, 'function', 'withWhat']);
+
+    var list = this.getSubscribers(toWhat);
+    list.push(withWhat);
+    return this;
+  }, {"signature":"function(string,function)"}),
+
+  
+  unsubscribe: __w(function(/*string*/ toWhat, /*function*/ withWhat) {__t([toWhat, 'string', 'toWhat'], [withWhat, 'function', 'withWhat']);
+
+    var list = this.getSubscribers(toWhat);
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] === withWhat) {
+        list.splice(i, 1);
+        break;
+      }
+    }
+    return this;
+  }, {"signature":"function(string,function)"}),
+
+  
+  monitor: __w(function(/*string*/ toWhat, /*function*/ withWhat) {__t([toWhat, 'string', 'toWhat'], [withWhat, 'function', 'withWhat']);
+    if (!withWhat()) {
+      var monitor = ES(function(value) {
+        if (withWhat.apply(withWhat, arguments)) {
+          this.unsubscribe(toWhat, monitor);
+        }
+      }, 'bind', true,this);
+      this.subscribe(toWhat, monitor);
+    }
+    return this;
+  }, {"signature":"function(string,function)"})
+
+};
+
+
+module.exports = ObservableMixin;
+
+
+},null);
+
+
+__d("sdk.Model",["Type","ObservableMixin"],function(global,require,requireDynamic,requireLazy,module,exports,Type,ObservableMixin) {
+   
+   
+
+var Model = Type.extend({
+  constructor: __w(function(/*object*/ properties) {__t([properties, 'object', 'properties']);
+    this.parent();
+
+    
+    var propContainer = {};
+    var model = this;
+
+    ES(ES('Object', 'keys', false,properties), 'forEach', true,__w(function(/*string*/ name) {__t([name, 'string', 'name']);
+      
+      propContainer[name] = properties[name];
+
+      
+      model['set' + name] = function(value) {
+        if (value === propContainer[name]) {
+          return this;
+        }
+        propContainer[name] = value;
+        model.inform(name + '.change', value);
+        return model;
+      };
+
+      
+      model['get' + name] = function() {
+        return propContainer[name];
+      };
+    }, {"signature":"function(string)"}));
+  }, {"signature":"function(object)"})
+}, ObservableMixin);
+
+module.exports = Model;
+
+
+},null);
+
+
+__d("sdk.Runtime",["sdk.Model","JSSDKRuntimeConfig"],function(global,require,requireDynamic,requireLazy,module,exports,Model,RuntimeConfig) {
+   
+   
+
+
+var ENVIRONMENTS = {
+  UNKNOWN: 0,
+  PAGETAB: 1,
+  CANVAS: 2,
+  PLATFORM: 4
+};
+
+var Runtime = new Model({
+  AccessToken: '',
+  ClientID: '',
+  CookieUserID: '',
+  Environment: ENVIRONMENTS.UNKNOWN,
+  Initialized: false,
+  IsVersioned: false,
+  KidDirectedSite: undefined,
+  Locale: RuntimeConfig.locale,
+  LoginStatus: undefined,
+  Revision: RuntimeConfig.revision,
+  Rtl: RuntimeConfig.rtl,
+  Scope: undefined,
+  Secure: undefined,
+  UseCookie: false,
+  UserID: '',
+  Version: undefined
+});
+
+ES('Object', 'assign', false,Runtime, {
+
+  ENVIRONMENTS: ENVIRONMENTS,
+
+  isEnvironment: __w(function(/*number*/ target) /*boolean*/ {__t([target, 'number', 'target']);return __t([function() {
+    var environment = this.getEnvironment();
+    return (target | environment) === environment;
+  }.apply(this, arguments), 'boolean']);}, {"signature":"function(number):boolean"})
+});
+
+(function() {
+  var environment = /app_runner/.test(window.name)
+    ? ENVIRONMENTS.PAGETAB
+    : /iframe_canvas/.test(window.name)
+      ? ENVIRONMENTS.CANVAS
+      : ENVIRONMENTS.UNKNOWN;
+
+  
+  if ((environment | ENVIRONMENTS.PAGETAB) === environment) {
+    environment = environment | ENVIRONMENTS.CANVAS;
+  }
+  Runtime.setEnvironment(environment);
+})();
+
+module.exports = Runtime;
+
+
+},null);
+
+
+__d("sdk.Cookie",["QueryString","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,QueryString,Runtime) {
+   
+   
+
+
+
+var domain = null;
+
+
+function setRaw(/*string*/ prefix, /*string*/ val, /*number*/ ts) {__t([prefix, 'string', 'prefix'], [val, 'string', 'val'], [ts, 'number', 'ts']);
+  prefix = prefix + Runtime.getClientID();
+
+  var useDomain = domain && domain !== '.';
+  
+  if (useDomain) {
+    
+    document.cookie = prefix + '=; expires=Wed, 04 Feb 2004 08:00:00 GMT;';
+    
+    document.cookie = prefix  + '=; expires=Wed, 04 Feb 2004 08:00:00 GMT;' +
+      'domain=' + location.hostname + ';';
+  }
+
+  var expires = new Date(ts).toGMTString();
+  document.cookie = prefix +  '=' + val +
+    (val && ts === 0 ? '' : '; expires=' + expires) +
+    '; path=/' +
+    (useDomain ? '; domain=' + domain : '');
+}__w(setRaw, {"signature":"function(string,string,number)"}); 
+
+function getRaw(/*string*/ prefix) /*?string*/ {__t([prefix, 'string', 'prefix']);return __t([function() {
+  prefix = prefix + Runtime.getClientID();
+  var regExp = new RegExp('\\b' + prefix + '=([^;]*)\\b');
+  return regExp.test(document.cookie)
+    ? RegExp.$1
+    : null;
+}.apply(this, arguments), '?string']);}__w(getRaw, {"signature":"function(string):?string"}); 
+
+var Cookie = {
+  setDomain: __w(function(/*?string*/ val) {__t([val, '?string', 'val']);
+    domain = val;
+    
+    var meta  = QueryString.encode({
+      base_domain: domain && domain !== '.' ? domain : ''
+    });
+    var expiration = new Date();
+    expiration.setFullYear(expiration.getFullYear() + 1);
+    setRaw('fbm_', meta, expiration.getTime());
+  }, {"signature":"function(?string)"}),
+
+  getDomain: __w(function() /*?string*/ {return __t([function() {
+    return domain;
+  }.apply(this, arguments), '?string']);}, {"signature":"function():?string"}),
+
+  
+  loadMeta: __w(function() /*?object*/ {return __t([function() {
+    var cookie = getRaw('fbm_');
+    if (cookie) {
+      // url encoded session stored as "sub-cookies"
+      var meta = QueryString.decode(cookie);
+      if (!domain) {
+        
+        domain = meta.base_domain;
+      }
+      return meta;
+    }
+  }.apply(this, arguments), '?object']);}, {"signature":"function():?object"}),
+
+  
+  loadSignedRequest: __w(function() /*?string*/ {return __t([function() {
+    return getRaw('fbsr_');
+  }.apply(this, arguments), '?string']);}, {"signature":"function():?string"}),
+
+  
+  setSignedRequestCookie: __w(function(/*string*/ signedRequest,
+      /*number*/ expiration) {__t([signedRequest, 'string', 'signedRequest'], [expiration, 'number', 'expiration']);
+    if (!signedRequest) {
+      throw new Error('Value passed to Cookie.setSignedRequestCookie ' +
+                      'was empty.');
+    }
+    setRaw('fbsr_', signedRequest, expiration);
+  }, {"signature":"function(string,number)"}),
+
+  
+  clearSignedRequestCookie: function() {
+    setRaw('fbsr_', '', 0);
+  },
+
+  setRaw: setRaw
+};
+
+module.exports = Cookie;
+
+
+},null);
+
+
+__d("guid",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+function guid() {
+  return 'f' + (Math.random() * (1 << 30)).toString(16).replace('.', '');
+}
+
+module.exports = guid;
+
+
+},null);
+
+
+__d("UserAgent",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+
+var _populated = false;
+
+
+var _ie, _firefox, _opera, _webkit, _chrome;
+
+
+var _ie_real_version;
+
+
+var _osx, _windows, _linux, _android;
+
+
+var _win64;
+
+
+var _iphone, _ipad, _native;
+
+var _mobile;
+
+function _populate() {
+  if (_populated) {
+    return;
+  }
+
+  _populated = true;
+
+  // To work around buggy JS libraries that can't handle multi-digit
+  // version numbers, Opera 10's user agent string claims it's Opera
+  
+  
+  
+  var uas = navigator.userAgent;
+  var agent = /(?:MSIE.(\d+\.\d+))|(?:(?:Firefox|GranParadiso|Iceweasel).(\d+\.\d+))|(?:Opera(?:.+Version.|.)(\d+\.\d+))|(?:AppleWebKit.(\d+(?:\.\d+)?))|(?:Trident\/\d+\.\d+.*rv:(\d+\.\d+))/.exec(uas);
+  var os    = /(Mac OS X)|(Windows)|(Linux)/.exec(uas);
+
+  _iphone = /\b(iPhone|iP[ao]d)/.exec(uas);
+  _ipad = /\b(iP[ao]d)/.exec(uas);
+  _android = /Android/i.exec(uas);
+  _native = /FBAN\/\w+;/i.exec(uas);
+  _mobile = /Mobile/i.exec(uas);
+
+  
+  // for 'Win64; x64'.  But MSDN then reveals that you can actually be coming
+  
+  // as in indicator of whether you're in 64-bit IE.  32-bit IE on 64-bit
+  // Windows will send 'WOW64' instead.
+  _win64 = !!(/Win64/.exec(uas));
+
+  if (agent) {
+    _ie = agent[1] ? parseFloat(agent[1]) : (
+          agent[5] ? parseFloat(agent[5]) : NaN);
+    
+    if (_ie && document && document.documentMode) {
+      _ie = document.documentMode;
+    }
+    // grab the "true" ie version from the trident token if available
+    var trident = /(?:Trident\/(\d+.\d+))/.exec(uas);
+    _ie_real_version = trident ? parseFloat(trident[1]) + 4 : _ie;
+
+    _firefox = agent[2] ? parseFloat(agent[2]) : NaN;
+    _opera   = agent[3] ? parseFloat(agent[3]) : NaN;
+    _webkit  = agent[4] ? parseFloat(agent[4]) : NaN;
+    if (_webkit) {
+      
+      // match 'safari' only since 'AppleWebKit' appears before 'Chrome' in
+      
+      agent = /(?:Chrome\/(\d+\.\d+))/.exec(uas);
+      _chrome = agent && agent[1] ? parseFloat(agent[1]) : NaN;
+    } else {
+      _chrome = NaN;
+    }
+  } else {
+    _ie = _firefox = _opera = _chrome = _webkit = NaN;
+  }
+
+  if (os) {
+    if (os[1]) {
+      
+      
+      
+      
+      
+      var ver = /(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(uas);
+
+      _osx = ver ? parseFloat(ver[1].replace('_', '.')) : true;
+    } else {
+      _osx = false;
+    }
+    _windows = !!os[2];
+    _linux   = !!os[3];
+  } else {
+    _osx = _windows = _linux = false;
+  }
+}
+
+var UserAgent = {
+
+  
+  ie: function() {
+    return _populate() || _ie;
+  },
+
+  
+  ieCompatibilityMode: function() {
+    return _populate() || (_ie_real_version > _ie);
+  },
+
+
+  
+  ie64: function() {
+    return UserAgent.ie() && _win64;
+  },
+
+  
+  firefox: function() {
+    return _populate() || _firefox;
+  },
+
+
+  
+  opera: function() {
+    return _populate() || _opera;
+  },
+
+
+  
+  webkit: function() {
+    return _populate() || _webkit;
+  },
+
+  
+  safari: function() {
+    return UserAgent.webkit();
+  },
+
+  
+  chrome : function() {
+    return _populate() || _chrome;
+  },
+
+
+  
+  windows: function() {
+    return _populate() || _windows;
+  },
+
+
+  
+  osx: function() {
+    return _populate() || _osx;
+  },
+
+  
+  linux: function() {
+    return _populate() || _linux;
+  },
+
+  
+  iphone: function() {
+    return _populate() || _iphone;
+  },
+
+  mobile: function() {
+    return _populate() || (_iphone || _ipad || _android || _mobile);
+  },
+
+  nativeApp: function() {
+    
+    return _populate() || _native;
+  },
+
+  android: function() {
+    return _populate() || _android;
+  },
+
+  ipad: function() {
+    return _populate() || _ipad;
+  }
+};
+
+module.exports = UserAgent;
+
+
+},null);
+
+
+__d("hasNamePropertyBug",["guid","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,guid,UserAgent) {
+   
+   
+
+var hasBug = UserAgent.ie() ? undefined : false;
+
+
+
+
+function test() /*boolean*/ {return __t([function() {
+    var form = document.createElement("form"),
+        input = form.appendChild(document.createElement("input"));
+    input.name = guid();
+    hasBug = input !== form.elements[input.name];
+    form = input = null;
+    return hasBug;
+}.apply(this, arguments), 'boolean']);}__w(test, {"signature":"function():boolean"}); 
+
+function hasNamePropertyBug() /*boolean*/ {return __t([function() {
+  return typeof hasBug === 'undefined'
+    ? test()
+    : hasBug;
+}.apply(this, arguments), 'boolean']);}__w(hasNamePropertyBug, {"signature":"function():boolean"}); 
+
+module.exports = hasNamePropertyBug;
+
+
+},null);
+
+
+__d("wrapFunction",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+var wrappers = {};
+function wrapFunction(/*function*/ fn, /*?string*/ type, /*?string*/ source)
+    /*function*/ {__t([fn, 'function', 'fn'], [type, '?string', 'type'], [source, '?string', 'source']);return __t([function() {
+  type = type || 'default';
+
+  return function() {
+    var callee = type in wrappers
+      ? wrappers[type](fn, source)
+      : fn;
+
+    return callee.apply(this, arguments);
+  };
+}.apply(this, arguments), 'function']);}__w(wrapFunction, {"signature":"function(function,?string,?string):function"}); 
+
+wrapFunction.setWrapper = __w(function(/*function*/ fn, /*?string*/ type) {__t([fn, 'function', 'fn'], [type, '?string', 'type']);
+  type = type || 'default';
+  wrappers[type] = fn;
+}, {"signature":"function(function,?string)"});
+
+module.exports = wrapFunction;
+
+
+},null);
+
+
+__d("DOMEventListener",["wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,wrapFunction) {
+   
+
+var add, remove;
+
+if (window.addEventListener) {
+
+  
+  add = __w(function(target, /*string*/ name, /*function*/ listener) {__t([name, 'string', 'name'], [listener, 'function', 'listener']);
+    listener.wrapper =
+      wrapFunction(listener, 'entry', 'DOMEventListener.add ' + name);
+    target.addEventListener(name, listener.wrapper, false);
+  }, {"signature":"function(string,function)"});
+  remove = __w(function(target, /*string*/ name, /*function*/ listener) {__t([name, 'string', 'name'], [listener, 'function', 'listener']);
+    target.removeEventListener(name, listener.wrapper, false);
+  }, {"signature":"function(string,function)"});
+
+} else if (window.attachEvent) {
+
+  
+  add = __w(function(target, /*string*/ name, /*function*/ listener) {__t([name, 'string', 'name'], [listener, 'function', 'listener']);
+    listener.wrapper =
+      wrapFunction(listener, 'entry', 'DOMEventListener.add ' + name);
+    target.attachEvent('on' + name, listener.wrapper);
+  }, {"signature":"function(string,function)"});
+  remove = __w(function(target, /*string*/ name, /*function*/ listener) {__t([name, 'string', 'name'], [listener, 'function', 'listener']);
+    target.detachEvent('on' + name, listener.wrapper);
+  }, {"signature":"function(string,function)"});
+
+} else {
+  remove = add = function()  {};
+}
+
+var DOMEventListener = {
+
+  
+  add: __w(function(target, /*string*/ name, /*function*/ listener) {__t([name, 'string', 'name'], [listener, 'function', 'listener']);
+    
+    
+    add(target, name, listener);
+    return {
+      
+      
+      // someone is hanging on to this 'event' object.
+      remove: function() {
+        remove(target, name, listener);
+        target = null;
+      }
+    };
+  }, {"signature":"function(string,function)"}),
+
+  
+  remove: remove
+
+};
+module.exports = DOMEventListener;
+
+
+},null);
+
+
+__d("sdk.createIframe",["guid","hasNamePropertyBug","DOMEventListener"],function(global,require,requireDynamic,requireLazy,module,exports,guid,hasNamePropertyBug,DOMEventListener) {
+   
+   
+   
+
+function createIframe(/*object*/ opts) /*DOMElement*/ {__t([opts, 'object', 'opts']);return __t([function() {
+  opts = ES('Object', 'assign', false,{}, opts);
+  var frame;
+  var name = opts.name || guid();
+  var root = opts.root;
+  var style = opts.style ||  { border: 'none' };
+  var src = opts.url;
+  var onLoad = opts.onload;
+  var onError = opts.onerror;
+
+  if (hasNamePropertyBug()) {
+    frame = document.createElement('<iframe name="' + name + '"/>');
+  } else {
+    frame = document.createElement("iframe");
+    frame.name = name;
+  }
+
+  // delete attributes that we're setting directly
+  delete opts.style;
+  delete opts.name;
+  delete opts.url;
+  delete opts.root;
+  delete opts.onload;
+  delete opts.onerror;
+
+  var attributes =  ES('Object', 'assign', false,{
+    frameBorder: 0,
+    allowTransparency: true,
+    scrolling: 'no'
+  }, opts);
+
+
+  if (attributes.width) {
+    frame.width = attributes.width + 'px';
+  }
+  if (attributes.height) {
+    frame.height = attributes.height + 'px';
+  }
+
+  delete attributes.height;
+  delete attributes.width;
+
+  for (var key in attributes) {
+    if (attributes.hasOwnProperty(key)) {
+      frame.setAttribute(key, attributes[key]);
+    }
+  }
+
+  ES('Object', 'assign', false,frame.style, style);
+
+  
+  //       into the container, so we set it to "javascript:false" as a
+  
+  //       instead default to "about:blank", which causes SSL mixed-content
+  
+  frame.src = "javascript:false";
+  root.appendChild(frame);
+  if (onLoad) {
+    var onLoadListener = DOMEventListener.add(frame, 'load', function()  {
+      onLoadListener.remove();
+      onLoad();
+    });
+  }
+
+  if (onError) {
+    var onErrorListener = DOMEventListener.add(frame, 'error', function()  {
+      onErrorListener.remove();
+      onError();
+    });
+  }
+
+  
+  // "javascript:false" to work around the IE issue mentioned above)
+  frame.src = src;
+  return frame;
+}.apply(this, arguments), 'DOMElement']);}__w(createIframe, {"signature":"function(object):DOMElement"}); 
+
+module.exports = createIframe;
+
+
+},null);
+
+__d("DOMWrapper",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+/*global self:true*/
+var rootElement,
+    windowRef;
+
+
+// `obj || default` pattern to account for 'resetting'.
+var DOMWrapper = {
+  setRoot: __w(function(/*?DOMElement*/ root) {__t([root, '?DOMElement', 'root']);
+    rootElement = root;
+  }, {"signature":"function(?DOMElement)"}),
+  getRoot: __w(function() /*DOMElement*/ {return __t([function() {
+    return rootElement || document.body;
+  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function():DOMElement"}),
+  setWindow: function(win) {
+    windowRef = win;
+  },
+  getWindow: function() {
+    return windowRef || self;
+  }
+};
+
+module.exports = DOMWrapper;
+
+
+},null);
+
+
+__d("sdk.feature",["JSSDKConfig"],function(global,require,requireDynamic,requireLazy,module,exports,SDKConfig) {
+   
+
+function feature(/*string*/ name, defaultValue) {__t([name, 'string', 'name']);
+  if (SDKConfig.features && name in SDKConfig.features) {
+    var value = SDKConfig.features[name];
+    if (typeof value === 'object' && typeof value.rate === 'number') {
+      if (value.rate && Math.random() * 100 <= value.rate) {
+        return value.value || true;
+      } else {
+        return value.value ? null : false;
+      }
+    } else {
+      return value;
+    }
+  }
+
+  return typeof defaultValue !== 'undefined'
+    ? defaultValue
+    : null;
+}__w(feature, {"signature":"function(string)"}); 
+
+module.exports = feature;
+
+
+},null);
+
+
+__d("sdk.getContextType",["UserAgent","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,UserAgent,Runtime) {
+   
+   
+
+function getContextType() /*number*/ {return __t([function() {
+  
+  
+  
+  
+  
+  
+  if (UserAgent.nativeApp()) {
+    return 3;
+  }
+  if (UserAgent.mobile()) {
+    return 2;
+  }
+  if (Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
+    return 5;
+  }
+  return 1;
+}.apply(this, arguments), 'number']);}__w(getContextType, {"signature":"function():number"}); 
+
+module.exports = getContextType;
+
+
+},null);
+
+
+__d("UrlMap",["UrlMapConfig"],function(global,require,requireDynamic,requireLazy,module,exports,UrlMapConfig) {
+   
+
+var UrlMap = {
+  
+  resolve: __w(function(/*string*/ key, /*?boolean*/ https) /*string*/ {__t([key, 'string', 'key'], [https, '?boolean', 'https']);return __t([function() {
+    var protocol = typeof https == 'undefined'
+      ? location.protocol.replace(':', '')
+      : https ? 'https' : 'http';
+
+    
+    if (key in UrlMapConfig) {
+      return protocol + '://' + UrlMapConfig[key];
+    }
+
+    
+    if (typeof https == 'undefined' && key + '_' + protocol in UrlMapConfig) {
+      return protocol + '://' + UrlMapConfig[key + '_' + protocol];
+    }
+
+    
+    if (https !== true && key + '_http' in UrlMapConfig) {
+      return 'http://' + UrlMapConfig[key + '_http'];
+    }
+
+    
+    if (https !== false && key + '_https' in UrlMapConfig) {
+      return 'https://' + UrlMapConfig[key + '_https'];
+    }
+  }.apply(this, arguments), 'string']);}, {"signature":"function(string,?boolean):string"})
+};
+
+module.exports = UrlMap;
+
+
+},null);
+
+
+__d("sdk.Impressions",["guid","QueryString","sdk.Runtime","UrlMap"],function(global,require,requireDynamic,requireLazy,module,exports,guid,QueryString,Runtime,UrlMap) {
+   
+   
+   
+   
+
+function request(/*object*/ params) {__t([params, 'object', 'params']);
+  var clientID = Runtime.getClientID();
+
+  if (!params.api_key && clientID) {
+    params.api_key = clientID;
+  }
+
+  params.kid_directed_site = Runtime.getKidDirectedSite();
+
+  var image = new Image();
+
+  image.src = QueryString.appendToUrl(
+    UrlMap.resolve('www', /*force ssl*/true) +
+      '/impression.php/' + guid() + '/',
+    params
+  );
+}__w(request, {"signature":"function(object)"}); 
+
+var Impressions = {
+  log: __w(function(/*number*/ lid, /*object*/ payload) {__t([lid, 'number', 'lid'], [payload, 'object', 'payload']);
+    if (!payload.source) {
+      payload.source = 'jssdk';
+    }
+
+    request({
+      lid: lid, 
+      payload: ES('JSON', 'stringify', false,payload)
+    });
+  }, {"signature":"function(number,object)"}),
+
+  impression: request
+};
+
+module.exports = Impressions;
+
+
+},null);
+
+
+__d("Log",["sprintf"],function(global,require,requireDynamic,requireLazy,module,exports,sprintf) {
+   
+
+var Level = {
+  DEBUG    : 3,
+  INFO     : 2,
+  WARNING  : 1,
+  ERROR    : 0
+};
+
+function log(/*string*/ name, /*number*/ level/*, args*/ ) {__t([name, 'string', 'name'], [level, 'number', 'level']);
+  var args = Array.prototype.slice.call(arguments, 2);
+  var msg = sprintf.apply(null, args);
+  var console = window.console;
+  if (console && Log.level >= level) {
+    console[name in console ? name : 'log'](msg);
+  }
+}__w(log, {"signature":"function(string,number)"}); 
+
+var Log = {
+  
+  level: __DEV__ ? 3 : -1,
+
+  
+  Level: Level,
+
+  
+  debug : ES(log, 'bind', true,null, 'debug', Level.DEBUG),
+  info  : ES(log, 'bind', true,null, 'info',  Level.INFO),
+  warn  : ES(log, 'bind', true,null, 'warn',  Level.WARNING),
+  error : ES(log, 'bind', true,null, 'error', Level.ERROR)
+};
+module.exports = Log;
+
+
+
+},null);
+
+
+__d("Base64",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+
+
+var en =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+function en3(c) {
+  c = (c.charCodeAt(0) << 16) | (c.charCodeAt(1) << 8) | c.charCodeAt(2);
+  return String.fromCharCode(
+    en.charCodeAt(c >>> 18), en.charCodeAt((c >>> 12) & 63),
+    en.charCodeAt((c >>> 6) & 63), en.charCodeAt(c & 63));
+}
+
+
+// Position 0 corresponds to '+' (ASCII 43), and underscores are padding.
+// The octal sequence \13 is used because IE doesn't recognize \v
+var de =
+  '>___?456789:;<=_______' +
+  '\0\1\2\3\4\5\6\7\b\t\n\13\f\r\16\17\20\21\22\23\24\25\26\27\30\31' +
+  '______\32\33\34\35\36\37 !"#$%&\'()*+,-./0123';
+function de4(c) {
+  c = (de.charCodeAt(c.charCodeAt(0) - 43) << 18) |
+      (de.charCodeAt(c.charCodeAt(1) - 43) << 12) |
+      (de.charCodeAt(c.charCodeAt(2) - 43) <<  6) |
+       de.charCodeAt(c.charCodeAt(3) - 43);
+  return String.fromCharCode(c >>> 16, (c >>> 8) & 255, c & 255);
+}
+
+var Base64 = {
+  encode: function(s) {
+    
+    s = unescape(encodeURI(s));
+    var i = (s.length + 2) % 3;
+    s = (s + '\0\0'.slice(i)).replace(/[\s\S]{3}/g, en3);
+    return s.slice(0, s.length + i - 2) + '=='.slice(i);
+  },
+  decode: function(s) {
+    
+    s = s.replace(/[^A-Za-z0-9+\/]/g, '');
+    var i = (s.length + 3) & 3;
+    s = (s + 'AAA'.slice(i)).replace(/..../g, de4);
+    s = s.slice(0, s.length + i - 3);
+    
+    try { return decodeURIComponent(escape(s)); }
+    catch (_) { throw new Error('Not valid UTF-8'); }
+  },
+  encodeObject: function(obj) {
+    return Base64.encode(ES('JSON', 'stringify', false,obj));
+  },
+  decodeObject: function(b64) {
+    return ES('JSON', 'parse', false,Base64.decode(b64));
+  },
+  
+  encodeNums: function(l) {
+    return String.fromCharCode.apply(String, ES(l, 'map', true,function(val) {
+      return en.charCodeAt((val | -(val > 63)) & -(val > 0) & 63);
+    }));
+  }
+};
+
+module.exports = Base64;
+
+
+},null);
+
+
+__d("sdk.SignedRequest",["Base64"],function(global,require,requireDynamic,requireLazy,module,exports,Base64) {
+   
+
+function parse(/*?string*/ signed_request) /*?object*/ {__t([signed_request, '?string', 'signed_request']);return __t([function() {
+  if (!signed_request) {
+    return null;
+  }
+
+  
+  var payload = signed_request.split('.', 2)[1]
+    .replace(/\-/g, '+').replace(/\_/g, '/');
+  return Base64.decodeObject(payload);
+}.apply(this, arguments), '?object']);}__w(parse, {"signature":"function(?string):?object"}); 
+
+
+var SignedRequest = {
+  parse: parse
+};
+
+module.exports = SignedRequest;
+
+
+},null);
+
+
+__d("URIRFC3986",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+var PARSE_PATTERN = new RegExp(
+  '^'+
+  '([^:/?#]+:)?'+                
+  '(//'+                         
+    '([^\\\\/?#@]*@)?'+          
+    '('+                         
+      '\\[[A-Fa-f0-9:.]+\\]|'+   
+      '[^\\/?#:]*'+              
+    ')'+                         
+    '(:[0-9]*)?'+                
+  ')?'+                          
+  '([^?#]*)'+                    
+  '(\\?[^#]*)?'+                 
+  '(#.*)?'                       
+);
+
+
+var URIRFC3986 = {
+
+  
+  parse: __w(function(uriString) {__t([uriString, 'string', 'uriString']);return __t([function() {
+    if (ES(uriString,'trim', true) === '') {
+      return null;
+    }
+    var captures = uriString.match(PARSE_PATTERN);
+    var uri = {};
+    
+    // other browsers return undefined. This means there's no way to
+    
+    
+    uri.uri = captures[0] ? captures[0] : null;
+    uri.scheme = captures[1] ?
+      captures[1].substr(0, captures[1].length - 1) :
+      null;
+    uri.authority = captures[2] ? captures[2].substr(2) : null;
+    uri.userinfo = captures[3] ?
+      captures[3].substr(0, captures[3].length - 1) :
+      null;
+    uri.host = captures[2] ? captures[4] : null;
+    uri.port = captures[5] ?
+      (captures[5].substr(1) ? parseInt(captures[5].substr(1), 10) : null) :
+      null;
+    uri.path = captures[6] ? captures[6] : null;
+    uri.query = captures[7] ? captures[7].substr(1) : null;
+    uri.fragment = captures[8] ? captures[8].substr(1) : null;
+    uri.isGenericURI = uri.authority === null && !!uri.scheme;
+    return uri;
+  }.apply(this, arguments), '?object']);}, {"signature":"function(string):?object"})
+};
+
+module.exports = URIRFC3986;
+
+
+},null);
+
+
+__d("createObjectFrom",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+function createObjectFrom(keys, values ) {
+  if (__DEV__) {
+    if (!ES('Array', 'isArray', false,keys)) {
+      throw new TypeError('Must pass an array of keys.');
+    }
+  }
+
+  var object = {};
+  var isArray = ES('Array', 'isArray', false,values);
+  if (typeof values == 'undefined') {
+    values = true;
+  }
+
+  for (var ii = keys.length; ii--;) {
+    object[keys[ii]] = isArray ? values[ii] : values;
+  }
+  return object;
+}
+
+module.exports = createObjectFrom;
+
+
+},null);
+
+
+__d("URISchemes",["createObjectFrom"],function(global,require,requireDynamic,requireLazy,module,exports,createObjectFrom) {
+   
+
+var defaultSchemes = createObjectFrom([
+  'fb',        
+  'fbcf',
+  'fbconnect', 
+  'fb-messenger', 
+  'fbrpc',
+  'file',
+  'ftp',
+  'http',
+  'https',
+  'mailto',
+  'ms-app',    
+  'itms',      
+  'itms-apps', 
+  'itms-services', 
+  'market',    
+  'svn+ssh',   
+  'fbstaging', 
+  'tel',       
+  'sms'        
+]);
+
+var URISchemes = {
+
+  
+  isAllowed: __w(function(schema) {__t([schema, '?string', 'schema']);return __t([function() {
+    if (!schema) {
+      return true;
+    }
+    return defaultSchemes.hasOwnProperty(schema.toLowerCase());
+  }.apply(this, arguments), 'boolean']);}, {"signature":"function(?string):boolean"})
+};
+
+module.exports = URISchemes;
+
+
+},null);
+
+
+__d("copyProperties",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+function copyProperties(obj, a, b, c, d, e, f) {
+  obj = obj || {};
+
+  if (__DEV__) {
+    if (f) {
+      throw new Error('Too many arguments passed to copyProperties');
+    }
+  }
+
+  var args = [a, b, c, d, e];
+  var ii = 0, v;
+  while (args[ii]) {
+    v = args[ii++];
+    for (var k in v) {
+      obj[k] = v[k];
+    }
+
+    
+    
+    if (v.hasOwnProperty && v.hasOwnProperty('toString') &&
+        (typeof v.toString != 'undefined') && (obj.toString !== v.toString)) {
+      obj.toString = v.toString;
+    }
+  }
+
+  return obj;
+}
+
+module.exports = copyProperties;
+
+
+},null);
+
+
+__d("eprintf",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+
+var eprintf = function(errorMessage/*, arg1, arg2, ...*/) {
+  var args = ES(Array.prototype.slice.call(arguments), 'map', true,function(arg) {
+    return String(arg);
+  });
+  var expectedLength = errorMessage.split('%s').length - 1;
+
+  if (expectedLength !== args.length - 1) {
+    
+    return eprintf('eprintf args number mismatch: %s', ES('JSON', 'stringify', false,args));
+  }
+
+  var index = 1;
+  return errorMessage.replace(/%s/g, function(whole) {
+    return String(args[index++]);
+  });
+};
+
+module.exports = eprintf;
+
+
+},null);
+
+
+__d("ex",["eprintf"],function(global,require,requireDynamic,requireLazy,module,exports,eprintf) {
+   
+
+
+
+var ex = function() {var args=Array.prototype.slice.call(arguments,0);
+  args = ES(args, 'map', true,function(arg)  {return String(arg);});
+  if (args[0].split('%s').length !== args.length) {
+    
+    return ex('ex args number mismatch: %s', ES('JSON', 'stringify', false,args));
+  }
+
+  if (__DEV__) {
+    return eprintf.apply(null, args);
+  } else {
+    return ex._prefix + ES('JSON', 'stringify', false,args) + ex._suffix;
+  }
+};
+
+
+ex._prefix = '<![EX[';
+ex._suffix = ']]>';
+
+module.exports = ex;
+
+
+},null);
+
+
+__d("invariant",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+"use strict";
+
+
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (__DEV__) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        'Invariant Violation: ' +
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+
+},null);
+
+
+__d("URIBase",["URIRFC3986","URISchemes","copyProperties","ex","invariant"],function(global,require,requireDynamic,requireLazy,module,exports,URIRFC3986,URISchemes,copyProperties,ex,invariant) {
+   
+   
+   
+   
+   
+
+
+var UNSAFE_DOMAIN_PATTERN = new RegExp(
+  
+  
+  '[\\x00-\\x2c\\x2f\\x3b-\\x40\\x5c\\x5e\\x60\\x7b-\\x7f' +
+    
+    '\\uFDD0-\\uFDEF\\uFFF0-\\uFFFF' +
+    
+    '\\u2047\\u2048\\uFE56\\uFE5F\\uFF03\\uFF0F\\uFF1F]');
+
+
+var SECURITY_PATTERN = new RegExp(
+  // URI has a ":" before the first "/"
+  '^(?:[^/]*:|' +
+  
+  '[\\x00-\\x1f]*/[\\x00-\\x1f]*/)');
+
+
+function parse(uri, uriToParse, shouldThrow, serializer) {
+  if (!uriToParse) {
+    return true;
+  }
+
+  
+  if (uriToParse instanceof URIBase) {
+    uri.setProtocol(uriToParse.getProtocol());
+    uri.setDomain(uriToParse.getDomain());
+    uri.setPort(uriToParse.getPort());
+    uri.setPath(uriToParse.getPath());
+    uri.setQueryData(
+      serializer.deserialize(
+        serializer.serialize(uriToParse.getQueryData())
+      )
+    );
+    uri.setFragment(uriToParse.getFragment());
+    uri.setForceFragmentSeparator(uriToParse.getForceFragmentSeparator());
+    return true;
+  }
+
+  uriToParse = ES(uriToParse.toString(),'trim', true);
+  var components = URIRFC3986.parse(uriToParse) || {};
+  if (!shouldThrow && !URISchemes.isAllowed(components.scheme)) {
+    return false;
+  }
+  uri.setProtocol(components.scheme || '');
+  if (!shouldThrow && UNSAFE_DOMAIN_PATTERN.test(components.host)) {
+    return false;
+  }
+  uri.setDomain(components.host || '');
+  uri.setPort(components.port || '');
+  uri.setPath(components.path || '');
+  if (shouldThrow) {
+    uri.setQueryData(serializer.deserialize(components.query) || {});
+  } else {
+    try {
+      uri.setQueryData(serializer.deserialize(components.query) || {});
+    } catch (err) {
+      return false;
+    }
+  }
+  uri.setFragment(components.fragment || '');
+  
+  
+  if (components.fragment === '') {
+    uri.setForceFragmentSeparator(true);
+  }
+
+  if (components.userinfo !== null) {
+    if (shouldThrow) {
+        throw new Error(ex(
+          'URI.parse: invalid URI (userinfo is not allowed in a URI): %s',
+          uri.toString()
+        ));
+    } else {
+      return false;
+    }
+  }
+
+  
+  
+  if (!uri.getDomain() && ES(uri.getPath(), 'indexOf', true,'\\') !== -1) {
+    if (shouldThrow) {
+      throw new Error(ex(
+        'URI.parse: invalid URI (no domain but multiple back-slashes): %s',
+        uri.toString()
+      ));
+    } else {
+      return false;
+    }
+  }
+
+  
+  
+  if (!uri.getProtocol() && SECURITY_PATTERN.test(uriToParse)) {
+    if (shouldThrow) {
+      throw new Error(ex(
+        'URI.parse: invalid URI (unsafe protocol-relative URLs): %s',
+        uri.toString()
+      ));
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+
+
+  
+  function URIBase(uri, serializer) {"use strict";
+    invariant(serializer, 'no serializer set');
+    this.$URIBase_serializer = serializer;
+
+    this.$URIBase_protocol = '';
+    this.$URIBase_domain = '';
+    this.$URIBase_port = '';
+    this.$URIBase_path = '';
+    this.$URIBase_fragment = '';
+    this.$URIBase_queryData = {};
+    this.$URIBase_forceFragmentSeparator = false;
+    parse(this, uri, true, serializer);
+  }
+
+  
+  URIBase.prototype.setProtocol=function(protocol) {"use strict";
+    invariant(
+      URISchemes.isAllowed(protocol),
+      '"%s" is not a valid protocol for a URI.', protocol
+    );
+    this.$URIBase_protocol = protocol;
+    return this;
+  };
+
+  
+  URIBase.prototype.getProtocol=function(protocol) {"use strict";
+    return this.$URIBase_protocol;
+  };
+
+  
+  URIBase.prototype.setSecure=function(secure) {"use strict";
+    return this.setProtocol(secure ? 'https' : 'http');
+  };
+
+  
+  URIBase.prototype.isSecure=function() {"use strict";
+    return this.getProtocol() === 'https';
+  };
+
+  
+  URIBase.prototype.setDomain=function(domain) {"use strict";
+    
+    if (UNSAFE_DOMAIN_PATTERN.test(domain)) {
+      throw new Error(ex(
+        'URI.setDomain: unsafe domain specified: %s for url %s',
+        domain,
+        this.toString()
+      ));
+    }
+
+    this.$URIBase_domain = domain;
+    return this;
+  };
+
+  
+  URIBase.prototype.getDomain=function() {"use strict";
+    return this.$URIBase_domain;
+  };
+
+  
+  URIBase.prototype.setPort=function(port) {"use strict";
+    this.$URIBase_port = port;
+    return this;
+  };
+
+  
+  URIBase.prototype.getPort=function() {"use strict";
+    return this.$URIBase_port;
+  };
+
+  
+  URIBase.prototype.setPath=function(path) {"use strict";
+    if (__DEV__) {
+      if (path && path.charAt(0) !== '/') {
+        console.warn('Path does not begin with a "/" which means this URI ' +
+          'will likely be malformed. Ensure any string passed to .setPath() ' +
+          'leads with "/"');
+      }
+    }
+    this.$URIBase_path = path;
+    return this;
+  };
+
+  
+  URIBase.prototype.getPath=function() {"use strict";
+    return this.$URIBase_path;
+  };
+
+  
+  URIBase.prototype.addQueryData=function(mapOrKey, value) {"use strict";
+    // Don't use instanceof, as it doesn't work across windows
+    if (Object.prototype.toString.call(mapOrKey) === '[object Object]') {
+      copyProperties(this.$URIBase_queryData, mapOrKey);
+    } else {
+      this.$URIBase_queryData[mapOrKey] = value;
+    }
+    return this;
+  };
+
+  
+  URIBase.prototype.setQueryData=function(map) {"use strict";
+    this.$URIBase_queryData = map;
+    return this;
+  };
+
+  
+  URIBase.prototype.getQueryData=function() {"use strict";
+    return this.$URIBase_queryData;
+  };
+
+  
+  URIBase.prototype.removeQueryData=function(keys) {"use strict";
+    if (!ES('Array', 'isArray', false,keys)) {
+      keys = [keys];
+    }
+    for (var i = 0, length = keys.length; i < length; ++i) {
+      delete this.$URIBase_queryData[keys[i]];
+    }
+    return this;
+  };
+
+  
+  URIBase.prototype.setFragment=function(fragment) {"use strict";
+    this.$URIBase_fragment = fragment;
+    // fragment was updated - we don't care about forcing separator
+    this.setForceFragmentSeparator(false);
+    return this;
+  };
+
+  
+  URIBase.prototype.getFragment=function() {"use strict";
+    return this.$URIBase_fragment;
+  };
+
+
+  
+  URIBase.prototype.setForceFragmentSeparator=function(shouldForce) {"use strict";
+    this.$URIBase_forceFragmentSeparator = shouldForce;
+    return this;
+  };
+
+  
+  URIBase.prototype.getForceFragmentSeparator=function() {"use strict";
+    return this.$URIBase_forceFragmentSeparator;
+  };
+
+  
+  URIBase.prototype.isEmpty=function() {"use strict";
+    return !(
+      this.getPath() ||
+      this.getProtocol() ||
+      this.getDomain() ||
+      this.getPort() ||
+      ES('Object', 'keys', false,this.getQueryData()).length > 0 ||
+      this.getFragment()
+    );
+  };
+
+  
+  URIBase.prototype.toString=function() {"use strict";
+    var str = '';
+    if (this.$URIBase_protocol) {
+      str += this.$URIBase_protocol + '://';
+    }
+    if (this.$URIBase_domain) {
+      str += this.$URIBase_domain;
+    }
+    if (this.$URIBase_port) {
+      str += ':' + this.$URIBase_port;
+    }
+    // If there is a protocol, domain or port, we need to provide '/' for the
+    // path. If we don't have either and also don't have a path, we can omit
+    
+    // with "?", "#", or is empty.
+    if (this.$URIBase_path) {
+      str += this.$URIBase_path;
+    } else if (str) {
+      str += '/';
+    }
+    var queryStr = this.$URIBase_serializer.serialize(this.$URIBase_queryData);
+    if (queryStr) {
+      str += '?' + queryStr;
+    }
+    if (this.$URIBase_fragment) {
+      str += '#' + this.$URIBase_fragment;
+    } else if (this.$URIBase_forceFragmentSeparator) {
+      str += '#';
+    }
+    return str;
+  };
+
+  
+  URIBase.prototype.getOrigin=function() {"use strict";
+    return this.$URIBase_protocol
+      + '://'
+      + this.$URIBase_domain
+      + (this.$URIBase_port ? ':' + this.$URIBase_port : '');
+  };
+
+
+
+URIBase.isValidURI = function(uri, serializer) {
+  return parse(new URIBase(null, serializer), uri, false, serializer);
+};
+
+module.exports = URIBase;
+
+
+},null);
+
+
+__d("sdk.URI",["Assert","QueryString","URIBase"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,QueryString,URIBase) {
+   
+   
+   
+
+var facebookRe = /\.facebook\.com$/;
+
+var serializer = {
+  serialize: function(map) {
+    return map
+      ? QueryString.encode(map)
+      : '';
+  },
+  deserialize: function(text) {
+    return text
+      ? QueryString.decode(text)
+      : {};
+  }
+};
+
+for(var URIBase____Key in URIBase){if(URIBase.hasOwnProperty(URIBase____Key)){URI[URIBase____Key]=URIBase[URIBase____Key];}}var ____SuperProtoOfURIBase=URIBase===null?null:URIBase.prototype;URI.prototype=ES('Object', 'create', false,____SuperProtoOfURIBase);URI.prototype.constructor=URI;URI.__superConstructor__=URIBase;
+  function URI(uri) {"use strict";
+    Assert.isString(uri, 'The passed argument was of invalid type.');
+
+    if (!(this instanceof URI)) {
+      return new URI(uri);
+    }
+
+    URIBase.call(this,uri, serializer);
+  }__w(URI, {"type":"URI"}); 
+
+  URI.prototype.isFacebookURI=function()  {"use strict";
+    return facebookRe.test(this.getDomain());
+  };
+
+  URI.prototype.valueOf=function()  {"use strict";
+    return this.toString();
+  };
+
+
+module.exports = URI;
+
+
+},null);
+
+__d("sdk.domReady",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+var queue;
+var domIsReady = "readyState" in document
+  ? /loaded|complete/.test(document.readyState)
+  
+  
+  
+  
+  
+  : !!document.body;
+
+function flush() {
+  if (!queue) {
+    return;
+  }
+
+  var fn;
+  while (fn = queue.shift()) {
+    fn();
+  }
+  queue = null;
+}
+
+function domReady(/*function*/ fn) {__t([fn, 'function', 'fn']);
+  if (queue) {
+    queue.push(fn);
+    return;
+  } else {
+    fn();
+  }
+}__w(domReady, {"signature":"function(function)"}); 
+
+if(!domIsReady) {
+  queue = [];
+  if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', flush, false);
+    window.addEventListener('load', flush, false);
+  } else if (document.attachEvent) {
+    document.attachEvent('onreadystatechange', flush);
+    window.attachEvent('onload', flush);
+  }
+
+  
+  
+  if (document.documentElement.doScroll && window == window.top) {
+    var test = function() {
+      try {
+        
+        
+        document.documentElement.doScroll('left');
+      } catch(error) {
+        setTimeout(test, 0);
+        return;
+      }
+      flush();
+    };
+    test();
+  }
+}
+
+module.exports = domReady;
+
+
+},3);
+
+
+__d("sdk.Content",["sdk.domReady","Log","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,domReady,Log,UserAgent) {
+   
+   
+   
+
+var visibleRoot;
+var hiddenRoot;
+
+var Content = {
+
+  
+  append: __w(function(/*DOMElement|string*/ content, /*?DOMElement*/ root)
+      /*DOMElement*/ {__t([content, 'DOMElement|string', 'content'], [root, '?DOMElement', 'root']);return __t([function() {
+
+    
+    if (!root) {
+      if (!visibleRoot) {
+        visibleRoot = root = document.getElementById('fb-root');
+        if (!root) {
+          Log.warn('The "fb-root" div has not been created, auto-creating');
+          
+          visibleRoot = root = document.createElement('div');
+          root.id = 'fb-root';
+          
+          // that the body has loaded to avoid potential "operation aborted"
+          
+          
+          
+          
+          if (UserAgent.ie() || !document.body) {
+            domReady(function() {
+              document.body.appendChild(root);
+            });
+          } else {
+            document.body.appendChild(root);
+          }
+        }
+        root.className += ' fb_reset';
+      } else {
+        root = visibleRoot;
+      }
+    }
+
+    if (typeof content == 'string') {
+      var div = document.createElement('div');
+      root.appendChild(div).innerHTML = content;
+      return div;
+    } else {
+      return root.appendChild(content);
+    }
+  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(DOMElement|string,?DOMElement):DOMElement"}),
+
+  
+  appendHidden: __w(function(/*DOMElement|string*/ content) /*DOMElement*/ {__t([content, 'DOMElement|string', 'content']);return __t([function() {
+    if (!hiddenRoot) {
+      var
+        hiddenRoot = document.createElement('div'),
+        style      = hiddenRoot.style;
+      style.position = 'absolute';
+      style.top      = '-10000px';
+      style.width    = style.height = 0;
+      hiddenRoot = Content.append(hiddenRoot);
+    }
+
+    return Content.append(content, hiddenRoot);
+  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(DOMElement|string):DOMElement"}),
+
+  
+  submitToTarget: __w(function(/*object*/ opts, /*?boolean*/ get) {__t([opts, 'object', 'opts'], [get, '?boolean', 'get']);
+    var form = document.createElement('form');
+    form.action = opts.url;
+    form.target = opts.target;
+    form.method = (get) ? 'GET' : 'POST';
+    Content.appendHidden(form);
+
+    for (var key in opts.params) {
+      if (opts.params.hasOwnProperty(key)) {
+        var val = opts.params[key];
+        if (val !== null && val !== undefined) {
+          var input = document.createElement('input');
+          input.name = key;
+          input.value = val;
+          form.appendChild(input);
+        }
+      }
+    }
+
+    form.submit();
+    form.parentNode.removeChild(form);
+  }, {"signature":"function(object,?boolean)"})
+};
+
+module.exports = Content;
+
+
+},null);
+
+
+__d("sdk.Event",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+var Event = {
+
+  SUBSCRIBE: 'event.subscribe',
+  UNSUBSCRIBE: 'event.unsubscribe',
+
+  
+  subscribers: __w(function() /*object*/ {return __t([function() {
+    
+    
+    
+    
+    if (!this._subscribersMap) {
+      this._subscribersMap = {};
+    }
+    return this._subscribersMap;
+  }.apply(this, arguments), 'object']);}, {"signature":"function():object"}),
+
+  
+  subscribe: __w(function(/*string*/ name, /*function*/ cb) {__t([name, 'string', 'name'], [cb, 'function', 'cb']);
+    var subs = this.subscribers();
+
+    if (!subs[name]) {
+      subs[name] = [cb];
+    } else {
+      if (ES(subs[name], 'indexOf', true,cb) == -1){
+        subs[name].push(cb);
+      }
+    }
+    if (name != this.SUBSCRIBE && name != this.UNSUBSCRIBE) {
+      this.fire(this.SUBSCRIBE, name, subs[name]);
+    }
+  }, {"signature":"function(string,function)"}),
+
+  
+  unsubscribe: __w(function(/*string*/ name, /*function*/ cb) {__t([name, 'string', 'name'], [cb, 'function', 'cb']);
+    var subs = this.subscribers()[name];
+    if (subs) {
+      ES(subs, 'forEach', true,function(value, key) {
+        if (value == cb) {
+          subs.splice(key, 1);
+        }
+      });
+    }
+    if (name != this.SUBSCRIBE && name != this.UNSUBSCRIBE) {
+      this.fire(this.UNSUBSCRIBE, name, subs);
+    }
+  }, {"signature":"function(string,function)"}),
+
+  
+  monitor: __w(function(/*string*/ name, /*function*/ callback) {__t([name, 'string', 'name'], [callback, 'function', 'callback']);
+    if (!callback()) {
+      var
+        ctx = this,
+        fn = function() {
+          if (callback.apply(callback, arguments)) {
+            ctx.unsubscribe(name, fn);
+          }
+        };
+
+      this.subscribe(name, fn);
+    }
+  }, {"signature":"function(string,function)"}),
+
+  
+  clear: __w(function(/*string*/ name) {__t([name, 'string', 'name']);
+    delete this.subscribers()[name];
+  }, {"signature":"function(string)"}),
+
+  
+  fire: __w(function(/*string*/ name) {__t([name, 'string', 'name']);
+    var
+      args = Array.prototype.slice.call(arguments, 1),
+      subs = this.subscribers()[name];
+
+    if (subs) {
+      ES(subs, 'forEach', true,function(sub) {
+        
+        
+        if (sub) {
+          sub.apply(this, args);
+        }
+      });
+    }
+  }, {"signature":"function(string)"})
+};
+
+module.exports = Event;
+
+
+},null);
+
+
+__d("Queue",["copyProperties"],function(global,require,requireDynamic,requireLazy,module,exports,copyProperties) {
+   
+
+
+var registry = {};
+
+
+  
+  function Queue(opts) {"use strict";
+    
+    this._opts = copyProperties({
+      interval: 0,
+      processor: null
+    }, opts);
+
+    
+    this._queue = [];
+    this._stopped = true;
+  }
+
+  
+  Queue.prototype._dispatch=function(force) {"use strict";
+    if (this._stopped || this._queue.length === 0) {
+      return;
+    }
+    if (!this._opts.processor) {
+      this._stopped = true;
+      throw new Error('No processor available');
+    }
+
+    if (this._opts.interval) {
+      this._opts.processor.call(this, this._queue.shift());
+      this._timeout = setTimeout(
+        ES(this._dispatch, 'bind', true,this),
+        this._opts.interval
+      );
+    } else {
+      while(this._queue.length) {
+        this._opts.processor.call(this, this._queue.shift());
+      }
+    }
+  };
+
+  
+  Queue.prototype.enqueue=function(message) {"use strict";
+    if (this._opts.processor && !this._stopped) {
+      this._opts.processor.call(this, message);
+    } else {
+      this._queue.push(message);
+    }
+    return this;
+  };
+
+  
+  Queue.prototype.start=function(processor) {"use strict";
+    if (processor) {
+      this._opts.processor = processor;
+    }
+    this._stopped = false;
+    this._dispatch();
+    return this;
+  };
+
+  Queue.prototype.isStarted=function()  {"use strict";
+    return !this._stopped;
+  };
+
+  
+  Queue.prototype.dispatch=function() {"use strict";
+    this._dispatch(true);
+  };
+
+  
+  Queue.prototype.stop=function(scheduled) {"use strict";
+    this._stopped = true;
+    if (scheduled) {
+      clearTimeout(this._timeout);
+    }
+    return this;
+  };
+
+  
+  Queue.prototype.merge=function(queue, prepend) {"use strict";
+    this._queue[prepend ? 'unshift' : 'push']
+      .apply(this._queue, queue._queue);
+    queue._queue = [];
+    this._dispatch();
+    return this;
+  };
+
+  
+  Queue.prototype.getLength=function() {"use strict";
+    return this._queue.length;
+  };
+
+  
+  Queue.get=function(name, opts) {"use strict";
+   var queue;
+   if (name in registry) {
+     queue = registry[name];
+   } else {
+    queue = registry[name] = new Queue(opts);
+   }
+   return queue;
+  };
+
+  
+  Queue.exists=function(name) {"use strict";
+    return name in registry;
+  };
+
+  
+  Queue.remove=function(name) {"use strict";
+    return delete registry[name];
+  };
+
+
+
+module.exports = Queue;
+
+
+},null);
+
+
+__d("JSONRPC",["Log"],function(global,require,requireDynamic,requireLazy,module,exports,Log) {
+   
+
+
+
+  function JSONRPC(write) {"use strict";
+    this.$JSONRPC_counter = 0;
+    this.$JSONRPC_callbacks = {};
+
+    this.remote = ES(function(context)  {
+      this.$JSONRPC_context = context;
+      return this.remote;
+    }, 'bind', true,this);
+
+    this.local = {};
+
+    this.$JSONRPC_write = write;
+  }__w(JSONRPC, {"type":"JSONRPC"}); 
+
+  
+  JSONRPC.prototype.stub=function(stub) {"use strict";
+    this.remote[stub] = ES(function()  {var args=Array.prototype.slice.call(arguments,0);
+      var message = {
+        jsonrpc: '2.0',
+        method: stub
+      };
+
+      if (typeof args[args.length - 1] == 'function') {
+        message.id = ++this.$JSONRPC_counter;
+        this.$JSONRPC_callbacks[message.id] = args.pop();
+      }
+
+      message.params = args;
+
+      this.$JSONRPC_write(ES('JSON', 'stringify', false,message), this.$JSONRPC_context || {method: stub });
+    }, 'bind', true,this);
+  };
+
+  
+  JSONRPC.prototype.read=function(message, context) {"use strict";
+    var rpc = ES('JSON', 'parse', false,message), id = rpc.id;
+
+    if (!rpc.method) {
+      
+      if (!this.$JSONRPC_callbacks[id]) {
+        Log.warn('Could not find callback %s', id);
+        return;
+      }
+      var callback = this.$JSONRPC_callbacks[id];
+      delete this.$JSONRPC_callbacks[id];
+
+      delete rpc.id;
+      delete rpc.jsonrpc;
+
+      callback(rpc);
+      return;
+    }
+
+    
+    var instance = this, method = this.local[rpc.method], send;
+    if (id) {
+      
+      send = __w(function(/*string*/ type, value) {__t([type, 'string', 'type']);
+        var response = {
+          jsonrpc: '2.0',
+          id: id
+        };
+        response[type] = value;
+
+        
+        
+        setTimeout(function() {
+          instance.$JSONRPC_write(ES('JSON', 'stringify', false,response), context);
+        }, 0);
+      }, {"signature":"function(string)"});
+    } else {
+      
+      send = function() {};
+    }
+
+    if (!method) {
+      Log.error('Method "%s" has not been defined', rpc.method);
+
+      send('error', {
+        code: -32601,
+        message: 'Method not found',
+        data: rpc.method
+      });
+      return;
+    }
+
+    
+    rpc.params.push(ES(send, 'bind', true,null, 'result'));
+    rpc.params.push(ES(send, 'bind', true,null, 'error'));
+
+    
+    try {
+      var returnValue = method.apply(context || null, rpc.params);
+      
+      if (typeof returnValue !== 'undefined') {
+        send('result', returnValue);
+      }
+    } catch(rpcEx) {
+      Log.error('Invokation of RPC method %s resulted in the error: %s',
+        rpc.method, rpcEx.message);
+
+      send('error', {
+        code: -32603,
+        message: 'Internal error',
+        data: rpcEx.message
+      });
+    }
+  };
+
+
+module.exports = JSONRPC;
+
+
+},null);
+
+
+__d("sdk.RPC",["Assert","JSONRPC","Queue"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,JSONRPC,Queue) {
+   
+   
+   
+
+var outQueue = new Queue();
+var jsonrpc = new JSONRPC(__w(function(/*string*/ message) {__t([message, 'string', 'message']);
+  outQueue.enqueue(message);
+}, {"signature":"function(string)"}));
+
+var RPC = {
+  local: jsonrpc.local,
+  remote: jsonrpc.remote,
+  stub: ES(jsonrpc.stub, 'bind', true,jsonrpc),
+  setInQueue: __w(function(/*object*/ queue) {__t([queue, 'object', 'queue']);
+    Assert.isInstanceOf(Queue, queue);
+
+    queue.start(__w(function(/*string*/ message) {__t([message, 'string', 'message']);
+      jsonrpc.read(message);
+    }, {"signature":"function(string)"}));
+  }, {"signature":"function(object)"}),
+  getOutQueue: __w(function() /*object*/ {return __t([function() {
+    return outQueue;
+  }.apply(this, arguments), 'object']);}, {"signature":"function():object"})
+};
+
+module.exports = RPC;
+
+
+},null);
+
+__d("sdk.Scribe",["QueryString","sdk.Runtime","UrlMap"],function(global,require,requireDynamic,requireLazy,module,exports,QueryString,Runtime,UrlMap) {
+   
+   
+   
+
+function log(/*string*/ category, /*object*/ data) {__t([category, 'string', 'category'], [data, 'object', 'data']);
+  if (typeof data.extra == 'object') {
+    data.extra.revision = Runtime.getRevision();
+  }
+  (new Image()).src = QueryString.appendToUrl(
+    UrlMap.resolve('www', /*force ssl*/true) + '/common/scribe_endpoint.php',
+    {
+      c: category,
+      m: ES('JSON', 'stringify', false,data)
+    }
+  );
+}__w(log, {"signature":"function(string,object)"}); 
+
+var Scribe = {
+  log: log
+};
+
+module.exports = Scribe;
+
+
+},null);
+
+
+__d("emptyFunction",["copyProperties"],function(global,require,requireDynamic,requireLazy,module,exports,copyProperties) {
+   
+
+function makeEmptyFunction(arg) {
+  return function() {
+    return arg;
+  };
+}
+
+
+function emptyFunction() {}
+
+copyProperties(emptyFunction, {
+  thatReturns: makeEmptyFunction,
+  thatReturnsFalse: makeEmptyFunction(false),
+  thatReturnsTrue: makeEmptyFunction(true),
+  thatReturnsNull: makeEmptyFunction(null),
+  thatReturnsThis: function() { return this; },
+  thatReturnsArgument: function(arg) { return arg; }
+});
+
+module.exports = emptyFunction;
+
+
+},null);
+
+__d("htmlSpecialChars",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+
+
+var r_amp = /&/g;
+var r_lt = /</g;
+var r_gt = />/g;
+var r_quot = /"/g;
+var r_squo = /'/g;
+
+function htmlSpecialChars(text) {
+  if (typeof text == 'undefined' || text === null || !text.toString) {
+    return '';
+  }
+
+  if (text === false) {
+    return '0';
+  } else if (text === true) {
+    return '1';
+  }
+
+  return text
+    .toString()
+    .replace(r_amp, '&amp;')
+    .replace(r_quot, '&quot;')
+    .replace(r_squo, '&#039;')
+    .replace(r_lt, '&lt;')
+    .replace(r_gt, '&gt;');
+}
+
+module.exports = htmlSpecialChars;
+
+
+},null);
+
+
+__d("Flash",["DOMEventListener","DOMWrapper","QueryString","UserAgent","copyProperties","guid","htmlSpecialChars"],function(global,require,requireDynamic,requireLazy,module,exports,DOMEventListener,DOMWrapper,QueryString,UserAgent,copyProperties,guid,htmlSpecialChars) {
+/*globals ActiveXObject */
+
+   
+   
+   
+   
+
+   
+   
+   
+
+var registry = {};
+var unloadHandlerAttached;
+var document = DOMWrapper.getWindow().document;
+
+function remove(id) {
+  var swf = document.getElementById(id);
+  if (swf) {
+    swf.parentNode.removeChild(swf);
+  }
+  delete registry[id];
+}
+
+function unloadRegisteredSWFs() {
+  for (var id in registry) {
+    if (registry.hasOwnProperty(id)) {
+        remove(id);
+    }
+  }
+}
+
+
+function normalize(s) {
+  return s.replace(
+    /\d+/g,
+    function (m) { return '000'.substring(m.length) + m; }
+  );
+}
+
+function register(id) {
+  if (!unloadHandlerAttached) {
+    
+    
+    if (UserAgent.ie() >= 9) {
+      DOMEventListener.add(window, 'unload', unloadRegisteredSWFs);
+    }
+    unloadHandlerAttached = true;
+  }
+  registry[id] = id;
+}
+
+
+var Flash = {
+
+  
+  embed: function(src, container, params, flashvars) {
+    // Always give SWFs unique id's in order to kill instance caching.
+    var id = guid();
+    
+    // This is still safe because there isn't an & sequence that can
+    
+    src = htmlSpecialChars(src).replace(/&amp;/g, '&');
+
+    
+    params = copyProperties({
+        allowscriptaccess: 'always',
+        flashvars: flashvars,
+        movie: src
+      },
+      params || {});
+
+    
+    if (typeof params.flashvars == 'object') {
+      params.flashvars = QueryString.encode(params.flashvars);
+    }
+
+    
+    var pElements = [];
+    for (var key in params) {
+      if (params.hasOwnProperty(key) && params[key]) {
+        pElements.push('<param name="' + htmlSpecialChars(key) + '" value="' +
+          htmlSpecialChars(params[key]) + '">');
+      }
+    }
+
+    var span = container.appendChild(document.createElement('span'));
+    var html =
+      '<object ' + (UserAgent.ie()
+         ? 'classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" '
+         : 'type="application/x-shockwave-flash"') +
+        'data="' + src + '" ' +
+        (params.height ? 'height="' + params.height + '" ' : '') +
+        (params.width ? 'width="' + params.width + '" ' : '') +
+        'id="' + id + '">' + pElements.join('') + '</object>';
+    span.innerHTML = html;
+    var swf = span.firstChild;
+
+    register(id);
+    return swf;
+  },
+
+  
+  remove: remove,
+
+  
+  getVersion: function() {
+    var name = 'Shockwave Flash';
+    var mimeType = 'application/x-shockwave-flash';
+    var activexType = 'ShockwaveFlash.ShockwaveFlash';
+    var flashVersion;
+
+    if (navigator.plugins && typeof navigator.plugins[name] == 'object') {
+        
+        var description = navigator.plugins[name].description;
+        if (description && navigator.mimeTypes &&
+              navigator.mimeTypes[mimeType] &&
+              navigator.mimeTypes[mimeType].enabledPlugin) {
+            flashVersion = description.match(/\d+/g);
+        }
+    }
+    if (!flashVersion) {
+        try {
+            flashVersion = (new ActiveXObject(activexType))
+              .GetVariable('$version')
+              .match(/(\d+),(\d+),(\d+),(\d+)/);
+            flashVersion = Array.prototype.slice.call(flashVersion, 1);
+        }
+        catch (notSupportedException) {
+        }
+    }
+    return flashVersion;
+  },
+
+  
+  checkMinVersion: function(minVersion) {
+    var version = Flash.getVersion();
+    if (!version) {
+      return false;
+    }
+    return normalize(version.join('.')) >= normalize(minVersion);
+  },
+
+  
+  isAvailable : function() {
+    return !!Flash.getVersion();
+  }
+
+};
+
+module.exports = Flash;
+
+
+},null);
+
+
+__d("dotAccess",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+function dotAccess(head, path, create) {
+  var stack = path.split('.');
+  do {
+    var key = stack.shift();
+    head = head[key] || create && (head[key] = {});
+  } while(stack.length && head);
+  return head;
+}
+
+module.exports = dotAccess;
+
+
+},null);
+
+
+__d("GlobalCallback",["DOMWrapper","dotAccess","guid","wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,DOMWrapper,dotAccess,guid,wrapFunction) {
+   
+   
+   
+   
+
+// window is the same as the 'global' object in the browser, but the variable
+// 'global' might be shadowed.
+var rootObject;
+var callbackPrefix;
+
+var GlobalCallback = {
+
+  setPrefix: __w(function(/*string*/ prefix) {__t([prefix, 'string', 'prefix']);
+    rootObject = dotAccess(DOMWrapper.getWindow(), prefix, true);
+    callbackPrefix = prefix;
+  }, {"signature":"function(string)"}),
+
+  create: __w(function(/*function*/ fn, /*?string*/ description) /*string*/ {__t([fn, 'function', 'fn'], [description, '?string', 'description']);return __t([function() {
+    if (!rootObject) {
+      
+      
+      this.setPrefix('__globalCallbacks');
+    }
+    var id = guid();
+    rootObject[id] = wrapFunction(fn, 'entry', description || 'GlobalCallback');
+
+    return callbackPrefix + '.' + id;
+  }.apply(this, arguments), 'string']);}, {"signature":"function(function,?string):string"}),
+
+  remove: __w(function(/*string*/ name) {__t([name, 'string', 'name']);
+    var id = name.substring(callbackPrefix.length + 1);
+    delete rootObject[id]

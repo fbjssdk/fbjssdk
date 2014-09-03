@@ -495,8 +495,6 @@ var require, __d;
 /* u6b3MVzyeK6 */
 /** Path: html/js/sdk/ES5ArrayPrototype.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5ArrayPrototype
  */
 __d("ES5ArrayPrototype",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -610,12 +608,10 @@ ES5ArrayPrototype.indexOf = function(val, index) {
 
 module.exports = ES5ArrayPrototype;
 
-/* RMW-eICsrwT */
+/* TfZtt8IJr02 */
 },null);
 /** Path: html/js/sdk/ES5FunctionPrototype.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5FunctionPrototype
  */
 __d("ES5FunctionPrototype",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -649,12 +645,10 @@ ES5FunctionPrototype.bind = function(context /*, args... */) {
 
 module.exports = ES5FunctionPrototype;
 
-/* 2DXueXgYBiA */
+/* gA0hPn9APq5 */
 },null);
 /** Path: html/js/sdk/ES5StringPrototype.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5StringPrototype
  */
 __d("ES5StringPrototype",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -752,12 +746,10 @@ ES5StringPrototype.repeat = function(count) {
 
 module.exports = ES5StringPrototype;
 
-/* LnybSBK3IdP */
+/* LU1JJeuqBGZ */
 },null);
 /** Path: html/js/sdk/ES5Array.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5Array
  */
 __d("ES5Array",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -769,12 +761,10 @@ ES5Array.isArray = function(object) {
 
 module.exports = ES5Array;
 
-/* fqy5viPd9Si */
+/* MSYhZmKvHdG */
 },null);
 /** Path: html/js/ie8DontEnum.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ie8DontEnum
  */
 __d("ie8DontEnum",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -811,12 +801,10 @@ if (({toString: true}).propertyIsEnumerable('toString')) {
 
 module.exports = ie8DontEnum;
 
-/* AqbU7BP0XtX */
+/* GU28Zd-Jzdb */
 },null);
 /** Path: html/js/sdk/ES5Object.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5Object
  */
 __d("ES5Object",["ie8DontEnum"],function(global,require,requireDynamic,requireLazy,module,exports,ie8DontEnum) {
@@ -875,12 +863,10 @@ ES5Object.keys = function(object) {
 
 module.exports = ES5Object;
 
-/* KOaon63wAcQ */
+/* DFdG4QOyOcq */
 },null);
 /** Path: html/js/sdk/ES5Date.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES5Date
  */
 __d("ES5Date",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -891,7 +877,7 @@ ES5Date.now = function() {
 
 module.exports = ES5Date;
 
-/* eeaxbZNTDfe */
+/* Nh0WBu8zYRI */
 },null);
 /** Path: html/js/third_party/json3/json3.js */
 /**
@@ -1654,8 +1640,6 @@ module.exports = ES5Date;
 },null);
 /** Path: html/js/sdk/ES6Object.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES6Object
  */
 __d("ES6Object",["ie8DontEnum"],function(global,require,requireDynamic,requireLazy,module,exports,ie8DontEnum) {
@@ -1679,7 +1663,7 @@ var ES6Object = {
       var source = sources[i];
 
       if (source == null) {
-        continue;
+        throw new TypeError('Object.assign source cannot be null or undefined');
       }
 
       source = Object(source);
@@ -1700,122 +1684,20 @@ var ES6Object = {
 
 module.exports = ES6Object;
 
-/* DAgBbK5bQDP */
-},null);
-/** Path: html/js/sdk/ES6ArrayPrototype.js */
-/**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
- * @providesModule ES6ArrayPrototype
- */
-__d("ES6ArrayPrototype",[],function(global,require,requireDynamic,requireLazy,module,exports) {
-var ES6ArrayPrototype = {
-  /**
-   * http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.find
-   */
-  find:function(/*function*/ predicate, thisArg) {
-    if (this == null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
-    }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
-    }
-
-    var list = Object(this);
-    var length = list.length >>> 0;
-    var value;
-
-    for (var i = 0; i < length; i++) {
-      if (i in list) {
-        value = list[i];
-        if (predicate.call(thisArg, value, i, list)) {
-          return value;
-        }
-      }
-    }
-    return void (0);
-  }
-};
-
-module.exports = ES6ArrayPrototype;
-
-/* R41U-G5hrOt */
-},null);
-/** Path: html/js/sdk/ES6DatePrototype.js */
-/**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
- * @providesModule ES6DatePrototype
- */
-__d("ES6DatePrototype",[],function(global,require,requireDynamic,requireLazy,module,exports) {
-function pad(number) {
- return (number < 10 ? '0' : '') + number;
-}
-
-var ES6DatePrototype = {
-  /**
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString#Polyfill
-   */
-  toISOString:function() {
-    if (!isFinite(this)) {
-      throw new Error('Invalid time value');
-    }
-    var year = this.getUTCFullYear();
-    year = (year < 0 ? '-' : (year > 9999 ? '+' : '')) +
-      ('00000' + Math.abs(year)).slice(0 <= year && year <= 9999 ? -4 : -6);
-    return year +
-      '-' + pad(this.getUTCMonth() + 1) +
-      '-' + pad(this.getUTCDate()) +
-      'T' + pad(this.getUTCHours()) +
-      ':' + pad(this.getUTCMinutes()) +
-      ':' + pad(this.getUTCSeconds()) +
-      '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-      'Z';
-  }
-};
-
-module.exports = ES6DatePrototype;
-
-/* Ef3upjPNuVS */
-},null);
-/** Path: html/js/sdk/ES6Number.js */
-/**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
- * @providesModule ES6Number
- */
-__d("ES6Number",[],function(global,require,requireDynamic,requireLazy,module,exports) {
-var ES6Number = {
-  isFinite:function(value) {
-    return (typeof value == 'number') && isFinite(value);
-  },
-
-  isNaN:function(value) {
-    return (typeof value == 'number') && isNaN(value);
-  }
-};
-
-module.exports = ES6Number;
-
-/* QLLqANSCDwC */
+/* 76DsDGXX9vb */
 },null);
 /** Path: html/js/sdk/ES.js */
 /**
- * Copyright 2004-present Facebook. All Rights Reserved.
- *
  * @providesModule ES
  *
  * scripts/jssdk/default.spatch converts ES5/ES6 code into using this module in
  * ES3 style.
  */
-__d("ES",["ES5ArrayPrototype","ES5FunctionPrototype","ES5StringPrototype","ES5Array","ES5Object","ES5Date","JSON3","ES6Object","ES6ArrayPrototype","ES6DatePrototype","ES6Number"],function(global,require,requireDynamic,requireLazy,module,exports,ES5ArrayPrototype,ES5FunctionPrototype,ES5StringPrototype,ES5Array,ES5Object,ES5Date,JSON3,ES6Object,ES6ArrayPrototype,ES6DatePrototype,ES6Number) {
+__d("ES",["ES5ArrayPrototype","ES5FunctionPrototype","ES5StringPrototype","ES5Array","ES5Object","ES5Date","JSON3","ES6Object"],function(global,require,requireDynamic,requireLazy,module,exports,ES5ArrayPrototype,ES5FunctionPrototype,ES5StringPrototype,ES5Array,ES5Object,ES5Date,JSON3,ES6Object) {
    
    
    
   
-   
-   
-   
    
    
    
@@ -1840,10 +1722,7 @@ var es5Polyfills = {
 };
 
 var es6Polyfills = {
-  'Object': ES6Object,
-  'Array.prototype': ES6ArrayPrototype,
-  'Date.prototype': ES6DatePrototype,
-  'Number': ES6Number
+  'Object': ES6Object
 };
 
 function setupMethodsCache(polyfills) {
@@ -1899,10 +1778,10 @@ function ES(lhs, rhs, proto ) {var args=Array.prototype.slice.call(arguments,3);
 
 module.exports = ES;
 
-/* 8t3naSxRM6- */
+/* HddqKc1MRYB */
 },null);
 var ES = require('ES');
-__d("JSSDKRuntimeConfig",[],{"locale":"gn_PY","rtl":false,"revision":"1396250"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"event_subscriptions_log":{"rate":0.01,"value":10000},"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true,"launch_payment_dialog_via_pac":{"rate":100}},"api":{"mode":"warn","whitelist":["Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Data","Data.process","Data.query","Data.query:wait","Data.waitOn","Data.waitOn:wait","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.unlockForProcessing","Payment.parse","Payment.setSize","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui","ui:subscribe"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/Vy5GRL_ft86.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yR\/r\/ks_9ZXiQ0GL.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}\n.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget","css:fb.css.plugin.recommendationsbar"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/PvklbuW2Ycn.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});
+__d("JSSDKRuntimeConfig",[],{"locale":"gn_PY","rtl":false,"revision":"1352406"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true},"api":{"mode":"warn","whitelist":["Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Data","Data.process","Data.query","Data.query:wait","Data.waitOn","Data.waitOn:wait","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.unlockForProcessing","Payment.parse","Payment.setSize","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui","ui:subscribe"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/sT9WD2idZGy.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yR\/r\/ks_9ZXiQ0GL.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}\n.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode==\"CSS1Compat\"? document.documentElement.scrollTop+\"px\":body.scrollTop+\"px\")}.fb_connect_bar{position:relative;margin:auto;height:100\u0025;width:100\u0025;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}\n.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget","css:fb.css.connectbarwidget","css:fb.css.plugin.recommendationsbar"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/PvklbuW2Ycn.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});__d("JSSDKConnectBarConfig",[],{"imgs":{"buttonUrl":"rsrc.php\/v2\/yY\/r\/h_Y6u1wrZPW.png","missingProfileUrl":"rsrc.php\/v2\/yo\/r\/UlIqmHJn-SK.gif"}});
 
 
 __d("QueryString",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -2539,7 +2418,7 @@ module.exports = guid;
 },null);
 
 
-__d("UserAgent_DEPRECATED",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+__d("UserAgent",[],function(global,require,requireDynamic,requireLazy,module,exports) {
 
 
 var _populated = false;
@@ -2637,7 +2516,7 @@ function _populate() {
   }
 }
 
-var UserAgent_DEPRECATED = {
+var UserAgent = {
 
   
   ie: function() {
@@ -2652,7 +2531,7 @@ var UserAgent_DEPRECATED = {
 
   
   ie64: function() {
-    return UserAgent_DEPRECATED.ie() && _win64;
+    return UserAgent.ie() && _win64;
   },
 
   
@@ -2674,7 +2553,7 @@ var UserAgent_DEPRECATED = {
 
   
   safari: function() {
-    return UserAgent_DEPRECATED.webkit();
+    return UserAgent.webkit();
   },
 
   
@@ -2722,17 +2601,17 @@ var UserAgent_DEPRECATED = {
   }
 };
 
-module.exports = UserAgent_DEPRECATED;
+module.exports = UserAgent;
 
 
 },null);
 
 
-__d("hasNamePropertyBug",["guid","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,guid,UserAgent_DEPRECATED) {
+__d("hasNamePropertyBug",["guid","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,guid,UserAgent) {
    
    
 
-var hasBug = UserAgent_DEPRECATED.ie() ? undefined : false;
+var hasBug = UserAgent.ie() ? undefined : false;
 
 
 
@@ -2963,7 +2842,6 @@ module.exports = DOMWrapper;
 __d("sdk.feature",["JSSDKConfig"],function(global,require,requireDynamic,requireLazy,module,exports,SDKConfig) {
    
 
-
 function feature(/*string*/ name, defaultValue) {__t([name, 'string', 'name']);
   if (SDKConfig.features && name in SDKConfig.features) {
     var value = SDKConfig.features[name];
@@ -2989,7 +2867,7 @@ module.exports = feature;
 },null);
 
 
-__d("sdk.getContextType",["UserAgent_DEPRECATED","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,UserAgent_DEPRECATED,Runtime) {
+__d("sdk.getContextType",["UserAgent","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,UserAgent,Runtime) {
    
    
 
@@ -3000,10 +2878,10 @@ function getContextType() /*number*/ {return __t([function() {
   
   
   
-  if (UserAgent_DEPRECATED.nativeApp()) {
+  if (UserAgent.nativeApp()) {
     return 3;
   }
-  if (UserAgent_DEPRECATED.mobile()) {
+  if (UserAgent.mobile()) {
     return 2;
   }
   if (Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
@@ -3926,7 +3804,7 @@ module.exports = domReady;
 },3);
 
 
-__d("sdk.Content",["sdk.domReady","Log","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,domReady,Log,UserAgent_DEPRECATED) {
+__d("sdk.Content",["sdk.domReady","Log","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,domReady,Log,UserAgent) {
    
    
    
@@ -3955,7 +3833,7 @@ var Content = {
           
           
           
-          if (UserAgent_DEPRECATED.ie() || !document.body) {
+          if (UserAgent.ie() || !document.body) {
             domReady(function() {
               document.body.appendChild(root);
             });
@@ -4482,7 +4360,7 @@ module.exports = htmlSpecialChars;
 },null);
 
 
-__d("Flash",["DOMEventListener","DOMWrapper","QueryString","UserAgent_DEPRECATED","copyProperties","guid","htmlSpecialChars"],function(global,require,requireDynamic,requireLazy,module,exports,DOMEventListener,DOMWrapper,QueryString,UserAgent_DEPRECATED,copyProperties,guid,htmlSpecialChars) {
+__d("Flash",["DOMEventListener","DOMWrapper","QueryString","UserAgent","copyProperties","guid","htmlSpecialChars"],function(global,require,requireDynamic,requireLazy,module,exports,DOMEventListener,DOMWrapper,QueryString,UserAgent,copyProperties,guid,htmlSpecialChars) {
 /*globals ActiveXObject */
 
    
@@ -4526,7 +4404,7 @@ function register(id) {
   if (!unloadHandlerAttached) {
     
     
-    if (UserAgent_DEPRECATED.ie() >= 9) {
+    if (UserAgent.ie() >= 9) {
       DOMEventListener.add(window, 'unload', unloadRegisteredSWFs);
     }
     unloadHandlerAttached = true;
@@ -4570,7 +4448,7 @@ var Flash = {
 
     var span = container.appendChild(document.createElement('span'));
     var html =
-      '<object ' + (UserAgent_DEPRECATED.ie()
+      '<object ' + (UserAgent.ie()
          ? 'classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" '
          : 'type="application/x-shockwave-flash"') +
         'data="' + src + '" ' +
@@ -4697,7 +4575,7 @@ module.exports = GlobalCallback;
 },null);
 
 
-__d("XDM",["DOMEventListener","DOMWrapper","emptyFunction","Flash","GlobalCallback","guid","Log","UserAgent_DEPRECATED","wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,DOMEventListener,DOMWrapper,emptyFunction,Flash,GlobalCallback,guid,Log,UserAgent_DEPRECATED,wrapFunction) {
+__d("XDM",["DOMEventListener","DOMWrapper","emptyFunction","Flash","GlobalCallback","guid","Log","UserAgent","wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,DOMEventListener,DOMWrapper,emptyFunction,Flash,GlobalCallback,guid,Log,UserAgent,wrapFunction) {
    
    
    
@@ -4864,7 +4742,7 @@ XDM.register('postmessage', (function() {
           
           
           
-          if (UserAgent_DEPRECATED.ie() == 8 || UserAgent_DEPRECATED.ieCompatibilityMode()) {
+          if (UserAgent.ie() == 8 || UserAgent.ieCompatibilityMode()) {
             setTimeout(send, 0);
           } else{
             send();
@@ -5648,7 +5526,7 @@ module.exports = createArrayFrom;
 },null);
 
 
-__d("sdk.DOM",["Assert","createArrayFrom","sdk.domReady","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,createArrayFrom,domReady,UserAgent_DEPRECATED) {
+__d("sdk.DOM",["Assert","createArrayFrom","sdk.domReady","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,createArrayFrom,domReady,UserAgent) {
    
    
    
@@ -5805,7 +5683,12 @@ function addCssRules(/*string*/ styles, /*array<string>*/ names) {__t([styles, '
     return;
   }
 
-  if (UserAgent_DEPRECATED.ie() < 11) {
+  if (!UserAgent.ie()) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.textContent = styles;
+    document.getElementsByTagName('head')[0].appendChild(style);
+  } else {
     try {
       document.createStyleSheet().cssText = styles;
     } catch (exc) {
@@ -5816,11 +5699,6 @@ function addCssRules(/*string*/ styles, /*array<string>*/ names) {__t([styles, '
         document.styleSheets[0].cssText += styles;
       }
     }
-  } else {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.textContent = styles;
-    document.getElementsByTagName('head')[0].appendChild(style);
   }
 }__w(addCssRules, {"signature":"function(string,array<string>)"}); 
 
@@ -5884,7 +5762,7 @@ module.exports = DOM;
 },null);
 
 
-__d("sdk.ErrorHandling",["sdk.feature","ManagedError","sdk.Runtime","sdk.Scribe","UserAgent_DEPRECATED","wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,feature,ManagedError,Runtime,Scribe,UserAgent_DEPRECATED,wrapFunction) {
+__d("sdk.ErrorHandling",["sdk.feature","ManagedError","sdk.Runtime","sdk.Scribe","UserAgent","wrapFunction"],function(global,require,requireDynamic,requireLazy,module,exports,feature,ManagedError,Runtime,Scribe,UserAgent,wrapFunction) {
    
    
    
@@ -5925,7 +5803,7 @@ function normalizeError(err) /*object*/ {return __t([function() {
   
   
   
-  if (UserAgent_DEPRECATED.chrome() && /([\w:\.\/]+\.js):(\d+)/.test(err.stack)) {
+  if (UserAgent.chrome() && /([\w:\.\/]+\.js):(\d+)/.test(err.stack)) {
     info.script = RegExp.$1;
     info.line = parseInt(RegExp.$2, 10);
   }
@@ -6635,7 +6513,7 @@ module.exports = JSONPRequest;
 },null);
 
 
-__d("ApiClient",["ArgumentError","Assert","CORSRequest","FlashRequest","flattenObject","JSONPRequest","Log","ObservableMixin","sprintf","sdk.URI","UrlMap","ApiClientConfig","invariant"],function(global,require,requireDynamic,requireLazy,module,exports,ArgumentError,Assert,CORSRequest,FlashRequest,flattenObject,JSONPRequest,Log,ObservableMixin,sprintf,URI,UrlMap,ApiClientConfig,invariant) {
+__d("ApiClient",["ArgumentError","Assert","CORSRequest","FlashRequest","flattenObject","JSONPRequest","Log","ObservableMixin","sprintf","sdk.URI","UrlMap","ApiClientConfig"],function(global,require,requireDynamic,requireLazy,module,exports,ArgumentError,Assert,CORSRequest,FlashRequest,flattenObject,JSONPRequest,Log,ObservableMixin,sprintf,URI,UrlMap,ApiClientConfig) {
     
            
       
@@ -6647,8 +6525,6 @@ __d("ApiClient",["ArgumentError","Assert","CORSRequest","FlashRequest","flattenO
           
               
            
-
-   
 
    
 
@@ -6671,20 +6547,6 @@ var READONLYCALLS = {
   stream_get: true,
   users_getinfo: true
 };
-
-
-var batchCalls = [];
-var batchCallbacks = [];
-var scheduleId = null;
-
-
-
-var REQUESTS_PER_BATCH = 50;
-
-
-
-
-var DEFAULT_BATCH_APP_ID = 105440539523; 
 
 
 function request(/*string*/ url, /*string*/ method, /*object*/ params,
@@ -6738,15 +6600,14 @@ function inspect(/*?function*/ callback, /*string*/ endpoint, /*string*/ method,
 }__w(inspect, {"signature":"function(?function,string,string,object)"}); 
 
 
-function parseCallDataFromArgs(/*array*/ args) {__t([args, 'array', 'args']);
-  var path = args.shift();
+function requestUsingGraph(/*string*/ path) {__t([path, 'string', 'path']);
   Assert.isString(path, 'Invalid path');
   if (!/^https?/.test(path) && path.charAt(0) !== '/')  {
     path = '/' + path;
   }
 
   var uri;
-  var argsMap = {};
+  var args = {};
 
   try {
     uri = new URI(path);
@@ -6755,115 +6616,36 @@ function parseCallDataFromArgs(/*array*/ args) {__t([args, 'array', 'args']);
   }
 
   
-  ES(args, 'forEach', true,function(arg)  {return argsMap[typeof arg] = arg;});
+  ES(Array.prototype.slice.call(arguments, 1), 'forEach', true,function(argument) {
+    args[typeof argument] = argument;
+  });
 
-  var method = (argsMap.string || 'get').toLowerCase();
+  var method = (args.string || 'get').toLowerCase();
 
   Assert.isTrue(
     METHODS.hasOwnProperty(method),
     sprintf('Invalid method passed to ApiClient: %s', method)
   );
 
-  var callback = argsMap['function'];
+  var callback = args['function'];
   if (!callback) {
     Log.warn('No callback passed to the ApiClient');
   }
 
-  if (argsMap.object) {
-    uri.addQueryData(argsMap.object);
+  if (args.object) {
+    uri.addQueryData(args.object);
   }
-
   var params = uri.getQueryData();
-  params.method = method;
 
-  return {uri:uri, callback:callback, params:params};
-}__w(parseCallDataFromArgs, {"signature":"function(array)"}); 
-
-
-function requestUsingGraph() {var args=Array.prototype.slice.call(arguments,0);
-  var $__0=    parseCallDataFromArgs(args),uri=$__0.uri,callback=$__0.callback,params=$__0.params;
-  var method = params.method;
+  var inspector = ES(inspect, 'bind', true,null, callback, uri.getPath(), method, params);
 
   var url = uri.getProtocol() && uri.getDomain()
     ? uri.setQueryData({}).toString()
     : UrlMap.resolve('graph') + uri.getPath();
 
-  request(
-    url,
-    method == 'get' ? 'get' : 'post',
-    params,
-    ES(inspect, 'bind', true,null, callback, uri.getPath(), method, params)
-  );
-}
-
-
-function scheduleBatchCall() {var args=Array.prototype.slice.call(arguments,0);
-  var $__0=     parseCallDataFromArgs(args),uri=$__0.uri,callback=$__0.callback,$__1=$__0.params,method=$__1.method;
-
-  var batchCall = {
-    method: method,
-    relative_url: uri
-      .removeQueryData('method')
-      .toString()
-  };
-
-  if (method.toLowerCase() == 'post') {
-    batchCall.body = uri.getQueryData();
-    batchCall.relative_url = uri
-      .setQueryData({})
-      .toString();
-  }
-
-  batchCalls.push(batchCall);
-  batchCallbacks.push(callback);
-
-  
-  
-  if (batchCalls.length == REQUESTS_PER_BATCH) {
-    dispatchBatchCalls();
-  } else if (!scheduleId) {
-    
-    scheduleId = setTimeout(dispatchBatchCalls, 0);
-  }
-}
-
-
-function dispatchBatchCalls() {
-  invariant(
-    batchCalls.length > 0,
-    'ApiClient: batchCalls is empty at dispatch.'
-  );
-
-  
-  
-  var copiedBatchCalls = batchCalls;
-  var copiedBatchCallbacks = batchCallbacks;
-
-  batchCalls = [];
-  batchCallbacks = [];
-  scheduleId = null;
-
-  requestUsingGraph(
-    '/',
-    'POST',
-    {
-      batch: ES('JSON', 'stringify', false,copiedBatchCalls),
-      include_headers: false,
-      batch_app_id: clientID || DEFAULT_BATCH_APP_ID
-    },
-    function(response)  {
-      if (ES('Array', 'isArray', false,response)) {
-        ES(response, 'forEach', true,function(data, idx)  {
-          copiedBatchCallbacks[idx](ES('JSON', 'parse', false,data.body));
-        });
-      } else {
-        ES(copiedBatchCallbacks, 'forEach', true,function(callback) 
-          {return callback({error: {message: 'Fatal: batch call failed.'}});}
-        );
-      }
-    }
-  );
-}
+  params.method = method;
+  request(url, method == 'get' ? 'get' : 'post', params, inspector);
+}__w(requestUsingGraph, {"signature":"function(string)"}); 
 
 
 function requestUsingRest(/*object*/ params, /*?function*/ cb) {__t([params, 'object', 'params'], [cb, '?function', 'cb']);
@@ -6884,18 +6666,17 @@ function requestUsingRest(/*object*/ params, /*?function*/ cb) {__t([params, 'ob
 }__w(requestUsingRest, {"signature":"function(object,?function)"}); 
 
 var ApiClient = ES('Object', 'assign', false,new ObservableMixin(), {
-  setAccessToken:__w(function(/*?string*/ access_token) {__t([access_token, '?string', 'access_token']);
+  setAccessToken: __w(function(/*?string*/ access_token) {__t([access_token, '?string', 'access_token']);
     accessToken = access_token;
   }, {"signature":"function(?string)"}),
-  setClientID:__w(function(/*?string*/ client_id) {__t([client_id, '?string', 'client_id']);
+  setClientID: __w(function(/*?string*/ client_id) {__t([client_id, '?string', 'client_id']);
     clientID = client_id;
   }, {"signature":"function(?string)"}),
-  setDefaultParams:__w(function(/*?object*/ default_params) {__t([default_params, '?object', 'default_params']);
+  setDefaultParams: __w(function(/*?object*/ default_params) {__t([default_params, '?object', 'default_params']);
     defaultParams = default_params;
   }, {"signature":"function(?object)"}),
   rest: requestUsingRest,
-  graph: requestUsingGraph,
-  scheduleBatchCall: scheduleBatchCall
+  graph: requestUsingGraph
 });
 
 
@@ -7183,7 +6964,7 @@ module.exports = {
 },null);
 
 
-__d("sdk.Dialog",["sdk.Canvas.Environment","sdk.Content","sdk.DOM","DOMEventListener","sdk.Intl","ObservableMixin","sdk.Runtime","Type","UserAgent_DEPRECATED","sdk.feature"],function(global,require,requireDynamic,requireLazy,module,exports,CanvasEnvironment,Content,DOM,DOMEventListener,Intl,ObservableMixin,Runtime,Type,UserAgent_DEPRECATED,feature) {
+__d("sdk.Dialog",["sdk.Canvas.Environment","sdk.Content","sdk.DOM","DOMEventListener","sdk.Intl","ObservableMixin","sdk.Runtime","Type","UserAgent","sdk.feature"],function(global,require,requireDynamic,requireLazy,module,exports,CanvasEnvironment,Content,DOM,DOMEventListener,Intl,ObservableMixin,Runtime,Type,UserAgent,feature) {
    
    
    
@@ -7208,7 +6989,7 @@ var isTablet = __w(function() /*boolean*/ {return __t([function() {
       result = size
         && (size.height >= MAX_HEIGHT_MOBILE || size.width >= MAX_WIDTH_MOBILE);
     } else {
-      result = !!UserAgent_DEPRECATED.ipad();
+      result = !!UserAgent.ipad();
     }
     isTablet = __w(function() /*boolean*/ {return __t([function() { return result; }.apply(this, arguments), 'boolean']);}, {"signature":"function():boolean"});
     return result;
@@ -7330,7 +7111,7 @@ var Dialog = {
     
     
     
-    var chrome = UserAgent_DEPRECATED.nativeApp()
+    var chrome = UserAgent.nativeApp()
       ? ''
       : ('<table>' +
         '  <tbody>' +
@@ -7390,7 +7171,7 @@ var Dialog = {
     Dialog._showTabletOverlay();
 
     if (!Dialog._loaderEl) {
-      Dialog._loaderEl = Dialog._findRoot(UserAgent_DEPRECATED.mobile()
+      Dialog._loaderEl = Dialog._findRoot(UserAgent.mobile()
         ? Dialog._createMobileLoader()
         : Dialog._createWWWLoader(width));
     }
@@ -7498,7 +7279,7 @@ var Dialog = {
 
     
     
-    if (UserAgent_DEPRECATED.mobile()) {
+    if (UserAgent.mobile()) {
       
       
       
@@ -7544,7 +7325,7 @@ var Dialog = {
   }, {"signature":"function(?object)"}),
 
   _setDialogSizes: function() {
-    if (!UserAgent_DEPRECATED.mobile() || isTablet()) {
+    if (!UserAgent.mobile() || isTablet()) {
       return;
     }
     for (var id in Dialog._dialogs) {
@@ -7558,7 +7339,7 @@ var Dialog = {
     }
   },
   getDefaultSize: __w(function() /*object*/ {return __t([function() {
-    if (UserAgent_DEPRECATED.mobile()) {
+    if (UserAgent.mobile()) {
       var size = getMobileSize();
 
       if (size) {
@@ -7567,14 +7348,14 @@ var Dialog = {
 
       
       // Keep this old ipad logic: it's pretty straightforward.
-      if (UserAgent_DEPRECATED.ipad()) {
+      if (UserAgent.ipad()) {
         return {
           width: MAX_WIDTH_MOBILE,
           height: MAX_HEIGHT_MOBILE
         };
       }
 
-      if (UserAgent_DEPRECATED.android()) {
+      if (UserAgent.android()) {
         
         // window.innerWidth/Height doesn't return correct values
         return {
@@ -7623,7 +7404,7 @@ var Dialog = {
     
     
     
-    if (UserAgent_DEPRECATED.android() &&
+    if (UserAgent.android() &&
         screenWidth == Dialog._availScreenWidth) {
       setTimeout(Dialog._handleOrientationChange, 50);
       return;
@@ -7649,7 +7430,7 @@ var Dialog = {
 
   
   _addOrientationHandler: function() {
-    if (!UserAgent_DEPRECATED.mobile()) {
+    if (!UserAgent.mobile()) {
       return;
     }
     
@@ -7686,7 +7467,7 @@ var Dialog = {
     className += ' ' + (opts.classes || '');
 
     
-    if (UserAgent_DEPRECATED.ie()) {
+    if (UserAgent.ie()) {
       className += ' fb_dialog_legacy';
       ES([ 'vert_left',
         'vert_right',
@@ -7701,7 +7482,7 @@ var Dialog = {
           dialog.appendChild(span);
         }, {"signature":"function(string)"}));
     } else {
-      className += UserAgent_DEPRECATED.mobile()
+      className += UserAgent.mobile()
         ? ' fb_dialog_mobile'
         : ' fb_dialog_advanced';
     }
@@ -7717,7 +7498,7 @@ var Dialog = {
     contentRoot.className = 'fb_dialog_content';
 
     dialog.appendChild(contentRoot);
-    if (UserAgent_DEPRECATED.mobile()) {
+    if (UserAgent.mobile()) {
       var padding = document.createElement('div');
       padding.className = 'fb_dialog_padding';
       dialog.appendChild(padding);
@@ -8039,7 +7820,7 @@ module.exports = insertIframe;
 },null);
 
 
-__d("sdk.Native",["Log","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,Log,UserAgent_DEPRECATED) {
+__d("sdk.Native",["Log","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,Log,UserAgent) {
    
    
 
@@ -8050,7 +7831,7 @@ var Native = {
   
   onready: __w(function(/*function*/ func) {__t([func, 'function', 'func']);
     // Check that we're within a native container
-    if (!UserAgent_DEPRECATED.nativeApp()) {
+    if (!UserAgent.nativeApp()) {
       Log.error('FB.Native.onready only works when the page is rendered ' +
              'in a WebView of the native Facebook app. Test if this is the ' +
              'case calling FB.UA.nativeApp()');
@@ -8109,7 +7890,7 @@ module.exports = resolveURI;
 },null);
 
 
-__d("sdk.UIServer",["sdk.Auth","sdk.Content","createObjectFrom","sdk.Dialog","sdk.DOM","sdk.Event","flattenObject","sdk.Frictionless","sdk.getContextType","guid","insertIframe","Log","sdk.Native","QueryString","resolveURI","sdk.RPC","sdk.Runtime","JSSDKConfig","UrlMap","UserAgent_DEPRECATED","sdk.XD"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,Content,createObjectFrom,Dialog,DOM,Event,flattenObject,Frictionless,getContextType,guid,insertIframe,Log,Native,QueryString,resolveURI,RPC,Runtime,SDKConfig,UrlMap,UserAgent_DEPRECATED,XD) {
+__d("sdk.UIServer",["sdk.Auth","sdk.Content","createObjectFrom","sdk.Dialog","sdk.DOM","sdk.Event","flattenObject","sdk.Frictionless","sdk.getContextType","guid","insertIframe","Log","sdk.Native","QueryString","resolveURI","sdk.RPC","sdk.Runtime","JSSDKConfig","UrlMap","UserAgent","sdk.XD"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,Content,createObjectFrom,Dialog,DOM,Event,flattenObject,Frictionless,getContextType,guid,insertIframe,Log,Native,QueryString,resolveURI,RPC,Runtime,SDKConfig,UrlMap,UserAgent,XD) {
    
    
    
@@ -8148,7 +7929,7 @@ var MobileIframeable = {
         'parent'
       );
       
-      if (!UserAgent_DEPRECATED.nativeApp()) {
+      if (!UserAgent.nativeApp()) {
         call.params.in_iframe = 1;
       }
       return call;
@@ -8219,8 +8000,8 @@ var Methods = {
 
   'permissions.oauth': {
     url       : 'dialog/oauth',
-    size      : { width: (UserAgent_DEPRECATED.mobile() ? null : 475),
-                  height: (UserAgent_DEPRECATED.mobile() ? null : 183) },
+    size      : { width: (UserAgent.mobile() ? null : 475),
+                  height: (UserAgent.mobile() ? null : 183) },
     transform : __w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
       if (!Runtime.getClientID()) {
         Log.error('FB.login() called before FB.init().');
@@ -8468,7 +8249,7 @@ var UIServer = {
     
     // (the fb native app is an exception because it doesn't
     // doesn't support POST for dialogs).
-    if (!UserAgent_DEPRECATED.nativeApp() &&
+    if (!UserAgent.nativeApp() &&
         UIServer.urlTooLongForIE(call.url + '?' + encodedQS)) {
       call.post = true;
     } else if (encodedQS) {
@@ -8496,7 +8277,7 @@ var UIServer = {
     }
 
     
-    if (UserAgent_DEPRECATED.mobile() || params.display === 'touch') {
+    if (UserAgent.mobile() || params.display === 'touch') {
       return 'touch';
     }
 
@@ -8552,8 +8333,8 @@ var UIServer = {
 
       
       
-      width    = UserAgent_DEPRECATED.mobile() ? null : call.size.width,
-      height   = UserAgent_DEPRECATED.mobile() ? null : call.size.height,
+      width    = UserAgent.mobile() ? null : call.size.width,
+      height   = UserAgent.mobile() ? null : call.size.height,
       screenX  = (_screenX < 0) ? window.screen.width + _screenX : _screenX,
       left     = parseInt(screenX + ((outerWidth - width) / 2), 10),
       top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
@@ -8642,7 +8423,7 @@ var UIServer = {
     call.root = Dialog.create({
       onClose: onClose,
       closeIcon: call.closeIcon === undefined ? true : call.closeIcon,
-      classes: (UserAgent_DEPRECATED.ipad() ? 'centered' : '')
+      classes: (UserAgent.ipad() ? 'centered' : '')
     });
     if (!call.hideLoader) {
       Dialog.showLoader(onClose, call.size.width);
@@ -8663,7 +8444,7 @@ var UIServer = {
       } else {
         UIServer.iframe(call);
       }
-    } else if (UserAgent_DEPRECATED.nativeApp() && !call.ui_created) {
+    } else if (UserAgent.nativeApp() && !call.ui_created) {
       
       
       call.frame = call.id;
@@ -8911,7 +8692,6 @@ var UIServer = {
                  params.result != UIServer._resultToken &&
                  ES('JSON', 'parse', false,params.result));
       }, frame, target, isDefault) +
-      
       '&result=' + encodeURIComponent(UIServer._resultToken)
     );
   }.apply(this, arguments), 'string']);}, {"signature":"function(function,string,string,boolean):string"}),
@@ -8963,11 +8743,6 @@ function ui(/*object*/ params, /*?function*/ cb) /*?object*/ {__t([params, 'obje
     Log.error('"method" is a required parameter for FB.ui().');
     return null;
   }
-
-  if (params.method == 'pay.prompt') {
-    params.method = 'pay';
-  }
-
   var method = params.method;
 
   if (params.redirect_uri) {
@@ -9234,7 +9009,7 @@ module.exports = Navigation;
 },null);
 
 
-__d("sdk.Canvas.Plugin",["sdk.api","sdk.RPC","Log","UserAgent_DEPRECATED","sdk.Runtime","createArrayFrom"],function(global,require,requireDynamic,requireLazy,module,exports,api,RPC,Log,UserAgent_DEPRECATED,Runtime,createArrayFrom) {
+__d("sdk.Canvas.Plugin",["sdk.api","sdk.RPC","Log","UserAgent","sdk.Runtime","createArrayFrom"],function(global,require,requireDynamic,requireLazy,module,exports,api,RPC,Log,UserAgent,Runtime,createArrayFrom) {
    
    
    
@@ -9247,10 +9022,10 @@ var unityClassID = 'CLSID:444785F1-DE89-4295-863A-D46C3A781394';
 var devHidePluginCallback = null;
 
 
-var unityNeedsToBeHidden = !(UserAgent_DEPRECATED.osx() >= 10.9
-                             && (UserAgent_DEPRECATED.chrome() >= 31
-                                 || UserAgent_DEPRECATED.webkit() >= 537.71
-                                 || UserAgent_DEPRECATED.firefox() >= 25));
+var unityNeedsToBeHidden = !(UserAgent.osx() >= 10.9
+                             && (UserAgent.chrome() >= 31
+                                 || UserAgent.webkit() >= 537.71
+                                 || UserAgent.firefox() >= 25));
 
 
 function hideUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
@@ -10115,49 +9890,12 @@ FB.provide('Data', Data);
 },3);
 
 
-__d("legacy:fb.event",["FB","sdk.Event","sdk.Runtime","sdk.Scribe","sdk.feature"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Event,Runtime,Scribe,feature) {
+__d("legacy:fb.event",["FB","sdk.Event"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Event) {
    
    
-   
-   
-
-   
-
-var eventsToLog = [];
-var logScheduleId = null;
-var logTimeout = feature('event_subscriptions_log', false);
 
 FB.provide('Event', {
-  subscribe:function(/*string*/ name, /*function*/ cb) {
-    if (logTimeout) {
-      eventsToLog.push(name);
-
-      
-      
-      if (!logScheduleId) {
-        logScheduleId = setTimeout(function()  {
-
-          Scribe.log('jssdk_error', {
-            appId: Runtime.getClientID(),
-            error: 'EVENT_SUBSCRIPTIONS_LOG',
-            extra: {
-              line: 0,
-              name: 'EVENT_SUBSCRIPTIONS_LOG',
-              script: 'N/A',
-              stack: 'N/A',
-              message: eventsToLog.sort().join(',')
-            }
-          });
-
-          eventsToLog.length = 0;
-          logScheduleId = null;
-
-        }, logTimeout);
-      }
-    }
-    return Event.subscribe(name, cb);
-  },
-
+  subscribe: ES(Event.subscribe, 'bind', true,Event),
   unsubscribe: ES(Event.unsubscribe, 'bind', true,Event)
 });
 
@@ -10360,10 +10098,9 @@ FB.provide('JSON', {
 },3);
 
 
-__d("legacy:fb.pay",["copyProperties","sdk.Runtime","sdk.UIServer","sdk.XD","sdk.feature","FB"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,copyProperties,Runtime,UIServer,XD,feature) {
+__d("legacy:fb.pay",["copyProperties","sdk.Runtime","sdk.UIServer","sdk.XD","FB"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,copyProperties,Runtime,UIServer,XD) {
 require('FB');
 
-   
    
    
    
@@ -10376,43 +10113,44 @@ var DEF_ERROR_MSG = {
 
 var callbackWrapper = __w(function(/*function*/ callback) /*function*/ {__t([callback, 'function', 'callback']);return __t([function() {
   return __w(function(/*?object*/ msg) {__t([msg, '?object', 'msg']);
-    
-    
-    if (msg && typeof msg.response === 'string') {
-      callback(ES('JSON', 'parse', false,msg.response));
-    } else if (typeof msg === 'object') {
-      callback(msg);
-    } else {
-      callback(DEF_ERROR_MSG);
-    }
+    callback(msg && msg.response
+      ? ES('JSON', 'parse', false,msg.response)
+      : DEF_ERROR_MSG
+    );
   }, {"signature":"function(?object)"});
 }.apply(this, arguments), 'function']);}, {"signature":"function(function):function"});
 
 
 copyProperties(UIServer.Methods, {
+  'pay.prompt': {
+    transform : __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+      var handler = XD.handler(
+        callbackWrapper(call.cb),
+        'parent.frames[' + (window.name || 'iframe_canvas') + ']');
+
+      call.params.channel = handler;
+
+      XD.inform('Pay.Prompt', call.params);
+    }, {"signature":"function(object)"})
+  },
   'pay': {
     size      : { width: 555, height: 120 },
     connectDisplay : 'popup',
     transform : __w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
-      if (feature('launch_payment_dialog_via_pac')) {
-        call.cb = callbackWrapper(call.cb);
+      call.cb = callbackWrapper(call.cb);
+      if (!Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
+        
+        call.params.order_info = ES('JSON', 'stringify', false,call.params.order_info);
         return call;
-      } else {
-        call.cb = callbackWrapper(call.cb);
-        if (!Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
-          
-          call.params.order_info = ES('JSON', 'stringify', false,call.params.order_info);
-          return call;
-        }
-        var handler = XD.handler(
-          call.cb,
-          'parent.frames[' + (window.name || 'iframe_canvas') + ']');
-
-        call.params.channel = handler;
-        call.params.uiserver = true;
-
-        XD.inform('Pay.Prompt', call.params);
       }
+      var handler = XD.handler(
+        call.cb,
+        'parent.frames[' + (window.name || 'iframe_canvas') + ']');
+
+      call.params.channel = handler;
+      call.params.uiserver = true;
+
+      XD.inform('Pay.Prompt', call.params);
     }.apply(this, arguments), '?object']);}, {"signature":"function(object):?object"})
   }
 });
@@ -10422,11 +10160,11 @@ copyProperties(UIServer.Methods, {
 },3);
 
 
-__d("legacy:fb.ua",["FB","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,UserAgent_DEPRECATED) {
+__d("legacy:fb.ua",["FB","UserAgent"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,UserAgent) {
    
    
 FB.provide('UA', {
-  nativeApp: UserAgent_DEPRECATED.nativeApp
+  nativeApp: UserAgent.nativeApp
 });
 
 
@@ -10557,7 +10295,7 @@ module.exports = runOnce;
 },null);
 
 
-__d("XFBML",["Assert","createArrayFrom","sdk.DOM","sdk.feature","sdk.Impressions","Log","ObservableMixin","runOnce","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,createArrayFrom,DOM,feature,Impressions,Log,ObservableMixin,runOnce,UserAgent_DEPRECATED) {
+__d("XFBML",["Assert","createArrayFrom","sdk.DOM","sdk.feature","sdk.Impressions","Log","ObservableMixin","runOnce","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,Assert,createArrayFrom,DOM,feature,Impressions,Log,ObservableMixin,runOnce,UserAgent) {
    
    
    
@@ -10689,7 +10427,7 @@ function parse(/*DOMElement*/ dom, /*function*/ callback, /*boolean*/ reparse) {
       return;
     }
 
-    if (UserAgent_DEPRECATED.ie() < 9 && element.scopeName) {
+    if (UserAgent.ie() < 9 && element.scopeName) {
       // Touching innerHTML on custom XML elements in IE<9 can cause an 'Unknown
       // runtime error', so we switch to the HTML5 syntax in this case.
       element = convertSyntax(element, info.xmlns, info.localName);
@@ -10784,7 +10522,7 @@ module.exports = XFBML;
 
 },null);
 
-__d("PluginPipe",["sdk.Content","sdk.feature","guid","insertIframe","Miny","ObservableMixin","JSSDKPluginPipeConfig","sdk.Runtime","UrlMap","UserAgent_DEPRECATED","XFBML"],function(global,require,requireDynamic,requireLazy,module,exports,Content,feature,guid,insertIframe,Miny,ObservableMixin,PluginPipeConfig,Runtime,UrlMap,UserAgent_DEPRECATED,XFBML) {
+__d("PluginPipe",["sdk.Content","sdk.feature","guid","insertIframe","Miny","ObservableMixin","JSSDKPluginPipeConfig","sdk.Runtime","UrlMap","UserAgent","XFBML"],function(global,require,requireDynamic,requireLazy,module,exports,Content,feature,guid,insertIframe,Miny,ObservableMixin,PluginPipeConfig,Runtime,UrlMap,UserAgent,XFBML) {
    
    
    
@@ -10805,7 +10543,7 @@ var queued = [];
 function isEnabled() /*boolean*/ {return __t([function() {
   return !!(feature('plugin_pipe') &&
          Runtime.getSecure() !== undefined &&
-         (UserAgent_DEPRECATED.chrome() || UserAgent_DEPRECATED.firefox()) &&
+         (UserAgent.chrome() || UserAgent.firefox()) &&
          PluginPipeConfig.enabledApps[Runtime.getClientID()]);
 }.apply(this, arguments), 'boolean']);}__w(isEnabled, {"signature":"function():boolean"}); 
 
@@ -10901,7 +10639,7 @@ module.exports = PluginPipe;
 },null);
 
 
-__d("IframePlugin",["sdk.Auth","sdk.DOM","sdk.Event","Log","ObservableMixin","sdk.PlatformVersioning","PluginPipe","QueryString","sdk.Runtime","Type","sdk.URI","UrlMap","UserAgent_DEPRECATED","sdk.XD","sdk.createIframe","guid","resolveURI"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,DOM,Event,Log,ObservableMixin,PlatformVersioning,PluginPipe,QueryString,Runtime,Type,URI,UrlMap,UserAgent_DEPRECATED,XD,createIframe,guid,resolveURI) {
+__d("IframePlugin",["sdk.Auth","sdk.DOM","sdk.Event","Log","ObservableMixin","sdk.PlatformVersioning","PluginPipe","QueryString","sdk.Runtime","Type","sdk.URI","UrlMap","UserAgent","sdk.XD","sdk.createIframe","guid","resolveURI"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,DOM,Event,Log,ObservableMixin,PlatformVersioning,PluginPipe,QueryString,Runtime,Type,URI,UrlMap,UserAgent,XD,createIframe,guid,resolveURI) {
    
    
    
@@ -11112,7 +10850,7 @@ var IframePlugin = Type.extend({
       
       
       
-      width: (UserAgent_DEPRECATED.mobile() ? (void 0) : (params.width || 1000)),
+      width: (UserAgent.mobile() ? (void 0) : (params.width || 1000)),
       height: params.height || 1000,
       style: {
         border: 'none',
@@ -11158,7 +10896,7 @@ var IframePlugin = Type.extend({
       this._element.removeChild(this._element.firstChild);
     }
     this._element.appendChild(this._config.root);
-    var timeout = UserAgent_DEPRECATED.mobile() ? 120 : 45;
+    var timeout = UserAgent.mobile() ? 120 : 45;
     this._timeoutID = setTimeout(ES(function()  {
       collapseIframe(this._iframe);
       Log.warn(
@@ -11177,7 +10915,7 @@ var IframePlugin = Type.extend({
     if (!PluginPipe.add(this)) {
       this._iframe = createIframe(this._config);
     }
-    if (UserAgent_DEPRECATED.mobile()) {
+    if (UserAgent.mobile()) {
       DOM.addCss(this._element, 'fb_iframe_widget_fluid');
 
       ES('Object', 'assign', false,this._element.style, {
@@ -11919,7 +11657,7 @@ module.exports = IframeWidget;
 },null);
 
 
-__d("sdk.XFBML.Comments",["sdk.Event","sdk.XFBML.IframeWidget","QueryString","sdk.Runtime","JSSDKConfig","UrlMap","UserAgent_DEPRECATED"],function(global,require,requireDynamic,requireLazy,module,exports,Event,IframeWidget,QueryString,Runtime,SDKConfig,UrlMap,UserAgent_DEPRECATED) {
+__d("sdk.XFBML.Comments",["sdk.Event","sdk.XFBML.IframeWidget","QueryString","sdk.Runtime","JSSDKConfig","UrlMap","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,Event,IframeWidget,QueryString,Runtime,SDKConfig,UrlMap,UserAgent) {
    
    
    
@@ -11955,7 +11693,7 @@ var Comments = IframeWidget.extend({
     }
 
     if (SDKConfig.initSitevars.enableMobileComments &&
-        UserAgent_DEPRECATED.mobile() &&
+        UserAgent.mobile() &&
         attr.mobile !== false) {
       attr.mobile = true;
       delete attr.width;
@@ -12114,7 +11852,7 @@ module.exports = Comments;
 },null);
 
 
-__d("sdk.XFBML.CommentsCount",["ApiClient","sdk.DOM","sdk.XFBML.Element","sprintf"],function(global,require,requireDynamic,requireLazy,module,exports,ApiClient,DOM,Element,sprintf) {
+__d("sdk.XFBML.CommentsCount",["sdk.Data","sdk.DOM","sdk.XFBML.Element","sprintf"],function(global,require,requireDynamic,requireLazy,module,exports,Data,DOM,Element,sprintf) {
    
    
    
@@ -12122,16 +11860,15 @@ __d("sdk.XFBML.CommentsCount",["ApiClient","sdk.DOM","sdk.XFBML.Element","sprint
 
 var CommentsCount = Element.extend({
 
-  process:function() {
+  process: function() {
     DOM.addCss(this.dom, 'fb_comments_count_zero');
 
     var href = this.getAttribute('href', window.location.href);
 
-    ApiClient.scheduleBatchCall(
-      '/v2.1/' + encodeURIComponent(href),
-      {fields: 'share'},
-      ES(function(value)  {
-        var c = (value.share && value.share.comment_count) || 0;
+    Data._selectByIndex(['commentsbox_count'], 'link_stat', 'url', href)
+      .wait(ES(__w(function(/*array<object>*/ value) {__t([value, 'array<object>', 'value']);
+        var c = value[0].commentsbox_count;
+
         DOM.html(
           this.dom,
           sprintf('<span class="fb_comments_count">%s</span>', c)
@@ -12142,13 +11879,109 @@ var CommentsCount = Element.extend({
         }
 
         this.fire('render');
-      }, 'bind', true,this)
-    );
+      }, {"signature":"function(array<object>)"}), 'bind', true,this));
   }
 
 });
 
 module.exports = CommentsCount;
+
+
+},null);
+
+
+__d("sdk.Anim",["sdk.DOM"],function(global,require,requireDynamic,requireLazy,module,exports,DOM) {
+   
+var Anim = {
+  
+  ate: __w(function(/*DOMElement*/ dom, /*object*/ props, /*?number*/ duration,
+      /*?function*/ callback) {__t([dom, 'DOMElement', 'dom'], [props, 'object', 'props'], [duration, '?number', 'duration'], [callback, '?function', 'callback']);
+    duration = !isNaN(parseFloat(duration)) && duration >= 0
+      ? duration
+      : 750;
+    var
+      frame_speed = 40,
+      from        = {},
+      to          = {},
+      begin       = null,
+      timer       = setInterval(ES(function() {
+        if (!begin) { begin = ES('Date', 'now', false); }
+        
+        var pd = 1;
+        if (duration != 0) {
+          pd = Math.min((ES('Date', 'now', false) - begin) / duration, 1);
+        }
+        for (var prop in props) if (props.hasOwnProperty(prop)) {
+          var value = props[prop];
+          if (!from[prop]) { 
+            var style = DOM.getStyle(dom, prop);
+            // check for can't animate this, bad prop for this browser
+            if (style === false) { return; }
+            from[prop] = this._parseCSS(style+''); 
+          }
+          if (!to[prop]) { 
+            to[prop] = this._parseCSS(value.toString());
+          }
+          var next = ''; 
+          ES(from[prop], 'forEach', true,__w(function(/*object*/ pair, /*number*/ i) {__t([pair, 'object', 'pair'], [i, 'number', 'i']);
+            
+            if (isNaN(to[prop][i].numPart) && to[prop][i].textPart == '?') {
+              next = pair.numPart + pair.textPart;
+            
+            } else if (isNaN(pair.numPart)) {
+              next = pair.textPart;
+            // yay it's animate-able!
+            } else {
+              next +=
+                (pair.numPart + 
+                 Math.ceil((to[prop][i].numPart - pair.numPart) *
+                            Math.sin(Math.PI/2 * pd))) +
+                to[prop][i].textPart + ' '; 
+            }
+          }, {"signature":"function(object,number)"}));
+          
+          DOM.setStyle(dom, prop, next);
+        }
+        if (pd == 1) { 
+          clearInterval(timer);
+          if (callback) { callback(dom); }
+        }
+      }, 'bind', true,this), frame_speed);
+  }, {"signature":"function(DOMElement,object,?number,?function)"}),
+
+  
+  _parseCSS: __w(function(/*string*/ css) /*array<object>*/ {__t([css, 'string', 'css']);return __t([function() {
+    var ret = [];
+    ES(css.split(' '), 'forEach', true,function(peice) {
+      var num = parseInt(peice, 10);
+      ret.push({numPart: num, textPart: peice.replace(num,'')});
+    });
+    return ret;
+  }.apply(this, arguments), 'array<object>']);}, {"signature":"function(string):array<object>"})
+};
+module.exports = Anim;
+
+
+},null);
+
+
+__d("escapeHTML",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+var re = /[&<>"'\/]/g;
+var map = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#039;',
+  '/': '&#x2F;'
+};
+
+function escapeHTML(/*string*/ value) /*string*/ {__t([value, 'string', 'value']);return __t([function() {
+  return value.replace(re, function(m) {
+    return map[m];
+  });
+}.apply(this, arguments), 'string']);}__w(escapeHTML, {"signature":"function(string):string"}); 
+module.exports = escapeHTML;
 
 
 },null);
@@ -12239,6 +12072,240 @@ module.exports = Helper;
 },null);
 
 
+__d("sdk.XFBML.ConnectBar",["sdk.Anim","sdk.api","sdk.Auth","createArrayFrom","JSSDKConnectBarConfig","sdk.Data","sdk.DOM","sdk.XFBML.Element","escapeHTML","sdk.Event","format","sdk.Helper","sdk.Insights","sdk.Intl","sdk.Runtime","UrlMap","UserAgent"],function(global,require,requireDynamic,requireLazy,module,exports,Anim,api,Auth,createArrayFrom,ConnectBarConfig,Data,DOM,Element,escapeHTML,Event,format,Helper,Insights,Intl,Runtime,UrlMap,UserAgent) {
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+var ConnectBar = Element.extend({
+  _initialHeight: null,
+  _initTopMargin: 0,
+  _picFieldName: 'pic_square',
+  _page: null, // the external site's content parent node
+  _displayed: false, 
+  _notDisplayed: false, 
+  _container: null,
+  _animationSpeed: 0, 
+
+  
+  process: function() {
+    
+    Auth.getLoginStatus(ES(__w(function(/*object*/ resp) {__t([resp, 'object', 'resp']);
+      Event.monitor('auth.statusChange', ES(__w(function() /*boolean*/ {return __t([function() {
+        
+        if (this.isValid() && Runtime.getLoginStatus() == 'connected') {
+          this._uid = Runtime.getUserID();
+          api({ 
+            method: 'Connect.shouldShowConnectBar'
+          }, ES(function(showBar) {
+            if (showBar != 2) {
+              this._animationSpeed = (showBar == 0) ? 750 : 0;
+              this._showBar();
+            } else {
+              this._noRender();
+            }
+          }, 'bind', true,this));
+        } else {
+          this._noRender();
+        }
+        return false; 
+      }.apply(this, arguments), 'boolean']);}, {"signature":"function():boolean"}), 'bind', true,this));
+    }, {"signature":"function(object)"}), 'bind', true,this));
+  },
+
+  
+  _showBar: function() {
+    var q1 = Data._selectByIndex(['first_name', 'profile_url',
+                                      this._picFieldName],
+                                    'user', 'uid', this._uid);
+    var q2 = Data._selectByIndex(['display_name'], 'application',
+                                    'api_key', Runtime.getClientID());
+    Data.waitOn([q1, q2], ES(__w(function(/*array<array<object>>*/ data) {__t([data, 'array<array<object>>', 'data']);
+      data[0][0].site_name = data[1][0].display_name;
+      if (!this._displayed) {
+        this._displayed = true;
+        this._notDisplayed = false;
+        this._renderConnectBar(data[0][0]);
+        this.fire('render');
+        Insights.impression({
+          lid: 104,
+          name: 'widget_load'
+        });
+        this.fire('connectbar.ondisplay');
+        Event.fire('connectbar.ondisplay', this);
+        Helper.invokeHandler(this.getAttribute('on-display'), this);
+      }
+    }, {"signature":"function(array<array<object>>)"}), 'bind', true,this));
+  },
+
+  
+  _noRender: function() {
+    if (this._displayed) {
+      this._displayed = false;
+      this._closeConnectBar();
+    }
+    if (!this._notDisplayed) {
+      this._notDisplayed = true;
+      this.fire('render');
+      this.fire('connectbar.onnotdisplay');
+      Event.fire('connectbar.onnotdisplay', this);
+      Helper.invokeHandler(this.getAttribute('on-not-display'), this);
+    }
+  },
+
+  
+  _renderConnectBar: __w(function(/*object*/ info) {__t([info, 'object', 'info']);
+    var bar = document.createElement('div'),
+        container = document.createElement('div');
+    
+    bar.className = 'fb_connect_bar';
+    container.className = 'fb_reset fb_connect_bar_container';
+    container.appendChild(bar);
+    document.body.appendChild(container);
+    this._container = container;
+    this._initialHeight = Math.round(
+              parseFloat(DOM.getStyle(container, 'height')) +
+              parseFloat(DOM.getStyle(container, 'borderBottomWidth')));
+    DOM.html(bar, format(
+      '<div class="fb_buttons">' +
+        '<a href="#" class="fb_bar_close">' +
+          '<img src="{1}" alt="{2}" title="{2}"/>' +
+        '</a>' +
+      '</div>' +
+      '<a href="{7}" class="fb_profile" target="_blank">' +
+        '<img src="{3}" alt="{4}" title="{4}"/>' +
+      '</a>' +
+      '{5}' +
+      ' <span>' +
+        '<a href="{8}" class="fb_learn_more" target="_blank">{6}</a> &ndash; ' +
+        '<a href="#" class="fb_no_thanks">{0}</a>' +
+      '</span>',
+      Intl.tx._("Nah\u00e1niri, Aguyje!"),
+      UrlMap.resolve('fbcdn') + '/' + ConnectBarConfig.imgs.buttonUrl,
+      Intl.tx._("Emboty"),
+      info[this._picFieldName] || UrlMap.resolve('fbcdn') + '/' +
+                                  ConnectBarConfig.imgs.missingProfileUrl,
+      escapeHTML(info.first_name),
+      Intl.tx._("Hi {firstName}. \u003Cstrong>{siteName}\u003C\/strong> is using Facebook to personalize your experience.", {
+        firstName: escapeHTML(info.first_name),
+        siteName: escapeHTML(info.site_name)
+      }),
+      Intl.tx._("Hetave marandu"),
+      info.profile_url,
+      UrlMap.resolve('www') + '/sitetour/connect.php'
+    ));
+    ES(createArrayFrom(bar.getElementsByTagName('a')), 'forEach', true,__w(function(/*DOMElement*/ el) {__t([el, 'DOMElement', 'el']);
+        el.onclick = ES(this._clickHandler, 'bind', true,this);
+      }, {"signature":"function(DOMElement)"}), this);
+    this._page = document.body;
+    var top_margin = 0;
+    if (this._page.parentNode) {
+      top_margin = Math.round(
+        (parseFloat(DOM.getStyle(this._page.parentNode, 'height')) -
+        parseFloat(DOM.getStyle(this._page, 'height'))) / 2);
+    } else {
+      top_margin = parseInt(DOM.getStyle(this._page, 'marginTop'), 10);
+    }
+    top_margin = isNaN(top_margin) ? 0 : top_margin;
+    this._initTopMargin = top_margin;
+    if (!window.XMLHttpRequest) { 
+      container.className += " fb_connect_bar_container_ie6";
+    } else {
+      container.style.top = (-1*this._initialHeight) + 'px';
+      Anim.ate(container, { top: '0px' }, this._animationSpeed);
+    }
+    var move = { marginTop: this._initTopMargin + this._initialHeight + 'px' }
+    if (UserAgent.ie()) { 
+      move.backgroundPositionY = this._initialHeight + 'px'
+    } else { 
+      move.backgroundPosition = '? ' + this._initialHeight + 'px'
+    }
+    Anim.ate(this._page, move, this._animationSpeed);
+  }, {"signature":"function(object)"}),
+
+  
+  _clickHandler : function(e) {
+    e = e || window.event;
+    var el = e.target || e.srcElement;
+    while (el.nodeName != 'A') { el = el.parentNode; }
+    switch (el.className) {
+      case 'fb_bar_close':
+        api({ 
+          method: 'Connect.connectBarMarkAcknowledged'
+        });
+        Insights.impression({
+          lid: 104,
+          name: 'widget_user_closed'
+        });
+        this._closeConnectBar();
+        break;
+      case 'fb_learn_more':
+      case 'fb_profile':
+        window.open(el.href);
+        break;
+      case 'fb_no_thanks':
+        this._closeConnectBar();
+        api({ 
+          method: 'Connect.connectBarMarkAcknowledged'
+        });
+        Insights.impression({
+          lid: 104,
+          name: 'widget_user_no_thanks'
+        });
+        api({ method: 'auth.revokeAuthorization', block: true }, ES(function() {
+          this.fire('connectbar.ondeauth');
+          Event.fire('connectbar.ondeauth', this);
+          Helper.invokeHandler(this.getAttribute('on-deauth'), this);
+          if (this._getBoolAttribute('auto-refresh', true)) {
+            window.location.reload();
+          }
+        }, 'bind', true,this));
+        break;
+    }
+    return false;
+  },
+
+  _closeConnectBar: function() {
+    this._notDisplayed = true;
+    var move = { marginTop: this._initTopMargin + 'px' }
+    if (UserAgent.ie()) { 
+      move.backgroundPositionY = '0px'
+    } else { 
+      move.backgroundPosition = '? 0px'
+    }
+    var speed = (this._animationSpeed == 0) ? 0 : 300;
+    Anim.ate(this._page, move, speed);
+    Anim.ate(this._container, {
+      top: (-1 * this._initialHeight) + 'px'
+    }, speed, __w(function(/*DOMElement*/ el) {__t([el, 'DOMElement', 'el']);
+      el.parentNode.removeChild(el);
+    }, {"signature":"function(DOMElement)"}));
+    this.fire('connectbar.onclose');
+    Event.fire('connectbar.onclose', this);
+    Helper.invokeHandler(this.getAttribute('on-close'), this);
+  }
+});
+
+module.exports = ConnectBar;
+
+
+},null);
+
+
 __d("sdk.XFBML.LoginButton",["sdk.Helper","IframePlugin"],function(global,require,requireDynamic,requireLazy,module,exports,Helper,IframePlugin) {
    
    
@@ -12280,29 +12347,7 @@ module.exports = LoginButton;
 },null);
 
 
-__d("escapeHTML",[],function(global,require,requireDynamic,requireLazy,module,exports) {
-var re = /[&<>"'\/]/g;
-var map = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  "'": '&#039;',
-  '/': '&#x2F;'
-};
-
-function escapeHTML(/*string*/ value) /*string*/ {__t([value, 'string', 'value']);return __t([function() {
-  return value.replace(re, function(m) {
-    return map[m];
-  });
-}.apply(this, arguments), 'string']);}__w(escapeHTML, {"signature":"function(string):string"}); 
-module.exports = escapeHTML;
-
-
-},null);
-
-
-__d("sdk.XFBML.Name",["ApiClient","escapeHTML","sdk.Event","sdk.XFBML.Element","sdk.Helper","Log","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,ApiClient,escapeHTML,Event,Element,Helper,Log,Runtime) {
+__d("sdk.XFBML.Name",["sdk.Data","escapeHTML","sdk.Event","sdk.XFBML.Element","sdk.Helper","Log","sdk.Runtime"],function(global,require,requireDynamic,requireLazy,module,exports,Data,escapeHTML,Event,Element,Helper,Log,Runtime) {
    
    
    
@@ -12310,8 +12355,6 @@ __d("sdk.XFBML.Name",["ApiClient","escapeHTML","sdk.Event","sdk.XFBML.Element","
    
    
    
-
-var hasOwnProperty = ({}).hasOwnProperty;
 
 var Name = Element.extend({
   
@@ -12343,15 +12386,16 @@ var Name = Element.extend({
     }
 
     if (this._subjectId) {
-      fields.push('gender');
+      fields.push('sex');
 
       if (this._subjectId == Runtime.getUserID()) {
         this._reflexive = true;
       }
     }
 
+    var data;
     
-    Event.monitor('auth.statusChange', ES(function()  {
+    Event.monitor('auth.statusChange', ES(function() {
       
       if (!this.isValid()) {
         this.fire('render');
@@ -12366,25 +12410,19 @@ var Name = Element.extend({
         return; // don't do anything yet
       }
 
-      ApiClient.scheduleBatchCall(
-        
-        // which will work till Apr, 2015. It's done to support
-        
-        '/v1.0/' + this._uid,
-        {fields: fields.join(',')},
-        ES(function(data)  {
-          if (hasOwnProperty.call(data, 'error')) {
-            Log.warn('The name is not found for ID: ' + this._uid);
-            return;
-          }
-          if (this._subjectId == this._uid) {
-            this._renderPronoun(data);
-          } else {
-            this._renderOther(data);
-          }
-          this.fire('render');
-        }, 'bind', true,this)
-      );
+      if (Helper.isUser(this._uid)) {
+        data = Data._selectByIndex(fields, 'user', 'uid', this._uid);
+      } else {
+        data = Data._selectByIndex(['name', 'id'], 'profile', 'id', this._uid);
+      }
+      data.wait(ES(__w(function(/*array<object>*/ data) {__t([data, 'array<object>', 'data']);
+        if (this._subjectId == this._uid) {
+          this._renderPronoun(data[0]);
+        } else {
+          this._renderOther(data[0]);
+        }
+        this.fire('render');
+      }, {"signature":"function(array<object>)"}), 'bind', true,this));
     }, 'bind', true,this));
   },
 
@@ -12416,7 +12454,7 @@ var Name = Element.extend({
       }
     }
     else {
-      switch (userInfo.gender) {
+      switch (userInfo.sex) {
         case 'male':
           if (this._possessive) {
             word = this._reflexive ? 'his own' : 'his';
@@ -12900,7 +12938,7 @@ module.exports = Registration;
 },null);
 
 
-__d("legacy:fb.xfbml",["Assert","sdk.domReady","sdk.Event","FB","IframePlugin","PluginTags","wrapFunction","XFBML","sdk.XFBML.Comments","sdk.XFBML.CommentsCount","sdk.XFBML.LoginButton","sdk.XFBML.Name","sdk.XFBML.RecommendationsBar","sdk.XFBML.Registration"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Assert,domReady,Event,FB,IframePlugin,PluginTags,wrapFunction,XFBML) {
+__d("legacy:fb.xfbml",["Assert","sdk.domReady","sdk.Event","FB","IframePlugin","PluginTags","wrapFunction","XFBML","sdk.XFBML.Comments","sdk.XFBML.CommentsCount","sdk.XFBML.ConnectBar","sdk.XFBML.LoginButton","sdk.XFBML.Name","sdk.XFBML.RecommendationsBar","sdk.XFBML.Registration"],function(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Assert,domReady,Event,FB,IframePlugin,PluginTags,wrapFunction,XFBML) {
    
    
    
@@ -12913,6 +12951,7 @@ __d("legacy:fb.xfbml",["Assert","sdk.domReady","sdk.Event","FB","IframePlugin","
 var customTags = {
   comments: require('sdk.XFBML.Comments'),
   comments_count: require('sdk.XFBML.CommentsCount'),
+  connect_bar: require('sdk.XFBML.ConnectBar'),
   login_button: require('sdk.XFBML.LoginButton'),
   name: require('sdk.XFBML.Name'),
   recommendations_bar: require('sdk.XFBML.RecommendationsBar'),
@@ -13004,4 +13043,4 @@ FB.provide('XFBML.RecommendationsBar', {
 
 
 }).call({}, window.inDapIF ? parent.window : window);
-} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1396250","message":"'+e.message+'"}}');}
+} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1352406","message":"'+e.message+'"}}');}

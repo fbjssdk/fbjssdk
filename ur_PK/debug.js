@@ -10207,7 +10207,8 @@ var Data = {
     query.table = table;
     query.where = { type: 'index', key: name, value: value };
     Data.queue.push(query);
-    Data._waitToProcess(        eturn query;
+    Data._waitToProcess();
+    return query;
   }.apply(this, arguments), 'object']);}, {"signature":"function(array,string,string,string):object"}),
 
   

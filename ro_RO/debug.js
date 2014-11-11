@@ -7,6 +7,7 @@
  */
 try {window.FB || (function(window) {
 var self = window, document = window.document;
+var undefined = void 0;
 var setTimeout = window.setTimeout, setInterval = window.setInterval,clearTimeout = window.clearTimeout,clearInterval = window.clearInterval;var __DEV__ = 1;
 function emptyFunction() {};
 var __w, __t;

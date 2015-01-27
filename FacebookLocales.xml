@@ -1,104 +1,993 @@
-<!DOCTYPE html>
-<html lang="en" id="facebook">
-  <head>
-    <title>Facebook | Error</title>
-    <meta charset="utf-8">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="cache-control" content="no-store">
-    <meta http-equiv="cache-control" content="max-age=0">
-    <meta http-equiv="expires" content="-1">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta name="robots" content="noindex,nofollow">
-    <style>
-      html, body {
-        color: #141823;
-        background-color: #e9eaed;
-        font-family: Helvetica, Lucida Grande, Arial,
-                     Tahoma, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      #header {
-        background: #3b5998
-                    url('//static.xx.fbcdn.net/images/logo-fb-trans-92x20.png')
-                    center 11px no-repeat;
-        border-bottom: 1px solid #133783;
-        display: block;
-        height: 38px;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 18px;
-      }
-
-      p {
-        font-size: 13px;
-      }
-
-      #footer {
-        border-top: 1px solid #ddd;
-        color: #9197a3;
-        font-size: 12px;
-        padding: 5px 8px 6px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <a id="header" href="//www.facebook.com/"></a>
-    </div>
-    <div id="core">
-      <h1 id="sorry">Sorry, something went wrong.</h1>
-      <p id="promise">
-        We're working on it and we'll get it fixed as soon as we can.
-      </p>
-      <p id="back-link">
-        <a id="back" href="//www.facebook.com/">Go Back</a>
-      </p>
-      <div id="footer">
-        Facebook
-        <span id="copyright">
-          &copy; 2014
-        </span>
-        <span id="help-link">
-          &#183;
-          <a id="help" href="//www.facebook.com/help/">Help Center</a>
-        </span>
-      </div>
-    </div>
-    <script>
-      document.getElementById('back').onclick = function() {
-        if (history.length > 1) {
-          history.back();
-          return false;
-        }
-      };
-
-      // Adjust the display based on the window size
-      if (window.innerHeight < 80 || window.innerWidth < 80) {
-        // Blank if window is too small
-        document.body.style.display = 'none';
-      };
-      if (window.innerWidth < 200 || window.innerHeight < 150) {
-        document.getElementById('header').style.background = '#3b5998';
-        document.getElementById('header').style.height = '8px';
-        document.getElementById('back-link').style.display = 'none';
-        document.getElementById('help-link').style.display = 'none';
-      };
-      if (window.innerWidth < 200) {
-        document.getElementById('sorry').style.fontSize = '16px';
-      };
-      if (window.innerWidth < 150) {
-        document.getElementById('promise').style.display = 'none';
-      };
-      if (window.innerHeight < 150) {
-        document.getElementById('sorry').style.margin = '4px 0 0 0';
-        document.getElementById('sorry').style.fontSize = '14px';
-        document.getElementById('promise').style.display = 'none';
-      };
-    </script>
-  </body>
-</html>
+<?xml version='1.0'?>
+<locales>
+<locale>
+<englishName>Afrikaans</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>af_ZA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Arabic</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ar_AR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Azerbaijani</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>az_AZ</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Belarusian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>be_BY</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Bulgarian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>bg_BG</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Bengali</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>bn_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Bosnian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>bs_BA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Catalan</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ca_ES</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Czech</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>cs_CZ</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Cebuano</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>cx_PH</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Welsh</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>cy_GB</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Danish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>da_DK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>German</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>de_DE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Greek</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>el_GR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>English (UK)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>en_GB</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>English (Pirate)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>en_PI</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>English (Upside Down)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>en_UD</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>English (US)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>en_US</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Esperanto</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>eo_EO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Spanish (Spain)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_ES</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Spanish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_LA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Estonian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>et_EE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Basque</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>eu_ES</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Persian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fa_IR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Leet Speak</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fb_LT</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Finnish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fi_FI</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Faroese</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fo_FO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>French (Canada)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fr_CA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>French (France)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fr_FR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Frisian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>fy_NL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Irish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ga_IE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Galician</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>gl_ES</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Guarani</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>gn_PY</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Gujarati</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>gu_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Hebrew</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>he_IL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Hindi</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>hi_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Croatian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>hr_HR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Hungarian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>hu_HU</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Armenian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>hy_AM</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Indonesian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>id_ID</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Icelandic</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>is_IS</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Italian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>it_IT</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Japanese</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ja_JP</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Japanese (Kansai)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ja_KS</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Javanese</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>jv_ID</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Georgian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ka_GE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Kazakh</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>kk_KZ</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Khmer</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>km_KH</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Kannada</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>kn_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Korean</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ko_KR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Kurdish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ku_TR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Latin</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>la_VA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Lithuanian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>lt_LT</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Latvian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>lv_LV</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Macedonian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>mk_MK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Malayalam</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ml_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Mongolian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>mn_MN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Marathi</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>mr_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Malay</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ms_MY</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Norwegian (bokmal)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>nb_NO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Nepali</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ne_NP</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Dutch</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>nl_NL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Norwegian (nynorsk)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>nn_NO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Punjabi</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>pa_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Polish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>pl_PL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Pashto</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ps_AF</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Portuguese (Brazil)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>pt_BR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Portuguese (Portugal)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>pt_PT</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Romanian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ro_RO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Russian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ru_RU</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Sinhala</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>si_LK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Slovak</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sk_SK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Slovenian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sl_SI</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Albanian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sq_AL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Serbian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sr_RS</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Swedish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sv_SE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Swahili</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>sw_KE</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Tamil</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ta_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Telugu</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>te_IN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Tajik</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>tg_TJ</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Thai</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>th_TH</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Filipino</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>tl_PH</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Turkish</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>tr_TR</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Ukrainian</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>uk_UA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Urdu</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>ur_PK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Uzbek</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>uz_UZ</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Vietnamese</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>vi_VN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Simplified Chinese (China)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>zh_CN</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Traditional Chinese (Hong Kong)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>zh_HK</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Traditional Chinese (Taiwan)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>zh_TW</representation>
+</standard>
+</code>
+</codes>
+</locale>
+</locales>

@@ -13,7 +13,7 @@ function emptyFunction() {};
 var __w, __t;
 /** Path: html/js/downstream/polyfill/TypeChecker.js */
 /**
- * @generated SignedSource<<844f320a76c971aa562d386826b156eb>>
+ * @generated SignedSource<<3b9e990680144cc70410fd78de04bb34>>
  *
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !! This file is a check-in of a static_upstream project!      !!
@@ -49,17 +49,23 @@ var __w, __t;
   /**
    * Mapping from types to interfaces that they implement.
    */
-  var typeInterfaces = {
-    'DOMElement': ['DOMEventTarget', 'DOMNode'],
-    'DOMDocument': ['DOMEventTarget', 'DOMNode'],
-    'DOMWindow': ['DOMEventTarget'],
-    'DOMTextNode': ['DOMNode'],
-    'Comment': ['DOMNode'],
-    'file': ['blob'],
-    'worker': ['DOMEventTarget'],
+  var typeInterfaceMap = {
+    'HTMLElement': {'DOMEventTarget': true, 'DOMNode': true},
+    'DOMElement': {'DOMEventTarget': true, 'DOMNode': true},
+    'DOMDocument': {'DOMEventTarget': true, 'DOMNode': true},
+    'DocumentFragment': {
+      'DOMElement': true,
+      'DOMEventTarget': true,
+      'DOMNode': true
+    },
+    'DOMWindow': {'DOMEventTarget': true},
+    'DOMTextNode': {'DOMNode': true},
+    'Comment': {'DOMNode': true},
+    'file': {'blob': true},
+    'worker': {'DOMEventTarget': true},
     // We need to support typing on both the native and polyfilled type.
-    'Set': ['set'],
-    'Map': ['map']
+    'Set': {'set': true},
+    'Map': {'map': true}
   };
 
   /**
@@ -69,6 +75,16 @@ var __w, __t;
    */
   function stringType(value) {
     return toStringFunc.call(value).slice(8, -1);
+  }
+
+  function getTagName(string) {
+    if (string === 'A') {
+      return 'Anchor';
+    }
+    if (string === 'IMG') {
+      return 'Image';
+    }
+    return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
   }
 
   /**
@@ -100,11 +116,13 @@ var __w, __t;
     if (value === null) {
       type = 'null';
     } else if (toStringType === 'Function') {
-      // Not all functions have type of "function" (e.g. built-ins and bound)
-      // Let functions with signatures also match 'function'
-      type = value.__TCmeta && node !== 'function'
-        ? value.__TCmeta.signature
-        : 'function';
+      if (value.__TCmeta) {
+        // Allow functions with signatures to match `function`.
+        type = node === 'function' ? 'function' : value.__TCmeta.signature;
+      } else {
+        // Allow functions without signatures to match any signature.
+        type = node.indexOf('function') === 0 ? node : 'function';
+      }
     } else if (type === 'object' || type === 'function') {
       var constructor = value.constructor;
       if (constructor && constructor.__TCmeta) {
@@ -127,15 +145,19 @@ var __w, __t;
         // HTMLObjectElements has a typeof function in FF, but is not callable.
         // Do not use instanceof Element etc. as e.g. MooTools shadow this
         switch (value.nodeType) {
-          case 1: type = 'DOMElement';
-            subType = value.nodeName.toUpperCase();
+          case 1:
+            if (node === 'HTMLElement') {
+              // If testing against the base type, return this
+              type = 'HTMLElement';
+            } else {
+              type = 'HTML' + getTagName(value.nodeName) + 'Element';
+              typeInterfaceMap[type] = typeInterfaceMap['HTMLElement'];
+            }
             break;
           case 3: type = 'DOMTextNode'; break;
           case 8: type = 'Comment'; break;
           case 9: type = 'DOMDocument'; break;
-          case 11: type = 'DOMElement';
-            subType = 'FRAGMENT';
-            break;
+          case 11: type = 'DocumentFragment'; break;
         }
       } else if (value == value.window && value == value.self) {
         type = 'DOMWindow';
@@ -246,7 +268,7 @@ var __w, __t;
       case 'promise':
         simpleMatch = type === 'object' && typeof value.then === 'function';
         break;
-      case 'DOMElement':
+      case 'HTMLElement':
         simpleMatch = isDOMNode(type, value, 1);
         break;
       case 'DOMTextNode':
@@ -273,13 +295,10 @@ var __w, __t;
 
     // Check whether type has an interface that is what we're looking for.
     // Use truthiness check as per http://jsperf.com/hasownproperty-vs-in-vs-undefined/35
-    if (type !== node && typeInterfaces[type]) {
-      var interfaces = typeInterfaces[type], i = interfaces.length;
-      while (i--) {
-        if (interfaces[i] === node) {
-          type = node;
-          break;
-        }
+    var interfaces;
+    if (type !== node && (interfaces = typeInterfaceMap[type])) {
+      if (interfaces[node]) {
+        type = node;
       }
     }
 
@@ -414,7 +433,7 @@ var __w, __t;
 })();
 /*/TC*/
 
-/* R0DxW8zXTGl */
+/* qA6fC48N2ts */
 /** Path: html/js/downstream/require/require-lite.js */
 /**
  * @generated SignedSource<<7618ccf975187cb96282853804aca921>>
@@ -1924,7 +1943,7 @@ module.exports = ES;
 /* 8t3naSxRM6- */
 },null);
 var ES = require('ES');
-__d("JSSDKRuntimeConfig",[],{"locale":"fy_NL","rtl":false,"revision":"1549264"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"allow_non_canvas_app_events":false,"event_subscriptions_log":{"rate":0.01,"value":10000},"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true,"launch_payment_dialog_via_pac":{"rate":100},"plugin_tags_blacklist":["recommendations_bar"]},"api":{"mode":"warn","whitelist":["AppEvents","AppEvents.EventNames","AppEvents.ParameterNames","AppEvents.activateApp","AppEvents.logEvent","AppEvents.logPurchase","Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.parse","Payment.setSize","Payment.unlockForProcessing","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/cnxubtftnjy.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yR\/r\/ks_9ZXiQ0GL.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/PvklbuW2Ycn.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});
+__d("JSSDKRuntimeConfig",[],{"locale":"fy_NL","rtl":false,"revision":"1576282"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"allow_non_canvas_app_events":false,"event_subscriptions_log":{"rate":0.01,"value":10000},"should_force_single_dialog_instance":true,"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true,"launch_payment_dialog_via_pac":{"rate":100},"plugin_tags_blacklist":["recommendations_bar"],"should_log_response_error":true},"api":{"mode":"warn","whitelist":["AppEvents","AppEvents.EventNames","AppEvents.ParameterNames","AppEvents.activateApp","AppEvents.logEvent","AppEvents.logPurchase","Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.parse","Payment.setSize","Payment.unlockForProcessing","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/iNI8UDsML5Z.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yR\/r\/ks_9ZXiQ0GL.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100\u0025}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/PvklbuW2Ycn.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});
 
 
 __d("QueryString",[],function(global,require,requireDynamic,requireLazy,module,exports) {
@@ -3041,7 +3060,7 @@ function createIframe(/*object*/ opts) /*DOMElement*/ {__t([opts, 'object', 'opt
   // "javascript:false" to work around the IE issue mentioned above)
   frame.src = src;
   return frame;
-}.apply(this, arguments), 'DOMElement']);}__w(createIframe, {"signature":"function(object):DOMElement"}); 
+}.apply(this, arguments), 'HTMLElement']);}__w(createIframe, {"signature":"function(object):DOMElement"}); 
 
 module.exports = createIframe;
 
@@ -3056,12 +3075,12 @@ var rootElement,
 
 // `obj || default` pattern to account for 'resetting'.
 var DOMWrapper = {
-  setRoot: __w(function(/*?DOMElement*/ root) {__t([root, '?DOMElement', 'root']);
+  setRoot: __w(function(/*?DOMElement*/ root) {__t([root, '?HTMLElement', 'root']);
     rootElement = root;
   }, {"signature":"function(?DOMElement)"}),
   getRoot: __w(function() /*DOMElement*/ {return __t([function() {
     return rootElement || document.body;
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function():DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function():DOMElement"}),
   setWindow: function(win) {
     windowRef = win;
   },
@@ -3356,7 +3375,7 @@ var Content = {
 
   
   append: __w(function(/*DOMElement|string*/ content, /*?DOMElement*/ root)
-      /*DOMElement*/ {__t([content, 'DOMElement|string', 'content'], [root, '?DOMElement', 'root']);return __t([function() {
+      /*DOMElement*/ {__t([content, 'HTMLElement|string', 'content'], [root, '?HTMLElement', 'root']);return __t([function() {
 
     
     if (!root) {
@@ -3394,10 +3413,10 @@ var Content = {
     } else {
       return root.appendChild(content);
     }
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(DOMElement|string,?DOMElement):DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function(DOMElement|string,?DOMElement):DOMElement"}),
 
   
-  appendHidden: __w(function(/*DOMElement|string*/ content) /*DOMElement*/ {__t([content, 'DOMElement|string', 'content']);return __t([function() {
+  appendHidden: __w(function(/*DOMElement|string*/ content) /*DOMElement*/ {__t([content, 'HTMLElement|string', 'content']);return __t([function() {
     if (!hiddenRoot) {
       var
         hiddenRoot = document.createElement('div'),
@@ -3409,7 +3428,7 @@ var Content = {
     }
 
     return Content.append(content, hiddenRoot);
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(DOMElement|string):DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function(DOMElement|string):DOMElement"}),
 
   
   submitToTarget: __w(function(/*object*/ opts, /*?boolean*/ get) {__t([opts, 'object', 'opts'], [get, '?boolean', 'get']);
@@ -4022,9 +4041,10 @@ __d("URISchemes",["createObjectFrom"],function(global,require,requireDynamic,req
 
 var defaultSchemes = createObjectFrom([
   'fb',        
+  'fb-ama',    
+  'fb-messenger', 
   'fbcf',
   'fbconnect', 
-  'fb-messenger', 
   'fbrpc',
   'file',
   'ftp',
@@ -4478,13 +4498,13 @@ for(var URIBase____Key in URIBase){if(URIBase.hasOwnProperty(URIBase____Key)){UR
     URIBase.call(this,uri, serializer);
   }__w(URI, {"type":"URI"}); 
 
-  URI.prototype.isFacebookURI=function()  {"use strict";
+  URI.prototype.isFacebookURI=__w(function() /*boolean*/ {return __t([function() {"use strict";
     return facebookRe.test(this.getDomain());
-  };
+  }.apply(this, arguments), 'boolean']);}, {"signature":"function():boolean"});
 
-  URI.prototype.valueOf=function()  {"use strict";
+  URI.prototype.valueOf=__w(function() /*string*/ {return __t([function() {"use strict";
     return this.toString();
-  };
+  }.apply(this, arguments), 'string']);}, {"signature":"function():string"});
 
 
 module.exports = URI;
@@ -4649,7 +4669,7 @@ var registry = {};
     return this;
   };
 
-  Queue.prototype.isStarted=function()  {"use strict";
+  Queue.prototype.isStarted=function() /*boolean*/ {"use strict";
     return !this._stopped;
   };
 
@@ -6067,7 +6087,7 @@ __d("sdk.DOM",["Assert","sdk.UA","createArrayFromMixed","sdk.domReady"],function
 
 var cssRules = {};
 
-function getAttr(/*DOMElement*/ dom, /*string*/ name) /*?string*/ {__t([dom, 'DOMElement', 'dom'], [name, 'string', 'name']);return __t([function() {
+function getAttr(/*DOMElement*/ dom, /*string*/ name) /*?string*/ {__t([dom, 'HTMLElement', 'dom'], [name, 'string', 'name']);return __t([function() {
   var attribute = (
     dom.getAttribute(name) ||
     dom.getAttribute(name.replace(/_/g, '-')) ||
@@ -6085,14 +6105,14 @@ function getAttr(/*DOMElement*/ dom, /*string*/ name) /*?string*/ {__t([dom, 'DO
     : null;
 }.apply(this, arguments), '?string']);}__w(getAttr, {"signature":"function(DOMElement,string):?string"}); 
 
-function getBoolAttr(/*DOMElement*/ dom, /*string*/ name) /*?boolean*/ {__t([dom, 'DOMElement', 'dom'], [name, 'string', 'name']);return __t([function() {
+function getBoolAttr(/*DOMElement*/ dom, /*string*/ name) /*?boolean*/ {__t([dom, 'HTMLElement', 'dom'], [name, 'string', 'name']);return __t([function() {
   var attribute = getAttr(dom, name);
   return attribute
     ? /^(true|1|yes|on)$/.test(attribute)
     : null;
 }.apply(this, arguments), '?boolean']);}__w(getBoolAttr, {"signature":"function(DOMElement,string):?boolean"}); 
 
-function getProp(/*DOMElement*/ dom, /*string*/ name) /*string*/ {__t([dom, 'DOMElement', 'dom'], [name, 'string', 'name']);return __t([function() {
+function getProp(/*DOMElement*/ dom, /*string*/ name) /*string*/ {__t([dom, 'HTMLElement', 'dom'], [name, 'string', 'name']);return __t([function() {
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(name);
 
@@ -6103,7 +6123,7 @@ function getProp(/*DOMElement*/ dom, /*string*/ name) /*string*/ {__t([dom, 'DOM
   }
 }.apply(this, arguments), 'string']);}__w(getProp, {"signature":"function(DOMElement,string):string"}); 
 
-function html(/*DOMElement*/ dom, /*string*/ content) {__t([dom, 'DOMElement', 'dom'], [content, 'string', 'content']);
+function html(/*DOMElement*/ dom, /*string*/ content) {__t([dom, 'HTMLElement', 'dom'], [content, 'string', 'content']);
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(content);
 
@@ -6115,7 +6135,7 @@ function html(/*DOMElement*/ dom, /*string*/ content) {__t([dom, 'DOMElement', '
 }__w(html, {"signature":"function(DOMElement,string)"}); 
 
 
-function hasClass(/*DOMElement*/ dom, /*string*/ className) /*boolean*/ {__t([dom, 'DOMElement', 'dom'], [className, 'string', 'className']);return __t([function() {
+function hasClass(/*DOMElement*/ dom, /*string*/ className) /*boolean*/ {__t([dom, 'HTMLElement', 'dom'], [className, 'string', 'className']);return __t([function() {
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(className);
 
@@ -6124,7 +6144,7 @@ function hasClass(/*DOMElement*/ dom, /*string*/ className) /*boolean*/ {__t([do
 }.apply(this, arguments), 'boolean']);}__w(hasClass, {"signature":"function(DOMElement,string):boolean"}); 
 
 
-function addClass(/*DOMElement*/ dom, /*string*/ className) {__t([dom, 'DOMElement', 'dom'], [className, 'string', 'className']);
+function addClass(/*DOMElement*/ dom, /*string*/ className) {__t([dom, 'HTMLElement', 'dom'], [className, 'string', 'className']);
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(className);
 
@@ -6134,7 +6154,7 @@ function addClass(/*DOMElement*/ dom, /*string*/ className) {__t([dom, 'DOMEleme
 }__w(addClass, {"signature":"function(DOMElement,string)"}); 
 
 
-function removeClass(/*DOMElement*/ dom, /*string*/ className) {__t([dom, 'DOMElement', 'dom'], [className, 'string', 'className']);
+function removeClass(/*DOMElement*/ dom, /*string*/ className) {__t([dom, 'HTMLElement', 'dom'], [className, 'string', 'className']);
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(className);
 
@@ -6161,10 +6181,10 @@ function getByClass(/*string*/ className, dom, tagName) /*array<DOMElement>*/ {_
     }
   }
   return els;
-}.apply(this, arguments), 'array<DOMElement>']);}__w(getByClass, {"signature":"function(string):array<DOMElement>"}); 
+}.apply(this, arguments), 'array<HTMLElement>']);}__w(getByClass, {"signature":"function(string):array<DOMElement>"}); 
 
 
-function getStyle(/*DOMElement*/ dom, /*string*/ styleProp) /*string*/ {__t([dom, 'DOMElement', 'dom'], [styleProp, 'string', 'styleProp']);return __t([function() {
+function getStyle(/*DOMElement*/ dom, /*string*/ styleProp) /*string*/ {__t([dom, 'HTMLElement', 'dom'], [styleProp, 'string', 'styleProp']);return __t([function() {
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(styleProp);
 
@@ -6189,7 +6209,7 @@ function getStyle(/*DOMElement*/ dom, /*string*/ styleProp) /*string*/ {__t([dom
 }.apply(this, arguments), 'string']);}__w(getStyle, {"signature":"function(DOMElement,string):string"}); 
 
 
-function setStyle(/*DOMElement*/ dom, /*string*/ styleProp, value) {__t([dom, 'DOMElement', 'dom'], [styleProp, 'string', 'styleProp']);
+function setStyle(/*DOMElement*/ dom, /*string*/ styleProp, value) {__t([dom, 'HTMLElement', 'dom'], [styleProp, 'string', 'styleProp']);
   Assert.isTruthy(dom, 'element not specified');
   Assert.isString(styleProp);
 
@@ -6252,7 +6272,7 @@ function getViewportInfo() /*object*/ {return __t([function() {
 }.apply(this, arguments), 'object']);}__w(getViewportInfo, {"signature":"function():object"}); 
 
 
-function getPosition(/*DOMElement*/ node) /*object*/ {__t([node, 'DOMElement', 'node']);return __t([function() {
+function getPosition(/*DOMElement*/ node) /*object*/ {__t([node, 'HTMLElement', 'node']);return __t([function() {
   Assert.isTruthy(node, 'element not specified');
 
   var x = 0,
@@ -7150,6 +7170,17 @@ function request(/*string*/ url, /*string*/ method, /*object*/ params,
 
 function inspect(/*?function*/ callback, /*string*/ endpoint, /*string*/ method,
     /*object*/ params, /*number*/ startTime, response) {__t([callback, '?function', 'callback'], [endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params'], [startTime, 'number', 'startTime']);
+  if (response && response.error) {
+    ApiClient.inform(
+      'request.error',
+      endpoint,
+      method,
+      params,
+      response,
+      /*duration*/ ES('Date', 'now', false) - startTime
+    );
+  }
+
   ApiClient.inform(
     'request.complete',
     endpoint,
@@ -7158,6 +7189,7 @@ function inspect(/*?function*/ callback, /*string*/ endpoint, /*string*/ method,
     response,
     /*duration*/ ES('Date', 'now', false) - startTime
   );
+
   if (callback) {
     callback(response);
   }
@@ -7390,30 +7422,39 @@ module.exports = PlatformVersioning;
 },null);
 
 
-__d("sdk.api",["ApiClient","sdk.PlatformVersioning","sdk.Runtime","sdk.URI"],function(global,require,requireDynamic,requireLazy,module,exports,ApiClient,PlatformVersioning,Runtime,URI) {
+__d("sdk.api",["ApiClient","sdk.PlatformVersioning","sdk.Runtime","sdk.Scribe","sdk.URI","sdk.feature"],function(global,require,requireDynamic,requireLazy,module,exports,ApiClient,PlatformVersioning,Runtime,Scribe,URI,feature) {
     
    
-      
    
+   
+   
+
+   
+var shouldLogResponseError = feature('should_log_response_error', false);
 
 var currentAccessToken;
 
-Runtime.subscribe('ClientID.change', __w(function(/*?string*/ value) {__t([value, '?string', 'value']);
-  ApiClient.setClientID(value);
-}, {"signature":"function(?string)"}));
+Runtime.subscribe(
+  'ClientID.change',
+  __w(function(/*?string*/ value)  {__t([value, '?string', 'value']);return ApiClient.setClientID(value);}, {"signature":"function(?string)"})
+);
 
-Runtime.subscribe('AccessToken.change', __w(function(/*?string*/ value) {__t([value, '?string', 'value']);
-  currentAccessToken = value;
-  ApiClient.setAccessToken(value);
-}, {"signature":"function(?string)"}));
+Runtime.subscribe(
+  'AccessToken.change',
+  __w(function(/*?string*/ value)   {__t([value, '?string', 'value']);
+    currentAccessToken = value;
+    ApiClient.setAccessToken(value);
+  }, {"signature":"function(?string)"})
+);
 
 ApiClient.setDefaultParams({
   sdk: 'joey'
 });
 
 
-ApiClient.subscribe('request.complete', __w(function(/*string*/ endpoint,
-    /*string*/ method, /*object*/ params, response) {__t([endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']);
+ApiClient.subscribe(
+  'request.complete',
+  __w(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)   {__t([endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']);
     var invalidateToken = false;
     if (response && typeof response == 'object') {
       if (response.error) {
@@ -7428,24 +7469,44 @@ ApiClient.subscribe('request.complete', __w(function(/*string*/ endpoint,
         }
       }
     }
-  if (invalidateToken
-      && currentAccessToken === Runtime.getAccessToken()) {
-    
-    Runtime.setAccessToken(null);
+    if (invalidateToken
+        && currentAccessToken === Runtime.getAccessToken()) {
+      
+      Runtime.setAccessToken(null);
   }
 }, {"signature":"function(string,string,object)"}));
 
 // Inspector for calls that untos'es the app
-ApiClient.subscribe('request.complete', __w(function(/*string*/ endpoint,
-    /*string*/ method, /*object*/ params, response) {__t([endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']);
-  if (((endpoint == '/me/permissions'
-        && method === 'delete')
-       || (endpoint == '/restserver.php'
-            && params.method == 'Auth.revokeAuthorization'))
-      && response === true) {
-    Runtime.setAccessToken(null);
-  }
-}, {"signature":"function(string,string,object)"}));
+ApiClient.subscribe(
+  'request.complete',
+  __w(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)  {__t([endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']);
+    if (((endpoint == '/me/permissions'
+          && method === 'delete')
+         || (endpoint == '/restserver.php'
+              && params.method == 'Auth.revokeAuthorization'))
+        && response === true) {
+      Runtime.setAccessToken(null);
+    }
+  }, {"signature":"function(string,string,object)"})
+);
+
+
+ApiClient.subscribe(
+  'request.error',
+  __w(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)  {__t([endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']);
+    if (shouldLogResponseError && response.error.type === 'http') {
+      Scribe.log('jssdk_error', {
+        appId: Runtime.getClientID(),
+        error: 'transport',
+        extra: {
+          name: 'transport',
+          // Let's stringify the error as transports build specific error
+          message: ES('JSON', 'stringify', false,response.error)
+        }
+      });
+    }
+  }, {"signature":"function(string,string,object)"})
+);
 
 
 function api(path) {
@@ -7658,14 +7719,14 @@ var Dialog = {
 
 
   
-  _findRoot: __w(function(/*DOMElement*/ node) /*DOMElement*/ {__t([node, 'DOMElement', 'node']);return __t([function() {
+  _findRoot: __w(function(/*DOMElement*/ node) /*DOMElement*/ {__t([node, 'HTMLElement', 'node']);return __t([function() {
     while (node) {
       if (DOM.containsCss(node, 'fb_dialog')) {
         return node;
       }
       node = node.parentNode;
     }
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(DOMElement):DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function(DOMElement):DOMElement"}),
 
   _createWWWLoader: __w(function(/*number*/ width) /*DOMElement*/ {__t([width, 'number', 'width']);return __t([function() {
     width = width ? width : 460;
@@ -7682,7 +7743,7 @@ var Dialog = {
       '<div class="dialog_footer"></div>'),
       width: width
     });
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(number):DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function(number):DOMElement"}),
 
   _createMobileLoader: __w(function() /*DOMElement*/ {return __t([function() {
     
@@ -7722,7 +7783,7 @@ var Dialog = {
           chrome +
         '</div>')
     });
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function():DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function():DOMElement"}),
 
   _restoreBodyPosition: function() {
     if (!isTablet()) {
@@ -7790,7 +7851,7 @@ var Dialog = {
   },
 
   
-  _makeActive: __w(function(/*DOMElement*/ el) {__t([el, 'DOMElement', 'el']);
+  _makeActive: __w(function(/*DOMElement*/ el) {__t([el, 'HTMLElement', 'el']);
     Dialog._setDialogSizes();
     Dialog._lowerActive();
     Dialog._active = el;
@@ -7812,7 +7873,7 @@ var Dialog = {
   },
 
   
-  _removeStacked: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'DOMElement', 'dialog']);
+  _removeStacked: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'HTMLElement', 'dialog']);
     Dialog._stack = ES(Dialog._stack, 'filter', true,function(node) {
       return node != dialog;
     });
@@ -8093,10 +8154,10 @@ var Dialog = {
       Dialog.show(dialog);
     }
     return contentRoot;
-  }.apply(this, arguments), 'DOMElement']);}, {"signature":"function(object):DOMElement"}),
+  }.apply(this, arguments), 'HTMLElement']);}, {"signature":"function(object):DOMElement"}),
 
   
-  show: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'DOMElement', 'dialog']);
+  show: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'HTMLElement', 'dialog']);
     var root = Dialog._findRoot(dialog);
     if (root) {
       Dialog._removeStacked(root);
@@ -8112,7 +8173,7 @@ var Dialog = {
   }, {"signature":"function(DOMElement)"}),
 
   
-  hide: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'DOMElement', 'dialog']);
+  hide: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'HTMLElement', 'dialog']);
     var root = Dialog._findRoot(dialog);
     Dialog._hideLoader();
     if (root == Dialog._active) {
@@ -8128,7 +8189,7 @@ var Dialog = {
   }, {"signature":"function(DOMElement)"}),
 
   
-  remove: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'DOMElement', 'dialog']);
+  remove: __w(function(/*DOMElement*/ dialog) {__t([dialog, 'HTMLElement', 'dialog']);
     dialog = Dialog._findRoot(dialog);
     if (dialog) {
       var is_active = Dialog._active == dialog;
@@ -8159,7 +8220,7 @@ var Dialog = {
   }, {"signature":"function(DOMElement)"}),
 
   
-  isActive: __w(function(/*DOMElement*/ node) /*boolean*/ {__t([node, 'DOMElement', 'node']);return __t([function() {
+  isActive: __w(function(/*DOMElement*/ node) /*boolean*/ {__t([node, 'HTMLElement', 'node']);return __t([function() {
     var root = Dialog._findRoot(node);
     return root && root === Dialog._active;
   }.apply(this, arguments), 'boolean']);}, {"signature":"function(DOMElement):boolean"})
@@ -8346,7 +8407,7 @@ module.exports = resolveURI;
 },null);
 
 
-__d("sdk.UIServer",["sdk.Auth","sdk.Content","sdk.DOM","sdk.Dialog","sdk.Event","sdk.Frictionless","Log","sdk.Native","QueryString","sdk.RPC","sdk.Runtime","JSSDKConfig","sdk.UA","UrlMap","sdk.XD","createObjectFrom","flattenObject","sdk.getContextType","guid","insertIframe","resolveURI"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,Content,DOM,Dialog,Event,Frictionless,Log,Native,QueryString,RPC,Runtime,SDKConfig,UA,UrlMap,XD,createObjectFrom,flattenObject,getContextType,guid,insertIframe,resolveURI) {
+__d("sdk.UIServer",["sdk.Auth","sdk.Content","sdk.DOM","sdk.Dialog","sdk.Event","sdk.Frictionless","Log","sdk.Native","QueryString","sdk.RPC","sdk.Runtime","JSSDKConfig","sdk.UA","UrlMap","sdk.XD","createObjectFrom","sdk.feature","flattenObject","sdk.getContextType","guid","insertIframe","resolveURI"],function(global,require,requireDynamic,requireLazy,module,exports,Auth,Content,DOM,Dialog,Event,Frictionless,Log,Native,QueryString,RPC,Runtime,SDKConfig,UA,UrlMap,XD,createObjectFrom,feature,flattenObject,getContextType,guid,insertIframe,resolveURI) {
    
    
    
@@ -8363,6 +8424,7 @@ __d("sdk.UIServer",["sdk.Auth","sdk.Content","sdk.DOM","sdk.Dialog","sdk.Event",
    
    
 
+   
    
    
    
@@ -8371,7 +8433,7 @@ __d("sdk.UIServer",["sdk.Auth","sdk.Content","sdk.DOM","sdk.Dialog","sdk.Event",
    
 
 var MobileIframeable = {
-  transform: __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+  transform:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
     
     
     
@@ -8394,7 +8456,7 @@ var MobileIframeable = {
       return UIServer.genericTransform(call);
     }
   }.apply(this, arguments), 'object']);}, {"signature":"function(object):object"}),
-  getXdRelation: __w(function(/*object*/ params) /*string*/ {__t([params, 'object', 'params']);return __t([function() {
+  getXdRelation:__w(function(/*object*/ params) /*string*/ {__t([params, 'object', 'params']);return __t([function() {
     var display = params.display;
     if (display === 'touch' && window.postMessage && params.in_iframe) {
       
@@ -8410,7 +8472,7 @@ var Methods = {
   'stream.share': {
     size      : { width: 670, height: 340 },
     url       : 'sharer.php',
-    transform : __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+    transform:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
       if (!call.params.u) {
         call.params.u = window.location.toString();
       }
@@ -8421,7 +8483,7 @@ var Methods = {
 
   
   'apprequests': {
-    transform: __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+    transform:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
       call = MobileIframeable.transform(call);
 
       call.params.frictionless = Frictionless &&
@@ -8459,7 +8521,7 @@ var Methods = {
     url       : 'dialog/oauth',
     size      : { width: (UA.mobile() ? null : 475),
                   height: (UA.mobile() ? null : 183) },
-    transform : __w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
+    transform:__w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
       if (!Runtime.getClientID()) {
         Log.error('FB.login() called before FB.init().');
         return;
@@ -8523,7 +8585,7 @@ var Methods = {
 
   'auth.logout': {
     url       : 'logout.php',
-    transform : __w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
+    transform:__w(function(/*object*/ call) /*?object*/ {__t([call, 'object', 'call']);return __t([function() {
       if (!Runtime.getClientID()) {
         Log.error('FB.logout() called before calling FB.init().');
       } else if (!Auth.getAuthResponse()) {
@@ -8541,7 +8603,7 @@ var Methods = {
 
   'login.status': {
     url       : 'dialog/oauth',
-    transform : __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+    transform:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
       var
         cb = call.cb,
         id = call.id;
@@ -8568,6 +8630,35 @@ var Methods = {
   }
 };
 
+
+var _dialogStates = {};
+
+function _trackRunState(/*function*/ cb, /*string*/id) {__t([cb, 'function', 'cb']);
+  _dialogStates[id] = true;
+  return function(response)  {
+    delete _dialogStates[id];
+    cb(response);
+  };
+}__w(_trackRunState, {"signature":"function(function)"}); 
+
+
+function shouldEnforceSingleDialogInstance(params) {
+  
+  if (!feature('should_force_single_dialog_instance', true)) {
+    return false;
+  }
+
+  
+  var name = params.method.toLowerCase();
+
+  
+  if (name === 'pay' && params.display === 'async') {
+    return true;
+  }
+
+  return false;
+}
+
 var UIServer = {
   
   Methods: Methods,
@@ -8577,7 +8668,7 @@ var UIServer = {
   _resultToken   : '"xxRESULTTOKENxx"',
 
   
-  genericTransform: __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+  genericTransform:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
     if (call.params.display == 'dialog' || call.params.display == 'iframe') {
       ES('Object', 'assign', false,call.params, {
         display: 'iframe',
@@ -8589,7 +8680,7 @@ var UIServer = {
   }.apply(this, arguments), 'object']);}, {"signature":"function(object):object"}),
 
   
-  checkOauthDisplay: function(params) {
+  checkOauthDisplay:function(params) {
     var scope = params.scope || params.perms || Runtime.getScope();
     if (!scope) {
       return params.display;
@@ -8606,7 +8697,7 @@ var UIServer = {
   },
 
   
-  prepareCall: __w(function(/*object*/ params, /*function*/ cb) /*?object*/ {__t([params, 'object', 'params'], [cb, 'function', 'cb']);return __t([function() {
+  prepareCall:__w(function(/*object*/ params, /*function*/ cb) /*?object*/ {__t([params, 'object', 'params'], [cb, 'function', 'cb']);return __t([function() {
     var
       name   = params.method.toLowerCase(),
       method = UIServer.Methods.hasOwnProperty(name)
@@ -8647,6 +8738,19 @@ var UIServer = {
 
     if (Runtime.getIsVersioned() && method.url.substring(0, 7) === 'dialog/') {
       method.url = params.version + '/' + method.url;
+    }
+
+    if (shouldEnforceSingleDialogInstance(params)) {
+      // Don't allow running the dialog twice, until the callback is fired.
+      if (_dialogStates[name]) {
+        var errorMessage = 'Dialog "' + name +
+          '" is trying to run more than once.';
+        Log.warn(errorMessage);
+        cb({error_code: -100, error_message: errorMessage});
+        return;
+      }
+
+      cb = _trackRunState(cb, name);
     }
 
     
@@ -8712,7 +8816,7 @@ var UIServer = {
     return call;
   }.apply(this, arguments), '?object']);}, {"signature":"function(object,function):?object"}),
 
-  prepareParams: __w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
+  prepareParams:__w(function(/*object*/ call) /*object*/ {__t([call, 'object', 'call']);return __t([function() {
     
     
     
@@ -8738,12 +8842,12 @@ var UIServer = {
     return call;
   }.apply(this, arguments), 'object']);}, {"signature":"function(object):object"}),
 
-  urlTooLongForIE: __w(function(/*string*/ fullURL) /*boolean*/ {__t([fullURL, 'string', 'fullURL']);return __t([function() {
+  urlTooLongForIE:__w(function(/*string*/ fullURL) /*boolean*/ {__t([fullURL, 'string', 'fullURL']);return __t([function() {
     return fullURL.length > 2000;
   }.apply(this, arguments), 'boolean']);}, {"signature":"function(string):boolean"}),
 
   
-  getDisplayMode: __w(function(/*object*/ method, /*object*/ params) /*string*/ {__t([method, 'object', 'method'], [params, 'object', 'params']);return __t([function() {
+  getDisplayMode:__w(function(/*object*/ method, /*object*/ params) /*string*/ {__t([method, 'object', 'method'], [params, 'object', 'params']);return __t([function() {
     if (params.display === 'hidden' ||
         params.display === 'none') {
       return params.display;
@@ -8779,7 +8883,7 @@ var UIServer = {
   }.apply(this, arguments), 'string']);}, {"signature":"function(object,object):string"}),
 
   
-  getXdRelation: __w(function(/*object*/ params) /*string*/ {__t([params, 'object', 'params']);return __t([function() {
+  getXdRelation:__w(function(/*object*/ params) /*string*/ {__t([params, 'object', 'params']);return __t([function() {
     var display = params.display;
     if (display === 'popup' || display === 'touch') {
       return 'opener';
@@ -8794,7 +8898,7 @@ var UIServer = {
   }.apply(this, arguments), 'string']);}, {"signature":"function(object):string"}),
 
   
-  popup: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  popup:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     
     var
       _screenX   = typeof window.screenX      != 'undefined'
@@ -8865,7 +8969,7 @@ var UIServer = {
     }
   }, {"signature":"function(object)"}),
 
-  setLoadedNode: __w(function(/*object*/ call, node, /*?string*/ type) {__t([call, 'object', 'call'], [type, '?string', 'type']);
+  setLoadedNode:__w(function(/*object*/ call, node, /*?string*/ type) {__t([call, 'object', 'call'], [type, '?string', 'type']);
     if (call.params && call.params.display != 'popup') {
       
       
@@ -8880,21 +8984,21 @@ var UIServer = {
     UIServer._loadedNodes[call.id] = node;
   }, {"signature":"function(object,?string)"}),
 
-  getLoadedNode: function(call) {
+  getLoadedNode:function(call) {
     var id = typeof call == 'object' ? call.id : call,
         node = UIServer._loadedNodes[id];
     return node ? node.node : null;
   },
 
   
-  hidden: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  hidden:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     call.className = 'FB_UI_Hidden';
     call.root = Content.appendHidden('');
     UIServer._insertIframe(call);
   }, {"signature":"function(object)"}),
 
   
-  iframe: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  iframe:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     call.className = 'FB_UI_Dialog';
     var onClose = function() {
       UIServer._triggerDefault(call.id);
@@ -8912,7 +9016,7 @@ var UIServer = {
   }, {"signature":"function(object)"}),
 
   
-  touch: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  touch:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     if (call.params && call.params.in_iframe) {
       
       
@@ -8947,35 +9051,39 @@ var UIServer = {
   }, {"signature":"function(object)"}),
 
   
-  async: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  async:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     call.params.redirect_uri = location.protocol + '//' +
       location.host + location.pathname;
     delete call.params.access_token;
 
-    RPC.remote.showDialog(call.params, __w(function(/*object*/ response) {__t([response, 'object', 'response']);
-      var result = response.result;
+    RPC.remote.showDialog(
+      call.params,
       
-      if (result && result.e2e) {
-        var dialog = Dialog.get(call.id);
-        dialog.trackEvents(result.e2e);
-        dialog.trackEvent('close');
-        delete result.e2e;
-      }
-      call.cb(result);
-    }, {"signature":"function(object)"}));
+      __w(function(/*object*/ response)  {__t([response, 'object', 'response']);
+        var result = response.result;
+        
+        if (result && result.e2e) {
+          var dialog = Dialog.get(call.id);
+          dialog.trackEvents(result.e2e);
+          dialog.trackEvent('close');
+          delete result.e2e;
+        }
+        call.cb(result);
+      }, {"signature":"function(object)"})
+    );
   }, {"signature":"function(object)"}),
 
-  getDefaultSize: __w(function() /*object*/ {return __t([function() {
+  getDefaultSize:__w(function() /*object*/ {return __t([function() {
     return Dialog.getDefaultSize();
   }.apply(this, arguments), 'object']);}, {"signature":"function():object"}),
 
   
-  _insertIframe: __w(function(/*object*/ call) {__t([call, 'object', 'call']);
+  _insertIframe:__w(function(/*object*/ call) {__t([call, 'object', 'call']);
     
     
     // from the _frames nodes, and we won't add the node back in.
     UIServer._loadedNodes[call.id] = false;
-    var activate = __w(function(/*DOMElement*/ node) {__t([node, 'DOMElement', 'node']);
+    var activate = __w(function(/*DOMElement*/ node) {__t([node, 'HTMLElement', 'node']);
       if (call.id in UIServer._loadedNodes) {
         UIServer.setLoadedNode(call, node, 'iframe');
       }
@@ -8991,7 +9099,7 @@ var UIServer = {
         height    : call.size.height,
         id        : call.id,
         onInsert  : activate,
-        onload    : __w(function(/*DOMElement*/ node) {__t([node, 'DOMElement', 'node']);
+        onload    : __w(function(/*DOMElement*/ node) {__t([node, 'HTMLElement', 'node']);
           Content.submitToTarget({
             url    : call.url,
             target : node.name,
@@ -9014,7 +9122,7 @@ var UIServer = {
   }, {"signature":"function(object)"}),
 
   
-  _handleResizeMessage: __w(function(/*string*/ frame, /*object*/ data) {__t([frame, 'string', 'frame'], [data, 'object', 'data']);
+  _handleResizeMessage:__w(function(/*string*/ frame, /*object*/ data) {__t([frame, 'string', 'frame'], [data, 'object', 'data']);
     var node = UIServer.getLoadedNode(frame);
     if (!node) {
       return;
@@ -9038,7 +9146,7 @@ var UIServer = {
   }, {"signature":"function(string,object)"}),
 
   
-  _triggerDefault: __w(function(/*string*/ id) {__t([id, 'string', 'id']);
+  _triggerDefault:__w(function(/*string*/ id) {__t([id, 'string', 'id']);
     UIServer._xdRecv(
       { frame: id },
       UIServer._defaultCb[id] || function() {}
@@ -9046,7 +9154,7 @@ var UIServer = {
   }, {"signature":"function(string)"}),
 
   
-  _popupMonitor: function() {
+  _popupMonitor:function() {
     
     var found;
     for (var id in UIServer._loadedNodes) {
@@ -9083,7 +9191,7 @@ var UIServer = {
   },
 
   
-  _xdChannelHandler: __w(function(/*string*/ frame, /*string*/ relation)
+  _xdChannelHandler:__w(function(/*string*/ frame, /*string*/ relation)
       /*string*/ {__t([frame, 'string', 'frame'], [relation, 'string', 'relation']);return __t([function() {
     return XD.handler(__w(function(/*object*/ data) {__t([data, 'object', 'data']);
       var node = UIServer.getLoadedNode(frame);
@@ -9105,7 +9213,7 @@ var UIServer = {
   }.apply(this, arguments), 'string']);}, {"signature":"function(string,string):string"}),
 
   
-  _xdNextHandler: __w(function(/*function*/ cb, /*string*/ frame,
+  _xdNextHandler:__w(function(/*function*/ cb, /*string*/ frame,
        /*string*/ relation, /*boolean*/ isDefault) /*string*/ {__t([cb, 'function', 'cb'], [frame, 'string', 'frame'], [relation, 'string', 'relation'], [isDefault, 'boolean', 'isDefault']);return __t([function() {
     if (isDefault) {
       UIServer._defaultCb[frame] = cb;
@@ -9117,7 +9225,7 @@ var UIServer = {
   }.apply(this, arguments), 'string']);}, {"signature":"function(function,string,string,boolean):string"}),
 
   
-  _xdRecv: __w(function(/*object*/ data, /*function*/ cb) {__t([data, 'object', 'data'], [cb, 'function', 'cb']);
+  _xdRecv:__w(function(/*object*/ data, /*function*/ cb) {__t([data, 'object', 'data'], [cb, 'function', 'cb']);
     var frame = UIServer.getLoadedNode(data.frame);
     if (frame) {
       if (frame.close) {
@@ -9163,7 +9271,7 @@ var UIServer = {
   }, {"signature":"function(object,function)"}),
 
   
-  _xdResult: __w(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
+  _xdResult:__w(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
       /*boolean*/ isDefault) /*string*/ {__t([cb, 'function', 'cb'], [frame, 'string', 'frame'], [target, 'string', 'target'], [isDefault, 'boolean', 'isDefault']);return __t([function() {
     return (
       UIServer._xdNextHandler(function(params) {
@@ -9176,7 +9284,7 @@ var UIServer = {
     );
   }.apply(this, arguments), 'string']);}, {"signature":"function(function,string,string,boolean):string"}),
 
-  xdHandler: __w(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
+  xdHandler:__w(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
       /*?object*/ authResponse, /*string*/ method) /*string*/ {__t([cb, 'function', 'cb'], [frame, 'string', 'frame'], [target, 'string', 'target'], [authResponse, '?object', 'authResponse'], [method, 'string', 'method']);return __t([function() {
     return UIServer._xdNextHandler(
       Auth.xdResponseWrapper(cb, authResponse, method),
@@ -9515,7 +9623,7 @@ var unityNeedsToBeHidden = !((osx && osx[0] > 10 && osx[1] > 10)
                                  || UA.firefox() >= 25));
 
 
-function hideUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function hideUnityElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   elem._hideunity_savedstyle = {};
   elem._hideunity_savedstyle.left = elem.style.left;
   elem._hideunity_savedstyle.position = elem.style.position;
@@ -9528,7 +9636,7 @@ function hideUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']
 }__w(hideUnityElement, {"signature":"function(DOMElement)"}); 
 
 
-function showUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function showUnityElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   if (elem._hideunity_savedstyle) {
     elem.style.left     = elem._hideunity_savedstyle.left;
     elem.style.position = elem._hideunity_savedstyle.position;
@@ -9538,18 +9646,18 @@ function showUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']
 }__w(showUnityElement, {"signature":"function(DOMElement)"}); 
 
 
-function hideFlashElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function hideFlashElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   elem._old_visibility = elem.style.visibility;
   elem.style.visibility = 'hidden';
 }__w(hideFlashElement, {"signature":"function(DOMElement)"}); 
 
 
-function showFlashElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function showFlashElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   elem.style.visibility = elem._old_visibility || '';
   delete elem._old_visibility;
 }__w(showFlashElement, {"signature":"function(DOMElement)"}); 
 
-function isHideableFlashElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function isHideableFlashElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   var type = elem.type ? elem.type.toLowerCase() : null;
   var isHideable = type === 'application/x-shockwave-flash'
         || (elem.classid && elem.classid.toUpperCase() == flashClassID);
@@ -9575,7 +9683,7 @@ function isHideableFlashElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', '
   return true;
 }__w(isHideableFlashElement, {"signature":"function(DOMElement)"}); 
 
-function isHideableUnityElement(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+function isHideableUnityElement(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
   var type = elem.type ? elem.type.toLowerCase() : null;
   return type === 'application/vnd.unity'
     || (elem.classid && elem.classid.toUpperCase() == unityClassID);
@@ -9592,7 +9700,7 @@ function hidePluginCallback(/*object*/ params) {__t([params, 'object', 'params']
 
   var flashPresent = false;
   var unityPresent = false;
-  ES(candidates, 'forEach', true,__w(function(/*DOMElement*/ elem) {__t([elem, 'DOMElement', 'elem']);
+  ES(candidates, 'forEach', true,__w(function(/*DOMElement*/ elem) {__t([elem, 'HTMLElement', 'elem']);
     var isFlashElement = isHideableFlashElement(elem);
     var isUnityElement = unityNeedsToBeHidden && isHideableUnityElement(elem);
     if (!isFlashElement && !isUnityElement) {
@@ -9853,7 +9961,7 @@ function sample() {
   if (collectionMode == COLLECT.AUTOMATIC) {
     ES(ES('Object', 'keys', false,resourceFieldsByTag), 'forEach', true,__w(function(/*string*/ tagName) {__t([tagName, 'string', 'tagName']);
       var propertyName = resourceFieldsByTag[tagName];
-      ES(createArrayFromMixed(document.getElementsByTagName(tagName)), 'forEach', true,__w(function(/*DOMElement*/ tag) {__t([tag, 'DOMElement', 'tag']);
+      ES(createArrayFromMixed(document.getElementsByTagName(tagName)), 'forEach', true,__w(function(/*DOMElement*/ tag) {__t([tag, 'HTMLElement', 'tag']);
           if (tag[propertyName]) {
             links.push(tag[propertyName]);
           }
@@ -10686,7 +10794,7 @@ function propStr(object, /*string*/ property) /*string*/ {__t([property, 'string
   return object[property] + '';
 }.apply(this, arguments), 'string']);}__w(propStr, {"signature":"function(string):string"}); 
 
-function nodeNameIE(/*DOMElement*/ element) /*string*/ {__t([element, 'DOMElement', 'element']);return __t([function() {
+function nodeNameIE(/*DOMElement*/ element) /*string*/ {__t([element, 'HTMLElement', 'element']);return __t([function() {
   // In old IE (< 9), element.nodeName doesn't include the namespace so we use
   
   return element.scopeName
@@ -10694,12 +10802,12 @@ function nodeNameIE(/*DOMElement*/ element) /*string*/ {__t([element, 'DOMElemen
     : '';
 }.apply(this, arguments), 'string']);}__w(nodeNameIE, {"signature":"function(DOMElement):string"}); 
 
-function xfbmlInfo(/*DOMElement*/ element) /*?object*/ {__t([element, 'DOMElement', 'element']);return __t([function() {
+function xfbmlInfo(/*DOMElement*/ element) /*?object*/ {__t([element, 'HTMLElement', 'element']);return __t([function() {
   return xfbml[propStr(element, 'nodeName').toLowerCase()]
     || xfbml[nodeNameIE(element).toLowerCase()];
 }.apply(this, arguments), '?object']);}__w(xfbmlInfo, {"signature":"function(DOMElement):?object"}); 
 
-function html5Info(/*DOMElement*/ element) /*?object*/ {__t([element, 'DOMElement', 'element']);return __t([function() {
+function html5Info(/*DOMElement*/ element) /*?object*/ {__t([element, 'HTMLElement', 'element']);return __t([function() {
   var classNames = ES(ES(propStr(element, 'className'),'trim', true).split(/\s+/), 'filter', true,
     function(className) { return html5.hasOwnProperty(className); });
 
@@ -10733,7 +10841,7 @@ function html5Info(/*DOMElement*/ element) /*?object*/ {__t([element, 'DOMElemen
   }
 }.apply(this, arguments), '?object']);}__w(html5Info, {"signature":"function(DOMElement):?object"}); 
 
-function attr(/*DOMElement*/ element) /*object*/ {__t([element, 'DOMElement', 'element']);return __t([function() {
+function attr(/*DOMElement*/ element) /*object*/ {__t([element, 'HTMLElement', 'element']);return __t([function() {
   var attrs = {};
   ES(createArrayFromMixed(element.attributes), 'forEach', true,function(at) {
     attrs[propStr(at, 'name')] = propStr(at, 'value');
@@ -10742,7 +10850,7 @@ function attr(/*DOMElement*/ element) /*object*/ {__t([element, 'DOMElement', 'e
 }.apply(this, arguments), 'object']);}__w(attr, {"signature":"function(DOMElement):object"}); 
 
 function convertSyntax(
-  /*DOMElement*/ element, /*string*/ ns, /*string*/ ln) /*DOMElement*/ {__t([element, 'DOMElement', 'element'], [ns, 'string', 'ns'], [ln, 'string', 'ln']);return __t([function() {
+  /*DOMElement*/ element, /*string*/ ns, /*string*/ ln) /*DOMElement*/ {__t([element, 'HTMLElement', 'element'], [ns, 'string', 'ns'], [ln, 'string', 'ln']);return __t([function() {
   var replacement = document.createElement('div');
   DOM.addCss(element, ns + '-' + ln);
   ES(createArrayFromMixed(element.childNodes), 'forEach', true,function(child) {
@@ -10753,9 +10861,9 @@ function convertSyntax(
   });
   element.parentNode.replaceChild(replacement, element);
   return replacement;
-}.apply(this, arguments), 'DOMElement']);}__w(convertSyntax, {"signature":"function(DOMElement,string,string):DOMElement"}); 
+}.apply(this, arguments), 'HTMLElement']);}__w(convertSyntax, {"signature":"function(DOMElement,string,string):DOMElement"}); 
 
-function parse(/*DOMElement*/ dom, /*function*/ callback, /*boolean*/ reparse) {__t([dom, 'DOMElement', 'dom'], [callback, 'function', 'callback'], [reparse, 'boolean', 'reparse']);
+function parse(/*DOMElement*/ dom, /*function*/ callback, /*boolean*/ reparse) {__t([dom, 'HTMLElement', 'dom'], [callback, 'function', 'callback'], [reparse, 'boolean', 'reparse']);
   Assert.isTrue(
     dom && dom.nodeType && dom.nodeType === 1 && !!dom.getElementsByTagName,
     'Invalid DOM node passed to FB.XFBML.parse()');
@@ -10866,7 +10974,7 @@ ES('Object', 'assign', false,XFBML, {
     html5[info.xmlns + '-' + info.localName] = info;
   }, {"signature":"function(object)"}),
 
-  parse: __w(function(/*?DOMElement*/ dom, /*?function*/ cb) {__t([dom, '?DOMElement', 'dom'], [cb, '?function', 'cb']);
+  parse: __w(function(/*?DOMElement*/ dom, /*?function*/ cb) {__t([dom, '?HTMLElement', 'dom'], [cb, '?function', 'cb']);
     parse(dom || document.body, cb || function(){},  true);
   }, {"signature":"function(?DOMElement,?function)"}),
 
@@ -11026,7 +11134,7 @@ var baseParams = {
   color_scheme: 'string' 
 };
 
-function resize(/*DOMElement*/ elem, /*?number*/ width, /*?number*/ height) {__t([elem, 'DOMElement', 'elem'], [width, '?number', 'width'], [height, '?number', 'height']);
+function resize(/*DOMElement*/ elem, /*?number*/ width, /*?number*/ height) {__t([elem, 'HTMLElement', 'elem'], [width, '?number', 'width'], [height, '?number', 'height']);
   if (width || width === 0) {
     elem.style.width = width + 'px';
   }
@@ -11035,44 +11143,6 @@ function resize(/*DOMElement*/ elem, /*?number*/ width, /*?number*/ height) {__t
     elem.style.height = height + 'px';
   }
 }__w(resize, {"signature":"function(DOMElement,?number,?number)"}); 
-
-function reposition(elem, message) {
-  var leftPosition = DOM.getPosition(elem).x;
-  var screenWidth = DOM.getViewportInfo().width;
-
-  var newWidth = parse(message.width);
-  var oldWidth = parseInt(DOM.getStyle(elem, 'width'), 10);
-
-  var params = {};
-  if (
-      (leftPosition + newWidth) > screenWidth &&
-      leftPosition > newWidth
-  ) {
-    elem.style.left =
-      parseInt(DOM.getStyle(elem, 'width'), 10) - newWidth + 'px';
-
-    this._isRepositioned = true;
-    params.type = 'reposition';
-
-  } else if (this._isRepositioned && (oldWidth - newWidth) !== 0) {
-    
-    elem.style.left = '0px';
-    this._isRepositioned = false;
-    params.type = 'restore';
-
-  } else {
-    // Don't reposition OR send a message to the iframe
-    return;
-  }
-
-  XD.sendToFacebook(
-    elem.name,
-    {
-      method: 'xd/reposition',
-      params: ES('JSON', 'stringify', false,params)
-    }
-  );
-}
 
 function resizeBubbler(/*?string*/ pluginID) /*function*/ {__t([pluginID, '?string', 'pluginID']);return __t([function() {
   return __w(function(/*object*/ msg) {__t([msg, 'object', 'msg']);
@@ -11119,7 +11189,7 @@ function getVal(/*object*/ attr, /*string*/ key) {__t([attr, 'object', 'attr'], 
 }__w(getVal, {"signature":"function(object,string)"}); 
 
 function validate(/*object*/ defn, /*DOMElement*/ elem, /*object*/ attr,
-    /*object*/ params) {__t([defn, 'object', 'defn'], [elem, 'DOMElement', 'elem'], [attr, 'object', 'attr'], [params, 'object', 'params']);
+    /*object*/ params) {__t([defn, 'object', 'defn'], [elem, 'HTMLElement', 'elem'], [attr, 'object', 'attr'], [params, 'object', 'params']);
   ES(ES('Object', 'keys', false,defn), 'forEach', true,function(key) {
     if (defn[key] == 'text' && !attr[key]) {
       attr[key] = elem.textContent || elem.innerText || ''; 
@@ -11148,7 +11218,7 @@ var IframePlugin = Type.extend({
     /*string*/ ns,
     /*string*/ tag,
     /*object*/ attr
-  ) {__t([elem, 'DOMElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']);
+  ) {__t([elem, 'HTMLElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']);
     this.parent();
     tag = tag.replace(/-/g, '_');
 
@@ -11186,12 +11256,7 @@ var IframePlugin = Type.extend({
       clearTimeout(this._timeoutID);
     }, {"signature":"function(object)"}), 'bind', true,this));
 
-    this._isRepositioned = false;
     this.subscribe('xd.resize.iframe', ES(__w(function(/*object*/ message)  {__t([message, 'object', 'message']);
-      if (message.reposition === "true") {
-        reposition(this._iframe, message);
-      }
-
       resize(this._iframe, parse(message.width), parse(message.height));
       this._isIframeResized = true;
       this.updateLift();
@@ -11223,7 +11288,17 @@ var IframePlugin = Type.extend({
       )
     });
 
+    if (UA.mobile()) {
+      
+      
+      
+      params.container_width = elem.offsetWidth;
+    }
+
     DOM.addCss(elem, 'fb_iframe_widget');
+    if (this.isFluid()) {
+      DOM.addCss(elem, 'fb_iframe_widget_fluid_desktop');
+    }
 
     var name = guid();
     this.subscribe('xd.verify', __w(function(/*object*/ msg)  {__t([msg, 'object', 'msg']);
@@ -11272,6 +11347,11 @@ var IframePlugin = Type.extend({
       onload: ES(function()  {return this.inform('render');}, 'bind', true,this),
       onerror: ES(function()  {return collapseIframe(this._iframe);}, 'bind', true,this)
     };
+
+    
+    if (params.allowfullscreen) {
+      this._iframeOptions.allowfullscreen = true;
+    }
   }, {"signature":"function(DOMElement,string,string,object)"}),
 
   process:function() {
@@ -11377,6 +11457,48 @@ var IframePlugin = Type.extend({
     return {};
   }.apply(this, arguments), 'object']);}, {"signature":"function():object"}),
 
+  isFluid:function() {
+    var config = this.getConfig();
+    return config.fluid && !UA.mobile();
+  },
+
+  reposition:function(newWidth) {
+    var leftPosition = DOM.getPosition(this._iframe).x;
+    var screenWidth = DOM.getViewportInfo().width;
+
+    var oldWidth = parseInt(DOM.getStyle(this._iframe, 'width'), 10);
+
+    var params = {};
+    if (
+        (leftPosition + newWidth) > screenWidth &&
+        leftPosition > newWidth
+    ) {
+     this._iframe.style.left =
+        parseInt(DOM.getStyle(this._iframe, 'width'), 10) - newWidth + 'px';
+
+      this._isRepositioned = true;
+      params.type = 'reposition';
+
+    } else if (this._isRepositioned && (oldWidth - newWidth) !== 0) {
+      
+      this._iframe.style.left = '0px';
+      this._isRepositioned = false;
+      params.type = 'restore';
+
+    } else {
+      // Don't reposition OR send a message to the iframe
+      return;
+    }
+
+    XD.sendToFacebook(
+      this._iframe.name,
+      {
+        method: 'xd/reposition',
+        params: ES('JSON', 'stringify', false,params)
+      }
+    );
+  },
+
   updateLift:function() { 
     var same =
       this._iframe.style.width === this._iframeOptions.root.style.width &&
@@ -11408,9 +11530,12 @@ module.exports = IframePlugin;
 },null);
 
 
-__d("PluginConfig",[],function(global,require,requireDynamic,requireLazy,module,exports) {
+__d("PluginConfig",["sdk.feature"],function(global,require,requireDynamic,requireLazy,module,exports,feature) {
+   
+
 var PluginConfig = {
   post: {
+    fluid: feature('fluid_embed', false),
     mobile_fullsize: true
   }
 };
@@ -11601,7 +11726,7 @@ __d("sdk.XFBML.Element",["sdk.DOM","Type","ObservableMixin"],function(global,req
 
 var Element = Type.extend({
   
-  constructor: __w(function(/*DOMElement*/ dom) {__t([dom, 'DOMElement', 'dom']);
+  constructor: __w(function(/*DOMElement*/ dom) {__t([dom, 'HTMLElement', 'dom']);
     this.parent();
     this.dom = dom;
   }, {"signature":"function(DOMElement)"}),
@@ -11785,7 +11910,7 @@ var IframeWidget = Element.extend({
     
     
     return this.dom.getElementsByTagName('iframe')[0];
-  }.apply(this, arguments), '?DOMElement']);}, {"signature":"function():?DOMElement"}),
+  }.apply(this, arguments), '?HTMLElement']);}, {"signature":"function():?DOMElement"}),
 
   
   arbiterInform: __w(function(/*string*/ event, /*?object*/ message,
@@ -12434,7 +12559,7 @@ __d("sdk.XFBML.LoginButton",["sdk.Helper","IframePlugin"],function(global,requir
 
 var LoginButton = IframePlugin.extend({
   constructor: __w(function(/*DOMElement*/ elem, /*string*/ ns, /*string*/ tag,
-      /*object*/ attr) {__t([elem, 'DOMElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']);
+      /*object*/ attr) {__t([elem, 'HTMLElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']);
     this.parent(elem, ns, tag, attr);
     var onlogin = IframePlugin.getVal(attr, 'on_login');
     if (onlogin) {
@@ -12984,4 +13109,4 @@ try {
 
 
 }).call({}, window.inDapIF ? parent.window : window);
-} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1549264","message":"'+e.message+'"}}');}
+} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1576282","message":"'+e.message+'"}}');}

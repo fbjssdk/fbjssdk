@@ -210,6 +210,17 @@
 </codes>
 </locale>
 <locale>
+<englishName>Spanish (Colombia)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_CO</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
 <englishName>Spanish (Spain)</englishName>
 <codes>
 <code>
@@ -551,7 +562,7 @@
 </codes>
 </locale>
 <locale>
-<englishName>Kurdish</englishName>
+<englishName>Kurdish (Kurmanji)</englishName>
 <codes>
 <code>
 <standard>
@@ -667,6 +678,17 @@
 <standard>
 <name>FB</name>
 <representation>ne_NP</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Dutch (België)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>nl_BE</representation>
 </standard>
 </code>
 </codes>

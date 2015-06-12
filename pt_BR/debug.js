@@ -2104,7 +2104,7 @@ module.exports = ES;
 /* 8t3naSxRM6- */
 }, {"module":"ES","line":9,"column":179,"name":"$module_ES"}),null);
 var ES = require('ES');
-__d("JSSDKRuntimeConfig",[],{"locale":"pt_BR","rtl":false,"revision":"1782496"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"allow_non_canvas_app_events":false,"event_subscriptions_log":{"rate":0.01,"value":10000},"should_force_single_dialog_instance":true,"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true,"launch_payment_dialog_via_pac":{"rate":100},"plugin_tags_blacklist":["recommendations_bar"],"should_log_response_error":true},"api":{"mode":"warn","whitelist":["AppEvents","AppEvents.EventNames","AppEvents.ParameterNames","AppEvents.activateApp","AppEvents.logEvent","AppEvents.logPurchase","Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.parse","Payment.setSize","Payment.unlockForProcessing","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("FlashVersionFix",[],{"enable":false});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/vcEqM62YZhf.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/yOZN1vHw3Z_.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100\u0025}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yd\/r\/mxzow1Sdmxr.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});
+__d("JSSDKRuntimeConfig",[],{"locale":"pt_BR","rtl":false,"revision":"1782496"});__d("JSSDKConfig",[],{"bustCache":true,"tagCountLogRate":0.01,"errorHandling":{"rate":4},"usePluginPipe":true,"features":{"allow_non_canvas_app_events":false,"event_subscriptions_log":{"rate":0.01,"value":10000},"should_force_single_dialog_instance":true,"kill_fragment":true,"xfbml_profile_pic_server":true,"error_handling":{"rate":4},"e2e_ping_tracking":{"rate":1.0e-6},"xd_timeout":{"rate":4,"value":30000},"use_bundle":true,"launch_payment_dialog_via_pac":{"rate":100},"plugin_tags_blacklist":["recommendations_bar"],"should_log_response_error":true},"api":{"mode":"warn","whitelist":["AppEvents","AppEvents.EventNames","AppEvents.ParameterNames","AppEvents.activateApp","AppEvents.logEvent","AppEvents.logPurchase","Canvas","Canvas.Prefetcher","Canvas.Prefetcher.addStaticResource","Canvas.Prefetcher.setCollectionMode","Canvas.getPageInfo","Canvas.hideFlashElement","Canvas.scrollTo","Canvas.setAutoGrow","Canvas.setDoneLoading","Canvas.setSize","Canvas.setUrlHandler","Canvas.showFlashElement","Canvas.startTimer","Canvas.stopTimer","Event","Event.subscribe","Event.unsubscribe","Music.flashCallback","Music.init","Music.send","Payment","Payment.cancelFlow","Payment.continueFlow","Payment.init","Payment.lockForProcessing","Payment.parse","Payment.setSize","Payment.unlockForProcessing","ThirdPartyProvider","ThirdPartyProvider.init","ThirdPartyProvider.sendData","UA","UA.nativeApp","XFBML","XFBML.RecommendationsBar","XFBML.RecommendationsBar.markRead","XFBML.parse","addFriend","api","getAccessToken","getAuthResponse","getLoginStatus","getUserID","init","login","logout","publish","share","ui"]},"initSitevars":{"enableMobileComments":1,"iframePermissions":{"read_stream":false,"manage_mailbox":false,"manage_friendlists":false,"read_mailbox":false,"publish_checkins":true,"status_update":true,"photo_upload":true,"video_upload":true,"sms":false,"create_event":true,"rsvp_event":true,"offline_access":true,"email":true,"xmpp_login":false,"create_note":true,"share_item":true,"export_stream":false,"publish_stream":true,"publish_likes":true,"ads_management":false,"contact_email":true,"access_private_data":false,"read_insights":false,"read_requests":false,"read_friendlists":true,"manage_pages":false,"physical_login":false,"manage_groups":false,"read_deals":false}}});__d("UrlMapConfig",[],{"www":"www.facebook.com","m":"m.facebook.com","connect":"connect.facebook.net","business":"business.facebook.com","api_https":"api.facebook.com","api_read_https":"api-read.facebook.com","graph_https":"graph.facebook.com","fbcdn_http":"fbstatic-a.akamaihd.net","fbcdn_https":"fbstatic-a.akamaihd.net","cdn_http":"static.ak.facebook.com","cdn_https":"s-static.ak.facebook.com"});__d("FlashVersionFix",[],{"enable":true});__d("JSSDKXDConfig",[],{"XdUrl":"\/connect\/xd_arbiter.php?version=41","XdBundleUrl":"\/connect\/xd_arbiter\/vcEqM62YZhf.js?version=41","Flash":{"path":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yW\/r\/yOZN1vHw3Z_.swf"},"useCdn":true});__d("JSSDKCssConfig",[],{"rules":".fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:\"lucida grande\", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}\n.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yq\/r\/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yL\/r\/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ye\/r\/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100\u0025}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100\u0025;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/yd\/r\/Cou7n-nqK52.gif) no-repeat 5px 50\u0025;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100\u0025;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100\u0025}.fb_dialog.fb_dialog_mobile.loading{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/ya\/r\/3rhSv5V8j3o.gif) white no-repeat 50\u0025 50\u0025;min-height:100\u0025;min-width:100\u0025;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100\u0025;min-height:100\u0025;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100\u0025}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0\u0025 0\u0025, 0\u0025 100\u0025, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat 50\u0025 50\u0025;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}\n.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100\u0025}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100\u0025}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https:\/\/fbstatic-a.akamaihd.net\/rsrc.php\/v2\/y9\/r\/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50\u0025;z-index:4}","components":["css:fb.css.base","css:fb.css.dialog","css:fb.css.iframewidget"]});__d("ApiClientConfig",[],{"FlashRequest":{"swfUrl":"https:\/\/connect.facebook.net\/rsrc.php\/v1\/yd\/r\/mxzow1Sdmxr.swf"}});__d("JSSDKCanvasPrefetcherConfig",[],{"blacklist":[144959615576466],"sampleRate":500});__d("JSSDKPluginPipeConfig",[],{"threshold":0,"enabledApps":{"209753825810663":1,"187288694643718":1}});
 
 
 __d("QueryString",[],__annotator(function $module_QueryString(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
@@ -6020,4 +6020,7402 @@ function xdResponseWrapper(/*function*/ cb, /*?object*/ authResponse,
       }
       status = 'connected';
       setAuthResponse(authResponse, status);
-    } else if (method === 'logout' || method === 'login_status'
+    } else if (method === 'logout' || method === 'login_status') {
+      
+      
+      
+      
+      if (params.error && params.error === 'not_authorized') {
+        status = 'not_authorized';
+      } else {
+        status = 'unknown';
+      }
+      setAuthResponse(null, status);
+      if (Runtime.getUseCookie()) {
+        Cookie.clearSignedRequestCookie();
+      }
+    }
+
+    
+    if (params && params.https == 1) {
+      Runtime.setSecure(true);
+    }
+
+    if (cb) {
+      cb({
+        authResponse: authResponse,
+        status: Runtime.getLoginStatus()
+      });
+    }
+    return authResponse;
+  }, {"params":[[params, '?object', 'params']],"returns":'?object'});}, {"module":"sdk.Auth","line":91,"column":9}, {"params":["?object"],"returns":"?object"});
+}, {"params":[[cb, 'function', 'cb'], [authResponse, '?object', 'authResponse'], [method, '?string', 'method']],"returns":'function'});}__annotator(xdResponseWrapper, {"module":"sdk.Auth","line":89,"column":0,"name":"xdResponseWrapper"}, {"params":["function","?object","?string"],"returns":"function"});
+
+function fetchLoginStatus(/*function*/ fn) {return __bodyWrapper(this, arguments, function() {
+  var frame, fetchStart = ES('Date', 'now', false);
+
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
+
+  var handleResponse = xdResponseWrapper(fn, currentAuthResponse,
+    'login_status');
+
+  var url = new URI(UrlMap.resolve('www', true) + '/connect/ping')
+    .setQueryData({
+      client_id: Runtime.getClientID(),
+      response_type: 'token,signed_request,code',
+      domain: location.hostname,
+      origin: getContextType(),
+      redirect_uri: XD.handler(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+        if (feature('e2e_ping_tracking', true)) {
+          var events = {
+            init: fetchStart,
+            close: ES('Date', 'now', false),
+            method: 'ping'
+          };
+          Log.debug('e2e: %s', ES('JSON', 'stringify', false,events));
+          
+          Impressions.log(114, {
+            payload: events
+          });
+        }
+        frame.parentNode.removeChild(frame);
+        if (handleResponse(response)) {
+          
+          timer = setTimeout(__annotator(function() {
+            fetchLoginStatus(__annotator(function() {}, {"module":"sdk.Auth","line":190,"column":29}));
+          }, {"module":"sdk.Auth","line":189,"column":29}), 1200000); 
+        }
+      }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.Auth","line":173,"column":31}, {"params":["object"]}), 'parent'),
+      sdk: 'joey',
+      kid_directed_site: Runtime.getKidDirectedSite()
+    });
+
+  frame = createIframe({
+    root: DOMWrapper.getRoot(),
+    name: guid(),
+    url: url.toString(),
+    style: { display: 'none' }
+  });
+
+}, {"params":[[fn, 'function', 'fn']]});}__annotator(fetchLoginStatus, {"module":"sdk.Auth","line":156,"column":0,"name":"fetchLoginStatus"}, {"params":["function"]});
+
+var loadState;
+function getLoginStatus(/*?function*/ cb, /*?boolean*/ force) {return __bodyWrapper(this, arguments, function() {
+  if (!Runtime.getClientID()) {
+    Log.warn('FB.getLoginStatus() called before calling FB.init().');
+    return;
+  }
+
+  
+  
+  if (cb) {
+    if (!force && loadState == 'loaded') {
+      cb({ status: Runtime.getLoginStatus(),
+           authResponse: getAuthResponse()});
+      return;
+    } else {
+      Auth.subscribe('FB.loginStatus', cb);
+    }
+  }
+
+  // if we're already loading, and this is not a force load, we're done
+  if (!force && loadState == 'loading') {
+    return;
+  }
+
+  loadState = 'loading';
+
+  
+  var lsCb = __annotator(function(/*?object*/ response) {return __bodyWrapper(this, arguments, function() {
+    
+    loadState = 'loaded';
+
+    
+    Auth.inform('FB.loginStatus', response);
+    Auth.clearSubscribers('FB.loginStatus');
+  }, {"params":[[response, '?object', 'response']]});}, {"module":"sdk.Auth","line":234,"column":13}, {"params":["?object"]});
+
+  fetchLoginStatus(lsCb);
+}, {"params":[[cb, '?function', 'cb'], [force, '?boolean', 'force']]});}__annotator(getLoginStatus, {"module":"sdk.Auth","line":208,"column":0,"name":"getLoginStatus"}, {"params":["?function","?boolean"]});
+
+ES('Object', 'assign', false,Auth, {
+  getLoginStatus: getLoginStatus,
+  fetchLoginStatus: fetchLoginStatus,
+  setAuthResponse: setAuthResponse,
+  getAuthResponse: getAuthResponse,
+  parseSignedRequest: SignedRequest.parse,
+  
+  xdResponseWrapper: xdResponseWrapper
+});
+
+module.exports = Auth;
+
+
+}, {"module":"sdk.Auth","line":7,"column":208,"name":"$module_sdk_Auth"}),null);
+
+
+__d("toArray",["invariant"],__annotator(function $module_toArray(global,require,requireDynamic,requireLazy,module,exports,invariant) {require.__markCompiled && require.__markCompiled();
+   
+
+
+function toArray(obj) {return __bodyWrapper(this, arguments, function() {
+  var length = obj.length;
+
+  // Some browse builtin objects can report typeof 'function' (e.g. NodeList in
+  
+  invariant(
+    !ES('Array', 'isArray', false,obj) &&
+    (typeof obj === 'object' || typeof obj === 'function'),
+    'toArray: Array-like object expected'
+  );
+
+  invariant(
+    typeof length === 'number',
+    'toArray: Object needs a length property'
+  );
+
+  invariant(
+    length === 0 ||
+    (length - 1) in obj,
+    'toArray: Object should have keys for indices'
+  );
+
+  // Old IE doesn't give collections access to hasOwnProperty. Assume inputs
+  
+  
+  if (obj.hasOwnProperty) {
+    try {
+      return Array.prototype.slice.call(obj);
+    } catch (e) {
+      
+    }
+  }
+
+  
+  
+  var ret = Array(length);
+  for (var ii = 0; ii < length; ii++) {
+    ret[ii] = obj[ii];
+  }
+  return ret;
+}, {"params":[[obj, 'object|function|filelist', 'obj']],"returns":'array'});}__annotator(toArray, {"module":"toArray","line":32,"column":0,"name":"toArray"}, {"params":["object|function|filelist"],"returns":"array"});
+
+module.exports = toArray;
+
+
+}, {"module":"toArray","line":20,"column":28,"name":"$module_toArray"}),null);
+
+
+__d("createArrayFromMixed",["toArray"],__annotator(function $module_createArrayFromMixed(global,require,requireDynamic,requireLazy,module,exports,toArray) {require.__markCompiled && require.__markCompiled();
+   
+
+
+function hasArrayNature(obj) {return __bodyWrapper(this, arguments, function() {
+  return (
+    
+    !!obj &&
+    
+    (typeof obj == 'object' || typeof obj == 'function') &&
+    
+    ('length' in obj) &&
+    
+    !('setInterval' in obj) &&
+    
+    // a 'select' element has 'length' and 'item' properties on IE8
+    (typeof obj.nodeType != 'number') &&
+    (
+      
+      ES('Array', 'isArray', false,obj) ||
+      
+      ('callee' in obj) ||
+      
+      ('item' in obj)
+    )
+  );
+}, {"returns":'boolean'});}__annotator(hasArrayNature, {"module":"createArrayFromMixed","line":38,"column":0,"name":"hasArrayNature"}, {"returns":"boolean"});
+
+
+function createArrayFromMixed(obj) {return __bodyWrapper(this, arguments, function() {
+  if (!hasArrayNature(obj)) {
+    return [obj];
+  } else if (ES('Array', 'isArray', false,obj)) {
+    return obj.slice();
+  } else {
+    return toArray(obj);
+  }
+}, {"returns":'array'});}__annotator(createArrayFromMixed, {"module":"createArrayFromMixed","line":83,"column":0,"name":"createArrayFromMixed"}, {"returns":"array"});
+
+module.exports = createArrayFromMixed;
+
+
+}, {"module":"createArrayFromMixed","line":20,"column":39,"name":"$module_createArrayFromMixed"}),null);
+
+
+__d("sdk.DOM",["Assert","sdk.UA","createArrayFromMixed","sdk.domReady"],__annotator(function $module_sdk_DOM(global,require,requireDynamic,requireLazy,module,exports,Assert,UA,createArrayFromMixed,domReady) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+   
+   
+
+var cssRules = {};
+
+function getAttr(/*DOMElement*/ dom, /*string*/ name) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+  var attribute = (
+    dom.getAttribute(name) ||
+    dom.getAttribute(name.replace(/_/g, '-')) ||
+    dom.getAttribute(name.replace(/-/g, '_')) ||
+    dom.getAttribute(name.replace(/-/g, '')) ||
+    dom.getAttribute(name.replace(/_/g, '')) ||
+    dom.getAttribute('data-' + name) ||
+    dom.getAttribute('data-' + name.replace(/_/g, '-')) ||
+    dom.getAttribute('data-' + name.replace(/-/g, '_')) ||
+    dom.getAttribute('data-' + name.replace(/-/g, '')) ||
+    dom.getAttribute('data-' + name.replace(/_/g, ''))
+  );
+  return attribute
+    ? String(attribute)
+    : null;
+}, {"params":[[dom, 'HTMLElement', 'dom'], [name, 'string', 'name']],"returns":'?string'});}__annotator(getAttr, {"module":"sdk.DOM","line":16,"column":0,"name":"getAttr"}, {"params":["DOMElement","string"],"returns":"?string"});
+
+function getBoolAttr(/*DOMElement*/ dom, /*string*/ name) /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+  var attribute = getAttr(dom, name);
+  return attribute
+    ? /^(true|1|yes|on)$/.test(attribute)
+    : null;
+}, {"params":[[dom, 'HTMLElement', 'dom'], [name, 'string', 'name']],"returns":'?boolean'});}__annotator(getBoolAttr, {"module":"sdk.DOM","line":34,"column":0,"name":"getBoolAttr"}, {"params":["DOMElement","string"],"returns":"?boolean"});
+
+function getProp(/*DOMElement*/ dom, /*string*/ name) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(name);
+
+  try {
+    return String(dom[name]);
+  } catch (e) {
+    throw new Error('Could not read property ' + name + ' : ' + e.message);
+  }
+}, {"params":[[dom, 'HTMLElement', 'dom'], [name, 'string', 'name']],"returns":'string'});}__annotator(getProp, {"module":"sdk.DOM","line":41,"column":0,"name":"getProp"}, {"params":["DOMElement","string"],"returns":"string"});
+
+function html(/*DOMElement*/ dom, /*string*/ content) {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(content);
+
+  try {
+    dom.innerHTML = content;
+  } catch (e) {
+    throw new Error('Could not set innerHTML : ' + e.message);
+  }
+}, {"params":[[dom, 'HTMLElement', 'dom'], [content, 'string', 'content']]});}__annotator(html, {"module":"sdk.DOM","line":52,"column":0,"name":"html"}, {"params":["DOMElement","string"]});
+
+
+function hasClass(/*DOMElement*/ dom, /*string*/ className) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(className);
+
+  var cssClassWithSpace = ' ' + getProp(dom, 'className') + ' ';
+  return ES(cssClassWithSpace, 'indexOf', true,' ' + className + ' ') >= 0;
+}, {"params":[[dom, 'HTMLElement', 'dom'], [className, 'string', 'className']],"returns":'boolean'});}__annotator(hasClass, {"module":"sdk.DOM","line":66,"column":0,"name":"hasClass"}, {"params":["DOMElement","string"],"returns":"boolean"});
+
+
+function addClass(/*DOMElement*/ dom, /*string*/ className) {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(className);
+
+  if (!hasClass(dom, className)) {
+    dom.className = getProp(dom, 'className') + ' ' + className;
+  }
+}, {"params":[[dom, 'HTMLElement', 'dom'], [className, 'string', 'className']]});}__annotator(addClass, {"module":"sdk.DOM","line":77,"column":0,"name":"addClass"}, {"params":["DOMElement","string"]});
+
+
+function removeClass(/*DOMElement*/ dom, /*string*/ className) {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(className);
+
+  var regExp = new RegExp('\\s*' + className, 'g');
+  dom.className = ES(getProp(dom, 'className').replace(regExp, ''),'trim', true);
+}, {"params":[[dom, 'HTMLElement', 'dom'], [className, 'string', 'className']]});}__annotator(removeClass, {"module":"sdk.DOM","line":89,"column":0,"name":"removeClass"}, {"params":["DOMElement","string"]});
+
+
+function getByClass(/*string*/ className, dom, tagName) /*array<DOMElement>*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isString(className);
+
+  dom = dom || document.body;
+  tagName = tagName || '*';
+  if (dom.querySelectorAll) {
+    return createArrayFromMixed(
+      dom.querySelectorAll(tagName + '.' + className)
+    );
+  }
+  var all = dom.getElementsByTagName(tagName),
+      els = [];
+  for (var i = 0, len = all.length; i < len; i++) {
+    if (hasClass(all[i], className)) {
+      els[els.length] = all[i];
+    }
+  }
+  return els;
+}, {"params":[[className, 'string', 'className']],"returns":'array<HTMLElement>'});}__annotator(getByClass, {"module":"sdk.DOM","line":103,"column":0,"name":"getByClass"}, {"params":["string"],"returns":"array<DOMElement>"});
+
+
+function getStyle(/*DOMElement*/ dom, /*string*/ styleProp) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(styleProp);
+
+  // camelCase (e.g. 'marginTop')
+  styleProp = styleProp.replace(/-(\w)/g, __annotator(function(m, g1) {
+    return g1.toUpperCase();
+  }, {"module":"sdk.DOM","line":136,"column":42}));
+
+  var currentStyle = dom.currentStyle ||
+    document.defaultView.getComputedStyle(dom, null);
+
+  var computedStyle = currentStyle[styleProp];
+
+  
+  // for some reason it doesn't return '0%' for defaults. so needed to
+  // translate 'top' and 'left' into '0px'
+  if (/backgroundPosition?/.test(styleProp) &&
+      /top|left/.test(computedStyle)) {
+    computedStyle = '0%';
+  }
+  return computedStyle;
+}, {"params":[[dom, 'HTMLElement', 'dom'], [styleProp, 'string', 'styleProp']],"returns":'string'});}__annotator(getStyle, {"module":"sdk.DOM","line":131,"column":0,"name":"getStyle"}, {"params":["DOMElement","string"],"returns":"string"});
+
+
+function setStyle(/*DOMElement*/ dom, /*string*/ styleProp, value) {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(dom, 'element not specified');
+  Assert.isString(styleProp);
+
+  // camelCase (e.g. 'marginTop')
+  styleProp = styleProp.replace(/-(\w)/g, __annotator(function(m, g1) {
+    return g1.toUpperCase();
+  }, {"module":"sdk.DOM","line":166,"column":42}));
+  dom.style[styleProp] = value;
+}, {"params":[[dom, 'HTMLElement', 'dom'], [styleProp, 'string', 'styleProp']]});}__annotator(setStyle, {"module":"sdk.DOM","line":161,"column":0,"name":"setStyle"}, {"params":["DOMElement","string"]});
+
+
+function addCssRules(/*string*/ styles, /*array<string>*/ names) {return __bodyWrapper(this, arguments, function() {
+  
+  
+  var allIncluded = true;
+  for (var i = 0, id; id = names[i++];) {
+    if (!(id in cssRules)) {
+      allIncluded = false;
+      cssRules[id] = true;
+    }
+  }
+
+  if (allIncluded) {
+    return;
+  }
+
+  if (UA.ie() < 11) {
+    try {
+      document.createStyleSheet().cssText = styles;
+    } catch (exc) {
+      
+      
+      
+      if (document.styleSheets[0]) {
+        document.styleSheets[0].cssText += styles;
+      }
+    }
+  } else {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.textContent = styles;
+    document.getElementsByTagName('head')[0].appendChild(style);
+  }
+}, {"params":[[styles, 'string', 'styles'], [names, 'array<string>', 'names']]});}__annotator(addCssRules, {"module":"sdk.DOM","line":175,"column":0,"name":"addCssRules"}, {"params":["string","array<string>"]});
+
+
+function getViewportInfo() /*object*/ {return __bodyWrapper(this, arguments, function() {
+  
+  var root = (document.documentElement && document.compatMode == 'CSS1Compat')
+    ? document.documentElement
+    : document.body;
+
+  return {
+    
+    scrollTop  : root.scrollTop || document.body.scrollTop,
+    scrollLeft : root.scrollLeft || document.body.scrollLeft,
+    width      : window.innerWidth  ? window.innerWidth  : root.clientWidth,
+    height     : window.innerHeight ? window.innerHeight : root.clientHeight
+  };
+}, {"returns":'object'});}__annotator(getViewportInfo, {"module":"sdk.DOM","line":213,"column":0,"name":"getViewportInfo"}, {"returns":"object"});
+
+
+function getPosition(/*DOMElement*/ node) /*object*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isTruthy(node, 'element not specified');
+
+  var x = 0,
+      y = 0;
+  do {
+    x += node.offsetLeft;
+    y += node.offsetTop;
+  } while (node = node.offsetParent);
+
+  return {x: x, y: y};
+}, {"params":[[node, 'HTMLElement', 'node']],"returns":'object'});}__annotator(getPosition, {"module":"sdk.DOM","line":232,"column":0,"name":"getPosition"}, {"params":["DOMElement"],"returns":"object"});
+
+
+var DOM = {
+  containsCss: hasClass,
+  addCss: addClass,
+  removeCss: removeClass,
+  getByClass: getByClass,
+
+  getStyle: getStyle,
+  setStyle: setStyle,
+
+  getAttr: getAttr,
+  getBoolAttr: getBoolAttr,
+  getProp: getProp,
+
+  html: html,
+
+  addCssRules: addCssRules,
+
+  getViewportInfo: getViewportInfo,
+  getPosition: getPosition,
+
+  ready: domReady
+};
+
+module.exports = DOM;
+
+
+}, {"module":"sdk.DOM","line":7,"column":72,"name":"$module_sdk_DOM"}),null);
+
+
+__d("sdk.ErrorHandling",["ManagedError","sdk.Runtime","sdk.Scribe","sdk.UA","sdk.feature","wrapFunction"],__annotator(function $module_sdk_ErrorHandling(global,require,requireDynamic,requireLazy,module,exports,ManagedError,Runtime,Scribe,UA,feature,wrapFunction) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+   
+   
+
+var handleError = feature('error_handling', false);
+var currentEntry = '';
+
+function errorHandler(/*object*/ error) {return __bodyWrapper(this, arguments, function() {
+  var originalError = error._originalError;
+  delete error._originalError;
+  Scribe.log('jssdk_error', {
+    appId: Runtime.getClientID(),
+    error: error.name || error.message,
+    extra: error
+  });
+
+  
+  throw originalError;
+}, {"params":[[error, 'object', 'error']]});}__annotator(errorHandler, {"module":"sdk.ErrorHandling","line":19,"column":0,"name":"errorHandler"}, {"params":["object"]});
+
+
+function normalizeError(err) /*object*/ {return __bodyWrapper(this, arguments, function() {
+  var info = {
+    line: err.lineNumber || err.line,
+    message: err.message,
+    name: err.name,
+    script: err.fileName || err.sourceURL || err.script,
+    stack: err.stackTrace || err.stack
+  };
+
+  
+  info._originalError = err;
+
+  // Chrome: There's no script/line info in Error objects, and if you rethrow
+  
+  
+  
+  if (UA.chrome() && /([\w:\.\/]+\.js):(\d+)/.test(err.stack)) {
+    info.script = RegExp.$1;
+    info.line = parseInt(RegExp.$2, 10);
+  }
+
+  
+  for (var k in info) {
+    (info[k] == null && delete info[k]);
+  }
+  return info;
+}, {"returns":'object'});}__annotator(normalizeError, {"module":"sdk.ErrorHandling","line":39,"column":0,"name":"normalizeError"}, {"returns":"object"});
+
+function guard(/*function*/ func, /*?string*/ entry) /*function*/ {return __bodyWrapper(this, arguments, function() {
+  return __annotator(function() {
+    
+    
+    if (!handleError) {
+      return func.apply(this, arguments);
+    }
+
+    try {
+      currentEntry = entry;
+      return func.apply(this, arguments);
+    } catch(error) {
+      
+      
+      if (error instanceof ManagedError) {
+        throw error;
+      }
+
+      var data = normalizeError(error);
+      data.entry = entry;
+
+      
+      var sanitizedArgs = ES(Array.prototype.slice.call(arguments), 'map', true,__annotator(function(arg) {
+        var type = Object.prototype.toString.call(arg);
+        return (/^\[object (String|Number|Boolean|Object|Date)\]$/).test(type)
+          ? arg
+          : arg.toString();
+      }, {"module":"sdk.ErrorHandling","line":90,"column":13}));
+
+      data.args = ES('JSON', 'stringify', false,sanitizedArgs).substring(0, 200);
+      errorHandler(data);
+    } finally {
+      currentEntry = '';
+    }
+  }, {"module":"sdk.ErrorHandling","line":68,"column":9});
+}, {"params":[[func, 'function', 'func'], [entry, '?string', 'entry']],"returns":'function'});}__annotator(guard, {"module":"sdk.ErrorHandling","line":67,"column":0,"name":"guard"}, {"params":["function","?string"],"returns":"function"});
+
+function unguard(/*function*/ func) /*function*/ {return __bodyWrapper(this, arguments, function() {
+  if (!func.__wrapper) {
+    func.__wrapper = __annotator(function() {
+      try {
+        return func.apply(this, arguments);
+      } catch(e) {
+        
+        window.setTimeout(__annotator(function() {
+          throw e;
+        }, {"module":"sdk.ErrorHandling","line":112,"column":26}), 0);
+        return false;
+      }
+    }, {"module":"sdk.ErrorHandling","line":107,"column":21});
+  }
+  return func.__wrapper;
+}, {"params":[[func, 'function', 'func']],"returns":'function'});}__annotator(unguard, {"module":"sdk.ErrorHandling","line":105,"column":0,"name":"unguard"}, {"params":["function"],"returns":"function"});
+
+function wrap(real, entry) {
+  return __annotator(function(fn, delay) {
+    var name = entry + ':' +
+      (currentEntry || '[global]') + ':' +
+      (fn.name
+       || '[anonymous]' + (arguments.callee.caller.name
+         ? '(' +  arguments.callee.caller.name + ')'
+         : ''));
+    return real(wrapFunction(fn, 'entry', name), delay);
+  }, {"module":"sdk.ErrorHandling","line":123,"column":9});
+}__annotator(wrap, {"module":"sdk.ErrorHandling","line":122,"column":0,"name":"wrap"});
+
+if (handleError) {
+  
+  setTimeout = wrap(setTimeout, 'setTimeout');
+  setInterval = wrap(setInterval, 'setInterval');
+  wrapFunction.setWrapper(guard, 'entry');
+}
+
+
+var ErrorHandler = {
+  guard: guard,
+  unguard: unguard
+};
+
+module.exports = ErrorHandler;
+
+
+}, {"module":"sdk.ErrorHandling","line":7,"column":106,"name":"$module_sdk_ErrorHandling"}),null);
+
+
+__d("sdk.Insights",["sdk.Impressions"],__annotator(function $module_sdk_Insights(global,require,requireDynamic,requireLazy,module,exports,Impressions) {require.__markCompiled && require.__markCompiled();
+   
+
+var Insights = {
+  TYPE: {
+    NOTICE: 'notice',
+    WARNING: 'warn',
+    ERROR: 'error'
+  },
+  CATEGORY:  {
+    DEPRECATED: 'deprecated',
+    APIERROR: 'apierror'
+  },
+
+  
+  log: __annotator(function(/*string*/ type, /*string*/ category, /*string*/ content) {return __bodyWrapper(this, arguments, function() {
+    var payload = {
+      source: 'jssdk',
+      type: type,
+      category: category,
+      payload: content
+    };
+
+    Impressions.log(
+      113, 
+      payload
+    );
+  }, {"params":[[type, 'string', 'type'], [category, 'string', 'category'], [content, 'string', 'content']]});}, {"module":"sdk.Insights","line":22,"column":7}, {"params":["string","string","string"]}),
+  
+  impression: Impressions.impression
+};
+
+module.exports = Insights;
+
+
+}, {"module":"sdk.Insights","line":7,"column":39,"name":"$module_sdk_Insights"}),null);
+
+
+__d("FB",["sdk.Auth","JSSDKCssConfig","dotAccess","sdk.domReady","sdk.DOM","sdk.ErrorHandling","sdk.Content","DOMWrapper","GlobalCallback","sdk.Insights","Log","sdk.Runtime","sdk.Scribe","JSSDKConfig"],__annotator(function $module_FB(global,require,requireDynamic,requireLazy,module,exports,Auth,CssConfig,dotAccess,domReady,DOM,ErrorHandling,Content,DOMWrapper,GlobalCallback,Insights,Log,Runtime,Scribe,SDKConfig) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+var externalInterface;
+var apiWhitelist, apiWhitelistMode = dotAccess(SDKConfig, 'api.mode');
+var logged = {};
+externalInterface = window.FB = {};
+var FB = {};
+
+if (__DEV__) {
+  FB.require = require;
+  window._FB = FB
+}
+
+
+
+
+Log.level = __DEV__ ? 3 : 1;
+
+// Whitelisted by our SWF's
+GlobalCallback.setPrefix('FB.__globalCallbacks');
+
+var fbRoot = document.createElement('div');
+DOMWrapper.setRoot(fbRoot);
+
+domReady(__annotator(function() {
+  Log.info('domReady');
+  Content.appendHidden(fbRoot);
+  if (CssConfig.rules) {
+    DOM.addCssRules(CssConfig.rules, CssConfig.components);
+  }
+}, {"module":"FB","line":52,"column":9}));
+
+Runtime.subscribe('AccessToken.change', __annotator(function(/*?string*/ value) {return __bodyWrapper(this, arguments, function() {
+  if (!value && Runtime.getLoginStatus() === 'connected') {
+    // The access token was invalidated, but we're still connected
+    
+    Auth.getLoginStatus(null, true);
+  }
+}, {"params":[[value, '?string', 'value']]});}, {"module":"FB","line":60,"column":40}, {"params":["?string"]}));
+
+
+
+if (dotAccess(SDKConfig, 'api.whitelist.length')) {
+  apiWhitelist = {};
+  ES(SDKConfig.api.whitelist, 'forEach', true,__annotator(function(/*string*/ key) {return __bodyWrapper(this, arguments, function() {
+    apiWhitelist[key] = 1;
+  }, {"params":[[key, 'string', 'key']]});}, {"module":"FB","line":72,"column":34}, {"params":["string"]}));
+}
+
+function protect(/*function*/ fn, /*string*/ accessor, /*string*/ key,
+    /*object*/ context) /*?function*/ {return __bodyWrapper(this, arguments, function() {
+  var exportMode;
+  if (/^_/.test(key)) {
+    exportMode = 'hide';
+  } else if (apiWhitelist && !apiWhitelist[accessor]) {
+    exportMode = apiWhitelistMode;
+  }
+
+  switch(exportMode) {
+    case 'hide':
+      return;
+    case 'stub':
+      return __annotator(function() {
+        Log.warn('The method FB.%s has been removed from the JS SDK.',
+          accessor);
+      }, {"module":"FB","line":90,"column":13});
+      break;
+    default:
+      return ErrorHandling.guard(__annotator(function(/*args*/) {
+        if (exportMode === 'warn') {
+          Log.warn('The method FB.%s is not officially supported by ' +
+            'Facebook and access to it will soon be removed.', accessor);
+          if (!logged.hasOwnProperty(accessor)) {
+            Insights.log(
+              Insights.TYPE.WARNING,
+              Insights.CATEGORY.DEPRECATED,
+              'FB.' + accessor
+            );
+
+            
+            Scribe.log('jssdk_error', {
+              appId: Runtime.getClientID(),
+              error: 'Private method used',
+              extra: {args: accessor}
+            });
+
+            logged[accessor] = true;
+          }
+        }
+
+        function unwrap(val) {
+          if (ES('Array', 'isArray', false,val)) {
+            return ES(val, 'map', true,unwrap);
+          }
+          if (val && typeof val === 'object' && val.__wrapped) {
+            
+            return val.__wrapped;
+          }
+          
+          // throwing an error during execution, it doesn't bubble up through
+          // the JS SDK's callstack.
+          // Due to FF's typeof returning 'function' for HTMLObjectElement,
+          
+          return typeof val === 'function' && /^function/.test(val.toString())
+            ? ErrorHandling.unguard(val)
+            : val;
+        }__annotator(unwrap, {"module":"FB","line":118,"column":8,"name":"unwrap"});
+
+        var args = ES(Array.prototype.slice.call(arguments), 'map', true,unwrap);
+
+        var result = fn.apply(context, args);
+        var facade;
+        var isPlainObject = true;
+
+        if (result && typeof result === 'object') {
+          // Create a 'facade' object that we can return
+          
+          // object, they aren't subject to the same limitations :)
+          facade = ES('Object', 'create', false,result);
+          facade.__wrapped = result;
+
+          
+          
+          for (var key in result) {
+            var property = result[key];
+            if (typeof property !== 'function' || key === 'constructor') {
+              continue;
+            }
+            isPlainObject = false;
+            facade[key] = protect(property, accessor + ':' + key, key, result);
+          }
+        }
+
+          if (!isPlainObject) {
+            return facade;
+          }
+        return isPlainObject
+          ? result
+          : facade;
+      }, {"module":"FB","line":96,"column":33}), accessor);
+  }
+}, {"params":[[fn, 'function', 'fn'], [accessor, 'string', 'accessor'], [key, 'string', 'key'], [context, 'object', 'context']],"returns":'?function'});}__annotator(protect, {"module":"FB","line":77,"column":0,"name":"protect"}, {"params":["function","string","string","object"],"returns":"?function"});
+
+
+function provide(/*string*/ name, /*object*/ source) {return __bodyWrapper(this, arguments, function() {
+  var externalTarget = name
+    ? dotAccess(externalInterface, name, true)
+    : externalInterface;
+
+  ES(ES('Object', 'keys', false,source), 'forEach', true,__annotator(function(/*string*/ key) {return __bodyWrapper(this, arguments, function() {
+    var value = source[key];
+
+    
+    if (typeof value === 'function') {
+      var accessor = (name ? name + '.' : '') + key;
+      var exportedProperty = protect(value, accessor, key, source);
+      if (exportedProperty) {
+        externalTarget[key] = exportedProperty;
+      }
+    } else if (typeof value === 'object') {
+      
+      accessor = (name ? name + '.' : '') + key;
+      if(apiWhitelist && apiWhitelist[accessor]) {
+        externalTarget[key] = value;
+      }
+    }
+  }, {"params":[[key, 'string', 'key']]});}, {"module":"FB","line":189,"column":30}, {"params":["string"]}));
+}, {"params":[[name, 'string', 'name'], [source, 'object', 'source']]});}__annotator(provide, {"module":"FB","line":184,"column":0,"name":"provide"}, {"params":["string","object"]});
+
+
+
+Runtime.setSecure((__annotator(function() /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+  // Resolve whether we're in a canvas context or not
+  var inCanvas = /iframe_canvas|app_runner/.test(window.name);
+  var inDialog = /dialog/.test(window.name);
+
+  
+  
+  if (location.protocol == 'https:' &&
+      (window == top || !(inCanvas || inDialog))) {
+    
+    
+    
+    return true;
+  }
+
+  
+  
+  if (/_fb_https?/.test(window.name)) {
+    return ES(window.name, 'indexOf', true,'_fb_https') != -1;
+  }
+}, {"returns":'?boolean'});}, {"module":"FB","line":211,"column":19}, {"returns":"?boolean"}))());
+
+
+ES('Object', 'assign', false,FB, {
+
+  
+  provide: provide
+
+});
+
+module.exports = FB;
+
+
+}, {"module":"FB","line":14,"column":202,"name":"$module_FB"}),null);
+
+
+__d("ArgumentError",["ManagedError"],__annotator(function $module_ArgumentError(global,require,requireDynamic,requireLazy,module,exports,ManagedError) {require.__markCompiled && require.__markCompiled();
+   
+
+function ArgumentError(message, innerError) {
+  ManagedError.prototype.constructor.apply(this, arguments);
+}__annotator(ArgumentError, {"module":"ArgumentError","line":12,"column":0,"name":"ArgumentError"});
+ArgumentError.prototype = new ManagedError();
+ArgumentError.prototype.constructor = ArgumentError;
+
+module.exports = ArgumentError;
+
+
+}, {"module":"ArgumentError","line":9,"column":37,"name":"$module_ArgumentError"}),null);
+
+__d("CORSRequest",["wrapFunction","QueryString"],__annotator(function $module_CORSRequest(global,require,requireDynamic,requireLazy,module,exports,wrapFunction,QueryString) {require.__markCompiled && require.__markCompiled();
+/*global self:true*/
+   
+   
+
+function createCORSRequest(/*string*/ method, /*string*/ url) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+   if (!self.XMLHttpRequest) {
+    return null;
+   }
+   var xhr = new XMLHttpRequest();
+   var noop = __annotator(function() {}, {"module":"CORSRequest","line":30,"column":14});
+   if ('withCredentials' in xhr) {
+     xhr.open(method, url, true);
+     xhr.setRequestHeader(
+       'Content-type', 'application/x-www-form-urlencoded');
+   } else if (self.XDomainRequest) {
+     xhr = new XDomainRequest();
+     try {
+       
+       
+       
+       
+       xhr.open(method, url);
+
+       
+       
+       
+       
+       
+       
+       xhr.onprogress = xhr.ontimeout = noop;
+     } catch (accessDeniedError) {
+       return null;
+     }
+   } else {
+     return null;
+   }
+
+   var wrapper = {
+     send: __annotator(function(/*string*/ data) {return __bodyWrapper(this, arguments, function() {
+       xhr.send(data);
+     }, {"params":[[data, 'string', 'data']]});}, {"module":"CORSRequest","line":59,"column":11}, {"params":["string"]})
+   };
+   var onload = wrapFunction(__annotator(function() {
+     onload = noop;
+     if ('onload' in wrapper)  {
+       wrapper.onload(xhr);
+     }
+   }, {"module":"CORSRequest","line":63,"column":29}), 'entry', 'XMLHttpRequest:load');
+   var onerror = wrapFunction(__annotator(function() {
+     onerror = noop;
+     if ('onerror' in wrapper) {
+       wrapper.onerror(xhr);
+     }
+   }, {"module":"CORSRequest","line":69,"column":30}), 'entry', 'XMLHttpRequest:error');
+
+   
+   
+   
+   
+
+   xhr.onload = __annotator(function() {
+     onload();
+   }, {"module":"CORSRequest","line":81,"column":16});
+
+   xhr.onerror = __annotator(function() {
+     onerror();
+   }, {"module":"CORSRequest","line":85,"column":17});
+
+   xhr.onreadystatechange = __annotator(function() {
+     if (xhr.readyState == 4) {
+       if (xhr.status == 200) {
+         onload();
+       } else {
+         onerror();
+       }
+     }
+   }, {"module":"CORSRequest","line":89,"column":28});
+
+   return wrapper;
+}, {"params":[[method, 'string', 'method'], [url, 'string', 'url']],"returns":'?object'});}__annotator(createCORSRequest, {"module":"CORSRequest","line":25,"column":0,"name":"createCORSRequest"}, {"params":["string","string"],"returns":"?object"});
+
+function execute(/*string*/ url, /*string*/ method, /*object*/ params,
+    /*function*/ cb) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  params.suppress_http_code = 1;
+  var data = QueryString.encode(params);
+
+  if (method != 'post') {
+    url = QueryString.appendToUrl(url, data);
+    data = '';
+  }
+
+  var request = createCORSRequest(method, url);
+  if (!request) {
+    return false;
+  }
+
+  request.onload = __annotator(function(xhr) {
+    cb(ES('JSON', 'parse', false,xhr.responseText));
+  }, {"module":"CORSRequest","line":117,"column":19});
+  request.onerror = __annotator(function(xhr) {
+    if (xhr.responseText) {
+      cb(ES('JSON', 'parse', false,xhr.responseText));
+    } else {
+      cb({
+        error: {
+          type   : 'http',
+          message: 'unknown error',
+          status : xhr.status
+        }
+      });
+    }
+  }, {"module":"CORSRequest","line":120,"column":20});
+  request.send(data);
+  return true;
+}, {"params":[[url, 'string', 'url'], [method, 'string', 'method'], [params, 'object', 'params'], [cb, 'function', 'cb']],"returns":'boolean'});}__annotator(execute, {"module":"CORSRequest","line":102,"column":0,"name":"execute"}, {"params":["string","string","object","function"],"returns":"boolean"});
+
+var CORSRequest = {
+  execute: execute
+};
+module.exports = CORSRequest;
+
+
+}, {"module":"CORSRequest","line":20,"column":52,"name":"$module_CORSRequest"}),null);
+
+
+__d("FlashRequest",["DOMWrapper","Flash","GlobalCallback","QueryString","Queue"],__annotator(function $module_FlashRequest(global,require,requireDynamic,requireLazy,module,exports,DOMWrapper,Flash,GlobalCallback,QueryString,Queue) {require.__markCompiled && require.__markCompiled();
+       
+            
+   
+      
+            
+
+var flashQueue; 
+var requestCallbacks = {}; 
+var swfUrl; 
+var swf; 
+
+function initFlash() {
+  if (!swfUrl) {
+    throw new Error('swfUrl has not been set');
+  }
+
+  var initCallback = GlobalCallback.create(__annotator(function() {
+    flashQueue.start(__annotator(function(/*object*/ item) {return __bodyWrapper(this, arguments, function() {
+      var id = swf.execute(
+        item.method,
+        item.url,
+        item.body);
+
+      if (!id) {
+        throw new Error('Could create request');
+      }
+      requestCallbacks[id] = item.callback;
+    }, {"params":[[item, 'object', 'item']]});}, {"module":"FlashRequest","line":42,"column":21}, {"params":["object"]}));
+  }, {"module":"FlashRequest","line":41,"column":43}));
+
+  
+  var requestCallback = GlobalCallback.create(__annotator(function(/*number*/ id,
+      /*number*/ status, /*string*/ response) {return __bodyWrapper(this, arguments, function() {
+    var data;
+    try {
+      data = ES('JSON', 'parse', false,decodeURIComponent(response));
+    } catch (parseError) {
+      data = {
+        error: {
+          type   : 'SyntaxError',
+          message: parseError.message,
+          status : status,
+          raw    : response
+        }
+      };
+    }
+
+    requestCallbacks[id](data);
+    delete requestCallbacks[id];
+  }, {"params":[[id, 'number', 'id'], [status, 'number', 'status'], [response, 'string', 'response']]});}, {"module":"FlashRequest","line":56,"column":46}, {"params":["number","number","string"]}));
+
+  swf = Flash.embed(swfUrl, DOMWrapper.getRoot(), null, {
+    log: __DEV__ ? true : false,
+    initCallback: initCallback,
+    requestCallback: requestCallback
+  });
+}__annotator(initFlash, {"module":"FlashRequest","line":36,"column":0,"name":"initFlash"});
+
+
+function execute(/*string*/ url, /*string*/ method, /*object*/ params,
+    /*function*/ cb) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  
+  
+  params.suppress_http_code = 1;
+
+  
+  
+  
+  if (!params.method) {
+    params.method = method;
+  }
+
+
+  var body = QueryString.encode(params);
+  if (method === 'get' && url.length + body.length < 2000) {
+    
+    
+    url = QueryString.appendToUrl(url, body);
+    body = '';
+  } else {
+    method = 'post';
+  }
+
+  
+  if (!flashQueue) {
+    if (!Flash.isAvailable()) {
+      return false;
+    }
+    flashQueue = new Queue();
+    initFlash();
+  }
+
+  
+  flashQueue.enqueue({
+    method: method,
+    url: url,
+    body: body,
+    callback: cb
+  });
+  return true;
+}, {"params":[[url, 'string', 'url'], [method, 'string', 'method'], [params, 'object', 'params'], [cb, 'function', 'cb']],"returns":'boolean'});}__annotator(execute, {"module":"FlashRequest","line":91,"column":0,"name":"execute"}, {"params":["string","string","object","function"],"returns":"boolean"});
+
+var FlashRequest = {
+  setSwfUrl: __annotator(function(/*string*/ swf_url) {return __bodyWrapper(this, arguments, function() {
+    swfUrl = swf_url;
+  }, {"params":[[swf_url, 'string', 'swf_url']]});}, {"module":"FlashRequest","line":135,"column":13}, {"params":["string"]}),
+  execute: execute
+};
+
+module.exports = FlashRequest;
+
+
+}, {"module":"FlashRequest","line":24,"column":81,"name":"$module_FlashRequest"}),null);
+
+
+__d("flattenObject",[],__annotator(function $module_flattenObject(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+
+function flattenObject(/*object*/ obj) /*object*/ {return __bodyWrapper(this, arguments, function() {
+  var flat = {};
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      var value = obj[key];
+      if (null === value || (void 0) === value) {
+        continue;
+      } else if (typeof value == 'string') {
+        flat[key] = value;
+      } else {
+        flat[key] = ES('JSON', 'stringify', false,value); }
+    }
+  }
+  return flat;
+}, {"params":[[obj, 'object', 'obj']],"returns":'object'});}__annotator(flattenObject, {"module":"flattenObject","line":17,"column":0,"name":"flattenObject"}, {"params":["object"],"returns":"object"});
+
+module.exports = flattenObject;
+
+
+}, {"module":"flattenObject","line":7,"column":23,"name":"$module_flattenObject"}),null);
+
+
+__d("JSONPRequest",["DOMWrapper","GlobalCallback","QueryString"],__annotator(function $module_JSONPRequest(global,require,requireDynamic,requireLazy,module,exports,DOMWrapper,GlobalCallback,QueryString) {require.__markCompiled && require.__markCompiled();
+       
+   
+      
+
+var MAX_QUERYSTRING_LENGTH = 2000;
+
+
+function execute(/*string*/ url, /*string*/ method, /*object*/ params,
+    /*function*/ cb) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  var script = document.createElement('script');
+
+  var callbackWrapper = __annotator(function(response) {
+    callbackWrapper = __annotator(function() {}, {"module":"JSONPRequest","line":41,"column":22});
+    GlobalCallback.remove(params.callback);
+    cb(response);
+    script.parentNode.removeChild(script);
+  }, {"module":"JSONPRequest","line":40,"column":24});
+
+  params.callback = GlobalCallback.create(callbackWrapper);
+
+  
+  if (!params.method) {
+    params.method = method;
+  }
+
+  url = QueryString.appendToUrl(url, params);
+  if (url.length > MAX_QUERYSTRING_LENGTH) {
+    GlobalCallback.remove(params.callback);
+    return false;
+  }
+
+  
+  script.onerror = __annotator(function() {
+    callbackWrapper({
+      error: {
+        type   : 'http',
+        message: 'unknown error'
+      }
+    });
+  }, {"module":"JSONPRequest","line":61,"column":19});
+
+  
+  var ensureCallbackCalled = __annotator(function() {
+    setTimeout(__annotator(function() {
+      
+      
+      callbackWrapper({
+        error: {
+          type   : 'http',
+          message: 'unknown error'
+        }
+      });
+    }, {"module":"JSONPRequest","line":72,"column":15}), 0);
+  }, {"module":"JSONPRequest","line":71,"column":29});
+  if (script.addEventListener) {
+    script.addEventListener('load', ensureCallbackCalled, false);
+  } else {
+    script.onreadystatechange = __annotator(function() {
+      if (/loaded|complete/.test(this.readyState)) {
+        ensureCallbackCalled();
+      }
+    }, {"module":"JSONPRequest","line":86,"column":32});
+  }
+
+  script.src = url;
+  DOMWrapper.getRoot().appendChild(script);
+  return true;
+}, {"params":[[url, 'string', 'url'], [method, 'string', 'method'], [params, 'object', 'params'], [cb, 'function', 'cb']],"returns":'boolean'});}__annotator(execute, {"module":"JSONPRequest","line":36,"column":0,"name":"execute"}, {"params":["string","string","object","function"],"returns":"boolean"});
+
+var JSONPRequest = {
+  execute: execute,
+  MAX_QUERYSTRING_LENGTH: MAX_QUERYSTRING_LENGTH
+};
+
+module.exports = JSONPRequest;
+
+
+}, {"module":"JSONPRequest","line":21,"column":65,"name":"$module_JSONPRequest"}),null);
+
+
+__d("ApiClient",["ArgumentError","Assert","CORSRequest","FlashRequest","flattenObject","JSONPRequest","Log","ObservableMixin","QueryString","sprintf","sdk.URI","UrlMap","ApiClientConfig","invariant"],__annotator(function $module_ApiClient(global,require,requireDynamic,requireLazy,module,exports,ArgumentError,Assert,CORSRequest,FlashRequest,flattenObject,JSONPRequest,Log,ObservableMixin,QueryString,sprintf,URI,UrlMap,ApiClientConfig,invariant) {require.__markCompiled && require.__markCompiled();
+    
+           
+      
+     
+    
+     
+              
+   
+      
+          
+              
+           
+
+   
+
+   
+
+var accessToken;
+var clientID;
+var defaultParams;
+
+var MAX_QUERYSTRING_LENGTH = JSONPRequest.MAX_QUERYSTRING_LENGTH;
+var METHODS = {
+  'get': true,
+  'post': true,
+  'delete': true,
+  'put': true
+};
+
+var READONLYCALLS = {
+  fql_query: true,
+  fql_multiquery: true,
+  friends_get: true,
+  notifications_get: true,
+  stream_get: true,
+  users_getinfo: true
+};
+
+
+var batchCalls = [];
+var batchCallbacks = [];
+var scheduleId = null;
+
+var currentlyExecutingRequests = 0;
+var requestQueue = [];
+var maxConcurrentRequests = 0;
+
+
+
+var REQUESTS_PER_BATCH = 50;
+
+
+
+
+var DEFAULT_BATCH_APP_ID = 105440539523; 
+
+
+function request(/*string*/ url, /*string*/ method, /*object*/ params,
+    /*function*/ cb) {return __bodyWrapper(this, arguments, function() {
+
+  // Determine if we've reached the maximum number of concurrent request
+  var shouldQueueRequest =
+    maxConcurrentRequests !== 0 &&
+    currentlyExecutingRequests >= maxConcurrentRequests;
+
+  if (shouldQueueRequest) {
+    
+    
+    requestQueue.push(__annotator(function()  {return request(url, method, params, cb);}, {"module":"ApiClient","line":83,"column":22}));
+    ApiClient.inform(
+      'request.queued',
+      url,
+      method,
+      params
+    );
+    return;
+  }
+
+  currentlyExecutingRequests++;
+
+  if (defaultParams) {
+    params = ES('Object', 'assign', false,{}, defaultParams, params);
+  }
+
+  params.access_token = params.access_token || accessToken;
+  params.pretty = params.pretty || 0;
+
+  params = flattenObject(params);
+  var availableTransports = {
+    jsonp: JSONPRequest,
+    cors : CORSRequest,
+    flash: FlashRequest
+  };
+
+  
+  
+  var transports;
+  if (params.transport) {
+    transports = [params.transport];
+    delete params.transport;
+  } else {
+    transports = ['jsonp', 'cors', 'flash'];
+  }
+
+  for (var i = 0; i < transports.length; i++) {
+    var transport = availableTransports[transports[i]];
+    var paramsCopy = ES('Object', 'assign', false,{}, params);
+    if (transport.execute(url, method, paramsCopy, cb)) {
+      return;
+    }
+  }
+
+  cb({
+    error: {
+      type   : 'no-transport',
+      message: 'Could not find a usable transport for request'
+    }
+  });
+}, {"params":[[url, 'string', 'url'], [method, 'string', 'method'], [params, 'object', 'params'], [cb, 'function', 'cb']]});}__annotator(request, {"module":"ApiClient","line":72,"column":0,"name":"request"}, {"params":["string","string","object","function"]});
+
+function inspect(/*?function*/ callback, /*string*/ endpoint, /*string*/ method,
+    /*object*/ params, /*number*/ startTime, response) {return __bodyWrapper(this, arguments, function() {
+  if (response && response.error) {
+    ApiClient.inform(
+      'request.error',
+      endpoint,
+      method,
+      params,
+      response,
+      /*duration*/ ES('Date', 'now', false) - startTime
+    );
+  }
+
+  ApiClient.inform(
+    'request.complete',
+    endpoint,
+    method,
+    params,
+    response,
+    /*duration*/ ES('Date', 'now', false) - startTime
+  );
+
+
+  currentlyExecutingRequests--;
+  if (callback) {
+    callback(response);
+  }
+
+  
+  
+  var shouldExecuteQueuedRequest =
+    requestQueue.length > 0 &&
+    currentlyExecutingRequests < maxConcurrentRequests;
+  if (shouldExecuteQueuedRequest) {
+    var nextRequest = requestQueue.shift();
+    nextRequest();
+  }
+}, {"params":[[callback, '?function', 'callback'], [endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params'], [startTime, 'number', 'startTime']]});}__annotator(inspect, {"module":"ApiClient","line":135,"column":0,"name":"inspect"}, {"params":["?function","string","string","object","number"]});
+
+
+function parseCallDataFromArgs(/*array*/ args) {return __bodyWrapper(this, arguments, function() {
+  var path = args.shift();
+  Assert.isString(path, 'Invalid path');
+  if (!/^https?/.test(path) && path.charAt(0) !== '/')  {
+    path = '/' + path;
+  }
+
+  var uri;
+  var argsMap = {};
+
+  try {
+    uri = new URI(path);
+  } catch (e) {
+    throw new ArgumentError(e.message, e);
+  }
+
+  
+  ES(args, 'forEach', true,__annotator(function(arg)  {return argsMap[typeof arg] = arg;}, {"module":"ApiClient","line":195,"column":15}));
+
+  var method = (argsMap.string || 'get').toLowerCase();
+
+  Assert.isTrue(
+    METHODS.hasOwnProperty(method),
+    sprintf('Invalid method passed to ApiClient: %s', method)
+  );
+
+  var callback = argsMap['function'];
+  if (!callback) {
+    Log.warn('No callback passed to the ApiClient');
+  }
+
+  if (argsMap.object) {
+    uri.addQueryData(flattenObject(argsMap.object));
+  }
+
+  var params = uri.getQueryData();
+  params.method = method;
+
+  return {uri:uri, callback:callback, params:params};
+}, {"params":[[args, 'array', 'args']]});}__annotator(parseCallDataFromArgs, {"module":"ApiClient","line":178,"column":0,"name":"parseCallDataFromArgs"}, {"params":["array"]});
+
+
+function requestUsingGraph() {for (var args=[],$__0=0,$__1=arguments.length;$__0<$__1;$__0++) args.push(arguments[$__0]);
+  var $__2=    parseCallDataFromArgs(args),uri=$__2.uri,callback=$__2.callback,params=$__2.params;
+  var method = params.method;
+
+  if (requestIsTooLargeForGet(uri, method)) {
+    method = 'post';
+  }
+
+  var url = uri.getProtocol() && uri.getDomain()
+    ? uri.setQueryData({}).toString()
+    : UrlMap.resolve('graph') + uri.getPath();
+
+  ApiClient.inform('request.prepare', url, params);
+
+  request(
+    url,
+    method == 'get' ? 'get' : 'post',
+    params,
+    ES(inspect, 'bind', true,null, callback, uri.getPath(), method, params, ES('Date', 'now', false))
+  );
+}__annotator(requestUsingGraph, {"module":"ApiClient","line":242,"column":0,"name":"requestUsingGraph"});
+
+
+function scheduleBatchCall() {for (var args=[],$__0=0,$__1=arguments.length;$__0<$__1;$__0++) args.push(arguments[$__0]);
+  var $__2=     parseCallDataFromArgs(args),uri=$__2.uri,callback=$__2.callback,$__3=$__2.params,method=$__3.method;
+
+  var batchCall = {
+    method: method,
+    relative_url: uri
+      .removeQueryData('method')
+      .toString()
+  };
+
+  if (method.toLowerCase() == 'post') {
+    batchCall.body = QueryString.encode(uri.getQueryData());
+    batchCall.relative_url = uri
+      .setQueryData({})
+      .toString();
+  }
+
+  batchCalls.push(batchCall);
+  batchCallbacks.push(callback);
+
+  
+  
+  if (batchCalls.length == REQUESTS_PER_BATCH) {
+    if (scheduleId) {
+      clearTimeout(scheduleId);
+    }
+    dispatchBatchCalls();
+  } else if (!scheduleId) {
+    
+    scheduleId = setTimeout(dispatchBatchCalls, 0);
+  }
+}__annotator(scheduleBatchCall, {"module":"ApiClient","line":267,"column":0,"name":"scheduleBatchCall"});
+
+
+function dispatchBatchCalls() {
+  invariant(
+    batchCalls.length > 0,
+    'ApiClient: batchCalls is empty at dispatch.'
+  );
+  invariant(
+    batchCalls.length === batchCallbacks.length,
+    'ApiClient: Every batch call should have a callback'
+  );
+
+  
+  
+  var copiedBatchCalls = batchCalls;
+  var copiedBatchCallbacks = batchCallbacks;
+
+  batchCalls = [];
+  batchCallbacks = [];
+  scheduleId = null;
+
+  // If there's only one request, just send it directly
+  if (copiedBatchCalls.length === 1) {
+    var call = copiedBatchCalls[0];
+    var callback = copiedBatchCallbacks[0];
+    
+    
+    var body = call.body ? QueryString.decode(call.body) : null;
+
+    requestUsingGraph(
+      call.relative_url,
+      call.method,
+      body,
+      callback
+    );
+    return;
+  }
+
+  requestUsingGraph(
+    '/',
+    'POST',
+    {
+      batch: copiedBatchCalls,
+      include_headers: false,
+      batch_app_id: clientID || DEFAULT_BATCH_APP_ID
+    },
+    __annotator(function(response)  {
+      if (ES('Array', 'isArray', false,response)) {
+        ES(response, 'forEach', true,__annotator(function(data, idx)  {
+          copiedBatchCallbacks[idx](ES('JSON', 'parse', false,data.body));
+        }, {"module":"ApiClient","line":350,"column":25}));
+      } else {
+        ES(copiedBatchCallbacks, 'forEach', true,__annotator(function(callback) 
+          {return callback({error: {message: 'Fatal: batch call failed.'}});}, {"module":"ApiClient","line":354,"column":37})
+        );
+      }
+    }, {"module":"ApiClient","line":348,"column":4})
+  );
+}__annotator(dispatchBatchCalls, {"module":"ApiClient","line":304,"column":0,"name":"dispatchBatchCalls"});
+
+
+function requestUsingRest(/*object*/ params, /*?function*/ cb) {return __bodyWrapper(this, arguments, function() {
+  Assert.isObject(params);
+  Assert.isString(params.method, 'method missing');
+
+  if (!cb) {
+    Log.warn('No callback passed to the ApiClient');
+  }
+  var method = params.method.toLowerCase().replace('.', '_');
+  params.format = 'json-strings';
+  params.api_key = clientID;
+
+  var domain = method in READONLYCALLS ? 'api_read' : 'api';
+  var url = UrlMap.resolve(domain) + '/restserver.php';
+  var inspector =
+    ES(inspect, 'bind', true,null, cb, '/restserver.php', 'get', params, ES('Date', 'now', false));
+  request(url, 'get', params, inspector);
+}, {"params":[[params, 'object', 'params'], [cb, '?function', 'cb']]});}__annotator(requestUsingRest, {"module":"ApiClient","line":373,"column":0,"name":"requestUsingRest"}, {"params":["object","?function"]});
+
+var ApiClient = ES('Object', 'assign', false,new ObservableMixin(), {
+  setAccessToken:__annotator(function(/*?string*/ access_token) {return __bodyWrapper(this, arguments, function() {
+    if (__DEV__) {
+      if (accessToken && accessToken !== access_token) {
+        console.error(
+          'You are overriding current access token, that means some other ' +
+          'app is expecting different access token and you will probably ' +
+          'break things. Please consider passing access_token directly to ' +
+          'API parameters instead of overriding the global settings.'
+        );
+      }
+    }
+    accessToken = access_token;
+  }, {"params":[[access_token, '?string', 'access_token']]});}, {"module":"ApiClient","line":392,"column":17}, {"params":["?string"]}),
+  getAccessToken:__annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return accessToken;
+  }, {"returns":'string'});}, {"module":"ApiClient","line":405,"column":17}, {"returns":"string"}),
+  setClientID:__annotator(function(/*?string*/ client_id) {return __bodyWrapper(this, arguments, function() {
+    clientID = client_id;
+  }, {"params":[[client_id, '?string', 'client_id']]});}, {"module":"ApiClient","line":408,"column":14}, {"params":["?string"]}),
+  setDefaultParams:__annotator(function(/*?object*/ default_params) {return __bodyWrapper(this, arguments, function() {
+    defaultParams = default_params;
+  }, {"params":[[default_params, '?object', 'default_params']]});}, {"module":"ApiClient","line":411,"column":19}, {"params":["?object"]}),
+  setMaxConcurrentRequests:__annotator(function(/*number*/ value        ) {return __bodyWrapper(this, arguments, function() {
+    maxConcurrentRequests = value;
+  }, {"params":[[value, 'number', 'value']]});}, {"module":"ApiClient","line":414,"column":27}, {"params":["number"]}),
+  getCurrentlyExecutingRequestCount:__annotator(function()   /*number*/       {
+    return currentlyExecutingRequests;
+  }, {"module":"ApiClient","line":417,"column":36}),
+  getQueuedRequestCount:__annotator(function()   /*number*/       {
+    return requestQueue.length;
+  }, {"module":"ApiClient","line":420,"column":24}),
+  rest: requestUsingRest,
+  graph: requestUsingGraph,
+  scheduleBatchCall: scheduleBatchCall
+});
+
+function requestIsTooLargeForGet(/*URI*/ uri, /*?string*/ method) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  return (uri.toString().length > MAX_QUERYSTRING_LENGTH && method === 'get');
+}, {"params":[[uri, 'URI', 'uri'], [method, '?string', 'method']],"returns":'boolean'});}__annotator(requestIsTooLargeForGet, {"module":"ApiClient","line":428,"column":0,"name":"requestIsTooLargeForGet"}, {"params":["URI","?string"],"returns":"boolean"});
+
+
+FlashRequest.setSwfUrl(ApiClientConfig.FlashRequest.swfUrl);
+
+module.exports = ApiClient;
+
+
+}, {"module":"ApiClient","line":7,"column":200,"name":"$module_ApiClient"}),null);
+
+
+__d("sdk.PlatformVersioning",["sdk.Runtime","ManagedError"],__annotator(function $module_sdk_PlatformVersioning(global,require,requireDynamic,requireLazy,module,exports,Runtime,ManagedError) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+var REGEX = /^v\d+\.\d\d?$/;
+
+var PlatformVersioning = {
+
+  REGEX: REGEX,
+
+  assertVersionIsSet: __annotator(function() {
+    if (!Runtime.getVersion()) {
+      throw new ManagedError('init not called with valid version');
+    }
+  }, {"module":"sdk.PlatformVersioning","line":17,"column":22}),
+
+  assertValidVersion: __annotator(function(/*string*/ version) {return __bodyWrapper(this, arguments, function() {
+    if (!REGEX.test(version)) {
+      throw new ManagedError('invalid version specified');
+    }
+  }, {"params":[[version, 'string', 'version']]});}, {"module":"sdk.PlatformVersioning","line":23,"column":22}, {"params":["string"]})
+
+};
+
+module.exports = PlatformVersioning;
+
+
+}, {"module":"sdk.PlatformVersioning","line":7,"column":60,"name":"$module_sdk_PlatformVersioning"}),null);
+
+
+__d("sdk.api",["ApiClient","sdk.PlatformVersioning","sdk.Runtime","sdk.Scribe","sdk.URI","sdk.feature"],__annotator(function $module_sdk_api(global,require,requireDynamic,requireLazy,module,exports,ApiClient,PlatformVersioning,Runtime,Scribe,URI,feature) {require.__markCompiled && require.__markCompiled();
+    
+   
+   
+   
+   
+
+   
+var shouldLogResponseError = feature('should_log_response_error', false);
+
+var currentAccessToken;
+
+Runtime.subscribe(
+  'ClientID.change',
+  __annotator(function(/*?string*/ value)  {return __bodyWrapper(this, arguments, function() {return ApiClient.setClientID(value);}, {"params":[[value, '?string', 'value']]});}, {"module":"sdk.api","line":21,"column":2}, {"params":["?string"]})
+);
+
+Runtime.subscribe(
+  'AccessToken.change',
+  __annotator(function(/*?string*/ value)   {return __bodyWrapper(this, arguments, function() {
+    currentAccessToken = value;
+    ApiClient.setAccessToken(value);
+  }, {"params":[[value, '?string', 'value']]});}, {"module":"sdk.api","line":26,"column":2}, {"params":["?string"]})
+);
+
+ApiClient.setDefaultParams({
+  sdk: 'joey'
+});
+
+
+ApiClient.subscribe(
+  'request.complete',
+  __annotator(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)   {return __bodyWrapper(this, arguments, function() {
+    var invalidateToken = false;
+    if (response && typeof response == 'object') {
+      if (response.error) {
+        if (response.error == 'invalid_token'
+            || (response.error.type == 'OAuthException'
+                && response.error.code == 190)) {
+          invalidateToken = true;
+        }
+      } else if (response.error_code) {
+        if (response.error_code == '190') {
+          invalidateToken = true;
+        }
+      }
+    }
+    if (invalidateToken
+        && currentAccessToken === Runtime.getAccessToken()) {
+      
+      Runtime.setAccessToken(null);
+  }
+}, {"params":[[endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']]});}, {"module":"sdk.api","line":39,"column":2}, {"params":["string","string","object"]}));
+
+// Inspector for calls that untos'es the app
+ApiClient.subscribe(
+  'request.complete',
+  __annotator(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)  {return __bodyWrapper(this, arguments, function() {
+    if (((endpoint == '/me/permissions'
+          && method === 'delete')
+         || (endpoint == '/restserver.php'
+              && params.method == 'Auth.revokeAuthorization'))
+        && response === true) {
+      Runtime.setAccessToken(null);
+    }
+  }, {"params":[[endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']]});}, {"module":"sdk.api","line":64,"column":2}, {"params":["string","string","object"]})
+);
+
+
+ApiClient.subscribe(
+  'request.error',
+  __annotator(function(/*string*/ endpoint, /*string*/ method, /*object*/ params, response)  {return __bodyWrapper(this, arguments, function() {
+    if (shouldLogResponseError && response.error.type === 'http') {
+      Scribe.log('jssdk_error', {
+        appId: Runtime.getClientID(),
+        error: 'transport',
+        extra: {
+          name: 'transport',
+          // Let's stringify the error as transports build specific error
+          message: ES('JSON', 'stringify', false,response.error)
+        }
+      });
+    }
+  }, {"params":[[endpoint, 'string', 'endpoint'], [method, 'string', 'method'], [params, 'object', 'params']]});}, {"module":"sdk.api","line":78,"column":2}, {"params":["string","string","object"]})
+);
+
+
+function api(path) {
+
+  
+  if (typeof path === 'string') {
+    if (Runtime.getIsVersioned()) {
+      PlatformVersioning.assertVersionIsSet();
+
+      
+      if (!/https?/.test(path) && path.charAt(0) !== '/') {
+        path = '/' + path;
+      }
+      path = new URI(path).setDomain(null).setProtocol(null).toString();
+
+      
+      if (!PlatformVersioning.REGEX
+            .test(path.substring(1, ES(path, 'indexOf', true,'/', 1)))) {
+        path = '/' + Runtime.getVersion() + path;
+      }
+
+      var args = [path].concat(Array.prototype.slice.call(arguments, 1));
+      ApiClient.graph.apply(ApiClient, args);
+    } else {
+      ApiClient.graph.apply(ApiClient, arguments);
+    }
+  } else {
+    ApiClient.rest.apply(ApiClient, arguments);
+  }
+}__annotator(api, {"module":"sdk.api","line":99,"column":0,"name":"api"});
+
+module.exports = api;
+
+
+}, {"module":"sdk.api","line":7,"column":104,"name":"$module_sdk_api"}),null);
+
+
+__d("legacy:fb.api",["FB","sdk.api"],__annotator(function $module_legacy_fb_api(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,api) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+FB.provide('', {
+  api: api
+});
+
+
+}, {"module":"legacy:fb.api","line":4,"column":37,"name":"$module_legacy_fb_api"}),3);
+
+
+__d("sdk.Canvas.Environment",["sdk.RPC"],__annotator(function $module_sdk_Canvas_Environment(global,require,requireDynamic,requireLazy,module,exports,RPC) {require.__markCompiled && require.__markCompiled();
+   
+
+function getPageInfo(/*function*/ appCallback) {return __bodyWrapper(this, arguments, function() {
+  RPC.remote.getPageInfo(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+    appCallback(response.result);
+  }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.Canvas.Environment","line":11,"column":25}, {"params":["object"]}));
+}, {"params":[[appCallback, 'function', 'appCallback']]});}__annotator(getPageInfo, {"module":"sdk.Canvas.Environment","line":10,"column":0,"name":"getPageInfo"}, {"params":["function"]});
+
+function scrollTo(/*?number*/ x, /*?number*/ y) {return __bodyWrapper(this, arguments, function() {
+  RPC.remote.scrollTo({ x: x || 0, y: y || 0 });
+}, {"params":[[x, '?number', 'x'], [y, '?number', 'y']]});}__annotator(scrollTo, {"module":"sdk.Canvas.Environment","line":16,"column":0,"name":"scrollTo"}, {"params":["?number","?number"]});
+
+
+RPC.stub('getPageInfo');
+RPC.stub('scrollTo');
+
+var Environment = {
+  getPageInfo: getPageInfo,
+  scrollTo: scrollTo
+};
+
+module.exports = Environment;
+
+
+}, {"module":"sdk.Canvas.Environment","line":7,"column":41,"name":"$module_sdk_Canvas_Environment"}),null);
+
+
+__d("sdk.fbt",[],__annotator(function $module_sdk_fbt(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+
+
+
+var fbt = {
+  _:__annotator(function(table) {
+    if (__DEV__) {
+      if (arguments.length > 1) {
+        throw ('You are not using a simple string');
+      }
+    }
+    return typeof table === 'string' ? table : table[0];
+  }, {"module":"sdk.fbt","line":11,"column":4})
+};
+module.exports = fbt;
+
+
+}, {"module":"sdk.fbt","line":6,"column":17,"name":"$module_sdk_fbt"}),null);
+
+
+__d("sdk.Dialog",["sdk.Canvas.Environment","sdk.Content","sdk.DOM","DOMEventListener","ObservableMixin","sdk.Runtime","Type","sdk.UA","sdk.fbt","sdk.feature"],__annotator(function $module_sdk_Dialog(global,require,requireDynamic,requireLazy,module,exports,CanvasEnvironment,Content,DOM,DOMEventListener,ObservableMixin,Runtime,Type,UA,fbt,feature) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+
+var MAX_HEIGHT_MOBILE = 590;
+var MAX_WIDTH_MOBILE = 500;
+var MAX_HEIGHT_DESKTOP = 240;
+var MAX_WIDTH_DESKTOP = 575;
+
+var isTablet = __annotator(function() /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  var result;
+  if (feature('dialog_resize_refactor', false)) {
+      var size = getMobileSize();
+      result = size
+        && (size.height >= MAX_HEIGHT_MOBILE || size.width >= MAX_WIDTH_MOBILE);
+    } else {
+      result = !!UA.ipad();
+    }
+    isTablet = __annotator(function() /*boolean*/ {return __bodyWrapper(this, arguments, function() { return result; }, {"returns":'boolean'});}, {"module":"sdk.Dialog","line":35,"column":15}, {"returns":"boolean"});
+    return result;
+}, {"returns":'boolean'});}, {"module":"sdk.Dialog","line":26,"column":15}, {"returns":"boolean"});
+
+function getMobileSize() /*?object*/ {return __bodyWrapper(this, arguments, function() {
+  
+  if (feature('dialog_resize_refactor', false)) {
+    var info = DOM.getViewportInfo();
+    if (info.height && info.width) {
+      return {
+        width: Math.min(info.width, MAX_HEIGHT_MOBILE),
+        height: Math.min(info.height, MAX_WIDTH_MOBILE)
+      };
+    }
+  }
+  return null;
+}, {"returns":'?object'});}__annotator(getMobileSize, {"module":"sdk.Dialog","line":39,"column":0,"name":"getMobileSize"}, {"returns":"?object"});
+
+
+var SdkDialog = Type.extend({
+  constructor: __annotator(function SdkDialog(/*string*/ id, /*string*/ display) {return __bodyWrapper(this, arguments, function() {
+    this.parent();
+    this.id = id;
+    this.display = display;
+    
+    this._e2e = {};
+
+    if (!Dialog._dialogs) {
+      Dialog._dialogs = {};
+      Dialog._addOrientationHandler();
+    }
+    Dialog._dialogs[id] = this;
+    this.trackEvent('init');
+  }, {"params":[[id, 'string', 'id'], [display, 'string', 'display']]});}, {"module":"sdk.Dialog","line":68,"column":15,"name":"SdkDialog"}, {"params":["string","string"]}),
+
+  trackEvent: __annotator(function(/*string*/ name, /*?number*/ time) /*SdkDialog*/ {return __bodyWrapper(this, arguments, function() {
+    if (this._e2e[name]) {
+      return this;
+    }
+    this._e2e[name] = time || ES('Date', 'now', false);
+    if (name == 'close') {
+      
+      this.inform('e2e:end', this._e2e);
+    }
+    return this;
+  }, {"params":[[name, 'string', 'name'], [time, '?number', 'time']],"returns":'SdkDialog'});}, {"module":"sdk.Dialog","line":83,"column":14}, {"params":["string","?number"],"returns":"SdkDialog"}),
+
+  trackEvents: __annotator(function(/*string|object*/ events) /*SdkDialog*/ {return __bodyWrapper(this, arguments, function() {
+    if (typeof events === 'string') {
+      events = ES('JSON', 'parse', false,events);
+    }
+    for (var key in events) {
+      if (events.hasOwnProperty(key)) {
+        this.trackEvent(key, events[key]);
+      }
+    }
+    return this;
+  }, {"params":[[events, 'string|object', 'events']],"returns":'SdkDialog'});}, {"module":"sdk.Dialog","line":95,"column":15}, {"params":["string|object"],"returns":"SdkDialog"})
+}, ObservableMixin);
+
+var Dialog = {
+  newInstance: __annotator(function(/*string*/ id, /*string*/ display) /*SdkDialog*/ {return __bodyWrapper(this, arguments, function() {
+    return new SdkDialog(id, display);
+  }, {"params":[[id, 'string', 'id'], [display, 'string', 'display']],"returns":'SdkDialog'});}, {"module":"sdk.Dialog","line":109,"column":15}, {"params":["string","string"],"returns":"SdkDialog"}),
+
+  
+  _dialogs: null,
+  _lastYOffset: 0,
+
+  
+  _loaderEl: null,
+
+  
+  _overlayEl: null,
+
+  
+  _stack: [],
+
+  
+  _active: null,
+
+  
+  get: __annotator(function(/*string*/ id) /*SdkDialog*/ {return __bodyWrapper(this, arguments, function() {
+    return Dialog._dialogs[id];
+  }, {"params":[[id, 'string', 'id']],"returns":'SdkDialog'});}, {"module":"sdk.Dialog","line":152,"column":7}, {"params":["string"],"returns":"SdkDialog"}),
+
+
+  
+  _findRoot: __annotator(function(/*DOMElement*/ node) /*DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+    while (node) {
+      if (DOM.containsCss(node, 'fb_dialog')) {
+        return node;
+      }
+      node = node.parentNode;
+    }
+  }, {"params":[[node, 'HTMLElement', 'node']],"returns":'HTMLElement'});}, {"module":"sdk.Dialog","line":165,"column":13}, {"params":["DOMElement"],"returns":"DOMElement"}),
+
+  _createWWWLoader: __annotator(function(/*number*/ width) /*DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+    width = width ? width : 460;
+    return Dialog.create({
+      content: (
+      '<div class="dialog_title">' +
+      '  <a id="fb_dialog_loader_close">' +
+      '    <div class="fb_dialog_close_icon"></div>' +
+      '  </a>' +
+      '  <span>Facebook</span>' +
+      '  <div style="clear:both;"></div>' +
+      '</div>' +
+      '<div class="dialog_content"></div>' +
+      '<div class="dialog_footer"></div>'),
+      width: width
+    });
+  }, {"params":[[width, 'number', 'width']],"returns":'HTMLElement'});}, {"module":"sdk.Dialog","line":174,"column":20}, {"params":["number"],"returns":"DOMElement"}),
+
+  _createMobileLoader: __annotator(function() /*DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+    
+    // We're copying the HTML/CSS output of an XHP element here
+    
+    
+    
+    var chrome = UA.nativeApp()
+      ? ''
+      : ('<table>' +
+        '  <tbody>' +
+        '    <tr>' +
+        '      <td class="header_left">' +
+        '        <label class="touchable_button">' +
+        '          <input type="submit" value="' +
+                     fbt._("Cancelar"
+) + '"' +
+        '            id="fb_dialog_loader_close"/>' +
+        '        </label>' +
+        '      </td>' +
+        '      <td class="header_center">' +
+        '        <div>' +
+        '         ' + fbt._("Carregando..."
+) +
+        '        </div>' +
+        '      </td>' +
+        '      <td class="header_right">' +
+        '      </td>' +
+        '    </tr>' +
+        '  </tbody>' +
+        '</table>');
+
+    return Dialog.create({
+      classes: 'loading' + (isTablet() ? ' centered' : ''),
+      content: (
+        '<div class="dialog_header">' +
+          chrome +
+        '</div>')
+    });
+  }, {"returns":'HTMLElement'});}, {"module":"sdk.Dialog","line":191,"column":23}, {"returns":"DOMElement"}),
+
+  _restoreBodyPosition: __annotator(function() {
+    if (!isTablet()) {
+      var body = document.getElementsByTagName('body')[0];
+      DOM.removeCss(body, 'fb_hidden');
+    }
+  }, {"module":"sdk.Dialog","line":231,"column":24}),
+
+  _showTabletOverlay: __annotator(function() {
+    if (!isTablet()) {
+      return;
+    }
+    if (!Dialog._overlayEl) {
+      Dialog._overlayEl = document.createElement('div');
+      Dialog._overlayEl.setAttribute('id', 'fb_dialog_ipad_overlay');
+      Content.append(Dialog._overlayEl, null);
+    }
+    Dialog._overlayEl.className = '';
+  }, {"module":"sdk.Dialog","line":238,"column":22}),
+
+  _hideTabletOverlay: __annotator(function() {
+    if (isTablet()) {
+      Dialog._overlayEl.className = 'hidden';
+    }
+  }, {"module":"sdk.Dialog","line":250,"column":22}),
+
+  
+  showLoader: __annotator(function(/*?function*/ cb, /*number*/ width) {return __bodyWrapper(this, arguments, function() {
+    Dialog._showTabletOverlay();
+
+    if (!Dialog._loaderEl) {
+      Dialog._loaderEl = Dialog._findRoot(UA.mobile()
+        ? Dialog._createMobileLoader()
+        : Dialog._createWWWLoader(width));
+    }
+
+    // this needs to be done for each invocation of showLoader. since we don't
+    
+    
+    
+    if (!cb) {
+      cb = __annotator(function() {}, {"module":"sdk.Dialog","line":277,"column":11});
+    }
+    var loaderClose = document.getElementById('fb_dialog_loader_close');
+    DOM.removeCss(loaderClose, 'fb_hidden');
+    loaderClose.onclick = __annotator(function() {
+      Dialog._hideLoader();
+      Dialog._restoreBodyPosition();
+      Dialog._hideTabletOverlay();
+      cb();
+    }, {"module":"sdk.Dialog","line":281,"column":26});
+    var tabletOverlay = document.getElementById('fb_dialog_ipad_overlay');
+    if (tabletOverlay) {
+      tabletOverlay.ontouchstart = loaderClose.onclick;
+    }
+
+    Dialog._makeActive(Dialog._loaderEl);
+  }, {"params":[[cb, '?function', 'cb'], [width, 'number', 'width']]});}, {"module":"sdk.Dialog","line":263,"column":14}, {"params":["?function","number"]}),
+
+  
+  _hideLoader: __annotator(function() {
+    if (Dialog._loaderEl && Dialog._loaderEl == Dialog._active) {
+      Dialog._loaderEl.style.top = '-10000px';
+    }
+  }, {"module":"sdk.Dialog","line":299,"column":15}),
+
+  
+  _makeActive: __annotator(function(/*DOMElement*/ el) {return __bodyWrapper(this, arguments, function() {
+    Dialog._setDialogSizes();
+    Dialog._lowerActive();
+    Dialog._active = el;
+    if (Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
+      CanvasEnvironment.getPageInfo(__annotator(function(pageInfo) {
+        Dialog._centerActive(pageInfo);
+      }, {"module":"sdk.Dialog","line":316,"column":36}));
+    }
+    Dialog._centerActive();
+  }, {"params":[[el, 'HTMLElement', 'el']]});}, {"module":"sdk.Dialog","line":311,"column":15}, {"params":["DOMElement"]}),
+
+  
+  _lowerActive: __annotator(function() {
+    if (!Dialog._active) {
+      return;
+    }
+    Dialog._active.style.top = '-10000px';
+    Dialog._active = null;
+  }, {"module":"sdk.Dialog","line":326,"column":16}),
+
+  
+  _removeStacked: __annotator(function(/*DOMElement*/ dialog) {return __bodyWrapper(this, arguments, function() {
+    Dialog._stack = ES(Dialog._stack, 'filter', true,__annotator(function(node) {
+      return node != dialog;
+    }, {"module":"sdk.Dialog","line":340,"column":41}));
+  }, {"params":[[dialog, 'HTMLElement', 'dialog']]});}, {"module":"sdk.Dialog","line":339,"column":18}, {"params":["DOMElement"]}),
+
+  
+  _centerActive: __annotator(function(/*?object*/ pageInfo) {return __bodyWrapper(this, arguments, function() {
+    var dialog = Dialog._active;
+    if (!dialog) {
+      return;
+    }
+
+    var view = DOM.getViewportInfo();
+    var width = parseInt(dialog.offsetWidth, 10);
+    var height = parseInt(dialog.offsetHeight, 10);
+    var left = view.scrollLeft + (view.width - width) / 2;
+
+    
+    // these ensure that the dialog is always within the iframe's
+    
+    
+    
+    
+    
+    var minTop = (view.height - height) / 2.5;
+    if (left < minTop) {
+      minTop = left;
+    }
+    var maxTop = view.height - height - minTop;
+
+    
+    var top = (view.height - height) / 2;
+    if (pageInfo) {
+      top = pageInfo.scrollTop - pageInfo.offsetTop +
+        (pageInfo.clientHeight - height) / 2;
+    }
+
+    
+    if (top < minTop) {
+      top = minTop;
+    } else if (top > maxTop) {
+      top = maxTop;
+    }
+
+    // offset by the iframe's scroll
+    top += view.scrollTop;
+
+    
+    
+    if (UA.mobile()) {
+      
+      
+      
+      // space. If page doesn't have enough height, then OS will effectively
+      
+      
+      
+      
+      
+      
+      // down, then the "click" event may fire from a differnt DOM element and
+      
+      
+      
+      
+      // such that page won't be forced to scroll beyeond its limit when
+      
+      
+      
+      var paddingHeight = 100;
+
+      
+      
+      if (isTablet()) {
+        paddingHeight += (view.height - height) / 2;
+      } else {
+        var body = document.getElementsByTagName('body')[0];
+        DOM.addCss(body, 'fb_hidden');
+        if (feature('dialog_resize_refactor', false)) {
+          body.style.width = 'auto';
+        }
+        top = 10000;
+      }
+
+      var paddingDivs = DOM.getByClass('fb_dialog_padding', dialog);
+      if (paddingDivs.length) {
+        paddingDivs[0].style.height = paddingHeight + 'px';
+      }
+    }
+
+    dialog.style.left = (left > 0 ? left : 0) + 'px';
+    dialog.style.top = (top > 0 ? top : 0) + 'px';
+  }, {"params":[[pageInfo, '?object', 'pageInfo']]});}, {"module":"sdk.Dialog","line":349,"column":17}, {"params":["?object"]}),
+
+  _setDialogSizes: __annotator(function() {
+    if (!UA.mobile() || isTablet()) {
+      return;
+    }
+    for (var id in Dialog._dialogs) {
+      if (Dialog._dialogs.hasOwnProperty(id)) {
+        var iframe = document.getElementById(id);
+        if (iframe) {
+          iframe.style.width = Dialog.getDefaultSize().width + 'px';
+          iframe.style.height = Dialog.getDefaultSize().height + 'px';
+        }
+      }
+    }
+  }, {"module":"sdk.Dialog","line":437,"column":19}),
+  getDefaultSize: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    if (UA.mobile()) {
+      var size = getMobileSize();
+
+      if (size) {
+        return size;
+      }
+
+      
+      // Keep this old ipad logic: it's pretty straightforward.
+      if (UA.ipad()) {
+        return {
+          width: MAX_WIDTH_MOBILE,
+          height: MAX_HEIGHT_MOBILE
+        };
+      }
+
+      if (UA.android()) {
+        
+        // window.innerWidth/Height doesn't return correct values
+        return {
+          width: screen.availWidth,
+          height: screen.availHeight
+        };
+      } else {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var isLandscape = width / height > 1.2;
+        
+        
+        // window.innerHeight is not good enough because it doesn't take into
+        
+        
+        
+        
+        
+        
+        
+        
+        return {
+          width: width,
+          height: Math.max(height,
+                         (isLandscape ? screen.width : screen.height))
+        };
+      }
+    }
+    return {width: MAX_WIDTH_DESKTOP, height: MAX_HEIGHT_DESKTOP};
+  }, {"returns":'object'});}, {"module":"sdk.Dialog","line":451,"column":18}, {"returns":"object"}),
+
+
+  
+  _handleOrientationChange: __annotator(function(e) {
+
+    var screenWidth = feature('dialog_resize_refactor', false)
+      ? DOM.getViewportInfo().width
+      : screen.availWidth;
+
+    
+    
+    
+    
+    // "orientation" event, but change shortly after (50-150ms later).
+    
+    
+    
+    
+    if (UA.android() &&
+        screenWidth == Dialog._availScreenWidth) {
+      setTimeout(Dialog._handleOrientationChange, 50);
+      return;
+    }
+
+    Dialog._availScreenWidth = screenWidth;
+
+    if (isTablet()) {
+      Dialog._centerActive();
+    } else {
+      var width = Dialog.getDefaultSize().width;
+      for (var id in Dialog._dialogs) {
+        if (Dialog._dialogs.hasOwnProperty(id)) {
+          
+          var iframe = document.getElementById(id);
+          if (iframe) {
+            iframe.style.width = width + 'px';
+          }
+        }
+      }
+    }
+  }, {"module":"sdk.Dialog","line":504,"column":28}),
+
+  
+  _addOrientationHandler: __annotator(function() {
+    if (!UA.mobile()) {
+      return;
+    }
+    
+    
+    
+    var event_name = "onorientationchange" in window
+      ? 'orientationchange'
+      : 'resize';
+
+    Dialog._availScreenWidth = feature('dialog_resize_refactor', false)
+      ? DOM.getViewportInfo().width
+      : screen.availWidth;
+
+    DOMEventListener.add(window, event_name, Dialog._handleOrientationChange);
+  }, {"module":"sdk.Dialog","line":546,"column":26}),
+
+  
+  create: __annotator(function(/*object*/ opts) /*DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+    opts = opts || {};
+
+    var
+      dialog      = document.createElement('div'),
+      contentRoot = document.createElement('div'),
+      className   = 'fb_dialog';
+
+    
+    if (opts.closeIcon && opts.onClose) {
+      var closeIcon = document.createElement('a');
+      closeIcon.className = 'fb_dialog_close_icon';
+      closeIcon.onclick = opts.onClose;
+      dialog.appendChild(closeIcon);
+    }
+
+    className += ' ' + (opts.classes || '');
+
+    
+    if (UA.ie()) {
+      className += ' fb_dialog_legacy';
+      ES([ 'vert_left',
+        'vert_right',
+        'horiz_top',
+        'horiz_bottom',
+        'top_left',
+        'top_right',
+        'bottom_left',
+        'bottom_right'], 'forEach', true,__annotator(function(/*string*/ name) {return __bodyWrapper(this, arguments, function() {
+          var span = document.createElement('span');
+          span.className = 'fb_dialog_' + name;
+          dialog.appendChild(span);
+        }, {"params":[[name, 'string', 'name']]});}, {"module":"sdk.Dialog","line":609,"column":32}, {"params":["string"]}));
+    } else {
+      className += UA.mobile()
+        ? ' fb_dialog_mobile'
+        : ' fb_dialog_advanced';
+    }
+
+    if (opts.content) {
+      Content.append(opts.content, contentRoot);
+    }
+    dialog.className = className;
+    var width = parseInt(opts.width, 10);
+    if (!isNaN(width)) {
+      dialog.style.width = width + 'px';
+    }
+    contentRoot.className = 'fb_dialog_content';
+
+    dialog.appendChild(contentRoot);
+    if (UA.mobile()) {
+      var padding = document.createElement('div');
+      padding.className = 'fb_dialog_padding';
+      dialog.appendChild(padding);
+    }
+
+    Content.append(dialog);
+
+    if (opts.visible) {
+      Dialog.show(dialog);
+    }
+    return contentRoot;
+  }, {"params":[[opts, 'object', 'opts']],"returns":'HTMLElement'});}, {"module":"sdk.Dialog","line":581,"column":10}, {"params":["object"],"returns":"DOMElement"}),
+
+  
+  show: __annotator(function(/*DOMElement*/ dialog) {return __bodyWrapper(this, arguments, function() {
+    var root = Dialog._findRoot(dialog);
+    if (root) {
+      Dialog._removeStacked(root);
+      Dialog._hideLoader();
+      Dialog._makeActive(root);
+      Dialog._stack.push(root);
+      if ('fbCallID' in dialog) {
+        Dialog.get(dialog.fbCallID)
+          .inform('iframe_show')
+          .trackEvent('show');
+      }
+    }
+  }, {"params":[[dialog, 'HTMLElement', 'dialog']]});}, {"module":"sdk.Dialog","line":653,"column":8}, {"params":["DOMElement"]}),
+
+  
+  hide: __annotator(function(/*DOMElement*/ dialog) {return __bodyWrapper(this, arguments, function() {
+    var root = Dialog._findRoot(dialog);
+    Dialog._hideLoader();
+    if (root == Dialog._active) {
+      Dialog._lowerActive();
+      Dialog._restoreBodyPosition();
+      Dialog._hideTabletOverlay();
+      if ('fbCallID' in dialog) {
+        Dialog.get(dialog.fbCallID)
+          .inform('iframe_hide')
+          .trackEvent('hide');
+      }
+    }
+  }, {"params":[[dialog, 'HTMLElement', 'dialog']]});}, {"module":"sdk.Dialog","line":674,"column":8}, {"params":["DOMElement"]}),
+
+  
+  remove: __annotator(function(/*DOMElement*/ dialog) {return __bodyWrapper(this, arguments, function() {
+    dialog = Dialog._findRoot(dialog);
+    if (dialog) {
+      var is_active = Dialog._active == dialog;
+      Dialog._removeStacked(dialog);
+      if (is_active) {
+        Dialog._hideLoader();
+        if (Dialog._stack.length > 0) {
+          Dialog.show(Dialog._stack.pop());
+        } else {
+          Dialog._lowerActive();
+          Dialog._restoreBodyPosition();
+          Dialog._hideTabletOverlay();
+        }
+      } else if (Dialog._active === null && Dialog._stack.length > 0) {
+        Dialog.show(Dialog._stack.pop());
+      }
+
+      
+      // flash crap. seriously, don't ever ask me about it.
+      // if we remove this without deferring, then in IE only, we'll get an
+      
+      // traces. the 3 second delay isn't a problem because the <div> is
+      // already hidden, it's just not removed from the DOM yet.
+      setTimeout(__annotator(function() {
+        dialog.parentNode.removeChild(dialog);
+      }, {"module":"sdk.Dialog","line":718,"column":17}), 3000);
+    }
+  }, {"params":[[dialog, 'HTMLElement', 'dialog']]});}, {"module":"sdk.Dialog","line":694,"column":10}, {"params":["DOMElement"]}),
+
+  
+  isActive: __annotator(function(/*DOMElement*/ node) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    var root = Dialog._findRoot(node);
+    return root && root === Dialog._active;
+  }, {"params":[[node, 'HTMLElement', 'node']],"returns":'boolean'});}, {"module":"sdk.Dialog","line":729,"column":12}, {"params":["DOMElement"],"returns":"boolean"})
+
+};
+
+module.exports = Dialog;
+
+
+}, {"module":"sdk.Dialog","line":8,"column":159,"name":"$module_sdk_Dialog"}),null);
+
+
+__d("sdk.Frictionless",["sdk.Auth","sdk.api","sdk.Event","sdk.Dialog"],__annotator(function $module_sdk_Frictionless(global,require,requireDynamic,requireLazy,module,exports,Auth,api,Event,Dialog) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+var Frictionless = {
+
+  
+  
+  _allowedRecipients: {},
+
+  _useFrictionless: false,
+
+  
+  _updateRecipients: __annotator(function() {
+    Frictionless._allowedRecipients = {};
+    api('/me/apprequestformerrecipients', __annotator(function(response) {
+      if (!response || response.error) {
+        return;
+      }
+      ES(response.data, 'forEach', true,__annotator(function(/*object*/ recipient) {return __bodyWrapper(this, arguments, function() {
+        Frictionless._allowedRecipients[recipient.recipient_id] = true;
+      }, {"params":[[recipient, 'object', 'recipient']]});}, {"module":"sdk.Frictionless","line":30,"column":28}, {"params":["object"]}));
+    }, {"module":"sdk.Frictionless","line":26,"column":42}));
+  }, {"module":"sdk.Frictionless","line":24,"column":21}),
+
+  
+  init: __annotator(function() {
+    Frictionless._useFrictionless = true;
+    Auth.getLoginStatus(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+      if (response.status == 'connected') {
+        Frictionless._updateRecipients();
+      }
+    }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.Frictionless","line":41,"column":24}, {"params":["object"]}));
+    Event.subscribe('auth.login', __annotator(function(/*object*/ login) {return __bodyWrapper(this, arguments, function() {
+      if (login.authResponse) {
+        Frictionless._updateRecipients();
+      }
+    }, {"params":[[login, 'object', 'login']]});}, {"module":"sdk.Frictionless","line":46,"column":34}, {"params":["object"]}));
+  }, {"module":"sdk.Frictionless","line":39,"column":8}),
+
+  
+  _processRequestResponse: __annotator(function(/*function*/ cb, /*?boolean */hidden)
+      /*function*/ {return __bodyWrapper(this, arguments, function() {
+    return __annotator(function(/*?object*/ params) {return __bodyWrapper(this, arguments, function() {
+      var updated = params && params.updated_frictionless;
+      if (Frictionless._useFrictionless && updated) {
+        
+        
+        Frictionless._updateRecipients();
+      }
+
+      if (params) {
+        if (!hidden && params.frictionless) {
+          Dialog._hideLoader();
+          Dialog._restoreBodyPosition();
+          Dialog._hideIPadOverlay();
+        }
+        delete params.frictionless;
+        delete params.updated_frictionless;
+      }
+      
+      cb && cb(params);
+    }, {"params":[[params, '?object', 'params']]});}, {"module":"sdk.Frictionless","line":62,"column":11}, {"params":["?object"]});
+  }, {"params":[[cb, 'function', 'cb']],"returns":'function'});}, {"module":"sdk.Frictionless","line":60,"column":27}, {"params":["function"],"returns":"function"}),
+
+  
+  isAllowed: __annotator(function(user_ids) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    if (!user_ids) {
+      return false;
+    }
+
+    if (typeof user_ids === 'number') {
+      return user_ids in Frictionless._allowedRecipients;
+    }
+    if (typeof user_ids === 'string') {
+      user_ids = user_ids.split(',');
+    }
+    user_ids = ES(user_ids, 'map', true,__annotator(function(s) {return ES(String(s),'trim', true);}, {"module":"sdk.Frictionless","line":102,"column":28}));
+
+    var allowed = true;
+    var has_user_ids = false;
+    ES(user_ids, 'forEach', true,__annotator(function(/*string*/ user_id) {return __bodyWrapper(this, arguments, function() {
+      allowed = allowed && user_id in Frictionless._allowedRecipients;
+      has_user_ids = true;
+    }, {"params":[[user_id, 'string', 'user_id']]});}, {"module":"sdk.Frictionless","line":106,"column":21}, {"params":["string"]}));
+    return allowed && has_user_ids;
+  }, {"returns":'boolean'});}, {"module":"sdk.Frictionless","line":91,"column":13}, {"returns":"boolean"})
+};
+
+Event.subscribe('init:post', __annotator(function(/*object*/ options) {return __bodyWrapper(this, arguments, function() {
+  if (options.frictionlessRequests) {
+    Frictionless.init();
+  }
+}, {"params":[[options, 'object', 'options']]});}, {"module":"sdk.Frictionless","line":114,"column":29}, {"params":["object"]}));
+
+
+module.exports = Frictionless;
+
+
+}, {"module":"sdk.Frictionless","line":7,"column":71,"name":"$module_sdk_Frictionless"}),null);
+
+
+__d("sdk.Native",["Log","sdk.UA"],__annotator(function $module_sdk_Native(global,require,requireDynamic,requireLazy,module,exports,Log,UA) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+var NATIVE_READY_EVENT = 'fbNativeReady';
+
+var Native = {
+
+  
+  onready: __annotator(function(/*function*/ func) {return __bodyWrapper(this, arguments, function() {
+    // Check that we're within a native container
+    if (!UA.nativeApp()) {
+      Log.error('FB.Native.onready only works when the page is rendered ' +
+             'in a WebView of the native Facebook app. Test if this is the ' +
+             'case calling FB.UA.nativeApp()');
+      return;
+    }
+
+    // if the native container has injected JS but we haven't copied it
+    
+    
+    
+    if (window.__fbNative && !this.nativeReady) {
+      ES('Object', 'assign', false,this, window.__fbNative);
+    }
+
+    
+    if (this.nativeReady) {
+      func();
+    } else {
+      // If the native interfaces haven't been injected yet,
+      
+      var nativeReadyCallback = __annotator(function(evt) {
+        window.removeEventListener(NATIVE_READY_EVENT, nativeReadyCallback);
+        this.onready(func);
+      }, {"module":"sdk.Native","line":44,"column":32});
+      window.addEventListener(NATIVE_READY_EVENT, nativeReadyCallback, false);
+    }
+  }, {"params":[[func, 'function', 'func']]});}, {"module":"sdk.Native","line":21,"column":11}, {"params":["function"]})
+};
+
+module.exports = Native;
+
+
+}, {"module":"sdk.Native","line":7,"column":34,"name":"$module_sdk_Native"}),null);
+
+
+__d("resolveURI",[],__annotator(function $module_resolveURI(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+function resolveURI(/*?string*/ uri) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  if (!uri) { 
+    return window.location.href;
+  }
+
+  uri = uri.replace(/&/g, '&amp;') 
+           .replace(/"/g, '&quot;'); 
+
+  var div = document.createElement('div');
+  // This uses `innerHTML` because anything else doesn't resolve properly or
+  
+  div.innerHTML = '<a href="' + uri + '"></a>';
+
+  return div.firstChild.href; 
+}, {"params":[[uri, '?string', 'uri']],"returns":'string'});}__annotator(resolveURI, {"module":"resolveURI","line":11,"column":0,"name":"resolveURI"}, {"params":["?string"],"returns":"string"});
+
+module.exports = resolveURI;
+
+
+}, {"module":"resolveURI","line":10,"column":20,"name":"$module_resolveURI"}),null);
+
+
+__d("sdk.UIServer",["sdk.Auth","sdk.Content","sdk.DOM","sdk.Dialog","sdk.Event","sdk.Frictionless","Log","sdk.Native","QueryString","sdk.RPC","sdk.Runtime","JSSDKConfig","sdk.UA","UrlMap","sdk.XD","createObjectFrom","sdk.feature","flattenObject","sdk.getContextType","guid","insertIframe","resolveURI"],__annotator(function $module_sdk_UIServer(global,require,requireDynamic,requireLazy,module,exports,Auth,Content,DOM,Dialog,Event,Frictionless,Log,Native,QueryString,RPC,Runtime,SDKConfig,UA,UrlMap,XD,createObjectFrom,feature,flattenObject,getContextType,guid,insertIframe,resolveURI) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+
+var MobileIframeable = {
+  transform:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    
+    
+    
+    if (call.params.display === 'touch' &&
+        call.params.access_token &&
+        window.postMessage
+       ) {
+      
+      
+      call.params.channel = UIServer._xdChannelHandler(
+        call.id,
+        'parent'
+      );
+      
+      if (!UA.nativeApp()) {
+        call.params.in_iframe = 1;
+      }
+      return call;
+    } else {
+      return UIServer.genericTransform(call);
+    }
+  }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":36,"column":12}, {"params":["object"],"returns":"object"}),
+  getXdRelation:__annotator(function(/*object*/ params) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    var display = params.display;
+    if (display === 'touch' && window.postMessage && params.in_iframe) {
+      
+      
+      
+      return 'parent';
+    }
+    return UIServer.getXdRelation(params);
+  }, {"params":[[params, 'object', 'params']],"returns":'string'});}, {"module":"sdk.UIServer","line":59,"column":16}, {"params":["object"],"returns":"string"})
+};
+
+var Methods = {
+  'stream.share': {
+    size      : { width: 670, height: 340 },
+    url       : 'sharer.php',
+    transform:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+      if (!call.params.u) {
+        call.params.u = window.location.toString();
+      }
+      call.params.display = 'popup';
+      return call;
+    }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":75,"column":14}, {"params":["object"],"returns":"object"})
+  },
+
+  
+  'apprequests': {
+    transform:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+      call = MobileIframeable.transform(call);
+
+      call.params.frictionless = Frictionless &&
+        Frictionless._useFrictionless;
+      if (call.params.frictionless) {
+
+        if (Frictionless.isAllowed(call.params.to)) {
+          
+          // for frictionless request that's already
+          
+          
+          call.params.display = 'iframe';
+          call.params.in_iframe = true;
+          
+          call.hideLoader = true;
+        }
+
+        
+        call.cb = Frictionless._processRequestResponse(
+          call.cb,
+          call.hideLoader
+        );
+      }
+      
+      
+      call.closeIcon = false;
+      return call;
+    }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":86,"column":14}, {"params":["object"],"returns":"object"}),
+    getXdRelation: MobileIframeable.getXdRelation
+  },
+
+  'feed': MobileIframeable,
+
+  'permissions.oauth': {
+    url       : 'dialog/oauth',
+    size      : { width: (UA.mobile() ? null : 475),
+                  height: (UA.mobile() ? null : 183) },
+    transform:__annotator(function(/*object*/ call) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+      if (!Runtime.getClientID()) {
+        Log.error('FB.login() called before FB.init().');
+        return;
+      }
+
+      
+      
+      
+      if (Auth.getAuthResponse()
+          && !call.params.scope
+          && !call.params.auth_type) {
+        Log.error('FB.login() called when user is already connected.');
+        call.cb && call.cb({ status: Runtime.getLoginStatus(),
+                             authResponse: Auth.getAuthResponse()});
+        return;
+      }
+
+      var
+        cb = call.cb,
+        id = call.id;
+      delete call.cb;
+
+      var responseTypes = ES('Object', 'keys', false,ES('Object', 'assign', false,
+        call.params.response_type
+          ? createObjectFrom(call.params.response_type.split(','))
+          : {},
+        { token: true, signed_request: true }
+      )).join(',');
+
+      if (call.params.display === 'async') {
+        ES('Object', 'assign', false,
+          call.params, {
+            client_id : Runtime.getClientID(),
+            origin : getContextType(),
+            response_type: responseTypes,
+            domain: location.hostname
+          });
+
+        call.cb = Auth.xdResponseWrapper(
+          cb, Auth.getAuthResponse(), 'permissions.oauth');
+      } else {
+        ES('Object', 'assign', false,
+          call.params, {
+            client_id : Runtime.getClientID(),
+            redirect_uri : resolveURI(
+              UIServer.xdHandler(
+                cb,
+                id,
+                'opener',
+                Auth.getAuthResponse(),
+                'permissions.oauth')),
+            origin : getContextType(),
+            response_type: responseTypes,
+            domain: location.hostname
+          });
+      }
+
+      return call;
+    }, {"params":[[call, 'object', 'call']],"returns":'?object'});}, {"module":"sdk.UIServer","line":124,"column":14}, {"params":["object"],"returns":"?object"})
+  },
+
+  'auth.logout': {
+    url       : 'logout.php',
+    transform:__annotator(function(/*object*/ call) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+      if (!Runtime.getClientID()) {
+        Log.error('FB.logout() called before calling FB.init().');
+      } else if (!Auth.getAuthResponse()) {
+        Log.error('FB.logout() called without an access token.');
+      } else {
+        call.params.next = UIServer.xdHandler(call.cb,
+                                             call.id,
+                                             'parent',
+                                             Auth.getAuthResponse(),
+                                             'logout');
+        return call;
+      }
+    }, {"params":[[call, 'object', 'call']],"returns":'?object'});}, {"module":"sdk.UIServer","line":188,"column":14}, {"params":["object"],"returns":"?object"})
+  },
+
+  'login.status': {
+    url       : 'dialog/oauth',
+    transform:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+      var
+        cb = call.cb,
+        id = call.id;
+      delete call.cb;
+      ES('Object', 'assign', false,call.params, {
+        client_id : Runtime.getClientID(),
+        redirect_uri : UIServer.xdHandler(cb,
+                                         id,
+                                         'parent',
+                                         Auth.getAuthResponse(),
+                                         'login_status'),
+        origin : getContextType(),
+        response_type : 'token,signed_request,code',
+        domain: location.hostname
+      });
+
+      return call;
+    }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":206,"column":14}, {"params":["object"],"returns":"object"})
+  },
+
+  'pay': {
+    size : { width: 555, height: 120 },
+    connectDisplay : 'popup'
+  }
+};
+
+
+var _dialogStates = {};
+
+function _trackRunState(/*function*/ cb, /*string*/id) {return __bodyWrapper(this, arguments, function() {
+  _dialogStates[id] = true;
+  return __annotator(function(response)  {
+    delete _dialogStates[id];
+    cb(response);
+  }, {"module":"sdk.UIServer","line":241,"column":9});
+}, {"params":[[cb, 'function', 'cb']]});}__annotator(_trackRunState, {"module":"sdk.UIServer","line":239,"column":0,"name":"_trackRunState"}, {"params":["function"]});
+
+
+function shouldEnforceSingleDialogInstance(params) {
+  
+  if (!feature('should_force_single_dialog_instance', true)) {
+    return false;
+  }
+
+  
+  var name = params.method.toLowerCase();
+
+  
+  if (name === 'pay' && params.display === 'async') {
+    return true;
+  }
+
+  return false;
+}__annotator(shouldEnforceSingleDialogInstance, {"module":"sdk.UIServer","line":251,"column":0,"name":"shouldEnforceSingleDialogInstance"});
+
+var UIServer = {
+  
+  Methods: Methods,
+  
+  _loadedNodes   : {},
+  _defaultCb     : {},
+  _resultToken   : '"xxRESULTTOKENxx"',
+
+  
+  genericTransform:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    if (call.params.display == 'dialog' || call.params.display == 'iframe') {
+      ES('Object', 'assign', false,call.params, {
+        display: 'iframe',
+        channel: UIServer._xdChannelHandler(call.id, 'parent.parent')
+      }, true);
+    }
+
+    return call;
+  }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":287,"column":19}, {"params":["object"],"returns":"object"}),
+
+  
+  checkOauthDisplay:__annotator(function(params) {
+    var scope = params.scope || params.perms || Runtime.getScope();
+    if (!scope) {
+      return params.display;
+    }
+
+    var scopes = scope.split(/\s|,/g);
+    for (var ii = 0; ii< scopes.length; ii++) {
+      if (!SDKConfig.initSitevars.iframePermissions[ES(scopes[ii],'trim', true)]) {
+        return 'popup';
+      }
+    }
+
+    return params.display;
+  }, {"module":"sdk.UIServer","line":302,"column":20}),
+
+  
+  prepareCall:__annotator(function(/*object*/ params, /*function*/ cb) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+    var
+      name   = params.method.toLowerCase(),
+      method = UIServer.Methods.hasOwnProperty(name)
+        ? ES('Object', 'assign', false,{}, UIServer.Methods[name])
+        : {},
+      id     = guid(),
+      useSSL = Runtime.getSecure()
+        || (name !== 'auth.status' && name != 'login.status');
+
+    
+    ES('Object', 'assign', false,params, {
+      app_id       : Runtime.getClientID(),
+      locale       : Runtime.getLocale(),
+      sdk          : 'joey',
+      access_token : useSSL && Runtime.getAccessToken() || (void 0)
+    });
+
+    
+    params.display = UIServer.getDisplayMode(method, params);
+
+    // set the default dialog URL if one doesn't exist
+    if (!method.url) {
+      method.url = 'dialog/' + name;
+    }
+
+    if ((method.url == 'dialog/oauth'
+         || method.url == 'dialog/permissions.request')
+        && (params.display == 'iframe'
+            || (params.display == 'touch' && params.in_iframe))) {
+      params.display = UIServer.checkOauthDisplay(params);
+    }
+
+    // don't pass the access token to the popup; if it's no longer valid the
+    // popup will fail even if the user's session is valid
+    if (params.display == 'popup') {
+      delete params.access_token;
+    }
+
+    if (Runtime.getIsVersioned() && method.url.substring(0, 7) === 'dialog/') {
+      method.url = params.version + '/' + method.url;
+    }
+
+    if (shouldEnforceSingleDialogInstance(params)) {
+      // Don't allow running the dialog twice, until the callback is fired.
+      if (_dialogStates[name]) {
+        var errorMessage = 'Dialog "' + name +
+          '" is trying to run more than once.';
+        Log.warn(errorMessage);
+        cb({error_code: -100, error_message: errorMessage});
+        return;
+      }
+
+      cb = _trackRunState(cb, name);
+    }
+
+    
+    var call = {
+      cb     : cb,
+      id     : id,
+      size   : method.size || UIServer.getDefaultSize(),
+      url    : UrlMap.resolve(params.display == 'touch' ? 'm' :'www', useSSL)
+               + '/' + method.url,
+      params : params,
+      name   : name,
+      dialog : Dialog.newInstance(id, params.display)
+    };
+
+    
+    var transform = method.transform
+      ? method.transform
+      : UIServer.genericTransform;
+    if (transform) {
+      call = transform(call);
+
+      
+      if (!call) {
+        return;
+      }
+    }
+
+    // params.in_iframe isn't set until after the transform call
+    if (params.display === 'touch' && params.in_iframe) {
+      
+      
+      
+      
+      
+      
+      
+      call.params.parent_height = window.innerHeight;
+    }
+
+    
+    
+    var getXdRelationFn = method.getXdRelation || UIServer.getXdRelation;
+    var relation = getXdRelationFn(call.params);
+    if (!(call.id in UIServer._defaultCb) &&
+        !('next' in call.params) &&
+        !('redirect_uri' in call.params)) {
+      call.params.next = UIServer._xdResult(
+        call.cb,
+        call.id,
+        relation,
+        true 
+      );
+    }
+    if (relation === 'parent') {
+      ES('Object', 'assign', false,call.params, {
+        channel_url: UIServer._xdChannelHandler(id, 'parent.parent')
+      }, true);
+    }
+
+    
+    call = UIServer.prepareParams(call);
+
+    return call;
+  }, {"params":[[params, 'object', 'params'], [cb, 'function', 'cb']],"returns":'?object'});}, {"module":"sdk.UIServer","line":326,"column":14}, {"params":["object","function"],"returns":"?object"}),
+
+  prepareParams:__annotator(function(/*object*/ call) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    
+    
+    
+    
+    if (call.params.display !== 'async') {
+      delete call.params.method;
+    }
+
+    
+    call.params = flattenObject(call.params);
+    var encodedQS = QueryString.encode(call.params);
+
+    
+    // (the fb native app is an exception because it doesn't
+    // doesn't support POST for dialogs).
+    if (!UA.nativeApp() &&
+        UIServer.urlTooLongForIE(call.url + '?' + encodedQS)) {
+      call.post = true;
+    } else if (encodedQS) {
+      call.url += '?' + encodedQS;
+    }
+
+    return call;
+  }, {"params":[[call, 'object', 'call']],"returns":'object'});}, {"module":"sdk.UIServer","line":445,"column":16}, {"params":["object"],"returns":"object"}),
+
+  urlTooLongForIE:__annotator(function(/*string*/ fullURL) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    return fullURL.length > 2000;
+  }, {"params":[[fullURL, 'string', 'fullURL']],"returns":'boolean'});}, {"module":"sdk.UIServer","line":471,"column":18}, {"params":["string"],"returns":"boolean"}),
+
+  
+  getDisplayMode:__annotator(function(/*object*/ method, /*object*/ params) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (params.display === 'hidden' ||
+        params.display === 'none') {
+      return params.display;
+    }
+
+    var canvas = Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS) ||
+                 Runtime.isEnvironment(Runtime.ENVIRONMENTS.PAGETAB);
+    if (canvas && !params.display) {
+      return 'async';
+    }
+
+    
+    if (UA.mobile() || params.display === 'touch') {
+      return 'touch';
+    }
+
+    // cannot use an iframe "dialog" if an access token is not available
+    if (!Runtime.getAccessToken() &&
+        
+        
+        (params.display == 'iframe' || params.display == 'dialog') &&
+        !method.loggedOutIframe) {
+      Log.error('"dialog" mode can only be used when the user is connected.');
+      return 'popup';
+    }
+
+    if (method.connectDisplay && !canvas) {
+      return method.connectDisplay;
+    }
+
+    // TODO change "dialog" to "iframe" once moved to uiserver
+    return params.display || (Runtime.getAccessToken() ? 'dialog' : 'popup');
+  }, {"params":[[method, 'object', 'method'], [params, 'object', 'params']],"returns":'string'});}, {"module":"sdk.UIServer","line":482,"column":17}, {"params":["object","object"],"returns":"string"}),
+
+  
+  getXdRelation:__annotator(function(/*object*/ params) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    var display = params.display;
+    if (display === 'popup' || display === 'touch') {
+      return 'opener';
+    }
+    if (display === 'dialog' || display === 'iframe' ||
+        display === 'hidden' || display === 'none') {
+      return 'parent';
+    }
+    if (display === 'async') {
+      return 'parent.frames[' + window.name + ']';
+    }
+  }, {"params":[[params, 'object', 'params']],"returns":'string'});}, {"module":"sdk.UIServer","line":523,"column":16}, {"params":["object"],"returns":"string"}),
+
+  
+  popup:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    
+    var
+      _screenX   = typeof window.screenX      != 'undefined'
+        ? window.screenX
+        : window.screenLeft,
+      screenY    = typeof window.screenY      != 'undefined'
+        ? window.screenY
+        : window.screenTop,
+      outerWidth = typeof window.outerWidth   != 'undefined'
+        ? window.outerWidth
+        : document.documentElement.clientWidth,
+      outerHeight = typeof window.outerHeight != 'undefined'
+        ? window.outerHeight
+        : (document.documentElement.clientHeight - 22), 
+
+      
+      
+      width    = UA.mobile() ? null : call.size.width,
+      height   = UA.mobile() ? null : call.size.height,
+      screenX  = (_screenX < 0) ? window.screen.width + _screenX : _screenX,
+      left     = parseInt(screenX + ((outerWidth - width) / 2), 10),
+      top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
+      features = [];
+
+    if (width !== null) {
+      features.push('width=' + width);
+    }
+    if (height !== null) {
+      features.push('height=' + height);
+    }
+    features.push('left=' + left);
+    features.push('top=' + top);
+    features.push('scrollbars=1');
+    if (call.name == 'permissions.request' ||
+        call.name == 'permissions.oauth') {
+      features.push('location=1,toolbar=0');
+    }
+    features = features.join(',');
+
+    
+    var popup;
+    if (call.post) {
+      popup = window.open('about:blank', call.id, features);
+      if (popup) {
+        UIServer.setLoadedNode(call, popup, 'popup');
+        Content.submitToTarget({
+          url    : call.url,
+          target : call.id,
+          params : call.params
+        });
+      }
+    } else {
+      popup = window.open(call.url, call.id, features);
+      if (popup) {
+        UIServer.setLoadedNode(call, popup, 'popup');
+      }
+    }
+
+    
+    if (!popup) {
+      
+      return;
+    }
+
+    // if there's a default close action, setup the monitor for it
+    if (call.id in UIServer._defaultCb) {
+      UIServer._popupMonitor();
+    }
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":543,"column":8}, {"params":["object"]}),
+
+  setLoadedNode:__annotator(function(/*object*/ call, node, /*?string*/ type) {return __bodyWrapper(this, arguments, function() {
+    if (call.params && call.params.display != 'popup') {
+      
+      
+      // you can't set a property on an https popup window in IE.
+      node.fbCallID = call.id;
+    }
+    node = {
+      node: node,
+      type: type,
+      fbCallID: call.id
+    };
+    UIServer._loadedNodes[call.id] = node;
+  }, {"params":[[call, 'object', 'call'], [type, '?string', 'type']]});}, {"module":"sdk.UIServer","line":614,"column":16}, {"params":["object","?string"]}),
+
+  getLoadedNode:__annotator(function(call) {
+    var id = typeof call == 'object' ? call.id : call,
+        node = UIServer._loadedNodes[id];
+    return node ? node.node : null;
+  }, {"module":"sdk.UIServer","line":629,"column":16}),
+
+  
+  hidden:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    call.className = 'FB_UI_Hidden';
+    call.root = Content.appendHidden('');
+    UIServer._insertIframe(call);
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":640,"column":9}, {"params":["object"]}),
+
+  
+  iframe:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    call.className = 'FB_UI_Dialog';
+    var onClose = __annotator(function() {
+      UIServer._triggerDefault(call.id);
+    }, {"module":"sdk.UIServer","line":653,"column":18});
+    call.root = Dialog.create({
+      onClose: onClose,
+      closeIcon: call.closeIcon === (void 0) ? true : call.closeIcon,
+      classes: (UA.ipad() ? 'centered' : '')
+    });
+    if (!call.hideLoader) {
+      Dialog.showLoader(onClose, call.size.width);
+    }
+    DOM.addCss(call.root, 'fb_dialog_iframe');
+    UIServer._insertIframe(call);
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":651,"column":9}, {"params":["object"]}),
+
+  
+  touch:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    if (call.params && call.params.in_iframe) {
+      
+      
+      if (call.ui_created) {
+        Dialog.showLoader(__annotator(function() {
+          UIServer._triggerDefault(call.id);
+        }, {"module":"sdk.UIServer","line":679,"column":26}), 0);
+      } else {
+        UIServer.iframe(call);
+      }
+    } else if (UA.nativeApp() && !call.ui_created) {
+      
+      
+      call.frame = call.id;
+      Native.onready(__annotator(function() {
+        
+        
+        // Native.open doesn't accept a name parameter that it
+        
+        
+        
+        UIServer.setLoadedNode(
+          call,
+          Native.open(call.url + '#cb=' + call.frameName),
+          'native');
+      }, {"module":"sdk.UIServer","line":689,"column":21}));
+      UIServer._popupMonitor();
+    } else if (!call.ui_created) {
+      
+      UIServer.popup(call);
+    }
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":674,"column":8}, {"params":["object"]}),
+
+  
+  async:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    call.params.redirect_uri = location.protocol + '//' +
+      location.host + location.pathname;
+    delete call.params.access_token;
+
+    RPC.remote.showDialog(
+      call.params,
+      
+      __annotator(function(/*object*/ response)  {return __bodyWrapper(this, arguments, function() {
+        var result = response.result;
+        
+        if (result && result.e2e) {
+          var dialog = Dialog.get(call.id);
+          dialog.trackEvents(result.e2e);
+          dialog.trackEvent('close');
+          delete result.e2e;
+        }
+        call.cb(result);
+      }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.UIServer","line":723,"column":6}, {"params":["object"]})
+    );
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":715,"column":8}, {"params":["object"]}),
+
+  getDefaultSize:__annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return Dialog.getDefaultSize();
+  }, {"returns":'object'});}, {"module":"sdk.UIServer","line":737,"column":17}, {"returns":"object"}),
+
+  
+  _insertIframe:__annotator(function(/*object*/ call) {return __bodyWrapper(this, arguments, function() {
+    
+    
+    // from the _frames nodes, and we won't add the node back in.
+    UIServer._loadedNodes[call.id] = false;
+    var activate = __annotator(function(/*DOMElement*/ node) {return __bodyWrapper(this, arguments, function() {
+      if (call.id in UIServer._loadedNodes) {
+        UIServer.setLoadedNode(call, node, 'iframe');
+      }
+    }, {"params":[[node, 'HTMLElement', 'node']]});}, {"module":"sdk.UIServer","line":751,"column":19}, {"params":["DOMElement"]});
+
+    
+    if (call.post) {
+      insertIframe({
+        url       : 'about:blank',
+        root      : call.root,
+        className : call.className,
+        width     : call.size.width,
+        height    : call.size.height,
+        id        : call.id,
+        onInsert  : activate,
+        onload    : __annotator(function(/*DOMElement*/ node) {return __bodyWrapper(this, arguments, function() {
+          Content.submitToTarget({
+            url    : call.url,
+            target : node.name,
+            params : call.params
+          });
+        }, {"params":[[node, 'HTMLElement', 'node']]});}, {"module":"sdk.UIServer","line":767,"column":20}, {"params":["DOMElement"]})
+      });
+    } else {
+      insertIframe({
+        url       : call.url,
+        root      : call.root,
+        className : call.className,
+        width     : call.size.width,
+        height    : call.size.height,
+        id        : call.id,
+        name      : call.frameName,
+        onInsert  : activate
+      });
+    }
+  }, {"params":[[call, 'object', 'call']]});}, {"module":"sdk.UIServer","line":746,"column":16}, {"params":["object"]}),
+
+  
+  _handleResizeMessage:__annotator(function(/*string*/ frame, /*object*/ data) {return __bodyWrapper(this, arguments, function() {
+    var node = UIServer.getLoadedNode(frame);
+    if (!node) {
+      return;
+    }
+
+    if (data.height) {
+      node.style.height = data.height + 'px';
+    }
+    if (data.width) {
+      node.style.width = data.width + 'px';
+    }
+
+    XD.inform(
+      'resize.ack',
+      data || {},
+      'parent.frames[' + node.name + ']');
+
+    if (!Dialog.isActive(node)) {
+      Dialog.show(node);
+    }
+  }, {"params":[[frame, 'string', 'frame'], [data, 'object', 'data']]});}, {"module":"sdk.UIServer","line":794,"column":23}, {"params":["string","object"]}),
+
+  
+  _triggerDefault:__annotator(function(/*string*/ id) {return __bodyWrapper(this, arguments, function() {
+    UIServer._xdRecv(
+      { frame: id },
+      UIServer._defaultCb[id] || __annotator(function() {}, {"module":"sdk.UIServer","line":825,"column":33})
+    );
+  }, {"params":[[id, 'string', 'id']]});}, {"module":"sdk.UIServer","line":822,"column":18}, {"params":["string"]}),
+
+  
+  _popupMonitor:__annotator(function() {
+    
+    var found;
+    for (var id in UIServer._loadedNodes) {
+      
+      if (UIServer._loadedNodes.hasOwnProperty(id) &&
+          id in UIServer._defaultCb) {
+        var node = UIServer._loadedNodes[id];
+        if (node.type != 'popup' && node.type != 'native') {
+          continue;
+        }
+        var win = node.node;
+
+        try {
+          
+          if (win.closed) {
+            UIServer._triggerDefault(id);
+          } else {
+            found = true; 
+          }
+        } catch (y) {
+          
+        }
+      }
+    }
+
+    if (found && !UIServer._popupInterval) {
+      // start the monitor if needed and it's not already running
+      UIServer._popupInterval = setInterval(UIServer._popupMonitor, 100);
+    } else if (!found && UIServer._popupInterval) {
+      // shutdown if we have nothing to monitor but it's running
+      clearInterval(UIServer._popupInterval);
+      UIServer._popupInterval = null;
+    }
+  }, {"module":"sdk.UIServer","line":835,"column":16}),
+
+  
+  _xdChannelHandler:__annotator(function(/*string*/ frame, /*string*/ relation)
+      /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return XD.handler(__annotator(function(/*object*/ data) {return __bodyWrapper(this, arguments, function() {
+      var node = UIServer.getLoadedNode(frame);
+      if (!node) { 
+        return;
+      }
+
+      if (data.type == 'resize') {
+        UIServer._handleResizeMessage(frame, data);
+      } else if (data.type == 'hide') {
+        Dialog.hide(node);
+      } else if (data.type == 'rendered') {
+        var root = Dialog._findRoot(node);
+        Dialog.show(root);
+      } else if (data.type == 'fireevent') {
+        Event.fire(data.event);
+      }
+    }, {"params":[[data, 'object', 'data']]});}, {"module":"sdk.UIServer","line":881,"column":22}, {"params":["object"]}), relation, true, null);
+  }, {"params":[[frame, 'string', 'frame'], [relation, 'string', 'relation']],"returns":'string'});}, {"module":"sdk.UIServer","line":879,"column":20}, {"params":["string","string"],"returns":"string"}),
+
+  
+  _xdNextHandler:__annotator(function(/*function*/ cb, /*string*/ frame,
+       /*string*/ relation, /*boolean*/ isDefault) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (isDefault) {
+      UIServer._defaultCb[frame] = cb;
+    }
+
+    return XD.handler(__annotator(function(data) {
+      UIServer._xdRecv(data, cb);
+    }, {"module":"sdk.UIServer","line":917,"column":22}), relation) + '&frame=' + frame;
+  }, {"params":[[cb, 'function', 'cb'], [frame, 'string', 'frame'], [relation, 'string', 'relation'], [isDefault, 'boolean', 'isDefault']],"returns":'string'});}, {"module":"sdk.UIServer","line":911,"column":17}, {"params":["function","string","string","boolean"],"returns":"string"}),
+
+  
+  _xdRecv:__annotator(function(/*object*/ data, /*function*/ cb) {return __bodyWrapper(this, arguments, function() {
+    var frame = UIServer.getLoadedNode(data.frame);
+    if (frame) {
+      if (frame.close) {
+        
+        try {
+          frame.close();
+          
+          
+          
+          if (/iPhone.*Version\/(5|6)/.test(navigator.userAgent)
+              && RegExp.$1 !== '5') {
+            window.focus();
+          }
+          UIServer._popupCount--;
+        } catch (y) {
+          
+        }
+      } else {
+        
+        if (DOM.containsCss(frame, 'FB_UI_Hidden')) {
+          
+          // async flash crap. seriously, don't ever ask me about it.
+          setTimeout(__annotator(function() {
+            
+            frame.parentNode.parentNode.removeChild(frame.parentNode);
+          }, {"module":"sdk.UIServer","line":953,"column":21}), 3000);
+        } else if (DOM.containsCss(frame, 'FB_UI_Dialog')) {
+          Dialog.remove(frame);
+        }
+      }
+    }
+    
+    delete UIServer._loadedNodes[data.frame];
+    delete UIServer._defaultCb[data.frame];
+    
+    if (data.e2e) {
+      var dialog = Dialog.get(data.frame);
+      dialog.trackEvents(data.e2e);
+      dialog.trackEvent('close');
+      delete data.e2e;
+    }
+    cb(data);
+  }, {"params":[[data, 'object', 'data'], [cb, 'function', 'cb']]});}, {"module":"sdk.UIServer","line":930,"column":10}, {"params":["object","function"]}),
+
+  
+  _xdResult:__annotator(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
+      /*boolean*/ isDefault) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return (
+      UIServer._xdNextHandler(__annotator(function(params) {
+        cb && cb(params.result &&
+                 params.result != UIServer._resultToken &&
+                 ES('JSON', 'parse', false,params.result));
+      }, {"module":"sdk.UIServer","line":989,"column":30}), frame, target, isDefault) +
+      
+      '&result=' + encodeURIComponent(UIServer._resultToken)
+    );
+  }, {"params":[[cb, 'function', 'cb'], [frame, 'string', 'frame'], [target, 'string', 'target'], [isDefault, 'boolean', 'isDefault']],"returns":'string'});}, {"module":"sdk.UIServer","line":986,"column":12}, {"params":["function","string","string","boolean"],"returns":"string"}),
+
+  xdHandler:__annotator(function(/*function*/ cb, /*string*/ frame, /*string*/ target,
+      /*?object*/ authResponse, /*string*/ method) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return UIServer._xdNextHandler(
+      Auth.xdResponseWrapper(cb, authResponse, method),
+      frame,
+      target,
+      true);
+  }, {"params":[[cb, 'function', 'cb'], [frame, 'string', 'frame'], [target, 'string', 'target'], [authResponse, '?object', 'authResponse'], [method, 'string', 'method']],"returns":'string'});}, {"module":"sdk.UIServer","line":999,"column":12}, {"params":["function","string","string","?object","string"],"returns":"string"})
+
+};
+
+RPC.stub('showDialog');
+module.exports = UIServer;
+
+
+}, {"module":"sdk.UIServer","line":10,"column":303,"name":"$module_sdk_UIServer"}),null);
+
+
+__d("sdk.ui",["Assert","sdk.Impressions","Log","sdk.PlatformVersioning","sdk.Runtime","sdk.UIServer","sdk.feature"],__annotator(function $module_sdk_ui(global,require,requireDynamic,requireLazy,module,exports,Assert,Impressions,Log,PlatformVersioning,Runtime,UIServer,feature) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+
+   
+
+
+function ui(/*object*/ params, /*?function*/ cb) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+  Assert.isObject(params);
+  Assert.maybeFunction(cb);
+
+  if (Runtime.getIsVersioned()) {
+    PlatformVersioning.assertVersionIsSet();
+    if (params.version) {
+      PlatformVersioning.assertValidVersion(params.version);
+    } else {
+      params.version = Runtime.getVersion();
+    }
+  }
+
+  params = ES('Object', 'assign', false,{}, params);
+  if (!params.method) {
+    Log.error('"method" is a required parameter for FB.ui().');
+    return null;
+  }
+
+  if (params.method == 'pay.prompt') {
+    params.method = 'pay';
+  }
+
+  var method = params.method;
+
+  if (params.redirect_uri) {
+    Log.warn('When using FB.ui, you should not specify a redirect_uri.');
+    delete params.redirect_uri;
+  }
+
+  
+  if ((method == 'permissions.request' || method == 'permissions.oauth') &&
+      (params.display == 'iframe' || params.display == 'dialog')) {
+    params.display = UIServer.checkOauthDisplay(params);
+  }
+
+  var enableE2E = feature('e2e_tracking', true);
+  if (enableE2E) {
+    
+    params.e2e = {};
+  }
+  var call = UIServer.prepareCall(params, cb || __annotator(function() {}, {"module":"sdk.ui","line":113,"column":48}));
+  if (!call) { 
+    return null;
+  }
+
+  // each allowed "display" value maps to a function
+  var displayName = call.params.display;
+  if (displayName === 'dialog') { 
+                                 
+    displayName = 'iframe';
+  } else if (displayName === 'none') {
+    displayName = 'hidden';
+  }
+
+  var displayFn = UIServer[displayName];
+  if (!displayFn) {
+    Log.error('"display" must be one of "popup", ' +
+           '"dialog", "iframe", "touch", "async", "hidden", or "none"');
+    return null;
+  }
+
+  if (enableE2E) {
+    call.dialog.subscribe('e2e:end', __annotator(function(/*object*/ events) {return __bodyWrapper(this, arguments, function() {
+      events.method = method;
+      events.display = displayName;
+      Log.debug('e2e: %s', ES('JSON', 'stringify', false,events));
+      
+      Impressions.log(114, {
+        payload: events
+      });
+    }, {"params":[[events, 'object', 'events']]});}, {"module":"sdk.ui","line":135,"column":37}, {"params":["object"]}));
+  }
+  displayFn(call);
+  return call.dialog;
+}, {"params":[[params, 'object', 'params'], [cb, '?function', 'cb']],"returns":'?object'});}__annotator(ui, {"module":"sdk.ui","line":72,"column":0,"name":"ui"}, {"params":["object","?function"],"returns":"?object"});
+
+module.exports = ui;
+
+
+}, {"module":"sdk.ui","line":7,"column":116,"name":"$module_sdk_ui"}),null);
+
+
+__d("legacy:fb.auth",["sdk.Auth","sdk.Cookie","copyProperties","sdk.Event","FB","Log","sdk.Runtime","sdk.SignedRequest","sdk.ui"],__annotator(function $module_legacy_fb_auth(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Auth,Cookie,copyProperties,Event,FB,Log,Runtime,SignedRequest,ui) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+FB.provide('', {
+
+  getLoginStatus: __annotator(function() /*?object*/ {return __bodyWrapper(this, arguments, function() {
+    return Auth.getLoginStatus.apply(Auth, arguments);
+  }, {"returns":'?object'});}, {"module":"legacy:fb.auth","line":18,"column":18}, {"returns":"?object"}),
+
+  getAuthResponse: __annotator(function() /*?object*/ {return __bodyWrapper(this, arguments, function() {
+    return Auth.getAuthResponse();
+  }, {"returns":'?object'});}, {"module":"legacy:fb.auth","line":22,"column":19}, {"returns":"?object"}),
+
+  getAccessToken: __annotator(function() /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return Runtime.getAccessToken() || null;
+  }, {"returns":'?string'});}, {"module":"legacy:fb.auth","line":26,"column":18}, {"returns":"?string"}),
+
+  getUserID: __annotator(function() /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return Runtime.getUserID() || Runtime.getCookieUserID();
+  }, {"returns":'?string'});}, {"module":"legacy:fb.auth","line":30,"column":13}, {"returns":"?string"}),
+
+  login: __annotator(function(/*?function*/ cb, /*?object*/ opts) {return __bodyWrapper(this, arguments, function() {
+    if (opts && opts.perms && !opts.scope) {
+      opts.scope = opts.perms;
+      delete opts.perms;
+      Log.warn('OAuth2 specification states that \'perms\' ' +
+             'should now be called \'scope\'.  Please update.');
+    }
+    var canvas = Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS) ||
+                 Runtime.isEnvironment(Runtime.ENVIRONMENTS.PAGETAB);
+    ui(copyProperties({
+        method: 'permissions.oauth',
+        display: canvas
+          ? 'async'
+          : 'popup',
+        domain: location.hostname
+      }, opts || {}),
+    cb);
+  }, {"params":[[cb, '?function', 'cb'], [opts, '?object', 'opts']]});}, {"module":"legacy:fb.auth","line":34,"column":9}, {"params":["?function","?object"]}),
+
+
+  logout: __annotator(function(/*?function*/ cb) {return __bodyWrapper(this, arguments, function() {
+    ui({ method: 'auth.logout', display: 'hidden' }, cb);
+  }, {"params":[[cb, '?function', 'cb']]});}, {"module":"legacy:fb.auth","line":54,"column":10}, {"params":["?function"]})
+});
+
+Auth.subscribe('logout', ES(Event.fire, 'bind', true,Event, 'auth.logout'));
+Auth.subscribe('login', ES(Event.fire, 'bind', true,Event, 'auth.login'));
+Auth.subscribe('authresponse.change', ES(Event.fire, 'bind', true,Event,
+  'auth.authResponseChange'));
+Auth.subscribe('status.change', ES(Event.fire, 'bind', true,Event, 'auth.statusChange'));
+
+Event.subscribe('init:post', __annotator(function(/*object*/ options) {return __bodyWrapper(this, arguments, function() {
+  if (options.status) {
+    Auth.getLoginStatus();
+  }
+  if (Runtime.getClientID()) {
+    if (options.authResponse) {
+      Auth.setAuthResponse(options.authResponse, 'connected');
+    } else if (Runtime.getUseCookie()) {
+      // we don't have an access token yet, but we might have a user
+      
+      var signedRequest = Cookie.loadSignedRequest(), parsedSignedRequest;
+      if (signedRequest) {
+        try {
+          parsedSignedRequest = SignedRequest.parse(signedRequest);
+        } catch (e) {
+          
+          Cookie.clearSignedRequestCookie();
+        }
+        if (parsedSignedRequest && parsedSignedRequest.user_id) {
+          Runtime.setCookieUserID(parsedSignedRequest.user_id);
+        }
+      }
+      Cookie.loadMeta();
+    }
+  }
+}, {"params":[[options, 'object', 'options']]});}, {"module":"legacy:fb.auth","line":65,"column":29}, {"params":["object"]}));
+
+
+}, {"module":"legacy:fb.auth","line":5,"column":130,"name":"$module_legacy_fb_auth"}),3);
+
+
+__d("sdk.Canvas.IframeHandling",["DOMWrapper","sdk.RPC"],__annotator(function $module_sdk_Canvas_IframeHandling(global,require,requireDynamic,requireLazy,module,exports,DOMWrapper,RPC) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+var autoGrowTimer = null;
+var autoGrowLastSize;
+
+function getHeight() {
+  var document = DOMWrapper.getWindow().document;
+  var body = document.body,
+      docElement = document.documentElement,
+      bodyTop = Math.max(body.offsetTop, 0),
+      docTop = Math.max(docElement.offsetTop, 0),
+      bodyScroll = body.scrollHeight + bodyTop,
+      bodyOffset = body.offsetHeight + bodyTop,
+      docScroll = docElement.scrollHeight + docTop,
+      docOffset = docElement.offsetHeight + docTop;
+
+  return Math.max(bodyScroll, bodyOffset, docScroll, docOffset);
+}__annotator(getHeight, {"module":"sdk.Canvas.IframeHandling","line":14,"column":0,"name":"getHeight"});
+
+function setSize(/*?object*/ params) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  
+  if (typeof params != 'object') {
+    params = {};
+  }
+  var minShrink = 0,
+      minGrow = 0;
+  if (!params.height) {
+    params.height = getHeight();
+    
+    
+    
+    
+    
+    minShrink = 16;
+    minGrow = 4;
+  }
+
+  if (!params.frame) {
+    params.frame = window.name || 'iframe_canvas';
+  }
+
+  if (autoGrowLastSize) {
+    var oldHeight = autoGrowLastSize.height;
+    var dHeight = params.height - oldHeight;
+    if (dHeight <= minGrow && dHeight >= -minShrink) {
+      return false;
+    }
+  }
+  autoGrowLastSize = params;
+  RPC.remote.setSize(params);
+  return true;
+}, {"params":[[params, '?object', 'params']],"returns":'boolean'});}__annotator(setSize, {"module":"sdk.Canvas.IframeHandling","line":28,"column":0,"name":"setSize"}, {"params":["?object"],"returns":"boolean"});
+
+function setAutoGrow(on, interval) {
+  if (interval === (void 0) && typeof on === 'number') {
+    interval = on;
+    on = true;
+  }
+
+  if (on || on === (void 0)) {
+    if (autoGrowTimer === null) {
+      // Wrap the call in a function to avoid having FF pass in the 'Lateness'
+      
+      autoGrowTimer = setInterval(__annotator(function() {
+        setSize();
+      }, {"module":"sdk.Canvas.IframeHandling","line":72,"column":34}), interval || 100);
+    }
+    setSize();
+  } else {
+    if (autoGrowTimer !== null) {
+      clearInterval(autoGrowTimer);
+      autoGrowTimer = null;
+    }
+  }
+}__annotator(setAutoGrow, {"module":"sdk.Canvas.IframeHandling","line":62,"column":0,"name":"setAutoGrow"});
+
+RPC.stub('setSize');
+
+var IframeHandling = {
+  setSize: setSize,
+  setAutoGrow: setAutoGrow
+};
+
+module.exports = IframeHandling;
+
+
+}, {"module":"sdk.Canvas.IframeHandling","line":7,"column":57,"name":"$module_sdk_Canvas_IframeHandling"}),null);
+
+
+__d("sdk.Canvas.Navigation",["sdk.RPC"],__annotator(function $module_sdk_Canvas_Navigation(global,require,requireDynamic,requireLazy,module,exports,RPC) {require.__markCompiled && require.__markCompiled();
+   
+
+
+function setUrlHandler(/*function*/ callback) {return __bodyWrapper(this, arguments, function() {
+  RPC.local.navigate = __annotator(function(/*string*/ path) {return __bodyWrapper(this, arguments, function() {
+    callback({ path: path });
+  }, {"params":[[path, 'string', 'path']]});}, {"module":"sdk.Canvas.Navigation","line":38,"column":23}, {"params":["string"]});
+  RPC.remote.setNavigationEnabled(true);
+}, {"params":[[callback, 'function', 'callback']]});}__annotator(setUrlHandler, {"module":"sdk.Canvas.Navigation","line":37,"column":0,"name":"setUrlHandler"}, {"params":["function"]});
+
+
+RPC.stub('setNavigationEnabled');
+
+var Navigation = {
+  setUrlHandler: setUrlHandler
+};
+
+module.exports = Navigation;
+
+
+}, {"module":"sdk.Canvas.Navigation","line":7,"column":40,"name":"$module_sdk_Canvas_Navigation"}),null);
+
+
+__d("sdk.Canvas.Plugin",["Log","sdk.RPC","sdk.Runtime","sdk.UA","sdk.api","createArrayFromMixed"],__annotator(function $module_sdk_Canvas_Plugin(global,require,requireDynamic,requireLazy,module,exports,Log,RPC,Runtime,UA,api,createArrayFromMixed) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+   
+   
+
+var flashClassID = 'CLSID:D27CDB6E-AE6D-11CF-96B8-444553540000';
+var unityClassID = 'CLSID:444785F1-DE89-4295-863A-D46C3A781394';
+var devHidePluginCallback = null;
+
+
+var osx = UA.osx() && UA.osx.getVersionParts();
+var unityNeedsToBeHidden = !((osx && osx[0] > 10 && osx[1] > 10) 
+                             && (UA.chrome() >= 31
+                                 || UA.webkit() >= 537.71
+                                 || UA.firefox() >= 25));
+
+
+function hideUnityElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  elem._hideunity_savedstyle = {};
+  elem._hideunity_savedstyle.left = elem.style.left;
+  elem._hideunity_savedstyle.position = elem.style.position;
+  elem._hideunity_savedstyle.width = elem.style.width;
+  elem._hideunity_savedstyle.height = elem.style.height;
+  elem.style.left = '-10000px';
+  elem.style.position = 'absolute';
+  elem.style.width = '1px';
+  elem.style.height = '1px';
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(hideUnityElement, {"module":"sdk.Canvas.Plugin","line":41,"column":0,"name":"hideUnityElement"}, {"params":["DOMElement"]});
+
+
+function showUnityElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  if (elem._hideunity_savedstyle) {
+    elem.style.left     = elem._hideunity_savedstyle.left;
+    elem.style.position = elem._hideunity_savedstyle.position;
+    elem.style.width    = elem._hideunity_savedstyle.width;
+    elem.style.height   = elem._hideunity_savedstyle.height;
+  }
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(showUnityElement, {"module":"sdk.Canvas.Plugin","line":60,"column":0,"name":"showUnityElement"}, {"params":["DOMElement"]});
+
+
+function hideFlashElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  elem._old_visibility = elem.style.visibility;
+  elem.style.visibility = 'hidden';
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(hideFlashElement, {"module":"sdk.Canvas.Plugin","line":76,"column":0,"name":"hideFlashElement"}, {"params":["DOMElement"]});
+
+
+function showFlashElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  elem.style.visibility = elem._old_visibility || '';
+  delete elem._old_visibility;
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(showFlashElement, {"module":"sdk.Canvas.Plugin","line":88,"column":0,"name":"showFlashElement"}, {"params":["DOMElement"]});
+
+function isHideableFlashElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  var type = elem.type ? elem.type.toLowerCase() : null;
+  var isHideable = type === 'application/x-shockwave-flash'
+        || (elem.classid && elem.classid.toUpperCase() == flashClassID);
+
+  if (!isHideable) {
+    return false;
+  }
+
+  // for flash elements we don't need to hide if it is in wmode
+  
+  var keepvisibleRegex = /opaque|transparent/i;
+  if (keepvisibleRegex.test(elem.getAttribute('wmode'))) {
+    return false;
+  }
+
+  for (var j = 0; j < elem.childNodes.length; j++) {
+    var node = elem.childNodes[j];
+    if (/param/i.test(node.nodeName) && /wmode/i.test(node.name) &&
+      keepvisibleRegex.test(node.value)) {
+      return false;
+    }
+  }
+  return true;
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(isHideableFlashElement, {"module":"sdk.Canvas.Plugin","line":93,"column":0,"name":"isHideableFlashElement"}, {"params":["DOMElement"]});
+
+function isHideableUnityElement(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+  var type = elem.type ? elem.type.toLowerCase() : null;
+  return type === 'application/vnd.unity'
+    || (elem.classid && elem.classid.toUpperCase() == unityClassID);
+}, {"params":[[elem, 'HTMLElement', 'elem']]});}__annotator(isHideableUnityElement, {"module":"sdk.Canvas.Plugin","line":119,"column":0,"name":"isHideableUnityElement"}, {"params":["DOMElement"]});
+
+
+function hidePluginCallback(/*object*/ params) {return __bodyWrapper(this, arguments, function() {
+  var candidates = createArrayFromMixed(
+    window.document.getElementsByTagName('object')
+  );
+  candidates = candidates.concat(
+    createArrayFromMixed(window.document.getElementsByTagName('embed'))
+  );
+
+  var flashPresent = false;
+  var unityPresent = false;
+  ES(candidates, 'forEach', true,__annotator(function(/*DOMElement*/ elem) {return __bodyWrapper(this, arguments, function() {
+    var isFlashElement = isHideableFlashElement(elem);
+    var isUnityElement = unityNeedsToBeHidden && isHideableUnityElement(elem);
+    if (!isFlashElement && !isUnityElement) {
+      return;
+    }
+
+    flashPresent = flashPresent || isFlashElement;
+    unityPresent = unityPresent || isUnityElement;
+
+    var visibilityToggleCb = __annotator(function() {
+      if (params.state === 'opened') {
+        if (isFlashElement) {
+          hideFlashElement(elem);
+        } else {
+          hideUnityElement(elem);
+        }
+      } else {
+        if (isFlashElement) {
+          showFlashElement(elem);
+        } else {
+          showUnityElement(elem);
+        }
+      }
+    }, {"module":"sdk.Canvas.Plugin","line":150,"column":29});
+
+    if (devHidePluginCallback) {
+      Log.info('Calling developer specified callback');
+      
+      
+      
+      var devArgs = { state : params.state, elem : elem };
+      devHidePluginCallback(devArgs);
+      setTimeout(visibilityToggleCb, 200);
+    } else {
+      visibilityToggleCb();
+    }
+  }, {"params":[[elem, 'HTMLElement', 'elem']]});}, {"module":"sdk.Canvas.Plugin","line":140,"column":21}, {"params":["DOMElement"]}));
+
+  if (Math.random() <= 1 / 1000) {
+    var opts = {
+      'unity': unityPresent,
+      'flash': flashPresent
+    };
+    api(Runtime.getClientID() + '/occludespopups', 'post', opts);
+  }
+}, {"params":[[params, 'object', 'params']]});}__annotator(hidePluginCallback, {"module":"sdk.Canvas.Plugin","line":130,"column":0,"name":"hidePluginCallback"}, {"params":["object"]});
+
+RPC.local.hidePluginObjects = __annotator(function() {
+  Log.info('hidePluginObjects called');
+  hidePluginCallback({state: 'opened'});
+}, {"module":"sdk.Canvas.Plugin","line":188,"column":30});
+RPC.local.showPluginObjects = __annotator(function() {
+  Log.info('showPluginObjects called');
+  hidePluginCallback({state: 'closed'});
+}, {"module":"sdk.Canvas.Plugin","line":192,"column":30});
+
+
+RPC.local.showFlashObjects = RPC.local.showPluginObjects;
+RPC.local.hideFlashObjects = RPC.local.hidePluginObjects;
+
+function hidePluginElement() {
+  hideFlashElement();
+  hideUnityElement();
+}__annotator(hidePluginElement, {"module":"sdk.Canvas.Plugin","line":201,"column":0,"name":"hidePluginElement"});
+function showPluginElement() {
+  showFlashElement();
+  showUnityElement();
+}__annotator(showPluginElement, {"module":"sdk.Canvas.Plugin","line":205,"column":0,"name":"showPluginElement"});
+
+var Plugin = {
+  
+  _setHidePluginCallback: __annotator(function(/*?function*/ callback) {return __bodyWrapper(this, arguments, function() {
+    devHidePluginCallback = callback;
+  }, {"params":[[callback, '?function', 'callback']]});}, {"module":"sdk.Canvas.Plugin","line":212,"column":26}, {"params":["?function"]}),
+
+  hidePluginElement: hidePluginElement,
+  showPluginElement: showPluginElement
+};
+
+module.exports = Plugin;
+
+
+}, {"module":"sdk.Canvas.Plugin","line":7,"column":98,"name":"$module_sdk_Canvas_Plugin"}),null);
+
+
+__d("sdk.Canvas.Tti",["sdk.RPC","sdk.Runtime"],__annotator(function $module_sdk_Canvas_Tti(global,require,requireDynamic,requireLazy,module,exports,RPC,Runtime) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+function passAppTtiMessage(/*?function*/ callback, /*string*/ messageName) {return __bodyWrapper(this, arguments, function() {
+  var params = {
+    appId: Runtime.getClientID(),
+    time: ES('Date', 'now', false),
+    name: messageName
+  };
+
+  var args = [params];
+  if (callback) {
+    args.push(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+      callback(response.result);
+    }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.Canvas.Tti","line":20,"column":14}, {"params":["object"]}));
+  }
+
+  RPC.remote.logTtiMessage.apply(null, args);
+}, {"params":[[callback, '?function', 'callback'], [messageName, 'string', 'messageName']]});}__annotator(passAppTtiMessage, {"module":"sdk.Canvas.Tti","line":11,"column":0,"name":"passAppTtiMessage"}, {"params":["?function","string"]});
+
+
+function startTimer() {
+  passAppTtiMessage(null, 'StartIframeAppTtiTimer');
+}__annotator(startTimer, {"module":"sdk.Canvas.Tti","line":33,"column":0,"name":"startTimer"});
+
+function stopTimer(/*?function*/ callback) {return __bodyWrapper(this, arguments, function() {
+  passAppTtiMessage(callback, 'StopIframeAppTtiTimer');
+}, {"params":[[callback, '?function', 'callback']]});}__annotator(stopTimer, {"module":"sdk.Canvas.Tti","line":45,"column":0,"name":"stopTimer"}, {"params":["?function"]});
+
+
+function setDoneLoading(/*?function*/ callback) {return __bodyWrapper(this, arguments, function() {
+  passAppTtiMessage(callback, 'RecordIframeAppTti');
+}, {"params":[[callback, '?function', 'callback']]});}__annotator(setDoneLoading, {"module":"sdk.Canvas.Tti","line":58,"column":0,"name":"setDoneLoading"}, {"params":["?function"]});
+
+RPC.stub('logTtiMessage');
+
+var Tti = {
+  setDoneLoading: setDoneLoading,
+  startTimer: startTimer,
+  stopTimer: stopTimer
+};
+
+module.exports = Tti;
+
+
+}, {"module":"sdk.Canvas.Tti","line":7,"column":47,"name":"$module_sdk_Canvas_Tti"}),null);
+
+
+__d("legacy:fb.canvas",["Assert","sdk.Canvas.Environment","sdk.Event","FB","sdk.Canvas.IframeHandling","sdk.Canvas.Navigation","sdk.Canvas.Plugin","sdk.RPC","sdk.Runtime","sdk.Canvas.Tti"],__annotator(function $module_legacy_fb_canvas(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Assert,Environment,Event,FB,IframeHandling,Navigation,Plugin,RPC,Runtime,Tti) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+FB.provide('Canvas', {
+  
+  setSize: __annotator(function(params) {
+    Assert.maybeObject(params, 'Invalid argument');
+    return IframeHandling.setSize.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":18,"column":11}),
+  setAutoGrow: __annotator(function() {
+    return IframeHandling.setAutoGrow.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":22,"column":15}),
+
+  
+  getPageInfo: __annotator(function(callback) {
+    Assert.isFunction(callback, 'Invalid argument');
+    return Environment.getPageInfo.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":27,"column":15}),
+  scrollTo: __annotator(function(x, y) {
+    Assert.maybeNumber(x, 'Invalid argument');
+    Assert.maybeNumber(y, 'Invalid argument');
+    return Environment.scrollTo.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":31,"column":12}),
+
+  
+  setDoneLoading: __annotator(function(callback) {
+    Assert.maybeFunction(callback, 'Invalid argument');
+    return Tti.setDoneLoading.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":38,"column":18}),
+  startTimer: __annotator(function() {
+    return Tti.startTimer.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":42,"column":14}),
+  stopTimer: __annotator(function(callback) {
+    Assert.maybeFunction(callback, 'Invalid argument');
+    return Tti.stopTimer.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":45,"column":13}),
+
+  
+  getHash: __annotator(function(callback) {
+    Assert.isFunction(callback, 'Invalid argument');
+    return Navigation.getHash.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":51,"column":11}),
+  setHash: __annotator(function(hash) {
+    Assert.isString(hash, 'Invalid argument');
+    return Navigation.setHash.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":55,"column":11}),
+  setUrlHandler: __annotator(function(callback) {
+    Assert.isFunction(callback, 'Invalid argument');
+    return Navigation.setUrlHandler.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas","line":59,"column":17})
+
+});
+
+RPC.local.fireEvent = ES(Event.fire, 'bind', true,Event);
+
+Event.subscribe('init:post', __annotator(function(options) {
+  if (Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
+    Assert.isTrue(
+      !options.hideFlashCallback || !options.hidePluginCallback,
+      'cannot specify deprecated hideFlashCallback and new hidePluginCallback'
+    );
+    Plugin._setHidePluginCallback(
+      options.hidePluginCallback ||
+        options.hideFlashCallback 
+    );
+  }
+}, {"module":"legacy:fb.canvas","line":68,"column":29}));
+
+
+}, {"module":"legacy:fb.canvas","line":4,"column":189,"name":"$module_legacy_fb_canvas"}),3);
+
+
+__d("legacy:fb.canvas-legacy",["Assert","FB","Log","sdk.Canvas.Tti"],__annotator(function $module_legacy_fb_canvas_legacy(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Assert,FB,Log,Tti) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+FB.provide('CanvasInsights', {
+  setDoneLoading: __annotator(function(callback) {
+    Log.warn('Deprecated: use FB.Canvas.setDoneLoading');
+    Assert.maybeFunction(callback, 'Invalid argument');
+    return Tti.setDoneLoading.apply(null, arguments);
+  }, {"module":"legacy:fb.canvas-legacy","line":11,"column":18})
+});
+
+
+}, {"module":"legacy:fb.canvas-legacy","line":4,"column":69,"name":"$module_legacy_fb_canvas_legacy"}),3);
+
+
+__d("sdk.Canvas.Prefetcher",["sdk.api","createArrayFromMixed","JSSDKCanvasPrefetcherConfig","sdk.Runtime"],__annotator(function $module_sdk_Canvas_Prefetcher(global,require,requireDynamic,requireLazy,module,exports,api,createArrayFromMixed,CanvasPrefetcherConfig,Runtime) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+var COLLECT = {
+  AUTOMATIC : 0,
+  MANUAL : 1
+};
+
+var sampleRate = CanvasPrefetcherConfig.sampleRate;
+var blacklist = CanvasPrefetcherConfig.blacklist;
+var collectionMode = COLLECT.AUTOMATIC;
+var links = [];
+
+function sample() {
+  
+  var resourceFieldsByTag = {
+    object: 'data',
+    link: 'href',
+    script: 'src'
+  };
+
+  if (collectionMode == COLLECT.AUTOMATIC) {
+    ES(ES('Object', 'keys', false,resourceFieldsByTag), 'forEach', true,__annotator(function(/*string*/ tagName) {return __bodyWrapper(this, arguments, function() {
+      var propertyName = resourceFieldsByTag[tagName];
+      ES(createArrayFromMixed(document.getElementsByTagName(tagName)), 'forEach', true,__annotator(function(/*DOMElement*/ tag) {return __bodyWrapper(this, arguments, function() {
+          if (tag[propertyName]) {
+            links.push(tag[propertyName]);
+          }
+        }, {"params":[[tag, 'HTMLElement', 'tag']]});}, {"module":"sdk.Canvas.Prefetcher","line":35,"column":17}, {"params":["DOMElement"]}));
+    }, {"params":[[tagName, 'string', 'tagName']]});}, {"module":"sdk.Canvas.Prefetcher","line":32,"column":45}, {"params":["string"]}));
+  }
+
+  if (links.length === 0) {
+    return;
+  }
+
+  
+  api(Runtime.getClientID() + '/staticresources', 'post', {
+    urls: ES('JSON', 'stringify', false,links),
+    is_https: location.protocol === 'https:'
+  });
+
+  links = [];
+}__annotator(sample, {"module":"sdk.Canvas.Prefetcher","line":23,"column":0,"name":"sample"});
+
+function maybeSample() {
+  if (!Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS) ||
+      !Runtime.getClientID() ||
+      !sampleRate) {
+    return;
+  }
+
+  if (Math.random() > 1 / sampleRate ||
+      blacklist == '*' || ~ES(blacklist, 'indexOf', true,Runtime.getClientID())) {
+    return;
+  }
+
+  
+  setTimeout(sample, 30000);
+}__annotator(maybeSample, {"module":"sdk.Canvas.Prefetcher","line":56,"column":0,"name":"maybeSample"});
+
+
+function setCollectionMode(/*number*/ mode) {return __bodyWrapper(this, arguments, function() {
+  collectionMode = mode;
+}, {"params":[[mode, 'number', 'mode']]});}__annotator(setCollectionMode, {"module":"sdk.Canvas.Prefetcher","line":85,"column":0,"name":"setCollectionMode"}, {"params":["number"]});
+
+
+function addStaticResource(/*string*/ url) {return __bodyWrapper(this, arguments, function() {
+  links.push(url);
+}, {"params":[[url, 'string', 'url']]});}__annotator(addStaticResource, {"module":"sdk.Canvas.Prefetcher","line":93,"column":0,"name":"addStaticResource"}, {"params":["string"]});
+
+var CanvasPrefetcher = {
+  COLLECT_AUTOMATIC : COLLECT.AUTOMATIC,
+  COLLECT_MANUAL : COLLECT.MANUAL,
+
+  addStaticResource: addStaticResource,
+  setCollectionMode: setCollectionMode,
+
+  
+  _maybeSample: maybeSample
+};
+
+module.exports = CanvasPrefetcher;
+
+
+}, {"module":"sdk.Canvas.Prefetcher","line":7,"column":107,"name":"$module_sdk_Canvas_Prefetcher"}),null);
+
+
+__d("legacy:fb.canvas.prefetcher",["FB","sdk.Canvas.Prefetcher","sdk.Event","sdk.Runtime"],__annotator(function $module_legacy_fb_canvas_prefetcher(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,CanvasPrefetcher,Event,Runtime) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+FB.provide('Canvas.Prefetcher', CanvasPrefetcher);
+
+Event.subscribe('init:post', __annotator(function(options) {
+  if (Runtime.isEnvironment(Runtime.ENVIRONMENTS.CANVAS)) {
+    CanvasPrefetcher._maybeSample();
+  }
+}, {"module":"legacy:fb.canvas.prefetcher","line":12,"column":29}));
+
+
+}, {"module":"legacy:fb.canvas.prefetcher","line":4,"column":91,"name":"$module_legacy_fb_canvas_prefetcher"}),3);
+
+
+__d("legacy:fb.compat.ui",["copyProperties","FB","Log","sdk.ui","sdk.UIServer"],__annotator(function $module_legacy_fb_compat_ui(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,copyProperties,FB,Log,ui,UIServer) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+
+FB.provide('', {
+  share: __annotator(function(u) {
+    Log.error('share() has been deprecated. Please use FB.ui() instead.');
+    ui({
+      display : 'popup',
+      method  : 'stream.share',
+      u       : u
+    });
+  }, {"module":"legacy:fb.compat.ui","line":12,"column":9}),
+
+  publish: __annotator(function(post, cb) {
+    Log.error('publish() has been deprecated. Please use FB.ui() instead.');
+    post = post || {};
+    ui(copyProperties({
+      display : 'popup',
+      method  : 'stream.publish',
+      preview : 1
+    }, post || {}), cb);
+  }, {"module":"legacy:fb.compat.ui","line":21,"column":11}),
+
+  addFriend: __annotator(function(id, cb) {
+    Log.error('addFriend() has been deprecated. Please use FB.ui() instead.');
+    ui({
+      display : 'popup',
+      id      : id,
+      method  : 'friend.add'
+    }, cb);
+  }, {"module":"legacy:fb.compat.ui","line":31,"column":13})
+});
+
+// the "fake" UIServer method was called auth.login
+UIServer.Methods['auth.login'] = UIServer.Methods['permissions.request'];
+
+
+}, {"module":"legacy:fb.compat.ui","line":4,"column":80,"name":"$module_legacy_fb_compat_ui"}),3);
+
+
+__d("mergeArrays",[],__annotator(function $module_mergeArrays(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+function mergeArrays(/*array*/ target, /*array*/ source) /*array*/ {return __bodyWrapper(this, arguments, function() {
+  for (var i=0; i < source.length; i++) {
+    if (ES(target, 'indexOf', true,source[i]) < 0) {
+      target.push(source[i]);
+    }
+  }
+  return target;
+}, {"params":[[target, 'array', 'target'], [source, 'array', 'source']],"returns":'array'});}__annotator(mergeArrays, {"module":"mergeArrays","line":8,"column":0,"name":"mergeArrays"}, {"params":["array","array"],"returns":"array"});
+module.exports = mergeArrays;
+
+
+}, {"module":"mergeArrays","line":7,"column":21,"name":"$module_mergeArrays"}),null);
+
+
+__d("format",[],__annotator(function $module_format(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+function format(/*string*/ str, argsdotdot) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  argsdotdot = Array.prototype.slice.call(arguments, 1);
+  return str.replace(/\{(\d+)\}/g, __annotator(function(_, index) {
+    var value = argsdotdot[Number(index)];
+    return (value === null || value === (void 0))
+     ? ''
+     : value.toString();
+  }, {"module":"format","line":23,"column":35}));
+}, {"params":[[str, 'string', 'str']],"returns":'string'});}__annotator(format, {"module":"format","line":21,"column":0,"name":"format"}, {"params":["string"],"returns":"string"});
+module.exports = format;
+
+
+}, {"module":"format","line":20,"column":16,"name":"$module_format"}),null);
+
+
+__d("safeEval",[],__annotator(function $module_safeEval(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+function safeEval(source, /*?array*/ args) {return __bodyWrapper(this, arguments, function() {
+  if (source === null || typeof source === 'undefined') {
+    return;
+  }
+  if (typeof source !== 'string') {
+    return source;
+  }
+
+  // We're asked to invoke a global function
+  if (/^\w+$/.test(source) && typeof window[source] === 'function') {
+    return window[source].apply(null, args || []);
+  }
+
+  // We're asked to eval code
+  return Function('return eval("' + source.replace(/"/g, '\\"')  + '");')
+    .apply(null, args || []);
+}, {"params":[[args, '?array', 'args']]});}__annotator(safeEval, {"module":"safeEval","line":11,"column":0,"name":"safeEval"}, {"params":["?array"]});
+
+module.exports = safeEval;
+
+
+}, {"module":"safeEval","line":10,"column":18,"name":"$module_safeEval"}),null);
+
+
+__d("sdk.Waitable",["sdk.Model"],__annotator(function $module_sdk_Waitable(global,require,requireDynamic,requireLazy,module,exports,Model) {require.__markCompiled && require.__markCompiled();
+   
+
+
+var Waitable = Model.extend({
+  
+  constructor: __annotator(function() {
+    this.parent({Value: (void 0)});
+  }, {"module":"sdk.Waitable","line":21,"column":15}),
+
+  
+  error: __annotator(function(/*Error*/ ex) {return __bodyWrapper(this, arguments, function() {
+    this.inform("error", ex);
+  }, {"params":[[ex, 'Error', 'ex']]});}, {"module":"sdk.Waitable","line":30,"column":9}, {"params":["Error"]}),
+
+  
+  wait: __annotator(function(/*?function*/ callback, /*?function*/ errorHandler) {return __bodyWrapper(this, arguments, function() {
+    
+    if (errorHandler) {
+      this.subscribe('error', errorHandler);
+    }
+
+    this.monitor('Value.change', ES(__annotator(function() /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+      var value = this.getValue();
+      if (value !== (void 0)) {
+        
+        this.value = value;
+        callback(value);
+        return true;
+      }
+    }, {"returns":'?boolean'});}, {"module":"sdk.Waitable","line":65,"column":33}, {"returns":"?boolean"}), 'bind', true,this));
+  }, {"params":[[callback, '?function', 'callback'], [errorHandler, '?function', 'errorHandler']]});}, {"module":"sdk.Waitable","line":59,"column":8}, {"params":["?function","?function"]})
+});
+
+module.exports = Waitable;
+
+
+}, {"module":"sdk.Waitable","line":7,"column":33,"name":"$module_sdk_Waitable"}),null);
+
+
+__d("sdk.Query",["format","safeEval","Type","sdk.Waitable"],__annotator(function $module_sdk_Query(global,require,requireDynamic,requireLazy,module,exports,format,safeEval,Type,Waitable) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+
+
+
+
+function toFields(/*string*/ s) /*array<string>*/ {return __bodyWrapper(this, arguments, function() {
+  return ES(s.split(','), 'map', true,__annotator(function(s) {return ES(s,'trim', true);}, {"module":"sdk.Query","line":63,"column":26}));
+}, {"params":[[s, 'string', 's']],"returns":'array<string>'});}__annotator(toFields, {"module":"sdk.Query","line":62,"column":0,"name":"toFields"}, {"params":["string"],"returns":"array<string>"});
+
+
+function parseWhere(/*string*/ s) /*object*/ {return __bodyWrapper(this, arguments, function() {
+  
+  
+  var
+    re = (/^\s*(\w+)\s*=\s*(.*)\s*$/i).exec(s),
+    result,
+    value,
+    type = 'unknown';
+  if (re) {
+    
+    value = re[2];
+    
+    
+    if (/^(["'])(?:\\?.)*?\1$/.test(value)) {
+      
+      
+      value = safeEval(value);
+      type = 'index';
+    } else if (/^\d+\.?\d*$/.test(value)) {
+      type = 'index';
+    }
+  }
+
+  if (type == 'index') {
+    
+    result = { type: 'index', key: re[1], value: value };
+  } else {
+    
+    result = { type: 'unknown', value: s };
+  }
+  return result;
+}, {"params":[[s, 'string', 's']],"returns":'object'});}__annotator(parseWhere, {"module":"sdk.Query","line":72,"column":0,"name":"parseWhere"}, {"params":["string"],"returns":"object"});
+
+function encode(value) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  return typeof value === 'string'
+    ? ES('JSON', 'stringify', false,value)
+    : value;
+}, {"returns":'string'});}__annotator(encode, {"module":"sdk.Query","line":110,"column":0,"name":"encode"}, {"returns":"string"});
+
+var counter = 1;
+
+var Query = Waitable.extend({
+  constructor: __annotator(function() {
+    this.parent();
+    this.name = 'v_' + counter++;
+  }, {"module":"sdk.Query","line":119,"column":15}),
+  
+  hasDependency: __annotator(function(/*?boolean*/ value) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    if (arguments.length) {
+      this._hasDependency = value;
+    }
+    return !!this._hasDependency;
+  }, {"params":[[value, '?boolean', 'value']],"returns":'boolean'});}, {"module":"sdk.Query","line":124,"column":17}, {"params":["?boolean"],"returns":"boolean"}),
+
+  
+  parse: __annotator(function(/*array*/ args) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    var
+      fql = format.apply(null, args),
+      re = (/^select (.*?) from (\w+)\s+where (.*)$/i).exec(fql); 
+    this.fields = toFields(re[1]);
+    this.table = re[2];
+    this.where = parseWhere(re[3]);
+
+    for (var i=1; i < args.length; i++) {
+      if (Type.instanceOf(Query, args[i])) {
+        
+        
+        args[i].hasDependency(true);
+      }
+    }
+
+    return this;
+  }, {"params":[[args, 'array', 'args']],"returns":'object'});}, {"module":"sdk.Query","line":137,"column":9}, {"params":["array"],"returns":"object"}),
+
+  
+  toFql: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    var s = 'select ' + this.fields.join(',') + ' from ' +
+            this.table + ' where ';
+    switch (this.where.type) {
+      case 'unknown':
+        s += this.where.value;
+        break;
+      case 'index':
+        s += this.where.key + '=' + encode(this.where.value);
+        break;
+      case 'in':
+        if (this.where.value.length == 1) {
+          s += this.where.key + '=' +  encode(this.where.value[0]);
+        } else {
+          s += this.where.key + ' in (' +
+            ES(this.where.value, 'map', true,encode).join(',') + ')';
+        }
+        break;
+    }
+    return s;
+  }, {"returns":'string'});}, {"module":"sdk.Query","line":161,"column":9}, {"returns":"string"}),
+
+
+  
+  toString: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return '#' + this.name;
+  }, {"returns":'string'});}, {"module":"sdk.Query","line":191,"column":12}, {"returns":"string"})
+});
+
+module.exports = Query;
+
+
+}, {"module":"sdk.Query","line":7,"column":60,"name":"$module_sdk_Query"}),null);
+
+
+__d("sdk.Data",["sdk.api","sdk.ErrorHandling","mergeArrays","sdk.Query","safeEval","sdk.Waitable"],__annotator(function $module_sdk_Data(global,require,requireDynamic,requireLazy,module,exports,api,ErrorHandling,mergeArrays,Query,safeEval,Waitable) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+
+
+
+var Data = {
+  
+  query: __annotator(function(/*string*/ template, data) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    var query = new Query().parse(Array.prototype.slice.call(arguments));
+    Data.queue.push(query);
+    Data._waitToProcess();
+    return query;
+  }, {"params":[[template, 'string', 'template']],"returns":'object'});}, {"module":"sdk.Data","line":109,"column":9}, {"params":["string"],"returns":"object"}),
+
+  
+  waitOn: __annotator(function(/*array*/ dependencies, /*function*/ callback) /*Waitable*/ {return __bodyWrapper(this, arguments, function() {
+    var
+      result = new Waitable(),
+      count = dependencies.length;
+
+    
+    
+    if (typeof(callback) == 'string') {
+      var s = callback;
+      callback = ErrorHandling.unguard(__annotator(function() { return safeEval(s); }, {"module":"sdk.Data","line":190,"column":39}));
+    }
+
+    ES(dependencies, 'forEach', true,__annotator(function(/*object*/ item) {return __bodyWrapper(this, arguments, function() {
+      item.monitor('Value.change', __annotator(function() {
+        var done = false;
+        if (Data._getValue(item) !== (void 0)) {
+          
+          item.value = item.getValue();
+          count--;
+          done = true;
+        }
+        if (count === 0) {
+          var value = callback(ES(dependencies, 'map', true,Data._getValue));
+          result.setValue(value !== (void 0) ? value : true);
+        }
+        return done;
+      }, {"module":"sdk.Data","line":194,"column":35}));
+    }, {"params":[[item, 'object', 'item']]});}, {"module":"sdk.Data","line":193,"column":25}, {"params":["object"]}));
+    return result;
+  }, {"params":[[dependencies, 'array', 'dependencies'], [callback, 'function', 'callback']],"returns":'Waitable'});}, {"module":"sdk.Data","line":181,"column":10}, {"params":["array","function"],"returns":"Waitable"}),
+
+  
+  process: __annotator(function(/*?string*/ token) {return __bodyWrapper(this, arguments, function() {
+    Data._process(token);
+  }, {"params":[[token, '?string', 'token']]});}, {"module":"sdk.Data","line":217,"column":11}, {"params":["?string"]}),
+
+  
+  _getValue: __annotator(function(item) {
+    return item instanceof Waitable
+      ? item.getValue()
+      : item;
+  }, {"module":"sdk.Data","line":227,"column":13}),
+
+  
+  _selectByIndex: __annotator(function(/*array*/ fields, /*string*/ table, /*string*/ name,
+      /*string*/ value) /*object*/ {return __bodyWrapper(this, arguments, function() {
+    var query = new Query();
+    query.fields = fields;
+    query.table = table;
+    query.where = { type: 'index', key: name, value: value };
+    Data.queue.push(query);
+    Data._waitToProcess();
+    return query;
+  }, {"params":[[fields, 'array', 'fields'], [table, 'string', 'table'], [name, 'string', 'name'], [value, 'string', 'value']],"returns":'object'});}, {"module":"sdk.Data","line":243,"column":18}, {"params":["array","string","string","string"],"returns":"object"}),
+
+  
+  _waitToProcess: __annotator(function() {
+    if (Data.timer < 0) {
+      Data.timer = setTimeout(__annotator(function() {
+        Data._process();
+      }, {"module":"sdk.Data","line":260,"column":30}), 10);
+    }
+  }, {"module":"sdk.Data","line":258,"column":18}),
+
+  
+  _process: __annotator(function(/*?string*/ token) {return __bodyWrapper(this, arguments, function() {
+    Data.timer = -1;
+
+    var
+      mqueries = {},
+      q = Data.queue;
+
+    if (!q.length) {
+      return;
+    }
+
+    Data.queue = [];
+
+    for (var i=0; i < q.length; i++) {
+      var item = q[i];
+      if (item.where.type == 'index' && !item.hasDependency()) {
+        Data._mergeIndexQuery(item, mqueries);
+      } else {
+        mqueries[item.name] = item;
+      }
+    }
+
+    
+    var params = { q : {} };
+    for (var key in mqueries) {
+      if (mqueries.hasOwnProperty(key)) {
+        params.q[key] = mqueries[key].toFql();
+      }
+    }
+
+    if (token) {
+      params.access_token = token;
+    }
+
+    api('/fql', 'GET', params, __annotator(function(/*object*/ result) {return __bodyWrapper(this, arguments, function() {
+      if (result.error) {
+        ES(ES('Object', 'keys', false,mqueries), 'forEach', true,__annotator(function(/*string*/ key) {return __bodyWrapper(this, arguments, function() {
+          mqueries[key].error(new Error(result.error.message));
+        }, {"params":[[key, 'string', 'key']]});}, {"module":"sdk.Data","line":307,"column":38}, {"params":["string"]}));
+      } else {
+        ES(result.data, 'forEach', true,__annotator(function(/*object*/ o) {return __bodyWrapper(this, arguments, function() {
+          mqueries[o.name].setValue(o.fql_result_set);
+        }, {"params":[[o, 'object', 'o']]});}, {"module":"sdk.Data","line":311,"column":28}, {"params":["object"]}));
+      }
+    }, {"params":[[result, 'object', 'result']]});}, {"module":"sdk.Data","line":305,"column":31}, {"params":["object"]}));
+  }, {"params":[[token, '?string', 'token']]});}, {"module":"sdk.Data","line":271,"column":12}, {"params":["?string"]}),
+
+  
+  _mergeIndexQuery: __annotator(function(/*object*/ item, /*object*/ mqueries) {return __bodyWrapper(this, arguments, function() {
+    var key = item.where.key,
+    value = item.where.value;
+
+    var name = 'index_' +  item.table + '_' + key;
+    var master = mqueries[name];
+    if (!master) {
+      master = mqueries[name] = new Query();
+      master.fields = [key];
+      master.table = item.table;
+      master.where = {type: 'in', key: key, value: []};
+    }
+
+    
+    mergeArrays(master.fields, item.fields);
+    mergeArrays(master.where.value, [value]);
+
+    
+    master.wait(__annotator(function(/*array<object>*/ r) {return __bodyWrapper(this, arguments, function() {
+      item.setValue(ES(r, 'filter', true,__annotator(function(/*object*/ x) {return __bodyWrapper(this, arguments, function() {
+        return x[key] == value;
+      }, {"params":[[x, 'object', 'x']]});}, {"module":"sdk.Data","line":341,"column":29}, {"params":["object"]})));
+    }, {"params":[[r, 'array<object>', 'r']]});}, {"module":"sdk.Data","line":340,"column":16}, {"params":["array<object>"]}));
+  }, {"params":[[item, 'object', 'item'], [mqueries, 'object', 'mqueries']]});}, {"module":"sdk.Data","line":322,"column":20}, {"params":["object","object"]}),
+
+  timer: -1,
+  queue: []
+};
+
+module.exports = Data;
+
+
+}, {"module":"sdk.Data","line":7,"column":99,"name":"$module_sdk_Data"}),null);
+
+
+__d("legacy:fb.data",["FB","sdk.Data"],__annotator(function $module_legacy_fb_data(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Data) {require.__markCompiled && require.__markCompiled();
+   
+   
+FB.provide('Data', Data);
+
+
+}, {"module":"legacy:fb.data","line":4,"column":39,"name":"$module_legacy_fb_data"}),3);
+
+
+__d("legacy:fb.event",["FB","sdk.Event","sdk.Runtime","sdk.Scribe","sdk.feature"],__annotator(function $module_legacy_fb_event(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Event,Runtime,Scribe,feature) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+   
+
+var eventsToLog = [];
+var logScheduleId = null;
+var logTimeout = feature('event_subscriptions_log', false);
+
+FB.provide('Event', {
+  subscribe:__annotator(function(/*string*/ name, /*function*/ cb) {
+    if (logTimeout) {
+      eventsToLog.push(name);
+
+      
+      
+      if (!logScheduleId) {
+        logScheduleId = setTimeout(__annotator(function()  {
+
+          Scribe.log('jssdk_error', {
+            appId: Runtime.getClientID(),
+            error: 'EVENT_SUBSCRIPTIONS_LOG',
+            extra: {
+              line: 0,
+              name: 'EVENT_SUBSCRIPTIONS_LOG',
+              script: 'N/A',
+              stack: 'N/A',
+              message: eventsToLog.sort().join(',')
+            }
+          });
+
+          eventsToLog.length = 0;
+          logScheduleId = null;
+
+        }, {"module":"legacy:fb.event","line":24,"column":35}), logTimeout);
+      }
+    }
+    return Event.subscribe(name, cb);
+  }, {"module":"legacy:fb.event","line":17,"column":12}),
+
+  unsubscribe: ES(Event.unsubscribe, 'bind', true,Event)
+});
+
+
+}, {"module":"legacy:fb.event","line":4,"column":82,"name":"$module_legacy_fb_event"}),3);
+
+
+__d("legacy:fb.event-legacy",["FB","sdk.Event"],__annotator(function $module_legacy_fb_event_legacy(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Event) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+FB.provide('Event', {
+  clear: ES(Event.clear, 'bind', true,Event),
+  fire: ES(Event.fire, 'bind', true,Event),
+  monitor: ES(Event.monitor, 'bind', true,Event)
+});
+
+FB.provide('EventProvider', Event);
+
+
+}, {"module":"legacy:fb.event-legacy","line":4,"column":48,"name":"$module_legacy_fb_event_legacy"}),3);
+
+
+__d("legacy:fb.frictionless",["FB","sdk.Frictionless"],__annotator(function $module_legacy_fb_frictionless(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,Frictionless) {require.__markCompiled && require.__markCompiled();
+   
+   
+FB.provide('Frictionless', Frictionless);
+
+
+}, {"module":"legacy:fb.frictionless","line":4,"column":55,"name":"$module_legacy_fb_frictionless"}),3);
+
+
+__d("sdk.init",["sdk.Cookie","sdk.ErrorHandling","sdk.Event","Log","ManagedError","sdk.PlatformVersioning","QueryString","sdk.Runtime","sdk.URI","createArrayFromMixed"],__annotator(function $module_sdk_init(global,require,requireDynamic,requireLazy,module,exports,Cookie,ErrorHandling,Event,Log,ManagedError,PlatformVersioning,QueryString,Runtime,URI,createArrayFromMixed) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+
+
+
+// It checks that it's either a positive integer, or an alphanumeric api key,
+// and returns null if it's invalid, or the id as a string otherwise.
+function parseAppId(/*string|number*/ appId) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+  var looksValid =
+    (typeof appId == 'number' && appId > 0) ||
+    (typeof appId == 'string' && /^[0-9a-f]{21,}$|^[0-9]{1,21}$/.test(appId));
+  if (looksValid) {
+    return appId.toString();
+  }
+  Log.warn('Invalid App Id: Must be a number or numeric string representing ' +
+      'the application id.');
+  return null;
+}, {"params":[[appId, 'string|number', 'appId']],"returns":'?string'});}__annotator(parseAppId, {"module":"sdk.init","line":24,"column":0,"name":"parseAppId"}, {"params":["string|number"],"returns":"?string"});
+
+
+function init(/*object|number|string*/ options) {return __bodyWrapper(this, arguments, function() {
+  if (Runtime.getInitialized()) {
+    Log.warn(
+      'FB.init has already been called - this could indicate a problem');
+  }
+
+  
+  if (Runtime.getIsVersioned()) {
+    
+    if (Object.prototype.toString.call(options) !== '[object Object]') {
+      throw new ManagedError('Invalid argument');
+    }
+
+    if (options.authResponse) {
+      Log.warn('Setting authResponse is not supported');
+    }
+
+    if (!options.version)  {
+      
+      options.version = new URI(location.href).getQueryData().sdk_version;
+    }
+    // Enforce that there's a version specified
+    PlatformVersioning.assertValidVersion(options.version);
+    Runtime.setVersion(options.version);
+  } else {
+    
+    if (/number|string/.test(typeof options)) {
+      Log.warn('FB.init called with invalid parameters');
+      options = {apiKey: options};
+    }
+
+    options = ES('Object', 'assign', false,{
+      status: true
+    }, options || {});
+
+  }
+
+  var appId = parseAppId(options.appId || options.apiKey);
+  if (appId !== null) {
+    Runtime.setClientID(appId);
+  }
+
+  if ('scope' in options) {
+    Runtime.setScope(options.scope);
+  }
+
+  if (options.cookie) {
+    Runtime.setUseCookie(true);
+    if (typeof options.cookie === 'string') {
+      Cookie.setDomain(options.cookie);
+    }
+  }
+
+  if (options.kidDirectedSite) {
+    Runtime.setKidDirectedSite(true);
+  }
+
+  Runtime.setInitialized(true);
+  Event.fire('init:post', options);
+}, {"params":[[options, 'object|number|string', 'options']]});}__annotator(init, {"module":"sdk.init","line":52,"column":0,"name":"init"}, {"params":["object|number|string"]});
+
+
+
+
+setTimeout(__annotator(function() {
+  
+  
+  var pattern = /(connect\.facebook\.net|\.facebook\.com\/assets.php).*?#(.*)/;
+  ES(createArrayFromMixed(document.getElementsByTagName('script')), 'forEach', true,__annotator(function(script) {
+    if (script.src) {
+      var match = pattern.exec(script.src);
+      if (match) {
+        var opts = QueryString.decode(match[2]);
+        for (var key in opts) {
+          if (opts.hasOwnProperty(key)) {
+            var val = opts[key];
+            if (val == '0') {
+              opts[key] = 0;
+            }
+          }
+        }
+
+        init(opts);
+      }
+    }
+  }, {"module":"sdk.init","line":121,"column":15}));
+
+  
+  if (window.fbAsyncInit && !window.fbAsyncInit.hasRun) {
+    window.fbAsyncInit.hasRun = true;
+    ErrorHandling.unguard(window.fbAsyncInit)();
+  }
+}, {"module":"sdk.init","line":116,"column":11}), 0);
+
+module.exports = init;
+
+
+}, {"module":"sdk.init","line":7,"column":169,"name":"$module_sdk_init"}),null);
+
+
+__d("legacy:fb.init",["FB","sdk.init"],__annotator(function $module_legacy_fb_init(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,init) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+FB.provide('', {
+  init: init
+});
+
+
+}, {"module":"legacy:fb.init","line":4,"column":39,"name":"$module_legacy_fb_init"}),3);
+
+
+__d("legacy:fb.json",["FB","ManagedError"],__annotator(function $module_legacy_fb_json(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,ManagedError) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+
+
+
+FB.provide('JSON', {
+  stringify: __annotator(function(obj) {
+    try {
+      return ES('JSON', 'stringify', false,obj);
+    } catch(e) {
+      throw new ManagedError(e.message, e);
+    }
+  }, {"module":"legacy:fb.json","line":12,"column":13}),
+  parse: __annotator(function(str) {
+    try {
+      return ES('JSON', 'parse', false,str);
+    } catch(e) {
+      throw new ManagedError(e.message, e);
+    }
+  }, {"module":"legacy:fb.json","line":19,"column":9})
+});
+
+
+}, {"module":"legacy:fb.json","line":4,"column":43,"name":"$module_legacy_fb_json"}),3);
+
+
+__d("legacy:fb.ua",["FB","sdk.UA"],__annotator(function $module_legacy_fb_ua(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,UA) {require.__markCompiled && require.__markCompiled();
+   
+   
+FB.provide('UA', {
+  nativeApp: UA.nativeApp
+});
+
+
+}, {"module":"legacy:fb.ua","line":4,"column":35,"name":"$module_legacy_fb_ua"}),3);
+
+
+__d("legacy:fb.ui",["FB","sdk.ui"],__annotator(function $module_legacy_fb_ui(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,FB,ui) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+FB.provide('', {
+  ui: ui
+});
+
+
+
+}, {"module":"legacy:fb.ui","line":4,"column":35,"name":"$module_legacy_fb_ui"}),3);
+
+
+__d("runOnce",[],__annotator(function $module_runOnce(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+function runOnce(func) {
+  var run, ret;
+  return __annotator(function() {
+    if (!run) {
+      run = true;
+      ret = func();
+    }
+    return ret;
+  }, {"module":"runOnce","line":9,"column":9});
+}__annotator(runOnce, {"module":"runOnce","line":7,"column":0,"name":"runOnce"});
+
+module.exports = runOnce;
+
+
+}, {"module":"runOnce","line":6,"column":17,"name":"$module_runOnce"}),null);
+
+
+__d("XFBML",["Assert","sdk.DOM","Log","ObservableMixin","sdk.UA","createArrayFromMixed","runOnce"],__annotator(function $module_XFBML(global,require,requireDynamic,requireLazy,module,exports,Assert,DOM,Log,ObservableMixin,UA,createArrayFromMixed,runOnce) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+
+   
+   
+
+
+var xfbml = {}; 
+var html5 = {}; 
+
+var parseCount = 0;
+
+var XFBML = new ObservableMixin();
+
+function propStr(object, /*string*/ property) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  return ES((object[property] + ''),'trim', true);
+}, {"params":[[property, 'string', 'property']],"returns":'string'});}__annotator(propStr, {"module":"XFBML","line":30,"column":0,"name":"propStr"}, {"params":["string"],"returns":"string"});
+
+function nodeNameIE(/*DOMElement*/ element) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  // In old IE (< 9), element.nodeName doesn't include the namespace so we use
+  
+  return element.scopeName
+    ? (element.scopeName + ':' + element.nodeName)
+    : '';
+}, {"params":[[element, 'HTMLElement', 'element']],"returns":'string'});}__annotator(nodeNameIE, {"module":"XFBML","line":34,"column":0,"name":"nodeNameIE"}, {"params":["DOMElement"],"returns":"string"});
+
+function xfbmlInfo(/*DOMElement*/ element) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+  return xfbml[propStr(element, 'nodeName').toLowerCase()]
+    || xfbml[nodeNameIE(element).toLowerCase()];
+}, {"params":[[element, 'HTMLElement', 'element']],"returns":'?object'});}__annotator(xfbmlInfo, {"module":"XFBML","line":42,"column":0,"name":"xfbmlInfo"}, {"params":["DOMElement"],"returns":"?object"});
+
+function html5Info(/*DOMElement*/ element) /*?object*/ {return __bodyWrapper(this, arguments, function() {
+  var classNames = ES(propStr(element, 'className').split(/\s+/), 'filter', true,
+    __annotator(function(className) { return html5.hasOwnProperty(className); }, {"module":"XFBML","line":49,"column":4}));
+
+  if (classNames.length === 0) {
+    return (void 0);
+  }
+
+  
+  // like <div class="fb-like"><fb:like></fb:like></div>;
+  
+  
+  
+  
+  //    eg. <div class="fb-login-button">Log In with Facebook</div>
+  // - it's contains a specially marked container 'fb-xfbml-parse-ignore'
+  //    eg. <div class="fb-post">
+  //          <div class="fb-xfbml-parse-ignore">
+  
+  
+  
+  if (
+    element.getAttribute('fb-xfbml-state') ||
+    !element.childNodes ||
+    element.childNodes.length === 0 ||
+    (element.childNodes.length === 1 &&
+      element.childNodes[0].nodeType === 3 /*Node.TEXT_NODE*/) ||
+    (element.children.length === 1 &&
+      propStr(element.children[0], 'className') === 'fb-xfbml-parse-ignore')
+  ) {
+    return html5[classNames[0]];
+  }
+}, {"params":[[element, 'HTMLElement', 'element']],"returns":'?object'});}__annotator(html5Info, {"module":"XFBML","line":47,"column":0,"name":"html5Info"}, {"params":["DOMElement"],"returns":"?object"});
+
+function attr(/*DOMElement*/ element) /*object*/ {return __bodyWrapper(this, arguments, function() {
+  var attrs = {};
+  ES(createArrayFromMixed(element.attributes), 'forEach', true,__annotator(function(at) {
+    attrs[propStr(at, 'name')] = propStr(at, 'value');
+  }, {"module":"XFBML","line":83,"column":51}));
+  return attrs;
+}, {"params":[[element, 'HTMLElement', 'element']],"returns":'object'});}__annotator(attr, {"module":"XFBML","line":81,"column":0,"name":"attr"}, {"params":["DOMElement"],"returns":"object"});
+
+function convertSyntax(
+  /*DOMElement*/ element, /*string*/ ns, /*string*/ ln) /*DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+  var replacement = document.createElement('div');
+  DOM.addCss(element, ns + '-' + ln);
+  ES(createArrayFromMixed(element.childNodes), 'forEach', true,__annotator(function(child) {
+    replacement.appendChild(child);
+  }, {"module":"XFBML","line":93,"column":51}));
+  ES(createArrayFromMixed(element.attributes), 'forEach', true,__annotator(function(attribute) {
+    replacement.setAttribute(attribute.name, attribute.value);
+  }, {"module":"XFBML","line":96,"column":51}));
+  element.parentNode.replaceChild(replacement, element);
+  return replacement;
+}, {"params":[[element, 'HTMLElement', 'element'], [ns, 'string', 'ns'], [ln, 'string', 'ln']],"returns":'HTMLElement'});}__annotator(convertSyntax, {"module":"XFBML","line":89,"column":0,"name":"convertSyntax"}, {"params":["DOMElement","string","string"],"returns":"DOMElement"});
+
+function parse(/*DOMElement*/ dom, /*function*/ callback, /*boolean*/ reparse) {return __bodyWrapper(this, arguments, function() {
+  Assert.isTrue(
+    dom && dom.nodeType && dom.nodeType === 1 && !!dom.getElementsByTagName,
+    'Invalid DOM node passed to FB.XFBML.parse()');
+  Assert.isFunction(callback, 'Invalid callback passed to FB.XFBML.parse()');
+
+  var pc = ++parseCount;
+  Log.info('XFBML Parsing Start %s', pc);
+
+  
+  
+  // ensure that we don't hit 0 until we have finished queuing up all the tags.
+  
+  var count = 1;
+  var tags = 0;
+  var onrender = __annotator(function() {
+    count--;
+    if (count === 0) {
+      Log.info('XFBML Parsing Finish %s, %s tags found', pc, tags);
+      callback();
+      XFBML.inform('render', pc, tags);
+    }
+    Assert.isTrue(count >= 0, 'onrender() has been called too many times');
+  }, {"module":"XFBML","line":118,"column":17});
+
+  ES(createArrayFromMixed(dom.getElementsByTagName('*')), 'forEach', true,__annotator(function(element) {
+    if (!reparse && element.getAttribute('fb-xfbml-state')) {
+      
+      return;
+    }
+    if (element.nodeType !== 1) {
+      
+      return;
+    }
+
+    var info = xfbmlInfo(element) || html5Info(element);
+    if (!info) {
+      return;
+    }
+
+    if (UA.ie() < 9 && element.scopeName) {
+      // Touching innerHTML on custom XML elements in IE<9 can cause an 'Unknown
+      // runtime error', so we switch to the HTML5 syntax in this case.
+      element = convertSyntax(element, info.xmlns, info.localName);
+    }
+
+    count++;
+    tags++;
+    var renderer =
+      new info.ctor(element, info.xmlns, info.localName, attr(element));
+    
+    
+    
+    renderer.subscribe('render', runOnce(__annotator(function() {
+      
+      
+      
+      
+      element.setAttribute('fb-xfbml-state', 'rendered');
+      onrender();
+    }, {"module":"XFBML","line":157,"column":41})));
+
+    var render = __annotator(function() {
+      
+      
+      if (element.getAttribute('fb-xfbml-state') == 'parsed') {
+        // We can't render a tag if it's in the parsed-but-not-rendered state
+        
+        XFBML.subscribe('render.queue', render);
+      } else {
+        element.setAttribute('fb-xfbml-state', 'parsed');
+        renderer.process(); 
+      }
+    }, {"module":"XFBML","line":166,"column":17});
+
+    render();
+  }, {"module":"XFBML","line":129,"column":13}));
+
+  XFBML.inform('parse', pc, tags);
+
+  var timeout = 30000; 
+  setTimeout(__annotator(function() {
+    if (count > 0) {
+      Log.warn('%s tags failed to render in %s ms', count, timeout);
+    }
+  }, {"module":"XFBML","line":185,"column":13}), timeout);
+
+  onrender(); 
+}, {"params":[[dom, 'HTMLElement', 'dom'], [callback, 'function', 'callback'], [reparse, 'boolean', 'reparse']]});}__annotator(parse, {"module":"XFBML","line":103,"column":0,"name":"parse"}, {"params":["DOMElement","function","boolean"]});
+
+XFBML.subscribe('render', __annotator(function() {
+  var q = XFBML.getSubscribers('render.queue');
+  XFBML.clearSubscribers('render.queue');
+  ES(q, 'forEach', true,__annotator(function(r) { r(); }, {"module":"XFBML","line":197,"column":12}));
+  
+  
+}, {"module":"XFBML","line":194,"column":26}));
+
+ES('Object', 'assign', false,XFBML, {
+
+  registerTag: __annotator(function(/*object*/ info) {return __bodyWrapper(this, arguments, function() {
+    var fqn = info.xmlns + ':' + info.localName;
+    Assert.isUndefined(xfbml[fqn], fqn + ' already registered');
+
+    xfbml[fqn] = info;
+
+    
+    
+    html5[info.xmlns + '-' + info.localName] = info;
+  }, {"params":[[info, 'object', 'info']]});}, {"module":"XFBML","line":204,"column":15}, {"params":["object"]}),
+
+  parse: __annotator(function(/*?DOMElement*/ dom, /*?function*/ cb) {return __bodyWrapper(this, arguments, function() {
+    parse(dom || document.body, cb || __annotator(function(){}, {"module":"XFBML","line":216,"column":38}),  true);
+  }, {"params":[[dom, '?HTMLElement', 'dom'], [cb, '?function', 'cb']]});}, {"module":"XFBML","line":215,"column":9}, {"params":["?DOMElement","?function"]}),
+
+  parseNew: __annotator(function() {
+    parse(document.body, __annotator(function(){}, {"module":"XFBML","line":220,"column":25}),  false);
+  }, {"module":"XFBML","line":219,"column":12})
+});
+
+module.exports = XFBML;
+
+
+}, {"module":"XFBML","line":12,"column":99,"name":"$module_XFBML"}),null);
+
+__d("PluginPipe",["sdk.Content","sdk.feature","guid","insertIframe","Miny","ObservableMixin","JSSDKPluginPipeConfig","sdk.Runtime","sdk.UA","UrlMap","XFBML"],__annotator(function $module_PluginPipe(global,require,requireDynamic,requireLazy,module,exports,Content,feature,guid,insertIframe,Miny,ObservableMixin,PluginPipeConfig,Runtime,UA,UrlMap,XFBML) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+var PluginPipe = new ObservableMixin();
+
+var threshold = PluginPipeConfig.threshold;
+var queued = [];
+
+function isEnabled() /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+  return !!(feature('plugin_pipe', false) &&
+         Runtime.getSecure() !== (void 0) &&
+         (UA.chrome() || UA.firefox()) &&
+         PluginPipeConfig.enabledApps[Runtime.getClientID()]);
+}, {"returns":'boolean'});}__annotator(isEnabled, {"module":"PluginPipe","line":25,"column":0,"name":"isEnabled"}, {"returns":"boolean"});
+
+function insertPlugins() {
+  var q = queued;
+  queued = [];
+
+  if (q.length <= threshold) {
+    ES(q, 'forEach', true,__annotator(function(/*object*/ plugin) {return __bodyWrapper(this, arguments, function() {
+      insertIframe(plugin.config);
+    }, {"params":[[plugin, 'object', 'plugin']]});}, {"module":"PluginPipe","line":37,"column":14}, {"params":["object"]}));
+    return;
+  }
+
+  var count = q.length + 1;
+  function onrender() {
+    count--;
+    if (count === 0) {
+      insertPipe(q);
+    }
+  }__annotator(onrender, {"module":"PluginPipe","line":44,"column":2,"name":"onrender"});
+
+  ES(q, 'forEach', true,__annotator(function(/*object*/ plugin) {return __bodyWrapper(this, arguments, function() {
+    var config = {};
+    for (var key in plugin.config) {
+      config[key] = plugin.config[key];
+    }
+    config.url = UrlMap.resolve('www', Runtime.getSecure()) +
+      '/plugins/plugin_pipe_shell.php';
+    config.onload = onrender;
+    insertIframe(config);
+  }, {"params":[[plugin, 'object', 'plugin']]});}, {"module":"PluginPipe","line":51,"column":12}, {"params":["object"]}));
+
+  onrender();
+}__annotator(insertPlugins, {"module":"PluginPipe","line":32,"column":0,"name":"insertPlugins"});
+
+XFBML.subscribe('parse', insertPlugins);
+
+function insertPipe(/*array<object>*/ plugins) {return __bodyWrapper(this, arguments, function() {
+  var root = document.createElement('span');
+  Content.appendHidden(root);
+
+  var params = {};
+  ES(plugins, 'forEach', true,__annotator(function(/*object*/ plugin){return __bodyWrapper(this, arguments, function() {
+    params[plugin.config.name] = {
+      plugin: plugin.tag,
+      params: plugin.params
+    };
+  }, {"params":[[plugin, 'object', 'plugin']]});}, {"module":"PluginPipe","line":72,"column":18}, {"params":["object"]}));
+
+  var raw = ES('JSON', 'stringify', false,params);
+  var miny = Miny.encode(raw);
+
+  ES(plugins, 'forEach', true,__annotator(function(/*object*/ plugin) {return __bodyWrapper(this, arguments, function() {
+    var frame = document.getElementsByName(plugin.config.name)[0];
+    frame.onload = plugin.config.onload;
+  }, {"params":[[plugin, 'object', 'plugin']]});}, {"module":"PluginPipe","line":82,"column":18}, {"params":["object"]}));
+
+  var url = UrlMap.resolve('www', Runtime.getSecure()) + '/plugins/pipe.php';
+  var name = guid();
+
+  insertIframe({
+    url: 'about:blank',
+    root: root,
+    name: name,
+    className: 'fb_hidden fb_invisible',
+    onload: __annotator(function() {
+      Content.submitToTarget({
+        url: url,
+        target: name,
+        params: {
+          plugins: miny.length < raw.length ? miny : raw
+      }});
+    }, {"module":"PluginPipe","line":95,"column":12})
+  });
+}, {"params":[[plugins, 'array<object>', 'plugins']]});}__annotator(insertPipe, {"module":"PluginPipe","line":67,"column":0,"name":"insertPipe"}, {"params":["array<object>"]});
+
+ES('Object', 'assign', false,PluginPipe, {
+  add: __annotator(function(/*object*/ plugin) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    var enabled = isEnabled();
+    enabled && queued.push({
+      config: plugin._config,
+      tag: plugin._tag,
+      params: plugin._params
+    });
+    return enabled;
+  }, {"params":[[plugin, 'object', 'plugin']],"returns":'boolean'});}, {"module":"PluginPipe","line":107,"column":7}, {"params":["object"],"returns":"boolean"})
+});
+
+module.exports = PluginPipe;
+
+
+}, {"module":"PluginPipe","line":7,"column":161,"name":"$module_PluginPipe"}),null);
+
+
+__d("IframePlugin",["sdk.Auth","sdk.DOM","sdk.Event","Log","ObservableMixin","sdk.PlatformVersioning","PluginPipe","QueryString","sdk.Runtime","Type","sdk.UA","sdk.URI","UrlMap","sdk.XD","sdk.createIframe","sdk.feature","guid","resolveURI"],__annotator(function $module_IframePlugin(global,require,requireDynamic,requireLazy,module,exports,Auth,DOM,Event,Log,ObservableMixin,PlatformVersioning,PluginPipe,QueryString,Runtime,Type,UA,URI,UrlMap,XD,createIframe,feature,guid,resolveURI) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   
+
+var baseParams = {
+  skin: 'string',
+  font: 'string',
+  width: 'px',
+  height: 'px',
+  ref: 'string',
+  color_scheme: 'string' 
+};
+
+function resize(/*DOMElement*/ elem, /*?number*/ width, /*?number*/ height) {return __bodyWrapper(this, arguments, function() {
+  if (width || width === 0) {
+    if (width === '100%') {
+      elem.style.width = '100%';
+    } else {
+      elem.style.width = width + 'px';
+    }
+  }
+
+  if (height || height === 0) {
+    elem.style.height = height + 'px';
+  }
+}, {"params":[[elem, 'HTMLElement', 'elem'], [width, '?number', 'width'], [height, '?number', 'height']]});}__annotator(resize, {"module":"IframePlugin","line":43,"column":0,"name":"resize"}, {"params":["DOMElement","?number","?number"]});
+
+function resizeBubbler(/*?string*/ pluginID) /*function*/ {return __bodyWrapper(this, arguments, function() {
+  return __annotator(function(/*object*/ msg) {return __bodyWrapper(this, arguments, function() {
+    var message = { width: msg.width, height: msg.height, pluginID: pluginID };
+    Event.fire('xfbml.resize', message);
+  }, {"params":[[msg, 'object', 'msg']]});}, {"module":"IframePlugin","line":58,"column":9}, {"params":["object"]});
+}, {"params":[[pluginID, '?string', 'pluginID']],"returns":'function'});}__annotator(resizeBubbler, {"module":"IframePlugin","line":57,"column":0,"name":"resizeBubbler"}, {"params":["?string"],"returns":"function"});
+
+var types = {
+  // TODO: Move the 'bool' and 'px' parsing to the server?
+  string: __annotator(function(/*?string*/ value) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return value;
+  }, {"params":[[value, '?string', 'value']],"returns":'?string'});}, {"module":"IframePlugin","line":66,"column":10}, {"params":["?string"],"returns":"?string"}),
+  bool: __annotator(function(/*?string*/ value) /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+    return value ? (/^(?:true|1|yes|on)$/i).test(value) : (void 0);
+  }, {"params":[[value, '?string', 'value']],"returns":'?boolean'});}, {"module":"IframePlugin","line":69,"column":8}, {"params":["?string"],"returns":"?boolean"}),
+  url: __annotator(function(/*?string*/ value) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return resolveURI(value);
+  }, {"params":[[value, '?string', 'value']],"returns":'?string'});}, {"module":"IframePlugin","line":72,"column":7}, {"params":["?string"],"returns":"?string"}),
+  url_maybe: __annotator(function(/*?string*/ value) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return value ? resolveURI(value) : value;
+  }, {"params":[[value, '?string', 'value']],"returns":'?string'});}, {"module":"IframePlugin","line":75,"column":13}, {"params":["?string"],"returns":"?string"}),
+  hostname: __annotator(function(/*?string*/ value) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return value || window.location.hostname;
+  }, {"params":[[value, '?string', 'value']],"returns":'?string'});}, {"module":"IframePlugin","line":78,"column":12}, {"params":["?string"],"returns":"?string"}),
+  px: __annotator(function(/*?string*/ value) /*?number*/ {return __bodyWrapper(this, arguments, function() {
+    return (/^(\d+)(?:px)?$/).test(value) ? parseInt(RegExp.$1, 10) : (void 0);
+  }, {"params":[[value, '?string', 'value']],"returns":'?number'});}, {"module":"IframePlugin","line":81,"column":6}, {"params":["?string"],"returns":"?number"}),
+  text: __annotator(function(/*?string*/ value) /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return value;
+  }, {"params":[[value, '?string', 'value']],"returns":'?string'});}, {"module":"IframePlugin","line":84,"column":8}, {"params":["?string"],"returns":"?string"})
+};
+
+function getVal(/*object*/ attr, /*string*/ key) {return __bodyWrapper(this, arguments, function() {
+  var val =
+    attr[key] ||
+    attr[key.replace(/_/g, '-')] ||
+    attr[key.replace(/_/g, '')] ||
+    attr['data-' + key] ||
+    attr['data-' + key.replace(/_/g, '-')] ||
+    attr['data-' + key.replace(/_/g, '')] ||
+    (void 0);
+  return val;
+}, {"params":[[attr, 'object', 'attr'], [key, 'string', 'key']]});}__annotator(getVal, {"module":"IframePlugin","line":89,"column":0,"name":"getVal"}, {"params":["object","string"]});
+
+function validate(/*object*/ defn, /*DOMElement*/ elem, /*object*/ attr,
+    /*object*/ params) {return __bodyWrapper(this, arguments, function() {
+  ES(ES('Object', 'keys', false,defn), 'forEach', true,__annotator(function(key) {
+    if (defn[key] == 'text' && !attr[key]) {
+      attr[key] = elem.textContent || elem.innerText || ''; 
+      elem.setAttribute(key, attr[key]); 
+    }
+    params[key] = types[defn[key]](getVal(attr, key));
+  }, {"module":"IframePlugin","line":103,"column":28}));
+}, {"params":[[defn, 'object', 'defn'], [elem, 'HTMLElement', 'elem'], [attr, 'object', 'attr'], [params, 'object', 'params']]});}__annotator(validate, {"module":"IframePlugin","line":101,"column":0,"name":"validate"}, {"params":["object","DOMElement","object","object"]});
+
+
+
+function parse(dim) {
+  if (dim === '100%') {
+    return '100%';
+  }
+
+  return dim || dim === '0' || dim === 0 ? parseInt(dim, 10) : (void 0);
+}__annotator(parse, {"module":"IframePlugin","line":114,"column":0,"name":"parse"});
+
+function collapseIframe(iframe) {
+  if (iframe) {
+    resize(iframe, 0, 0);
+  }
+}__annotator(collapseIframe, {"module":"IframePlugin","line":122,"column":0,"name":"collapseIframe"});
+
+
+var IframePlugin = Type.extend({
+  constructor:__annotator(function(
+    /*DOMElement*/ elem,
+    /*string*/ ns,
+    /*string*/ tag,
+    /*object*/ attr
+  ) {return __bodyWrapper(this, arguments, function() {
+    this.parent();
+    tag = tag.replace(/-/g, '_');
+
+    var pluginId = getVal(attr, 'plugin_id');
+    this.subscribe('xd.resize', resizeBubbler(pluginId));
+    this.subscribe('xd.resize.flow', resizeBubbler(pluginId));
+
+    this.subscribe('xd.resize.flow', ES(__annotator(function(/*object*/ message)  {return __bodyWrapper(this, arguments, function() {
+      ES('Object', 'assign', false,this._iframeOptions.root.style, {
+        verticalAlign: 'bottom',
+        overflow: ''
+      });
+      resize(
+        this._iframeOptions.root,
+        parse(message.width),
+        parse(message.height)
+      );
+      this.updateLift();
+      clearTimeout(this._timeoutID);
+    }, {"params":[[message, 'object', 'message']]});}, {"module":"IframePlugin","line":143,"column":37}, {"params":["object"]}), 'bind', true,this));
+
+    this.subscribe('xd.resize', ES(__annotator(function(/*object*/ message)  {return __bodyWrapper(this, arguments, function() {
+      ES('Object', 'assign', false,this._iframeOptions.root.style, {
+        verticalAlign: 'bottom',
+        overflow: ''
+      });
+      resize(
+        this._iframeOptions.root,
+        parse(message.width),
+        parse(message.height)
+      );
+      resize(this._iframe, parse(message.width), parse(message.height));
+      this._isIframeResized = true;
+      this.updateLift();
+      clearTimeout(this._timeoutID);
+    }, {"params":[[message, 'object', 'message']]});}, {"module":"IframePlugin","line":157,"column":32}, {"params":["object"]}), 'bind', true,this));
+
+    this.subscribe('xd.resize.iframe', ES(__annotator(function(/*object*/ message)  {return __bodyWrapper(this, arguments, function() {
+      if (
+          message.reposition === 'true' &&
+          feature('reposition_iframe', false)
+      ) {
+        this.reposition(parse(message.width));
+      }
+
+      resize(this._iframe, parse(message.width), parse(message.height));
+      this._isIframeResized = true;
+      this.updateLift();
+      clearTimeout(this._timeoutID);
+    }, {"params":[[message, 'object', 'message']]});}, {"module":"IframePlugin","line":173,"column":39}, {"params":["object"]}), 'bind', true,this));
+
+    this.subscribe('xd.sdk_event', __annotator(function(/*object*/ message)  {return __bodyWrapper(this, arguments, function() {
+      var data = ES('JSON', 'parse', false,message.data);
+      data.pluginID = pluginId;
+      Event.fire(message.event, data, elem);
+    }, {"params":[[message, 'object', 'message']]});}, {"module":"IframePlugin","line":187,"column":35}, {"params":["object"]}));
+
+    var secure = Runtime.getSecure() || window.location.protocol == 'https:';
+    
+    var url = UrlMap.resolve('www', secure) + '/plugins/' + tag + '.php?';
+    var params = {};
+    validate(this.getParams(), elem, attr, params);
+    validate(baseParams, elem, attr, params);
+
+    ES('Object', 'assign', false,params, {
+      app_id: Runtime.getClientID(),
+      locale: Runtime.getLocale(),
+      sdk: 'joey',
+      kid_directed_site: Runtime.getKidDirectedSite(),
+      channel: XD.handler(
+        ES(__annotator(function(msg)  {return this.inform('xd.' + msg.type, msg);}, {"module":"IframePlugin","line":206,"column":8}), 'bind', true,this),
+        'parent.parent',
+        /*forever=*/true
+      )
+    });
+
+    params.container_width = elem.offsetWidth;
+
+    DOM.addCss(elem, 'fb_iframe_widget');
+    var name = guid();
+    this.subscribe('xd.verify', __annotator(function(/*object*/ msg)  {return __bodyWrapper(this, arguments, function() {
+      XD.sendToFacebook(
+        name, { method: 'xd/verify', params: ES('JSON', 'stringify', false,msg.token) });
+    }, {"params":[[msg, 'object', 'msg']]});}, {"module":"IframePlugin","line":216,"column":32}, {"params":["object"]}));
+
+    this.subscribe(
+      'xd.refreshLoginStatus', ES(Auth.getLoginStatus, 'bind', true,
+        Auth, ES(this.inform, 'bind', true,this, 'login.status'), /*force*/true));
+
+    var flow = document.createElement('span');
+    // We want to use 'vertical-align: bottom' to match the default browser
+    // layout of inline blocks, but that results in a 'jumping' effect during
+    // rendering, so we use 'top' initially and set 'bottom' when resizing.
+    ES('Object', 'assign', false,flow.style, {
+      verticalAlign: 'top',
+      width: '0px',
+      height: '0px',
+      overflow: 'hidden'
+    });
+
+    this._element = elem;
+    this._ns = ns;
+    this._tag = tag;
+    this._params = params;
+    this._config = this.getConfig();
+    this._iframeOptions = {
+      root: flow,
+      url: url + QueryString.encode(params),
+      name: name,
+      
+      
+      
+      
+      
+      width: this._config.mobile_fullsize && UA.mobile()
+        ? void 0
+        : params.width || 1000,
+      height: params.height || 1000,
+      style: {
+        border: 'none',
+        visibility: 'hidden'
+      },
+      title: this._ns + ':' + this._tag + ' Facebook Social Plugin',
+      onload: ES(__annotator(function()  {return this.inform('render');}, {"module":"IframePlugin","line":259,"column":14}), 'bind', true,this),
+      onerror: ES(__annotator(function()  {return collapseIframe(this._iframe);}, {"module":"IframePlugin","line":260,"column":15}), 'bind', true,this)
+    };
+
+    if (this.isFluid()) {
+      DOM.addCss(this._element, 'fb_iframe_widget_fluid_desktop');
+      if (!params.width && this._config.full_width) {
+        this._element.style.width = '100%';
+        this._iframeOptions.root.style.width = '100%';
+        this._iframeOptions.style.width = '100%';
+        this._params.container_width = this._element.offsetWidth;
+        this._iframeOptions.url = url + QueryString.encode(this._params);
+      }
+    }
+
+  }, {"params":[[elem, 'HTMLElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']]});}, {"module":"IframePlugin","line":130,"column":14}, {"params":["DOMElement","string","string","object"]}),
+
+  process:__annotator(function() {
+    if (Runtime.getIsVersioned()) {
+      PlatformVersioning.assertVersionIsSet();
+      var uri = new URI(this._iframeOptions.url);
+      this._iframeOptions.url =
+        uri.setPath('/' + Runtime.getVersion() + uri.getPath()).toString();
+    }
+    // This implements an optimization to skip rendering if we've already
+    
+    var params = ES('Object', 'assign', false,{}, this._params);
+    delete params.channel; // Unique per-plugin, doesn't change rendering
+    var query = QueryString.encode(params);
+    if (this._element.getAttribute('fb-iframe-plugin-query') == query) {
+      Log.info('Skipping render: %s:%s %s', this._ns, this._tag, query);
+      this.inform('render');
+      return;
+    }
+    this._element.setAttribute('fb-iframe-plugin-query', query);
+
+    this.subscribe('render', ES(__annotator(function()  {
+      this._iframe.style.visibility = 'visible';
+      
+      // of network issues), and the main resize event wasn't
+      
+      
+      if (!this._isIframeResized) {
+        collapseIframe(this._iframe);
+      }
+    }, {"module":"IframePlugin","line":295,"column":29}), 'bind', true,this));
+
+    while (this._element.firstChild) {
+      this._element.removeChild(this._element.firstChild);
+    }
+    this._element.appendChild(this._iframeOptions.root);
+    var timeout = UA.mobile() ? 120 : 45;
+    this._timeoutID = setTimeout(ES(__annotator(function()  {
+      collapseIframe(this._iframe);
+      Log.warn(
+        '%s:%s failed to resize in %ss',
+        this._ns,
+        this._tag,
+        timeout
+      );
+    }, {"module":"IframePlugin","line":311,"column":33}), 'bind', true,this), timeout * 1000);
+    
+    
+    
+
+    
+    
+    if (!PluginPipe.add(this)) {
+      this._iframe = createIframe(this._iframeOptions);
+    }
+    if (UA.mobile()) {
+      DOM.addCss(this._element, 'fb_iframe_widget_fluid');
+
+      if (!this._iframeOptions.width) {
+        ES('Object', 'assign', false,this._element.style, {
+          display: 'block',
+          width: '100%',
+          height: 'auto'
+        });
+
+        ES('Object', 'assign', false,this._iframeOptions.root.style, {
+          width: '100%',
+          height: 'auto'
+        });
+
+        var iframeStyle = {
+          height: 'auto',
+          position: 'static',
+          width: '100%'
+        };
+
+        if (UA.iphone() || UA.ipad()) {
+          // Alright...what's going on here? Well, since iOS4, Mobile Safari
+          
+          
+          
+          
+          // anything bigger and, well, it'll be too big. However, we need to
+          // set a width because without it, min-width doesn't mean anything.
+          // Further, setting an explicit width means that Safari won't
+          
+          
+          
+          
+          ES('Object', 'assign', false,iframeStyle, {
+            width: '220px',
+            'min-width': '100%'
+          });
+        }
+
+        ES('Object', 'assign', false,this._iframe.style, iframeStyle);
+      }
+    }
+  }, {"module":"IframePlugin","line":276,"column":10}),
+
+  
+  getConfig:__annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return {};
+  }, {"returns":'object'});}, {"module":"IframePlugin","line":377,"column":12}, {"returns":"object"}),
+
+  isFluid:__annotator(function() {
+    var config = this.getConfig();
+    return config.fluid;
+  }, {"module":"IframePlugin","line":381,"column":10}),
+
+  reposition:__annotator(function(newWidth) {
+    var leftPosition = DOM.getPosition(this._iframe).x;
+    var screenWidth = DOM.getViewportInfo().width;
+
+    var oldWidth = parseInt(DOM.getStyle(this._iframe, 'width'), 10);
+
+    var params = {};
+    if (
+        (leftPosition + newWidth) > screenWidth &&
+        leftPosition > newWidth
+    ) {
+     this._iframe.style.left =
+        parseInt(DOM.getStyle(this._iframe, 'width'), 10) - newWidth + 'px';
+
+      this._isRepositioned = true;
+      params.type = 'reposition';
+
+    } else if (this._isRepositioned && (oldWidth - newWidth) !== 0) {
+      
+      this._iframe.style.left = '0px';
+      this._isRepositioned = false;
+      params.type = 'restore';
+
+    } else {
+      // Don't reposition OR send a message to the iframe
+      return;
+    }
+
+    XD.sendToFacebook(
+      this._iframe.name,
+      {
+        method: 'xd/reposition',
+        params: ES('JSON', 'stringify', false,params)
+      }
+    );
+  }, {"module":"IframePlugin","line":386,"column":13}),
+
+  updateLift:__annotator(function() { 
+    var same =
+      this._iframe.style.width === this._iframeOptions.root.style.width &&
+      this._iframe.style.height === this._iframeOptions.root.style.height;
+    DOM[same ? 'removeCss' : 'addCss'](this._iframe, 'fb_iframe_widget_lift');
+  }, {"module":"IframePlugin","line":423,"column":13})
+}, ObservableMixin);
+
+IframePlugin.getVal = getVal;
+
+IframePlugin.withParams = __annotator(function(
+  /*object*/ params,
+  /*object*/ config
+) /*function*/ {return __bodyWrapper(this, arguments, function() {
+  return IframePlugin.extend({
+    getParams:__annotator(function() {
+      return params;
+    }, {"module":"IframePlugin","line":438,"column":14}),
+
+    getConfig:__annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+      return config ? config : {};
+    }, {"returns":'object'});}, {"module":"IframePlugin","line":442,"column":14}, {"returns":"object"})
+  });
+}, {"params":[[params, 'object', 'params'], [config, 'object', 'config']],"returns":'function'});}, {"module":"IframePlugin","line":433,"column":26}, {"params":["object","object"],"returns":"function"});
+
+module.exports = IframePlugin;
+
+
+}, {"module":"IframePlugin","line":13,"column":241,"name":"$module_IframePlugin"}),null);
+
+
+__d("PluginConfig",["sdk.feature"],__annotator(function $module_PluginConfig(global,require,requireDynamic,requireLazy,module,exports,feature) {require.__markCompiled && require.__markCompiled();
+   
+
+var PluginConfig = {
+  messengerpreconfirmation: {
+    mobile_fullsize: true
+  },
+  messengeraccountconfirmation: {
+    mobile_fullsize: true
+  },
+  messengertoggle: {
+    mobile_fullsize: true
+  },
+  post: {
+    fluid: feature('fluid_embed', false),
+    mobile_fullsize: true
+  },
+  video: {
+    fluid: true,
+    full_width: true
+  }
+};
+
+module.exports = PluginConfig;
+
+
+}, {"module":"PluginConfig","line":11,"column":35,"name":"$module_PluginConfig"}),null);
+
+
+__d("PluginTags",[],__annotator(function $module_PluginTags(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+var PluginTags = {
+  activity: {
+    filter: 'string',
+    action: 'string',
+    max_age: 'string',
+    linktarget: 'string',
+    header: 'bool',
+    recommendations: 'bool',
+    site: 'hostname'
+  },
+
+  composer: {
+    action_type: 'string',
+    action_properties: 'string'
+  },
+
+  create_event_button: {
+  },
+
+  degrees: {
+    href: 'url'
+  },
+
+  facepile: {
+    href: 'string',
+    action: 'string',
+    size: 'string',
+    max_rows: 'string',
+    show_count: 'bool'
+  },
+
+  follow: {
+    href:       'url',
+    layout:     'string',
+    show_faces: 'bool'
+  },
+
+  like: {
+    href: 'url',
+    layout: 'string',
+    show_faces: 'bool',
+    share: 'bool',
+    action: 'string',
+    
+    send: 'bool'
+  },
+
+  like_box: {
+    href: 'string',
+    show_faces: 'bool',
+    header: 'bool',
+    stream: 'bool',
+    force_wall: 'bool',
+    show_border: 'bool',
+    
+    id: 'string',
+    connections: 'string',
+    profile_id: 'string',
+    name: 'string'
+  },
+
+  page: {
+    href: 'string',
+    hide_cta: 'bool',
+    hide_cover: 'bool',
+    show_facepile: 'bool',
+    show_about: 'bool',
+    show_posts: 'bool',
+    show_messenger: 'bool'
+  },
+
+  open_graph: {
+    href: 'url',
+    layout: 'string',
+    show_faces: 'bool',
+    action_type: 'string',
+    action_properties: 'string'
+  },
+
+  open_graph_preview: {
+    action_type: 'string',
+    action_properties: 'string'
+  },
+
+  messengerpreconfirmation: {
+    messenger_app_id: 'string'
+  },
+
+  messengeraccountconfirmation: {
+    messenger_app_id: 'string',
+    state: 'string'
+  },
+
+  messengertoggle: {
+    messenger_app_id: 'string',
+    token: 'string'
+  },
+
+  page_events: {
+    href: 'url'
+  },
+
+  post: {
+    href: 'url',
+    show_border: 'bool'
+  },
+
+  privacy_selector: {
+  },
+
+  profile_pic: {
+    uid: 'string',
+    linked: 'bool',
+    href: 'string',
+    size: 'string',
+    facebook_logo: 'bool'
+  },
+
+  recommendations: {
+    filter: 'string',
+    action: 'string',
+    max_age: 'string',
+    linktarget: 'string',
+    header: 'bool',
+    site: 'hostname'
+  },
+
+  share_button: {
+    href: 'url',
+    layout: 'string',
+    
+    type: 'string'
+  },
+
+  shared_activity: {
+    header: 'bool'
+  },
+
+  send: {
+    href: 'url'
+  },
+
+  send_to_mobile: {
+    max_rows:   'string',
+    show_faces: 'bool',
+    size:       'string'
+  },
+
+  story: {
+    href: 'url',
+    show_border: 'bool'
+  },
+
+  topic: {
+    topic_name: 'string',
+    topic_id: 'string'
+  },
+
+  video: {
+    allowfullscreen: 'bool',
+    href: 'url'
+  },
+
+  want: {
+    href:       'url',
+    layout:     'string',
+    show_faces: 'bool'
+  }
+
+};
+
+var aliases = {
+  subscribe: 'follow',
+  fan: 'like_box',
+  likebox: 'like_box',
+  friendpile: 'facepile'
+};
+
+ES(ES('Object', 'keys', false,aliases), 'forEach', true,__annotator(function(key) {
+  PluginTags[key] = PluginTags[aliases[key]];
+}, {"module":"PluginTags","line":210,"column":29}));
+
+module.exports = PluginTags;
+
+
+}, {"module":"PluginTags","line":31,"column":20,"name":"$module_PluginTags"}),null);
+
+
+__d("sdk.Arbiter",[],__annotator(function $module_sdk_Arbiter(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+var Arbiter = {
+  BEHAVIOR_EVENT: 'e',
+  BEHAVIOR_PERSISTENT: 'p',
+  BEHAVIOR_STATE: 's'
+};
+module.exports = Arbiter;
+
+
+}, {"module":"sdk.Arbiter","line":6,"column":21,"name":"$module_sdk_Arbiter"}),null);
+
+
+__d("sdk.XFBML.Element",["sdk.DOM","Type","ObservableMixin"],__annotator(function $module_sdk_XFBML_Element(global,require,requireDynamic,requireLazy,module,exports,DOM,Type,ObservableMixin) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+
+
+var Element = Type.extend({
+  
+  constructor: __annotator(function(/*DOMElement*/ dom) {return __bodyWrapper(this, arguments, function() {
+    this.parent();
+    this.dom = dom;
+  }, {"params":[[dom, 'HTMLElement', 'dom']]});}, {"module":"sdk.XFBML.Element","line":23,"column":15}, {"params":["DOMElement"]}),
+
+  fire: __annotator(function() {
+    this.inform.apply(this, arguments);
+  }, {"module":"sdk.XFBML.Element","line":28,"column":8}),
+
+  
+  getAttribute: __annotator(function(/*string*/ name, defaultValue,
+      /*?function*/ transform) {return __bodyWrapper(this, arguments, function() {
+    var value = DOM.getAttr(this.dom, name);
+    return value
+      ? transform
+        ? transform(value)
+        : value
+      : defaultValue;
+  }, {"params":[[name, 'string', 'name'], [transform, '?function', 'transform']]});}, {"module":"sdk.XFBML.Element","line":43,"column":16}, {"params":["string","?function"]}),
+
+  
+  _getBoolAttribute: __annotator(function(/*string*/ name, /*?boolean*/ defaultValue)
+      /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+    var value = DOM.getBoolAttr(this.dom, name);
+    return value === null
+      ? defaultValue
+      : value;
+  }, {"params":[[name, 'string', 'name'], [defaultValue, '?boolean', 'defaultValue']],"returns":'?boolean'});}, {"module":"sdk.XFBML.Element","line":59,"column":21}, {"params":["string","?boolean"],"returns":"?boolean"}),
+
+  
+  _getPxAttribute: __annotator(function(/*string*/ name, /*?number*/ defaultValue)
+      /*?number*/ {return __bodyWrapper(this, arguments, function() {
+    return this.getAttribute(name, defaultValue, __annotator(function(/*string*/ s) {return __bodyWrapper(this, arguments, function() {
+      var value = parseInt(s, 10);
+      return isNaN(value) ? defaultValue : value;
+    }, {"params":[[s, 'string', 's']]});}, {"module":"sdk.XFBML.Element","line":75,"column":49}, {"params":["string"]}));
+  }, {"params":[[name, 'string', 'name'], [defaultValue, '?number', 'defaultValue']],"returns":'?number'});}, {"module":"sdk.XFBML.Element","line":73,"column":19}, {"params":["string","?number"],"returns":"?number"}),
+
+  
+  _getLengthAttribute: __annotator(function(/*string*/ name, /*?number*/ defaultValue) {return __bodyWrapper(this, arguments, function() {
+    return this.getAttribute(name, defaultValue, __annotator(function(/*string*/ s) {return __bodyWrapper(this, arguments, function() {
+      if (s === '100%') {
+        return s;
+      }
+      var value = parseInt(s, 10);
+      return isNaN(value) ? defaultValue : value;
+    }, {"params":[[s, 'string', 's']]});}, {"module":"sdk.XFBML.Element","line":88,"column":49}, {"params":["string"]}));
+  }, {"params":[[name, 'string', 'name'], [defaultValue, '?number', 'defaultValue']]});}, {"module":"sdk.XFBML.Element","line":87,"column":23}, {"params":["string","?number"]}),
+
+  
+  _getAttributeFromList: __annotator(function(/*string*/ name, /*string*/ defaultValue,
+      /*array<string>*/ allowed) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return this.getAttribute(name, defaultValue, __annotator(function(/*string*/ s)
+        /*string*/ {return __bodyWrapper(this, arguments, function() {
+      s = s.toLowerCase();
+      return (ES(allowed, 'indexOf', true,s) > -1)
+        ? s
+        : defaultValue;
+    }, {"params":[[s, 'string', 's']],"returns":'string'});}, {"module":"sdk.XFBML.Element","line":108,"column":49}, {"params":["string"],"returns":"string"}));
+  }, {"params":[[name, 'string', 'name'], [defaultValue, 'string', 'defaultValue'], [allowed, 'array<string>', 'allowed']],"returns":'string'});}, {"module":"sdk.XFBML.Element","line":106,"column":25}, {"params":["string","string","array<string>"],"returns":"string"}),
+
+  
+  isValid: __annotator(function() /*?boolean*/ {return __bodyWrapper(this, arguments, function() {
+    for (var dom = this.dom; dom; dom = dom.parentNode) {
+      if (dom == document.body) {
+        return true;
+      }
+    }
+  }, {"returns":'?boolean'});}, {"module":"sdk.XFBML.Element","line":122,"column":11}, {"returns":"?boolean"}),
+
+  
+  clear: __annotator(function() {
+    DOM.html(this.dom, '');
+  }, {"module":"sdk.XFBML.Element","line":134,"column":9})
+
+}, ObservableMixin);
+
+module.exports = Element;
+
+
+}, {"module":"sdk.XFBML.Element","line":7,"column":61,"name":"$module_sdk_XFBML_Element"}),null);
+
+
+__d("sdk.XFBML.IframeWidget",["sdk.Arbiter","sdk.Auth","sdk.Content","sdk.DOM","sdk.Event","sdk.XFBML.Element","guid","insertIframe","QueryString","sdk.Runtime","sdk.ui","UrlMap","sdk.XD"],__annotator(function $module_sdk_XFBML_IframeWidget(global,require,requireDynamic,requireLazy,module,exports,Arbiter,Auth,Content,DOM,Event,Element,guid,insertIframe,QueryString,Runtime,ui,UrlMap,XD) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+var IframeWidget = Element.extend({
+  
+  _iframeName: null,
+
+  
+  _showLoader: true,
+
+  
+  _refreshOnAuthChange: false,
+
+  
+  _allowReProcess: false,
+
+  
+  _fetchPreCachedLoader: false,
+
+  
+  _visibleAfter: 'load',
+
+  
+  _widgetPipeEnabled: false,
+
+  
+  _borderReset: false,
+
+  
+  _repositioned: false,
+
+
+  
+  
+  
+
+  
+  getUrlBits: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    throw new Error('Inheriting class needs to implement getUrlBits().');
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.IframeWidget","line":107,"column":14}, {"returns":"object"}),
+
+  
+  
+  
+
+  
+  setupAndValidate: __annotator(function() /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    return true;
+  }, {"returns":'boolean'});}, {"module":"sdk.XFBML.IframeWidget","line":125,"column":20}, {"returns":"boolean"}),
+
+  
+  oneTimeSetup: __annotator(function() {}, {"module":"sdk.XFBML.IframeWidget","line":133,"column":16}),
+
+  
+  getSize: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {}, {"returns":'object'});}, {"module":"sdk.XFBML.IframeWidget","line":143,"column":11}, {"returns":"object"}),
+
+  
+  getIframeName: __annotator(function() /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return this._iframeName;
+  }, {"returns":'?string'});}, {"module":"sdk.XFBML.IframeWidget","line":156,"column":17}, {"returns":"?string"}),
+
+  
+  getIframeTitle: __annotator(function() /*?string*/ {return __bodyWrapper(this, arguments, function() {
+    return 'Facebook Social Plugin';
+  }, {"returns":'?string'});}, {"module":"sdk.XFBML.IframeWidget","line":164,"column":18}, {"returns":"?string"}),
+
+  
+  
+  
+
+  
+  getChannelUrl: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (!this._channelUrl) {
+      
+      
+      var self = this;
+      this._channelUrl = XD.handler(__annotator(function(message) {
+        self.fire('xd.' + message.type, message);
+      }, {"module":"sdk.XFBML.IframeWidget","line":182,"column":36}), 'parent.parent', true);
+    }
+    return this._channelUrl;
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":177,"column":17}, {"returns":"string"}),
+
+  
+  getIframeNode: __annotator(function() /*?DOMElement*/ {return __bodyWrapper(this, arguments, function() {
+    
+    
+    return this.dom.getElementsByTagName('iframe')[0];
+  }, {"returns":'?HTMLElement'});}, {"module":"sdk.XFBML.IframeWidget","line":194,"column":17}, {"returns":"?DOMElement"}),
+
+  
+  arbiterInform: __annotator(function(/*string*/ event, /*?object*/ message,
+      /*?string*/ behavior) {return __bodyWrapper(this, arguments, function() {
+    XD.sendToFacebook(
+      this.getIframeName(), {
+        method: event,
+        params: ES('JSON', 'stringify', false,message || {}),
+        behavior: behavior || Arbiter.BEHAVIOR_PERSISTENT
+      });
+  }, {"params":[[event, 'string', 'event'], [message, '?object', 'message'], [behavior, '?string', 'behavior']]});}, {"module":"sdk.XFBML.IframeWidget","line":203,"column":17}, {"params":["string","?object","?string"]}),
+
+  _arbiterInform: __annotator(function(/*string*/ event, /*object*/  message,
+      /*?string*/ behavior) {return __bodyWrapper(this, arguments, function() {
+    var relation = 'parent.frames["' + this.getIframeNode().name + '"]';
+    XD.inform(event, message, relation, behavior);
+  }, {"params":[[event, 'string', 'event'], [behavior, '?string', 'behavior']]});}, {"module":"sdk.XFBML.IframeWidget","line":213,"column":18}, {"params":["string","?string"]}),
+
+  
+  getDefaultWebDomain: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return UrlMap.resolve('www');
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":223,"column":23}, {"returns":"string"}),
+
+  
+  
+  
+
+  
+  process: __annotator(function(/*?boolean*/ force) {return __bodyWrapper(this, arguments, function() {
+    
+    if (this._done) {
+      if (!this._allowReProcess && !force) {
+        return;
+      }
+      this.clear();
+    } else {
+      this._oneTimeSetup();
+    }
+    this._done = true;
+
+    this._iframeName = this.getIframeName() || this._iframeName || guid();
+    if (!this.setupAndValidate()) {
+      // failure to validate means we're done rendering what we can
+      this.fire('render');
+      return;
+    }
+
+    
+    if (this._showLoader) {
+      this._addLoader();
+    }
+
+    // it's always hidden by default
+    DOM.addCss(this.dom, 'fb_iframe_widget');
+    if (this._visibleAfter != 'immediate') {
+      DOM.addCss(this.dom, 'fb_hide_iframes');
+    } else {
+      this.subscribe('iframe.onload', ES(this.fire, 'bind', true,this, 'render'));
+    }
+
+    
+    var size = this.getSize() || {};
+    var url = this.getFullyQualifiedURL();
+
+    if (size.width == '100%') {
+      DOM.addCss(this.dom, 'fb_iframe_widget_fluid');
+    }
+
+    this.clear();
+    insertIframe({
+      url       : url,
+      root      : this.dom.appendChild(document.createElement('span')),
+      name      : this._iframeName,
+      title     : this.getIframeTitle(),
+      className : Runtime.getRtl() ? 'fb_rtl' : 'fb_ltr',
+      height    : size.height,
+      width     : size.width,
+      onload    : ES(this.fire, 'bind', true,this, 'iframe.onload')
+    });
+
+    this._resizeFlow(size);
+
+    this.loaded = false;
+    this.subscribe('iframe.onload', ES(__annotator(function()  {
+      this.loaded = true;
+      
+      
+      if (!this._isResizeHandled) {
+        DOM.addCss(this.dom, 'fb_hide_iframes');
+      }
+    }, {"module":"sdk.XFBML.IframeWidget","line":292,"column":36}), 'bind', true,this));
+  }, {"params":[[force, '?boolean', 'force']]});}, {"module":"sdk.XFBML.IframeWidget","line":237,"column":11}, {"params":["?boolean"]}),
+
+  
+  generateWidgetPipeIframeName: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    widgetPipeIframeCount++;
+    return 'fb_iframe_' + widgetPipeIframeCount;
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":310,"column":32}, {"returns":"string"}),
+
+  
+  getFullyQualifiedURL: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    
+    // a <form> POST. we prefer a GET because it prevents the "POST resend"
+    
+    var url = this._getURL();
+    url += '?' + QueryString.encode(this._getQS());
+
+    if (url.length > 2000) {
+      
+      url = 'about:blank';
+      var onload = ES(__annotator(function() {
+        this._postRequest();
+        this.unsubscribe('iframe.onload', onload);
+      }, {"module":"sdk.XFBML.IframeWidget","line":335,"column":19}), 'bind', true,this);
+      this.subscribe('iframe.onload', onload);
+    }
+
+    return url;
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":325,"column":24}, {"returns":"string"}),
+
+   
+
+  _getWidgetPipeShell: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return UrlMap.resolve('www') + '/common/widget_pipe_shell.php';
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":356,"column":23}, {"returns":"string"}),
+
+  
+  _oneTimeSetup: __annotator(function() {
+    
+    
+    this.subscribe('xd.resize', ES(this._handleResizeMsg, 'bind', true,this));
+    this.subscribe('xd.resize', ES(this._bubbleResizeEvent, 'bind', true,this));
+
+    this.subscribe('xd.resize.iframe', ES(this._resizeIframe, 'bind', true,this));
+    this.subscribe('xd.resize.flow', ES(this._resizeFlow, 'bind', true,this));
+    this.subscribe('xd.resize.flow', ES(this._bubbleResizeEvent, 'bind', true,this));
+
+    this.subscribe('xd.refreshLoginStatus', __annotator(function() {
+      Auth.getLoginStatus(__annotator(function(){}, {"module":"sdk.XFBML.IframeWidget","line":374,"column":26}), true);
+    }, {"module":"sdk.XFBML.IframeWidget","line":373,"column":44}));
+    this.subscribe('xd.logout', __annotator(function() {
+      ui({ method: 'auth.logout', display: 'hidden' }, __annotator(function() {}, {"module":"sdk.XFBML.IframeWidget","line":377,"column":55}));
+    }, {"module":"sdk.XFBML.IframeWidget","line":376,"column":32}));
+
+    
+    if (this._refreshOnAuthChange) {
+      this._setupAuthRefresh();
+    }
+
+    
+    if (this._visibleAfter == 'load') {
+      this.subscribe('iframe.onload', ES(this._makeVisible, 'bind', true,this));
+    }
+
+    this.subscribe(
+      'xd.verify', ES(__annotator(function(message) {
+          this.arbiterInform('xd/verify', message.token);
+        }, {"module":"sdk.XFBML.IframeWidget","line":391,"column":19}), 'bind', true,this));
+
+    
+    this.oneTimeSetup();
+  }, {"module":"sdk.XFBML.IframeWidget","line":363,"column":17}),
+
+  
+  _makeVisible: __annotator(function() {
+    this._removeLoader();
+    DOM.removeCss(this.dom, 'fb_hide_iframes');
+    this.fire('render');
+  }, {"module":"sdk.XFBML.IframeWidget","line":402,"column":16}),
+
+  
+  _setupAuthRefresh: __annotator(function() {
+    Auth.getLoginStatus(ES(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+      var lastStatus = response.status;
+      Event.subscribe('auth.statusChange', ES(__annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+        if (!this.isValid()) {
+          return;
+        }
+        
+        if (lastStatus == 'unknown' || response.status == 'unknown') {
+          this.process(true);
+        }
+        lastStatus = response.status;
+      }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.XFBML.IframeWidget","line":420,"column":43}, {"params":["object"]}), 'bind', true,this));
+    }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.XFBML.IframeWidget","line":418,"column":24}, {"params":["object"]}), 'bind', true,this));
+  }, {"module":"sdk.XFBML.IframeWidget","line":417,"column":21}),
+
+  
+  _handleResizeMsg: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    if (!this.isValid()) {
+      return;
+    }
+    this._resizeIframe(message);
+    this._resizeFlow(message);
+
+    if (!this._borderReset) {
+      this.getIframeNode().style.border = 'none';
+      this._borderReset = true;
+    }
+
+    this._isResizeHandled = true;
+    this._makeVisible();
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.IframeWidget","line":436,"column":20}, {"params":["object"]}),
+
+  
+  _bubbleResizeEvent: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    var filtered_message = {
+      height: message.height,
+      width: message.width,
+      pluginID: this.getAttribute('plugin-id')
+    };
+
+    Event.fire('xfbml.resize', filtered_message);
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.IframeWidget","line":455,"column":22}, {"params":["object"]}),
+
+  _resizeIframe: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    var iframe = this.getIframeNode();
+    if (message.reposition === "true") {
+      this._repositionIframe(message);
+    }
+    message.height && (iframe.style.height = message.height + 'px');
+    message.width && (iframe.style.width = message.width + 'px');
+    this._updateIframeZIndex();
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.IframeWidget","line":465,"column":17}, {"params":["object"]}),
+
+  _resizeFlow: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    var span = this.dom.getElementsByTagName('span')[0];
+    message.height && (span.style.height = message.height + 'px');
+    message.width && (span.style.width = message.width + 'px');
+    this._updateIframeZIndex();
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.IframeWidget","line":475,"column":15}, {"params":["object"]}),
+
+  _updateIframeZIndex: __annotator(function() {
+    var span = this.dom.getElementsByTagName('span')[0];
+    var iframe = this.getIframeNode();
+    var identical = iframe.style.height === span.style.height &&
+      iframe.style.width === span.style.width;
+    var method = identical ? 'removeCss' : 'addCss';
+    DOM[method](iframe, 'fb_iframe_widget_lift');
+  }, {"module":"sdk.XFBML.IframeWidget","line":482,"column":23}),
+
+  _repositionIframe: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    var iframe = this.getIframeNode();
+    var iframe_width = parseInt(DOM.getStyle(iframe, 'width'), 10);
+    var left = DOM.getPosition(iframe).x;
+    var screen_width = DOM.getViewportInfo().width;
+    var comment_width = parseInt(message.width, 10);
+    if (left + comment_width > screen_width &&
+        left > comment_width) {
+      iframe.style.left = iframe_width - comment_width + 'px';
+      this.arbiterInform('xd/reposition', {type: 'horizontal'});
+      this._repositioned = true;
+    } else if (this._repositioned) {
+      iframe.style.left = '0px';
+      this.arbiterInform('xd/reposition', {type: 'restore'});
+      this._repositioned = false;
+    }
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.IframeWidget","line":491,"column":21}, {"params":["object"]}),
+
+  
+  _addLoader: __annotator(function() {
+    if (!this._loaderDiv) {
+      DOM.addCss(this.dom, 'fb_iframe_widget_loader');
+      this._loaderDiv = document.createElement('div');
+      this._loaderDiv.className = 'FB_Loader';
+      this.dom.appendChild(this._loaderDiv);
+    }
+  }, {"module":"sdk.XFBML.IframeWidget","line":512,"column":14}),
+
+  
+  _removeLoader: __annotator(function() {
+    if (this._loaderDiv) {
+      DOM.removeCss(this.dom, 'fb_iframe_widget_loader');
+      if (this._loaderDiv.parentNode) {
+        this._loaderDiv.parentNode.removeChild(this._loaderDiv);
+      }
+      this._loaderDiv = null;
+    }
+  }, {"module":"sdk.XFBML.IframeWidget","line":524,"column":17}),
+
+  
+  _getQS: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return ES('Object', 'assign', false,{
+      api_key      : Runtime.getClientID(),
+      locale       : Runtime.getLocale(),
+      sdk          : 'joey',
+      kid_directed_site: Runtime.getKidDirectedSite(),
+      ref          : this.getAttribute('ref')
+    }, this.getUrlBits().params);
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.IframeWidget","line":540,"column":10}, {"returns":"object"}),
+
+  
+  _getURL: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    var
+      domain = this.getDefaultWebDomain(),
+      static_path = '';
+
+    return domain + '/plugins/' + static_path +
+           this.getUrlBits().name + '.php';
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.IframeWidget","line":555,"column":11}, {"returns":"string"}),
+
+  
+  _postRequest: __annotator(function() {
+    Content.submitToTarget({
+      url    : this._getURL(),
+      target : this.getIframeNode().name,
+      params : this._getQS()
+    });
+  }, {"module":"sdk.XFBML.IframeWidget","line":567,"column":16})
+});
+
+var widgetPipeIframeCount = 0;
+var allWidgetPipeIframes = {};
+
+function groupWidgetPipeDescriptions() /*object*/ {return __bodyWrapper(this, arguments, function() {
+  var widgetPipeDescriptions = {};
+  for (var key in allWidgetPipeIframes) {
+    var controller = allWidgetPipeIframes[key];
+
+    widgetPipeDescriptions[key] = {
+      widget: controller.getUrlBits().name,
+      params: controller._getQS()
+    };
+  }
+
+  return widgetPipeDescriptions;
+}, {"returns":'object'});}__annotator(groupWidgetPipeDescriptions, {"module":"sdk.XFBML.IframeWidget","line":579,"column":0,"name":"groupWidgetPipeDescriptions"}, {"returns":"object"});
+
+module.exports = IframeWidget;
+
+
+}, {"module":"sdk.XFBML.IframeWidget","line":8,"column":189,"name":"$module_sdk_XFBML_IframeWidget"}),null);
+
+
+__d("sdk.XFBML.Comments",["sdk.Event","sdk.XFBML.IframeWidget","QueryString","sdk.Runtime","JSSDKConfig","sdk.UA","UrlMap","sdk.feature"],__annotator(function $module_sdk_XFBML_Comments(global,require,requireDynamic,requireLazy,module,exports,Event,IframeWidget,QueryString,Runtime,SDKConfig,UA,UrlMap,feature) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+
+   
+
+var Comments = IframeWidget.extend({
+  _visibleAfter: 'immediate',
+
+  
+  _refreshOnAuthChange: true,
+
+  
+  setupAndValidate: __annotator(function() /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    
+    var attr = {
+      channel_url : this.getChannelUrl(),
+      colorscheme : this.getAttribute('colorscheme'),
+      skin        : this.getAttribute('skin'),
+      numposts    : this.getAttribute('num-posts', 10),
+      width       : this._getLengthAttribute('width'),
+      href        : this.getAttribute('href'),
+      permalink   : this.getAttribute('permalink'),
+      publish_feed : this.getAttribute('publish_feed'),
+      order_by    : this.getAttribute('order_by'),
+      mobile      : this._getBoolAttribute('mobile'),
+      version     : this.getAttribute('version')
+    };
+
+    if (!attr.width && !attr.permalink) {
+      attr.width = 550;
+    }
+
+    if (SDKConfig.initSitevars.enableMobileComments &&
+        UA.mobile() &&
+        attr.mobile !== false) {
+      attr.mobile = true;
+      delete attr.width;
+    }
+    if (!attr.skin) {
+      attr.skin = attr.colorscheme;
+    }
+
+    
+    if (!attr.href) {
+      attr.migrated    = this.getAttribute('migrated');
+      attr.xid         = this.getAttribute('xid');
+      attr.title       = this.getAttribute('title', document.title);
+      attr.url         = this.getAttribute('url', document.URL);
+      attr.quiet       = this.getAttribute('quiet');
+      attr.reverse     = this.getAttribute('reverse');
+      attr.simple      = this.getAttribute('simple');
+      attr.css         = this.getAttribute('css');
+      attr.notify      = this.getAttribute('notify');
+
+      
+      if (!attr.xid) {
+        // We always want the URL minus the hash "#" also note the encoding here
+        
+        
+        var index = ES(document.URL, 'indexOf', true,'#');
+        if (index > 0) {
+          attr.xid = encodeURIComponent(document.URL.substring(0, index));
+        }
+        else {
+          attr.xid = encodeURIComponent(document.URL);
+        }
+      }
+
+      if (attr.migrated) {
+        attr.href =
+          UrlMap.resolve('www') + '/plugins/comments_v1.php?' +
+          'app_id=' + Runtime.getClientID() +
+          '&xid=' + encodeURIComponent(attr.xid) +
+          '&url=' + encodeURIComponent(attr.url);
+      }
+    } else {
+      
+      var fb_comment_id = this.getAttribute('fb_comment_id');
+      if (!fb_comment_id) {
+        fb_comment_id =
+          QueryString.decode(
+            document.URL.substring(
+              ES(document.URL, 'indexOf', true,'?') + 1)).fb_comment_id;
+        if (fb_comment_id && ES(fb_comment_id, 'indexOf', true,'#') > 0) {
+          
+          fb_comment_id =
+            fb_comment_id.substring(0,
+                                    ES(fb_comment_id, 'indexOf', true,'#'));
+        }
+      }
+
+      if (fb_comment_id) {
+        attr.fb_comment_id = fb_comment_id;
+        this.subscribe('render',
+                       ES(__annotator(function() {
+                           // don't nuke the hash if it currently
+                           
+                           
+                           if (!window.location.hash) {
+                             window.location.hash = this.getIframeNode().id;
+                           }
+                         }, {"module":"sdk.XFBML.Comments","line":113,"column":23}), 'bind', true,this));
+      }
+    }
+
+    if (!attr.version) {
+      attr.version = Runtime.getVersion();
+    }
+
+    this._attr = attr;
+    return true;
+  }, {"returns":'boolean'});}, {"module":"sdk.XFBML.Comments","line":31,"column":20}, {"returns":"boolean"}),
+
+  
+  oneTimeSetup: __annotator(function() {
+    this.subscribe('xd.commentCreated',
+                   ES(this._handleCommentCreatedMsg, 'bind', true,this));
+    this.subscribe('xd.commentRemoved',
+                   ES(this._handleCommentRemovedMsg, 'bind', true,this));
+  }, {"module":"sdk.XFBML.Comments","line":135,"column":16}),
+
+  
+  getSize: __annotator(function() /*?object*/ {return __bodyWrapper(this, arguments, function() {
+    if (!this._attr.permalink) {
+      return {
+        width: this._attr.mobile ? '100%' : this._attr.width,
+        
+        // loaded, but initially we don't want to take more space than we need
+        height: 100
+      };
+    }
+  }, {"returns":'?object'});}, {"module":"sdk.XFBML.Comments","line":147,"column":11}, {"returns":"?object"}),
+
+  
+  getUrlBits: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return { name: 'comments', params: this._attr };
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.Comments","line":163,"column":14}, {"returns":"object"}),
+
+  
+  getDefaultWebDomain: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (this._attr.mobile
+        && !feature('one_comment_controller', false)
+        && this._attr.version !== 'v2.3') {
+      return UrlMap.resolve('m', true);
+    }
+
+    return UrlMap.resolve('www', true);
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.Comments","line":175,"column":23}, {"returns":"string"}),
+
+  _handleCommentCreatedMsg: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    if (!this.isValid()) {
+      return;
+    }
+
+    var eventArgs = {
+      href: message.href,
+      commentID: message.commentID,
+      parentCommentID: message.parentCommentID,
+      message: message.message
+    };
+
+    Event.fire('comment.create', eventArgs);
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.Comments","line":185,"column":28}, {"params":["object"]}),
+
+  _handleCommentRemovedMsg: __annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+    if (!this.isValid()) {
+      return;
+    }
+
+    var eventArgs = {
+      href: message.href,
+      commentID: message.commentID
+    };
+
+    Event.fire('comment.remove', eventArgs);
+  }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.Comments","line":200,"column":28}, {"params":["object"]})
+});
+module.exports = Comments;
+
+
+}, {"module":"sdk.XFBML.Comments","line":9,"column":138,"name":"$module_sdk_XFBML_Comments"}),null);
+
+
+__d("sdk.XFBML.CommentsCount",["ApiClient","sdk.DOM","sdk.XFBML.Element","sprintf"],__annotator(function $module_sdk_XFBML_CommentsCount(global,require,requireDynamic,requireLazy,module,exports,ApiClient,DOM,Element,sprintf) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+
+var CommentsCount = Element.extend({
+
+  process:__annotator(function() {
+    DOM.addCss(this.dom, 'fb_comments_count_zero');
+
+    var href = this.getAttribute('href', window.location.href);
+
+    ApiClient.scheduleBatchCall(
+      '/v2.1/' + encodeURIComponent(href),
+      {fields: 'share'},
+      ES(__annotator(function(value)  {
+        var c = (value.share && value.share.comment_count) || 0;
+        DOM.html(
+          this.dom,
+          sprintf('<span class="fb_comments_count">%s</span>', c)
+        );
+
+        if (c > 0) {
+          DOM.removeCss(this.dom, 'fb_comments_count_zero');
+        }
+
+        this.fire('render');
+      }, {"module":"sdk.XFBML.CommentsCount","line":23,"column":6}), 'bind', true,this)
+    );
+  }, {"module":"sdk.XFBML.CommentsCount","line":15,"column":10})
+
+});
+
+module.exports = CommentsCount;
+
+
+}, {"module":"sdk.XFBML.CommentsCount","line":7,"column":84,"name":"$module_sdk_XFBML_CommentsCount"}),null);
+
+
+__d("sdk.Helper",["sdk.ErrorHandling","sdk.Event","UrlMap","safeEval","sprintf"],__annotator(function $module_sdk_Helper(global,require,requireDynamic,requireLazy,module,exports,ErrorHandling,Event,UrlMap,safeEval,sprintf) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+
+   
+   
+
+var Helper = {
+  
+  isUser: __annotator(function(id) /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    return id < 2200000000 ||
+      (id >= 100000000000000 &&  
+       id <= 100099999989999) || 
+      (id >= 89000000000000 &&   
+       id <= 89999999999999) ||  
+      (id >= 60000010000000 &&   // DBTYPE_SECOND_SEV: just don't ask
+       id <= 60000019999999);
+  }, {"returns":'boolean'});}, {"module":"sdk.Helper","line":25,"column":10}, {"returns":"boolean"}),
+
+  
+  upperCaseFirstChar: __annotator(function(/*string*/ s) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (s.length > 0) {
+      return s.substr(0, 1).toUpperCase() + s.substr(1);
+    }
+    else {
+      return s;
+    }
+  }, {"params":[[s, 'string', 's']],"returns":'string'});}, {"module":"sdk.Helper","line":41,"column":22}, {"params":["string"],"returns":"string"}),
+
+  
+  getProfileLink: __annotator(function(
+    /*?object*/ userInfo,
+    /*string*/ html,
+    /*?string*/ href
+  ) /*string*/ {return __bodyWrapper(this, arguments, function() {
+    if (!href && userInfo) {
+      href = sprintf(
+        '%s/profile.php?id=%s',
+        UrlMap.resolve('www'),
+        userInfo.uid || userInfo.id
+      );
+    }
+    if (href) {
+      html = sprintf('<a class="fb_link" href="%s">%s</a>', href, html);
+    }
+    return html;
+  }, {"params":[[userInfo, '?object', 'userInfo'], [html, 'string', 'html'], [href, '?string', 'href']],"returns":'string'});}, {"module":"sdk.Helper","line":58,"column":18}, {"params":["?object","string","?string"],"returns":"string"}),
+
+  
+  invokeHandler: __annotator(function(handler, /*?object*/ scope, /*?array*/ args) {return __bodyWrapper(this, arguments, function() {
+    if (handler) {
+      if (typeof handler === 'string') {
+        ErrorHandling.unguard(safeEval)(handler, args);
+      } else if (handler.apply) {
+        ErrorHandling.unguard(handler).apply(scope, args || []);
+      }
+    }
+  }, {"params":[[scope, '?object', 'scope'], [args, '?array', 'args']]});}, {"module":"sdk.Helper","line":84,"column":17}, {"params":["?object","?array"]}),
+
+  
+  fireEvent: __annotator(function(/*string*/ eventName, /*object*/ eventSource) {return __bodyWrapper(this, arguments, function() {
+    var href = eventSource._attr.href;
+    eventSource.fire(eventName, href); 
+    Event.fire(eventName, href, eventSource); 
+  }, {"params":[[eventName, 'string', 'eventName'], [eventSource, 'object', 'eventSource']]});}, {"module":"sdk.Helper","line":102,"column":13}, {"params":["string","object"]}),
+
+  
+  executeFunctionByName: __annotator(function(/*string*/ functionName ) {return __bodyWrapper(this, arguments, function() {
+    var args = Array.prototype.slice.call(arguments, 1);
+    var namespaces = functionName.split(".");
+    var func = namespaces.pop();
+    var context = window;
+    for (var i = 0; i < namespaces.length; i++) {
+      context = context[namespaces[i]];
+    }
+    return context[func].apply(this, args);
+  }, {"params":[[functionName, 'string', 'functionName']]});}, {"module":"sdk.Helper","line":113,"column":25}, {"params":["string"]})
+
+};
+
+module.exports = Helper;
+
+
+}, {"module":"sdk.Helper","line":7,"column":81,"name":"$module_sdk_Helper"}),null);
+
+
+__d("sdk.XFBML.LoginButton",["sdk.Helper","IframePlugin"],__annotator(function $module_sdk_XFBML_LoginButton(global,require,requireDynamic,requireLazy,module,exports,Helper,IframePlugin) {require.__markCompiled && require.__markCompiled();
+   
+   
+
+var LoginButton = IframePlugin.extend({
+  constructor: __annotator(function(/*DOMElement*/ elem, /*string*/ ns, /*string*/ tag,
+      /*object*/ attr) {return __bodyWrapper(this, arguments, function() {
+    this.parent(elem, ns, tag, attr);
+    var onlogin = IframePlugin.getVal(attr, 'on_login');
+    if (onlogin) {
+      this.subscribe('login.status', __annotator(function(/*object*/ response) {return __bodyWrapper(this, arguments, function() {
+        Helper.invokeHandler(onlogin, null, [response]);
+      }, {"params":[[response, 'object', 'response']]});}, {"module":"sdk.XFBML.LoginButton","line":17,"column":37}, {"params":["object"]}));
+    }
+  }, {"params":[[elem, 'HTMLElement', 'elem'], [ns, 'string', 'ns'], [tag, 'string', 'tag'], [attr, 'object', 'attr']]});}, {"module":"sdk.XFBML.LoginButton","line":12,"column":15}, {"params":["DOMElement","string","string","object"]}),
+
+  getParams: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return {
+      scope: 'string',
+      perms: 'string', 
+      size: 'string',
+      login_text: 'text',
+      show_faces: 'bool',
+      max_rows: 'string',
+      show_login_face: 'bool',
+      registration_url: 'url_maybe',
+      auto_logout_link: 'bool',
+      one_click: 'bool',
+      show_banner: 'bool',
+      auth_type: 'string',
+      default_audience: 'string'
+    };
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.LoginButton","line":23,"column":13}, {"returns":"object"})
+});
+
+module.exports = LoginButton;
+
+
+}, {"module":"sdk.XFBML.LoginButton","line":7,"column":58,"name":"$module_sdk_XFBML_LoginButton"}),null);
+
+
+__d("escapeHTML",[],__annotator(function $module_escapeHTML(global,require,requireDynamic,requireLazy,module,exports) {require.__markCompiled && require.__markCompiled();
+var re = /[&<>"'\/]/g;
+var map = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#039;',
+  '/': '&#x2F;'
+};
+
+function escapeHTML(/*string*/ value) /*string*/ {return __bodyWrapper(this, arguments, function() {
+  return value.replace(re, __annotator(function(m) {
+    return map[m];
+  }, {"module":"escapeHTML","line":34,"column":27}));
+}, {"params":[[value, 'string', 'value']],"returns":'string'});}__annotator(escapeHTML, {"module":"escapeHTML","line":33,"column":0,"name":"escapeHTML"}, {"params":["string"],"returns":"string"});
+module.exports = escapeHTML;
+
+
+}, {"module":"escapeHTML","line":22,"column":20,"name":"$module_escapeHTML"}),null);
+
+
+__d("sdk.XFBML.Name",["ApiClient","escapeHTML","sdk.Event","sdk.XFBML.Element","sdk.Helper","Log","sdk.Runtime"],__annotator(function $module_sdk_XFBML_Name(global,require,requireDynamic,requireLazy,module,exports,ApiClient,escapeHTML,Event,Element,Helper,Log,Runtime) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+
+var hasOwnProperty = ({}).hasOwnProperty;
+
+var Name = Element.extend({
+  
+  process: __annotator(function() {
+    ES('Object', 'assign', false,this, {
+      _uid           : this.getAttribute('uid'),
+      _firstnameonly : this._getBoolAttribute('first-name-only'),
+      _lastnameonly  : this._getBoolAttribute('last-name-only'),
+      _possessive    : this._getBoolAttribute('possessive'),
+      _reflexive     : this._getBoolAttribute('reflexive'),
+      _objective     : this._getBoolAttribute('objective'),
+      _linked        : this._getBoolAttribute('linked', true),
+      _subjectId     : this.getAttribute('subject-id')
+    });
+
+    if (!this._uid) {
+      Log.error('"uid" is a required attribute for <fb:name>');
+      this.fire('render');
+      return;
+    }
+
+    var fields = [];
+    if (this._firstnameonly) {
+      fields.push('first_name');
+    } else if (this._lastnameonly) {
+      fields.push('last_name');
+    } else {
+      fields.push('name');
+    }
+
+    if (this._subjectId) {
+      fields.push('gender');
+
+      if (this._subjectId == Runtime.getUserID()) {
+        this._reflexive = true;
+      }
+    }
+
+    
+    Event.monitor('auth.statusChange', ES(__annotator(function()  {
+      
+      if (!this.isValid()) {
+        this.fire('render');
+        return true; 
+      }
+
+      if (!this._uid || this._uid == 'loggedinuser') {
+        this._uid = Runtime.getUserID();
+      }
+
+      if (!this._uid) {
+        return; // don't do anything yet
+      }
+
+      ApiClient.scheduleBatchCall(
+        
+        // which will work till Apr, 2015. It's done to support
+        
+        '/v1.0/' + this._uid,
+        {fields: fields.join(',')},
+        ES(__annotator(function(data)  {
+          if (hasOwnProperty.call(data, 'error')) {
+            Log.warn('The name is not found for ID: ' + this._uid);
+            return;
+          }
+          if (this._subjectId == this._uid) {
+            this._renderPronoun(data);
+          } else {
+            this._renderOther(data);
+          }
+          this.fire('render');
+        }, {"module":"sdk.XFBML.Name","line":79,"column":8}), 'bind', true,this)
+      );
+    }, {"module":"sdk.XFBML.Name","line":58,"column":39}), 'bind', true,this));
+  }, {"module":"sdk.XFBML.Name","line":22,"column":11}),
+
+  
+  _renderPronoun: __annotator(function(/*object*/ userInfo) {return __bodyWrapper(this, arguments, function() {
+    var
+      word = '',
+      objective = this._objective;
+    if (this._subjectId) {
+      objective = true;
+      if (this._subjectId === this._uid) {
+        this._reflexive = true;
+      }
+    }
+    if (this._uid == Runtime.getUserID() &&
+        this._getBoolAttribute('use-you', true)) {
+      if (this._possessive) {
+        if (this._reflexive) {
+          word = 'your own';
+        } else {
+          word = 'your';
+        }
+      } else {
+        if (this._reflexive) {
+          word = 'yourself';
+        } else {
+          word = 'you';
+        }
+      }
+    }
+    else {
+      switch (userInfo.gender) {
+        case 'male':
+          if (this._possessive) {
+            word = this._reflexive ? 'his own' : 'his';
+          } else {
+            if (this._reflexive) {
+              word = 'himself';
+            } else if (objective) {
+              word = 'him';
+            } else {
+              word = 'he';
+            }
+          }
+          break;
+        case 'female':
+          if (this._possessive) {
+            word = this._reflexive ? 'her own' : 'her';
+          } else {
+            if (this._reflexive) {
+              word = 'herself';
+            } else if (objective) {
+              word = 'her';
+            } else {
+              word = 'she';
+            }
+          }
+          break;
+        default:
+          if (this._getBoolAttribute('use-they', true)) {
+            if (this._possessive) {
+              if (this._reflexive) {
+                word = 'their own';
+              } else {
+                word = 'their';
+              }
+            } else {
+              if (this._reflexive) {
+                word = 'themselves';
+              } else if (objective) {
+                word = 'them';
+              } else {
+                word = 'they';
+              }
+            }
+          }
+          else {
+            if (this._possessive) {
+              if (this._reflexive) {
+                word = 'his/her own';
+              } else {
+                word = 'his/her';
+              }
+            } else {
+              if (this._reflexive) {
+                word = 'himself/herself';
+              } else if (objective) {
+                word = 'him/her';
+              } else {
+                word = 'he/she';
+              }
+            }
+          }
+          break;
+      }
+    }
+    if (this._getBoolAttribute('capitalize', false)) {
+      word = Helper.upperCaseFirstChar(word);
+    }
+    this.dom.innerHTML = word;
+  }, {"params":[[userInfo, 'object', 'userInfo']]});}, {"module":"sdk.XFBML.Name","line":98,"column":18}, {"params":["object"]}),
+
+  
+  _renderOther: __annotator(function(/*object*/ userInfo) {return __bodyWrapper(this, arguments, function() {
+    var
+      name = '',
+      html = '';
+    if (this._uid == Runtime.getUserID() &&
+        this._getBoolAttribute('use-you', true)) {
+      if (this._reflexive) {
+        if (this._possessive) {
+          name = 'your own';
+        } else {
+          name = 'yourself';
+        }
+      } else {
+        
+        if (this._possessive) {
+          name = 'your';
+        } else {
+          name = 'you';
+        }
+      }
+    }
+    else if (userInfo) {
+      
+      if (null === userInfo.first_name) {
+        userInfo.first_name = '';
+      }
+      if (null === userInfo.last_name) {
+        userInfo.last_name = '';
+      }
+      // Structures that don't exist will return undefined
+      
+      
+      
+      if (this._firstnameonly && userInfo.first_name !== (void 0)) {
+        name = escapeHTML(userInfo.first_name);
+      } else if (this._lastnameonly && userInfo.last_name !== (void 0)) {
+        name = escapeHTML(userInfo.last_name);
+      }
+
+      if (!name) {
+        name = escapeHTML(userInfo.name);
+      }
+
+      if (name !== '' && this._possessive) {
+        name += '\'s';
+      }
+    }
+
+    if (!name) {
+      name = escapeHTML(
+        this.getAttribute('if-cant-see', 'Facebook User'));
+    }
+    if (name) {
+      if (this._getBoolAttribute('capitalize', false)) {
+        name = Helper.upperCaseFirstChar(name);
+      }
+      if (userInfo && this._linked) {
+        html = Helper.getProfileLink(userInfo, name,
+          this.getAttribute('href', null));
+      } else {
+        html = name;
+      }
+    }
+    this.dom.innerHTML = html;
+  }, {"params":[[userInfo, 'object', 'userInfo']]});}, {"module":"sdk.XFBML.Name","line":200,"column":16}, {"params":["object"]})
+});
+
+module.exports = Name;
+
+
+}, {"module":"sdk.XFBML.Name","line":7,"column":113,"name":"$module_sdk_XFBML_Name"}),null);
+
+
+__d("sdk.XFBML.Registration",["sdk.Auth","sdk.Helper","sdk.XFBML.IframeWidget","sdk.Runtime","UrlMap"],__annotator(function $module_sdk_XFBML_Registration(global,require,requireDynamic,requireLazy,module,exports,Auth,Helper,IframeWidget,Runtime,UrlMap) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+
+var Registration = IframeWidget.extend({
+  _visibleAfter: 'immediate',
+
+  
+  
+  
+  _baseHeight: 167,
+  
+  _fieldHeight: 28,
+
+  
+  _skinnyWidth: 520,
+  
+  
+  _skinnyBaseHeight: 173,
+  
+  _skinnyFieldHeight: 52,
+
+  
+  setupAndValidate: __annotator(function() /*boolean*/ {return __bodyWrapper(this, arguments, function() {
+    this._attr = {
+      action       : this.getAttribute('action'),
+      border_color : this.getAttribute('border-color'),
+      channel_url  : this.getChannelUrl(),
+      client_id    : Runtime.getClientID(),
+      fb_only      : this._getBoolAttribute('fb-only', false),
+      fb_register  : this._getBoolAttribute('fb-register', false),
+      fields       : this.getAttribute('fields'),
+      height       : this._getPxAttribute('height'),
+      redirect_uri : this.getAttribute('redirect-uri', window.location.href),
+      no_footer    : this._getBoolAttribute('no-footer'),
+      no_header    : this._getBoolAttribute('no-header'),
+      onvalidate   : this.getAttribute('onvalidate'),
+      width        : this._getPxAttribute('width', 600),
+      target       : this.getAttribute('target')
+    };
+    
+    
+
+    if (this._attr.onvalidate) {
+      this.subscribe('xd.validate', ES(__annotator(function(/*object*/ message) {return __bodyWrapper(this, arguments, function() {
+        var value = ES('JSON', 'parse', false,message.value);
+        var callback = ES(__annotator(function(errors) {
+          this.arbiterInform('Registration.Validation',
+                             { errors: errors, id: message.id });
+        }, {"module":"sdk.XFBML.Registration","line":60,"column":23}), 'bind', true,this);
+
+        
+        var response = Helper.executeFunctionByName(this._attr.onvalidate,
+                                                       value, callback);
+
+        
+        if (response) {
+          callback(response);
+        }
+      }, {"params":[[message, 'object', 'message']]});}, {"module":"sdk.XFBML.Registration","line":58,"column":36}, {"params":["object"]}), 'bind', true,this));
+    }
+
+    this.subscribe('xd.authLogin', ES(this._onAuthLogin, 'bind', true,this));
+    this.subscribe('xd.authLogout', ES(this._onAuthLogout, 'bind', true,this));
+
+    return true;
+  }, {"returns":'boolean'});}, {"module":"sdk.XFBML.Registration","line":37,"column":20}, {"returns":"boolean"}),
+
+  
+  getSize: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return { width: this._attr.width, height: this._getHeight() };
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.Registration","line":87,"column":11}, {"returns":"object"}),
+
+  _getHeight: __annotator(function() /*number*/ {return __bodyWrapper(this, arguments, function() {
+    if (this._attr.height) {
+      return this._attr.height;
+    }
+    var fields;
+    if (!this._attr.fields) {
+      
+      fields = ['name'];
+    } else {
+      try {
+        
+        fields = ES('JSON', 'parse', false,this._attr.fields);
+      } catch (e) {
+        
+        fields = this._attr.fields.split(/,/);
+      }
+    }
+
+    if (this._attr.width < this._skinnyWidth) {
+      return this._skinnyBaseHeight + fields.length * this._skinnyFieldHeight;
+    } else {
+      return this._baseHeight + fields.length * this._fieldHeight;
+    }
+  }, {"returns":'number'});}, {"module":"sdk.XFBML.Registration","line":91,"column":14}, {"returns":"number"}),
+
+  
+  getUrlBits: __annotator(function() /*object*/ {return __bodyWrapper(this, arguments, function() {
+    return { name: 'registration', params: this._attr };
+  }, {"returns":'object'});}, {"module":"sdk.XFBML.Registration","line":121,"column":14}, {"returns":"object"}),
+
+  
+  getDefaultWebDomain: __annotator(function() /*string*/ {return __bodyWrapper(this, arguments, function() {
+    return UrlMap.resolve('www', true);
+  }, {"returns":'string'});}, {"module":"sdk.XFBML.Registration","line":137,"column":23}, {"returns":"string"}),
+
+  
+  _onAuthLogin: __annotator(function() {
+    if (!Auth.getAuthResponse()) {
+      Auth.getLoginStatus();
+    }
+    Helper.fireEvent('auth.login', this);
+  }, {"module":"sdk.XFBML.Registration","line":144,"column":16}),
+
+  
+  _onAuthLogout: __annotator(function() {
+    if (!Auth.getAuthResponse()) {
+      Auth.getLoginStatus();
+    }
+    Helper.fireEvent('auth.logout', this);
+  }, {"module":"sdk.XFBML.Registration","line":154,"column":17})
+
+});
+
+module.exports = Registration;
+
+
+}, {"module":"sdk.XFBML.Registration","line":9,"column":103,"name":"$module_sdk_XFBML_Registration"}),null);
+
+
+__d("legacy:fb.xfbml",["Assert","sdk.Event","FB","IframePlugin","PluginConfig","PluginTags","XFBML","sdk.domReady","sdk.feature","wrapFunction","sdk.XFBML.Comments","sdk.XFBML.CommentsCount","sdk.XFBML.LoginButton","sdk.XFBML.Name","sdk.XFBML.Registration"],__annotator(function $module_legacy_fb_xfbml(global,require,requireDynamic,requireLazy,__DO_NOT_USE__module,__DO_NOT_USE__exports,Assert,Event,FB,IframePlugin,PluginConfig,PluginTags,XFBML,domReady,feature,wrapFunction) {require.__markCompiled && require.__markCompiled();
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+
+var customTags = {
+  comments: require('sdk.XFBML.Comments'),
+  comments_count: require('sdk.XFBML.CommentsCount'),
+  login_button: require('sdk.XFBML.LoginButton'),
+  name: require('sdk.XFBML.Name'),
+  registration: require('sdk.XFBML.Registration')
+};
+
+var blacklist = feature('plugin_tags_blacklist', []);
+
+
+ES(ES('Object', 'keys', false,PluginTags), 'forEach', true,__annotator(function(tag) {
+  if (ES(blacklist, 'indexOf', true,tag) !== -1) {
+    return;
+  }
+  XFBML.registerTag({
+    xmlns: 'fb',
+    localName: tag.replace(/_/g, '-'),
+    ctor: IframePlugin.withParams(PluginTags[tag], PluginConfig[tag])
+  });
+}, {"module":"legacy:fb.xfbml","line":30,"column":32}));
+
+
+ES(ES('Object', 'keys', false,customTags), 'forEach', true,__annotator(function(tag) {
+  if (ES(blacklist, 'indexOf', true,tag) !== -1) {
+    return;
+  }
+  XFBML.registerTag({
+    xmlns: 'fb',
+    localName: tag.replace(/_/g, '-'),
+    ctor: customTags[tag]
+  });
+}, {"module":"legacy:fb.xfbml","line":42,"column":32}));
+
+FB.provide('XFBML', {
+  parse: __annotator(function(dom) {
+    Assert.maybeXfbml(dom, 'Invalid argument');
+
+    
+    if (dom && dom.nodeType === 9) {
+      dom = dom.body;
+    }
+    return XFBML.parse.apply(null, arguments);
+  }, {"module":"legacy:fb.xfbml","line":54,"column":9})
+});
+
+XFBML.subscribe('parse', ES(Event.fire, 'bind', true,Event, 'xfbml.parse'));
+XFBML.subscribe('render', ES(Event.fire, 'bind', true,Event, 'xfbml.render'));
+
+Event.subscribe('init:post', __annotator(function(options) {
+  if (options.xfbml) {
+    
+    setTimeout(
+      wrapFunction(
+        ES(domReady, 'bind', true,null, XFBML.parse),
+        'entry',
+        'init:post:xfbml.parse'
+      ),
+      0
+    );
+  }
+}, {"module":"legacy:fb.xfbml","line":68,"column":29}));
+
+Assert.define('Xfbml', __annotator(function(element) {
+  return (element.nodeType === 1 || element.nodeType === 9) &&
+         typeof element.nodeName === 'string';
+}, {"module":"legacy:fb.xfbml","line":82,"column":23}));
+
+
+
+
+try {
+  if (document.namespaces && !document.namespaces.item.fb) {
+     document.namespaces.add('fb');
+  }
+} catch(e) {
+  // introspection doesn't yield any identifiable information to scope
+}
+
+
+}, {"module":"legacy:fb.xfbml","line":6,"column":258,"name":"$module_legacy_fb_xfbml"}),3);
+
+
+
+
+}).call({}, window.inDapIF ? parent.window : window);
+} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1782496","message":"'+e.message+'"}}');}

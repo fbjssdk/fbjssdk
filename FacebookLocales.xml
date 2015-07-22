@@ -309,6 +309,17 @@
 </codes>
 </locale>
 <locale>
+<englishName>Spanish (Chile)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_CL</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
 <englishName>Spanish (Colombia)</englishName>
 <codes>
 <code>
@@ -337,6 +348,28 @@
 <standard>
 <name>FB</name>
 <representation>es_LA</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Spanish (Mexico)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_MX</representation>
+</standard>
+</code>
+</codes>
+</locale>
+<locale>
+<englishName>Spanish (Venezuela)</englishName>
+<codes>
+<code>
+<standard>
+<name>FB</name>
+<representation>es_VE</representation>
 </standard>
 </code>
 </codes>

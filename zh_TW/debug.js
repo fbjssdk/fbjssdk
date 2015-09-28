@@ -12361,7 +12361,14 @@ if(match){
 var opts=QueryString.decode(match[2]);
 for(var key in opts) {
 if(opts.hasOwnProperty(key)){
-var val=opts{'module':'sdk.init','line':121,'column':15}));
+var val=opts[key];
+if(val == '0'){
+opts[key] = 0;}}}
+
+
+
+
+init(opts);}}},{'module':'sdk.init','line':121,'column':15}));
 
 
 

@@ -11761,7 +11761,8 @@ return !!this._hasDependency;},{params:[[value,'?boolean','value']],returns:'boo
 parse:__annotator(function(args){return __bodyWrapper(this,arguments,function(){
 var 
 fql=format.apply(null,args),
-re=/^select (.*?) fro[1]);
+re=/^select (.*?) from (\w+)\s+where (.*)$/i.exec(fql);
+this.fields = toFields(re[1]);
 this.table = re[2];
 this.where = parseWhere(re[3]);
 
@@ -15170,4 +15171,4 @@ catch(e) {}},{'module':'legacy:fb.xfbml','line':0,'column':0,'name':'$module_leg
 
 
 }).call({}, window.inDapIF ? parent.window : window);
-} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1959518","message":"'+e.message+'"}}');}ack)+'","revision":"1959518","message":"'+e.message+'"}}');}
+} catch (e) {new Image().src="https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"1959518","message":"'+e.message+'"}}');}

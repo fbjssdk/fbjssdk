@@ -3588,9 +3588,6 @@ return ex('ex args number mismatch: %s',ES('JSON', 'stringify', false,args));}
 if(__DEV__){
 return eprintf.apply(null,args);}else 
 {
-return e(__DEV__){
-return eprintf.apply(null,args);}else 
-{
 return ex._prefix + ES('JSON', 'stringify', false,args) + ex._suffix;}},{'module':'ex','line':38,'column':9});
 
 
